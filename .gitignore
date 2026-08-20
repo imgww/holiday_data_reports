@@ -1,0 +1,6 @@
+.workbuddy/
+__pycache__/
+*.pyc
+.DS_Store
+*.swp
+Thumbs.db
