@@ -1,0 +1,18 @@
+﻿{
+  "schema": "phenomena-library-v1",
+  "year": 2026,
+  "holiday": "春节",
+  "region": "全国",
+  "collected_at": "",
+  "version": "综合合并版(v1-v5)",
+  "merged_from": [
+    "均衡版",
+    "数据纵深版",
+    "现象丰度版",
+    "口径严版",
+    "前瞻版"
+  ],
+  "merged_at": "2026-08-24",
+  "item_count": 0,
+  "items": []
+}

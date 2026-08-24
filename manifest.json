@@ -1,0 +1,189 @@
+﻿{
+  "generated_at": "2026-08-24",
+  "source_root": "D:\\Prj\\260821_holiday_data\\holiday_data_report\\data",
+  "group_count": 18,
+  "csv_total_rows": 1236,
+  "json_total_items": 132,
+  "groups": [
+    {
+      "group": "2023春节",
+      "csv_rows": 60,
+      "json_items": 28,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    },
+    {
+      "group": "2023五一",
+      "csv_rows": 66,
+      "json_items": 0,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    },
+    {
+      "group": "2023端午",
+      "csv_rows": 54,
+      "json_items": 30,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    },
+    {
+      "group": "2023暑假",
+      "csv_rows": 80,
+      "json_items": 25,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    },
+    {
+      "group": "2023十一",
+      "csv_rows": 83,
+      "json_items": 0,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    },
+    {
+      "group": "2024春节",
+      "csv_rows": 115,
+      "json_items": 0,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    },
+    {
+      "group": "2024五一",
+      "csv_rows": 68,
+      "json_items": 0,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    },
+    {
+      "group": "2024端午",
+      "csv_rows": 76,
+      "json_items": 0,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    },
+    {
+      "group": "2024暑假",
+      "csv_rows": 85,
+      "json_items": 0,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    },
+    {
+      "group": "2024十一",
+      "csv_rows": 84,
+      "json_items": 0,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    },
+    {
+      "group": "2025春节",
+      "csv_rows": 60,
+      "json_items": 0,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    },
+    {
+      "group": "2025五一",
+      "csv_rows": 54,
+      "json_items": 0,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    },
+    {
+      "group": "2025端午",
+      "csv_rows": 42,
+      "json_items": 13,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    },
+    {
+      "group": "2025暑假",
+      "csv_rows": 45,
+      "json_items": 0,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    },
+    {
+      "group": "2025十一",
+      "csv_rows": 69,
+      "json_items": 0,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    },
+    {
+      "group": "2026春节",
+      "csv_rows": 59,
+      "json_items": 0,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    },
+    {
+      "group": "2026五一",
+      "csv_rows": 70,
+      "json_items": 15,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    },
+    {
+      "group": "2026端午",
+      "csv_rows": 66,
+      "json_items": 21,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    }
+  ]
+}
