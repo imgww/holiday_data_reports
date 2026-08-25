@@ -1,9 +1,9 @@
 ﻿{
   "generated_at": "2026-08-24",
   "source_root": "D:\\Prj\\260821_holiday_data\\holiday_data_report\\data",
-  "group_count": 18,
-  "csv_total_rows": 1236,
-  "json_total_items": 132,
+  "group_count": 19,
+  "csv_total_rows": 1292,
+  "json_total_items": 152,
   "groups": [
     {
       "group": "2023春节",
@@ -179,6 +179,16 @@
       "group": "2026端午",
       "csv_rows": 66,
       "json_items": 21,
+      "copied": [
+        "csv",
+        "json",
+        "md"
+      ]
+    },
+    {
+      "group": "2026暑假",
+      "csv_rows": 56,
+      "json_items": 20,
       "copied": [
         "csv",
         "json",
