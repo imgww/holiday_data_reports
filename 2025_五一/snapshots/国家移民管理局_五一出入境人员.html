@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="Content-Language" content="utf-8" />
+	
+		<title> “五一”假期消费热力十足（大数据观察） </title>
+		<meta name="author" content='第007版' />
+
+	<meta name="robots" content="all" />
+	<meta name="copyright" content="" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<META name='filetype' content='1'>
+	<meta name='publishedtype' content='1'>
+	<meta name='pagetype' content='1'>
+	<meta name='catalogs' content='rmrbdzb'>
+	<meta name='contentid' content='rmrbdzb_xxxxxxxx'>
+	<meta name='publishdate' content='2013-07-17'>
+	<!--优先使用 IE 最新版本和 Chrome-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<!--360 使用Google Chrome Frame-->
+	<meta name="renderer" content="webkit">
+	<link href="../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/default.css" rel="stylesheet">
+	<script language=Javascript
+		src="../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/prototype.js"></script>
+	<script language=Javascript
+		src="../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/rmrb/mp.js"></script>
+	<script language=Javascript
+		src="../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/calendar2.js"></script>
+	<script language=Javascript
+		src="../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/range.js"></script>
+	<script type="text/javascript"
+		src="../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/app.js"></script>
+	<script src="../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/swiper.min.js"></script>
+	<link href="../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/swiper.min.css" rel="stylesheet">
+	<script type="text/javascript">
+		function nTabs (tabObj, obj) {
+			var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+			for (i = 0; i < tabList.length; i++) {
+				if (tabList[i].id == obj.id) {
+					document.getElementById(tabObj + "_Title" + i).className = "active";
+					document.getElementById(tabObj + "_Content" + i).style.display = "block";
+				} else {
+					document.getElementById(tabObj + "_Title" + i).className = "normal";
+					document.getElementById(tabObj + "_Content" + i).style.display = "none";
+				}
+			}
+		}
+		function CopyAll () {
+
+			var obj = document.getElementById("articleContent");
+
+			if (obj != null) {
+
+				var content = obj.innerText;
+
+				window.clipboardData.setData("Text", content);
+
+				alert("复制成功");
+
+			}
+
+		}
+		
+		function getFontSize(element) {
+			var fontSize;
+			
+			if (window.getComputedStyle) {
+				// 现代浏览器的实现，包括 IE9+
+				fontSize = window.getComputedStyle(element, null).getPropertyValue('font-size');
+			} else if (element.currentStyle) {
+				// 针对 IE8 及更低版本
+				fontSize = element.currentStyle.fontSize;
+			}
+
+			return fontSize;
+		}
+
+		function zoomIn () {
+			newZoom = parseInt(getFontSize($('ozoom'))) + 4 + 'px'
+			$('ozoom').setStyle({'font-size': newZoom});
+		}
+		function zoomOut () {
+			newZoom = parseInt(getFontSize($('ozoom'))) - 4 + 'px'
+			$('ozoom').setStyle({'font-size': newZoom});
+		}
+
+	</script>
+	<script type="text/javascript">
+		var focus_width = 260;
+		var focus_height = 180;
+		var text_height = 20;
+		var swf_height = focus_height + text_height;
+		var pics = "";
+		var links = "";
+		var texts = "";
+		var resCount = 0;
+		function showArtPics () {
+			if (resCount > 0) {
+				pics = pics.substring(0, pics.length - 1);
+				links = links.substring(0, links.length - 1);
+				texts = texts.substring(0, texts.length - 1);
+				var content = "";
+				content += '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="' + focus_width + '" height="' + swf_height + '">';
+				content += '<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="../../../tplimg/picflash.swf"><param name="quality" value="high"><param name="bgcolor" value="#ffffff">';
+				content += '<param name="menu" value="false"/><param name="wmode" value="opaque"/>';
+				content += '<param name="FlashVars" value="pics=' + pics + '&links=' + links + '&texts=' + texts + '&borderwidth=' + focus_width + '&borderheight=' + focus_height + '&textheight=' + text_height + '">';
+				content += '<embed src="../../../tplimg/picflash.swf" wmode="opaque" FlashVars="pics=' + pics + '&links=' + links + '&texts=' + texts + '&borderwidth=' + focus_width + '&borderheight=' + focus_height + '&textheight=' + text_height + '" menu="false" bgcolor="#ffffff" quality="high" width="' + focus_width + '" height="' + focus_height + '" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />';
+				content += '<\/object>';
+				document.getElementById("showArtPicsDiv").innerHTML = content;
+			}
+		}
+	</script>
+	<style>
+		body,
+		div {
+			font-family: '宋体';
+			-webkit-text-size-adjust: none;
+		}
+
+		.main .article-box .article h1,
+		.main .article-box .article h2,
+		.main .article-box .article h3 {
+			font-family: Microsoft YaHei, SimSun, sans-serif, '宋体';
+		}
+
+		.main .right-main .title {
+			font-weight: bold;
+		}
+
+		.pci_c {
+			margin: 10px auto;
+			width: 410px
+		}
+
+		table {
+			border-spacing: 0;
+		}
+
+		table td {
+			text-align: center;
+			border-spacing: 0;
+		}
+
+		.pci_c td img {
+			width: auto;
+		}
+
+		.top img {
+			padding-top: 15px;
+			margin-left: 0px;
+		}
+
+		.nav {
+			margin-right: 0;
+		}
+
+		.pci_c td {
+			width: 100%;
+		}
+
+		.pci_c td p {
+			text-align: left;
+			font-size: 14px;
+			width: auto;
+			padding-top: 15px;
+			line-height: 160%;
+		}
+
+		.main .swiper-box .swiper-container .swiper-slide {
+			text-align: center;
+			background: #d00;
+			color: #fff;
+			width: 19.5%;
+			float: left;
+			margin-bottom: 1px;
+			margin-right: 1px;
+			text-indent: 0;
+			height: 34px;
+			line-height: 34px;
+		}
+
+		.main .swiper-box .swiper-container .swiper-slide a {
+			color: #fff;
+		}
+
+		.curr-news span {
+			display: inline-block;
+			color: #fff;
+			background: #d00;
+			padding: 5px 15px;
+			font-size: 16px;
+			height: 25px;
+			line-height: 25px;
+		}
+
+		.main .right-main .date-box span {
+			cursor: pointer;
+		}
+
+		.ribao,
+		.zhoubao,
+		.zazhi {
+			background: none;
+			padding: 10px 15px;
+			width: 140px;
+			z-index: 3;
+			position: absolute;
+			top: 60px;
+			left: -30px;
+			display: none;
+		}
+
+		.ribao li,
+		.zhoubao li,
+		.zazhi li {
+			border: 1px solid #e2e2e2;
+			color: #333;
+			padding: 3px 10px;
+			border-top: none;
+			width: 150px;
+			background: #fff;
+		}
+
+		.ribao li:nth-child(1),
+		.zhoubao li:nth-child(1),
+		.zazhi li:nth-child(1) {
+			border-top: 1px solid #e2e2e2;
+		}
+
+		.nav li {
+			cursor: pointer;
+		}
+
+		.ribao li a,
+		.zhoubao li a,
+		.zazhi li a {
+			color: #333;
+		}
+
+		.main .news .news-list li span {
+			font-size: 20px;
+			margin-right: 5px;
+		}
+
+		.main .article-box .art-btn span {
+			padding: 0 15px;
+		}
+
+		.main .article-box .art-btn strong {
+			font-weight: normal;
+			float: right;
+			margin-right: 15px;
+		}
+
+		.main .article-box .art-btn strong span {
+			padding: 0px;
+		}
+
+		.main .swiper-box .swiper-container .swiper-slide {
+			font-size: 12px;
+			width: 24.5%;
+		}
+		#ozoom p{
+			font-size: inherit;
+			line-height: 170%;
+			padding: 5px 0;
+		}
+
+		/* .main .swiper-box .swiper-container .swiper-slide:nth-child(4){
+        line-height:129%;padding:8px 1% 0 1%;height:36px;width:22.5%
+    } */
+		@media (min-device-width: 320px) and (max-width: 689px),
+		(max-device-width: 480px) {
+			body {
+				overflow: auto;
+			}
+		}
+	</style>
+</head>
+
+
+	<body onLoad="initialize();initMPPage();showArtPics();">
+		<!--题图-->
+		<div class="top">
+			<div class="w1000">
+				<a href="http://www.people.com.cn" target="_blank"><img class="left"
+						src="../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/logo.png" alt=""></a>
+				<ul class="right nav">
+					<li id="ribao">日报
+						<ul class="ribao" id="ribaobox">
+							<li><a href='http://paper.people.com.cn/rmrb/paperindex.htm' target='_blank'>人民日报</a></li>
+							<li><a href="http://paper.people.com.cn/rmrbhwb/paperindex.htm" target="_blank">人民日报海外版</a>
+							</li>
+							<li><a href="http://www.huanqiu.com/" target="_blank">环球时报</a></li>
+							<li><a href="http://epaper.stcn.com/" target="_blank">证券时报</a></li>
+						</ul>
+					</li>
+					<li id="zhoubao">周报
+						<ul class="zhoubao" id="zhoubaobox">
+							<li><a href="http://paper.people.com.cn/gjjrb/paperindex.htm" target="_blank">国际金融报</a></li>
+							<li><a href="http://paper.people.com.cn/zgnyb/paperindex.htm" target="_blank">中国能源报</a></li>
+							<li><a href="http://paper.people.com.cn/jksb/paperindex.htm" target="_blank">健康时报</a></li>
+							<li><a href="http://paper.people.com.cn/fcyym/paperindex.htm" target="_blank">讽刺与幽默</a></li>
+							<li><a href="http://paper.people.com.cn/zgcsb/paperindex.htm" target="_blank">中国城市报</a></li>
+						</ul>
+
+					</li>
+					<li id="zazhi">杂志
+						<ul class="zazhi" id="zazhibox">
+							<li><a href="http://paper.people.com.cn/xwzx/paperindex.htm" target="_blank">新闻战线</a></li>
+							<li><a href="http://paper.people.com.cn/rmlt/paperindex.htm" target="_blank">人民论坛</a></li>
+							<li><a href="http://paper.people.com.cn/rmzk/paperindex.htm" target="_blank">人民周刊</a></li>
+							<li><a href="http://paper.people.com.cn/zgjjzk/paperindex.htm" target="_blank">中国经济周刊</a>
+							</li>
+							<li><a href="http://paper.people.com.cn/mszk/paperindex.htm" target="_blank">民生周刊</a></li>
+							<li><a href="https://www.gjrwls.com/" target="_blank">国家人文历史</a>
+							</li>
+							<li><a href="http://paper.people.com.cn/zgby/paperindex.htm" target="_blank">中国报业</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<div class="main w1000">
+			<div class="left paper-box">
+				<div class="paper">
+					<MAP NAME="PagePicMap"><Area coords="3.08,31.97,297.36,31.97,297.36,410.0899999999999,95.64,410.0899999999999,95.64,571.2625,3.08,571.2625" shape="polygon" href="content_30071649.html"><Area coords="307.84,31.3375,396.68,31.3375,396.68,310.385,307.84,310.385" shape="polygon" href="content_30071650.html"><Area coords="396.68,334.8225,396.68,316.02,307.84,316.02,307.84,334.8225,307.84,396.9225,396.68,396.9225" shape="polygon" href="content_30071651.html"><Area coords="101.8,415.725,393.0,415.725,393.0,566.835,101.8,566.835" shape="polygon" href="content_30071652.html"><Area coords="307.24,401.2925,396.08,401.2925,396.08,405.0875,307.24,405.0875" shape="polygon" href="content_30071653.html"></MAP>
+					<img width="400" height="575" src="../../../pic/202505/07/0f064ea2-6e03-4d4a-aa26-15db171a0204.jpg.2" border="0" USEMAP=#PagePicMap>
+				</div>
+				<div class="paper-bot">
+					<p class="left ban">
+						第07版：要闻
+					</p>
+					<!-- <p class="right btn">PDF下载</p> -->
+				</div>
+				<div class="news">
+					<p class="curr-news"><span>本版新闻</span></p>
+					<!--新样式-->
+					<ul class='news-list'>
+								<li>
+									<span>·</span>
+									<a href="content_30071649.html"> “五一”假期消费热力十足（大数据观察） </a>
+								</li>
+								<li>
+									<span>·</span>
+									<a href="content_30071650.html"> 快递服务公众满意度稳步提升 </a>
+								</li>
+								<li>
+									<span>·</span>
+									<a href="content_30071651.html"> “五一”假期跨区域人员流动量超14.65亿人次 </a>
+								</li>
+								<li>
+									<span>·</span>
+									<a href="content_30071652.html"> 这里的政府食堂向群众开放 </a>
+								</li>
+								<li>
+									<span>·</span>
+									<a href="content_30071653.html"> 本版责编：纪雅林  张伟昊  尚嵘峥 </a>
+								</li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="right right-main">
+				<div class="date-box">
+					<p class="date left">
+						人民日报 <span class="newstime">2025年05月07日
+							Wed</span>
+						<span>
+							<img onClick="autoShowDate();"
+								src="../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/images/down.png"
+								alt="">
+						</span>
+					</p>
+					<p class="right">
+
+					</p>
+					<!-------rqdh版面导航------>
+					<div id=daydh
+						style="display:none; position:absolute; left:140px;top:30px;z-index:1000; filter:alpha(opacity=90);"
+						onmouseover="document.getElementById('daydh').style.display='block';">
+						<form name=CLD style="padding:0px;margin:0px;">
+							<table width="210" border="0" cellpadding="0" cellspacing="1" bordercolor="#007CD2"
+								bgcolor="#e0e0e0">
+								<tr>
+									<td bgcolor="#D8EFFF" style="padding: 3px;">
+										<table cellspacing=0 cellpadding=0 width="100%" align=center border=0
+											bgcolor="#D8EFFF">
+											<tr>
+												<td>
+													<table width="100%" align=center border="0" cellpadding="1"
+														cellspacing="1">
+														<tr class="default" align=center>
+															<td height=15 colspan=7 bgcolor="#FFFFFF">
+																<table width="100%" border="0" cellpadding="2"
+																	cellspacing="0">
+																	<tr align="center">
+																		<td align="left" nowrap><img
+																				src="../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/d1.gif"
+																				width="7" height="11"
+																				style="cursor:hand;"
+																				onClick="turnpage(SY,0)" /></td>
+																		<td><select class=jumpmenu
+																				onChange=changeMPCld() name=SY>
+																				<script language=JavaScript>
+																					for (i = 2006; i < 2051; i++)
+																						document.write('<option>' + i + '</option>')
+																				</script>
+																			</select>
+																		</td>
+																		<td><img src="../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/d.gif"
+																				width="7" height="11"
+																				style="cursor:hand;"
+																				onClick="turnpage(SY,1)" /></td>
+																		<td align="center" nowrap><img
+																				src="../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/d1.gif"
+																				width="7" height="11"
+																				style="cursor:hand;"
+																				onClick="turnpage(SM,0)" /></td>
+																		<td><select class=jumpmenu
+																				onChange=changeMPCld() name=SM>
+																				<script language="JavaScript">
+																					for (i = 1; i < 13; i++) document.write('<option>' + i + '</option>')
+																				</script>
+																			</select>
+																		</td>
+																		<td><img src="../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/d.gif"
+																				width="7" height="11"
+																				style="cursor:hand;"
+																				onClick="turnpage(SM,1)" /></td>
+																		<td align="right" nowrap><strong>
+																				<font id=GZ
+																					fface="Arial, Helvetica, sans-serif">
+																				</font>
+																			</strong></td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr align=middle bgcolor="#FFFFFF" class="default">
+															<td style="color: #fff;background: #d00;" align="center"
+																class="fontstyle01"><b>
+																	<font face="Arial, Helvetica, sans-serif">日</font>
+																</b></td>
+															<td style="color: #fff;background: #d00;" align="center"
+																class="fontstyle01"><b>
+																	<font face="Arial, Helvetica, sans-serif">一</font>
+																</b></td>
+															<td style="color: #fff;background: #d00;" align="center"
+																class="fontstyle01"><b>
+																	<font face="Arial, Helvetica, sans-serif">二</font>
+																</b></td>
+															<td style="color: #fff;background: #d00;" align="center"
+																class="fontstyle01"><b>
+																	<font face="Arial, Helvetica, sans-serif">三</font>
+																</b></td>
+															<td style="color: #fff;background: #d00;" align="center"
+																class="fontstyle01"><b>
+																	<font face="Arial, Helvetica, sans-serif">四</font>
+																</b></td>
+															<td style="color: #fff;background: #d00;" align="center"
+																class="fontstyle01"><b>
+																	<font face="Arial, Helvetica, sans-serif">五</font>
+																</b></td>
+															<td style="color: #fff;background: #d00;" align="center"
+																class="fontstyle01"><b>
+																	<font face="Arial, Helvetica, sans-serif">六</font>
+																</b> </td>
+														</tr>
+														<script type="text/JavaScript">
+															var gNum;
+															for(i=0;i<6;i++)
+															{
+																document.write('<tr align=center>');
+																for(j=0;j<7;j++)
+																{
+																	gNum = i*7+j;
+																	document.write('<td  bgcolor="#FFFFFF" class="default" align=center id="GD' + gNum +'" style="cursor: default;" width="14%"><a href="" id="CD' + gNum + '"><span class="date" style="font-family:Verdana, Arial;font-size:11px;"><font _onMouseOver="mOvr(' + gNum +')" onMouseOut="mOut()" id="SD' + gNum +'"');
+																	document.write('></font></span></a><br><font id="LD' + gNum + '" size=2 class=pt9 style=display:none></font></td>');
+																}
+																document.write('</tr>');
+															}
+														</script>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td align="center" height="22"><a href="#" onClick="autoShowDate();">关闭</a></td>
+								</tr>
+							</table>
+						</form>
+					</div>
+					<!-------rqdh版面导航END------>
+				</div>
+				<div class="swiper-box">
+					<div class="swiper-container">
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_01.html">01版：要闻</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_02.html">02版：要闻</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_03.html">03版：要闻</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_04.html">04版：要闻</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_05.html">05版：评论</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_06.html">06版：要闻</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_07.html">07版：要闻</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_08.html">08版：广告</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_09.html">09版：理论</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_10.html">10版：经济</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_11.html">11版：政治</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_12.html">12版：文化</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_13.html">13版：文件</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_14.html">14版：特别报道</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_15.html">15版：国际</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_16.html">16版：绿色</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_17.html">17版：国际</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_18.html">18版：产经</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_19.html">19版：消费</a>
+							</div>
+							<div class="swiper-slide">
+								<a id="pageLink" href="../../../layout/202505/07/node_20.html">20版：文化遗产</a>
+							</div>
+					</div>
+					<!-- <div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div> -->
+				</div>
+				<div class="article-box">
+					<div class="art-btn">
+						<span>
+							<a href="../../../layout/202505/07/node_07.html">返回目录</a>
+						</span>
+						&nbsp;&nbsp;
+						<a href="javascript:;" onclick="zoomIn();">
+							<span class="big">放大</span>
+						</a>
+						<a href="javascript:;" onclick="zoomOut();">
+							<span class="small">缩小</span>
+						</a>
+						<a href="javascript:;" onclick="CopyAll();">
+							<span>全文复制</span>
+						</a>
+						&nbsp;&nbsp;&nbsp;
+						<strong>
+							&nbsp;&nbsp;
+								<a class="preart" href="content_30071650.html">
+									<span>下一篇 </span>
+								</a>
+						</strong>
+						<div style="display:none" id="articleContent">
+							<!--enpcontent--><html>
+ <head></head>
+ <body>
+  <p>　　休闲露营、逛博看展、品尝美食……刚刚过去的“五一”假期，多样性、个性化供给更加丰富，带动消费潜力持续释放。商务部数据显示，“五一”假期全国消费市场繁荣活跃，全国重点零售和餐饮企业销售额同比增长6.3%。</p>
+  <p>　　</p>
+  <p>　<strong>　家电、汽车等商品零售增长较快</strong></p>
+  <p>　　“五一”假期，以旧换新备受欢迎。5月3日，在北京一家苏宁易购卖场，前来挑选家电的顾客络绎不绝。“叠加使用以旧换新和平台补贴，6件家电优惠了7000多元，真划算。”刚刚为新家订购了全套家电的消费者李旸说。数据显示，“五一”假期，苏宁易购全国门店客流量同比增长110%，家电以旧换新订单量增长57%，万元以上家电销量增长79%。</p>
+  <p>　　商务部数据显示，假期前4天，汽车以旧换新补贴申请量超6万份，带动新车销售额达88亿元；消费者购买12大类家电产品356万台，带动销售额达119亿元；购买手机等数码产品242万件，带动销售额达64亿元。</p>
+  <p>　　政策带动相关产品整体销售保持较快增长。“五一”假期，商务部重点监测零售企业家电、汽车、通讯器材销售额同比分别增长15.5%、13.7%、10.5%。商务部重点监测电商平台智能家居产品销售额同比增长超20%。</p>
+  <p>　　在博物馆、景区、步行街购买具有当地特色与文化底蕴的文创产品，成为不少游客的必选项。各地紧跟国潮文创消费趋势，推动文创产品定制化、精细化。美团数据显示，假期“文创”成为出游热搜关键词之一，“文创”“冰箱贴”的异地搜索热度较去年分别提升70.7%、102.5%。</p>
+  <p>　　“五一”假期，即时零售等新业态保持较快增长。5月4日，在北京温榆河公园，京东七鲜超市的配送员将新鲜的牛肉串、羊排、蔬菜、水果等食材和餐具、炉具送至露营地，让消费者节省了提前准备露营食材和户外用品的时间。京东数据显示，“五一”假期京东七鲜超市整体订单量同比增长近110%。</p>
+  <p>　　随着过境免签等政策红利不断释放，“即买即退”离境退税便利度提升，“五一”假期外国游客来华消费明显增长。“中国制造”的文创纪念品、衣服鞋子、电子产品等各式商品，成为来华游客的“扫货”目标。支付宝平台显示，义乌小商品市场、深圳华强北、广州国际轻纺城等吸引越来越多的外国人。</p>
+  <p>　　“中国制造物美价优，外国顾客都很喜欢。”浙江义乌一家商铺负责人姚宝娟说。支付宝数据显示，“五一”假期前3天，入境游客用支付宝消费金额同比增长180%；其中，240小时过境免签国家用户通过“支付宝碰一下”消费金额较4月增长近50%。</p>
+  <p>　　<strong>文化和旅游消费欣欣向荣</strong></p>
+  <p>　　“五一”假期，各地推出丰富多彩的文化旅游产品和服务，加强文旅融合和科技赋能，提升管理水平和服务品质，旅游景区度假区、休闲街区、乡村旅游、红色旅游等各类产品广受欢迎，文化和旅游消费欣欣向荣。</p>
+  <p>　　经文化和旅游部数据中心测算，假期5天，国内出游3.14亿人次，同比增长6.4%；国内游客出游总花费1802.69亿元，同比增长8.0%。</p>
+  <p>　　乘船“漫游”京杭大运河，欣赏沿途人文历史景观，感受江南水乡风情，吸引了众多游客前来体验。“五一”假期前，京杭大运河杭湖游线首次试航。节日期间，浙江发布了“泛舟浙里”13条精品游线，其中杭州“千年运河·钱塘宋韵”串联运河与钱塘江水路，绍兴“船访文豪故里”乘乌篷船游鲁迅故里、书圣故里，温州“塘河夜画”打造沉浸式夜游体验。水上观光、文化体验、体育休闲等多元业态融合，为文旅消费注入新动力。</p>
+  <p>　　行程推荐、路线规划、实时翻译、景区讲解……人工智能给旅途带来新体验。“我们一家5人想从广东广州出发到周边自驾游，希望车程3小时内、有适合5岁小朋友玩的地方，请给我推荐一些合适的目的地。”“五一”假期，广州市民李嘉使用夸克AI，快速敲定了一家人自驾游的行程。</p>
+  <p>　　“以前出游前，查攻略、定行程耗时长、费精力。现在只需拿起手机，输入关键的出游信息，很快就能得到一份详细的旅游路线，甚至还有很多实用的出游提示。”李嘉说。夸克深度搜索的数据显示，“五一”假期用户出游相关问答需求同比增长230%，文化体验、展览演出等成为出游问答的重要主题。</p>
+  <p>　　入境游迎来强劲复苏。携程数据显示，“五一”假期入境游订单量同比增长130%。微信支付外卡数据显示，假期前3天，外籍用户在境内消费笔数、金额同比都增长了近2倍。</p>
+  <p>　　非遗、汉服等文化体验热度越来越高。抖音生活服务数据显示，假期前3天，非遗相关短视频播放量近5亿，国潮妆造体验团购量同比增长502%，非遗打铁花相关团购订单量增长294%，古村古镇和博物馆的团购订单量也分别增长79%和57%。</p>
+  <p>　　<strong>餐饮住宿出行等服务消费红火</strong></p>
+  <p>　　跟着美食去旅游，成为假期出行新风尚。辽宁锦州烧烤、河北定州罩饼、重庆荣昌卤鹅、江苏昆山奥灶面、福建平潭海鲜档……这个假期，不少地方特色餐厅客流爆满。据商务大数据监测，假期全国重点监测餐饮企业销售额同比增长8.7%。“五一”假期，微信支付餐饮行业交易笔数同比增长12%。</p>
+  <p>　　以跨城消费为主的酒店住宿增长显著。美团旅行数据显示，假期以跨城消费为主的酒店住宿消费同比增长14.9%。</p>
+  <p>　　县域乡村旅游走红，带动了当地的餐饮、住宿消费。美团旅行数据显示，“五一”假期，县城高星酒店预订量同比增长超80%，县域接待外来游客的餐饮堂食、文化娱乐、生活休闲商户数量同比分别增长38.4%、38.6%和57.0%。在去哪儿平台上，县城酒店预订量同比增长30%。</p>
+  <p>　　“不少客人在假期前几天就来了，一住就是十几天。”云南大理一家民宿负责人说。这个假期，不少人选择以“慢节奏”旅游代替“打卡式”出游，利用“拼假”的方式，来一次“轻旅居”，带动相关住宿预订明显增长。途家民宿数据显示，假期前后，平台入住时间5天以上的“轻旅居”民宿订单同比增长超四成。途家民宿相关负责人认为，随着旅游需求不断升级，人们注重的不再只是居住本身，而是多元化、本土化体验，民宿领域未来将出现更多满足旅居市场的产品形态。</p>
+  <p>　　“在这里可以领略千年永乐宫壁画的风采，游览黄河湾的壮阔，还能体验非遗剪纸、露营烧烤。”入住携程度假农庄芮城黄河湾联营店的游客朱伟对这次出游很满意。“五一”假期前一周，该农庄假期期间的预订率已经超过92%，两天及两天以上连住订单占比超过三成。</p>
+  <p>　　“五一”假期，交通出行消费增长明显。滴滴出行数据显示，“五一”假期打车需求同比上涨17%，异地打车需求同比上涨29%。与去年相比，长线游需求更加突出，常驻地与目的地相距2000公里以上的异地打车需求同比上涨38%。</p>
+  <p>　　自驾游市场呈现消费升级与出行半径扩大的特点。携程租车数据显示，“五一”假期全国人均租车消费较去年增长24%，平均租车时长延长至4天，异地自驾订单占比高达85%，异地出行规模持续扩容。</p>
+  <p>　　</p>
+  <p>　　“五一”假期</p>
+  <p>　　国内3.14亿人次出游总花费超1800亿元</p>
+  <p>　　记者6日从文化和旅游部获悉：2025年“五一”假期，各地推出丰富多彩的旅游产品、文化活动和惠民举措，着力满足群众多元化和个性化需求。据文化和旅游部数据中心测算，假期5天全国国内出游3.14亿人次，同比增长6.4%；国内游客出游总花费1802.69亿元，同比增长8.0%。</p>
+  <p>　　（本报记者&nbsp;&nbsp;郑海鸥）</p>
+  <p>　　</p>
+  <p>　　消费行业销售收入同比增15.2%</p>
+  <p>　　国家税务总局6日发布的增值税发票数据显示，今年“五一”假期，全国消费相关行业销售收入同比增长15.2%，其中消费品“以旧换新”政策带动家电及通讯器材类商品消费需求旺盛，家居用品及珠宝首饰消费增幅较高，个性化旅游服务消费受到青睐。</p>
+  <p>　　（本报记者&nbsp;&nbsp;王&nbsp;&nbsp;观）&nbsp;&nbsp;</p>
+  <p>　　</p>
+  <p>　　银联网联处理支付交易超234亿笔</p>
+  <p>　　记者6日从中国人民银行获悉：今年“五一”假期，银联、网联共处理支付交易234.39亿笔、金额7.64万亿元，较去年“五一”假期分别增长20.49%、3.21%。其中，处理境外来华人员支付交易笔数、金额较去年同期分别增长244.86%、128.04%。</p>
+  <p>　　（本报记者&nbsp;&nbsp;吴秋余）</p>
+  <p>　</p>
+  <p>　　高速公路服务区充电量创历史同期新高</p>
+  <p>　　今年“五一”假期，新能源汽车流量增长。国家电网智慧车联网平台数据显示，5月1日至5日，平台充电量超1.24亿千瓦时，同比增长超20%。其中，高速公路服务区充电量超3771万千瓦时，同比增长超29%，均创历史同期新高。</p>
+  <p>　　（本报记者&nbsp;&nbsp;丁怡婷）</p>
+  <p>　</p>
+  <p>　　出入境1089.6万人次</p>
+  <p>　　今年“五一”假期，全国口岸出入境安全高效、平稳有序。记者从国家移民管理局获悉：边检机关共保障1089.6万人次中外人员出入境，日均217.9万人次，较去年“五一”假期增长28.7%。入境外国人中，适用免签政策入境38万人次，较去年同期增长72.7%。</p>
+  <p>　　（本报记者&nbsp;&nbsp;张天培）</p>
+  <p>　　</p>
+  <p>　　文博场馆接待观众超6000万人次</p>
+  <p>　　记者从国家文物局获悉：今年“五一”假期，文博场馆人气高涨，全国博物馆接待观众6049.19万人次，较去年“五一”假期参观人数增加了879.87万，同比增长17%，创历史新高；全国55家国家考古遗址公园观众达331.32万人次，同比增长2.3%。</p>
+  <p>　　（本报记者&nbsp;&nbsp;王&nbsp;&nbsp;珏）</p>
+  <p><br></p>
+  <p>　　版式设计：汪哲平</p>
+ </body>
+</html><!--/enpcontent--><!--enpproperty <date>2025-05-07 00:00:00:0</date><author>本报记者  王  珂  江  南</author><subtitle></subtitle><introtitle><p> 商品零售稳步增长，服务消费持续升温，餐饮文旅红红火火 </p></introtitle><keyword></keyword><paperarticleid>30071649</paperarticleid><channel>1</channel><nodeid>0</nodeid><nodename></nodename><url>http://paper.people.com.cn/rmrb/pc/content/202505/07/content_30071649.html</url><urlpad>http://paper.people.com.cn/rmrb/pad/content/202505/07/content_30071649.html</urlpad><siteid>1</siteid><paperid>1921</paperid><title><p> “五一”假期消费热力十足（大数据观察） </p></title><liability></liability>/enpproperty-->
+						</div>
+					</div>
+					<div class="article">
+						<h3><p> 商品零售稳步增长，服务消费持续升温，餐饮文旅红红火火 </p></h3>
+						<h1><p> “五一”假期消费热力十足（大数据观察） </p></h1>
+						<h2></h2>
+						<p class="sec">
+							<!-- <span class="origin">人民日报</span>
+							<span class="date">(2020年02月06日 01版)</span> -->
+							本报记者  王  珂  江  南
+							<span class="date">
+								《人民日报》（<span
+									class="newstime">2025年05月07日</span>&nbsp;第&nbsp;07&nbsp;版）
+							</span>
+						</p>
+						<style>
+							.attachment {
+								margin-top: 20px;
+								text-align: center;
+							}
+							.attachment img{
+								margin:0 auto;
+							}
+							.attachment .att-content{
+								text-align:justify;
+								line-height: 140%;
+								width:90%;
+								font-size: 14px;
+								width:400px;
+								margin:10px auto 15px auto;
+							}
+						</style>
+						<div class="attachment">
+							<!--高级资源列表-->
+								<img src="../../../pic/202505/07/f16cbf40-265d-4827-823d-1099f42a0559.jpg">
+								<div class="att-content"><p>　　数据来源：商务部、国家税务总局等</p></div>
+						</div>
+						<div id="ozoom">
+							<!--enpcontent--><html>
+ <head></head>
+ <body>
+  <p>　　休闲露营、逛博看展、品尝美食……刚刚过去的“五一”假期，多样性、个性化供给更加丰富，带动消费潜力持续释放。商务部数据显示，“五一”假期全国消费市场繁荣活跃，全国重点零售和餐饮企业销售额同比增长6.3%。</p>
+  <p>　　</p>
+  <p>　<strong>　家电、汽车等商品零售增长较快</strong></p>
+  <p>　　“五一”假期，以旧换新备受欢迎。5月3日，在北京一家苏宁易购卖场，前来挑选家电的顾客络绎不绝。“叠加使用以旧换新和平台补贴，6件家电优惠了7000多元，真划算。”刚刚为新家订购了全套家电的消费者李旸说。数据显示，“五一”假期，苏宁易购全国门店客流量同比增长110%，家电以旧换新订单量增长57%，万元以上家电销量增长79%。</p>
+  <p>　　商务部数据显示，假期前4天，汽车以旧换新补贴申请量超6万份，带动新车销售额达88亿元；消费者购买12大类家电产品356万台，带动销售额达119亿元；购买手机等数码产品242万件，带动销售额达64亿元。</p>
+  <p>　　政策带动相关产品整体销售保持较快增长。“五一”假期，商务部重点监测零售企业家电、汽车、通讯器材销售额同比分别增长15.5%、13.7%、10.5%。商务部重点监测电商平台智能家居产品销售额同比增长超20%。</p>
+  <p>　　在博物馆、景区、步行街购买具有当地特色与文化底蕴的文创产品，成为不少游客的必选项。各地紧跟国潮文创消费趋势，推动文创产品定制化、精细化。美团数据显示，假期“文创”成为出游热搜关键词之一，“文创”“冰箱贴”的异地搜索热度较去年分别提升70.7%、102.5%。</p>
+  <p>　　“五一”假期，即时零售等新业态保持较快增长。5月4日，在北京温榆河公园，京东七鲜超市的配送员将新鲜的牛肉串、羊排、蔬菜、水果等食材和餐具、炉具送至露营地，让消费者节省了提前准备露营食材和户外用品的时间。京东数据显示，“五一”假期京东七鲜超市整体订单量同比增长近110%。</p>
+  <p>　　随着过境免签等政策红利不断释放，“即买即退”离境退税便利度提升，“五一”假期外国游客来华消费明显增长。“中国制造”的文创纪念品、衣服鞋子、电子产品等各式商品，成为来华游客的“扫货”目标。支付宝平台显示，义乌小商品市场、深圳华强北、广州国际轻纺城等吸引越来越多的外国人。</p>
+  <p>　　“中国制造物美价优，外国顾客都很喜欢。”浙江义乌一家商铺负责人姚宝娟说。支付宝数据显示，“五一”假期前3天，入境游客用支付宝消费金额同比增长180%；其中，240小时过境免签国家用户通过“支付宝碰一下”消费金额较4月增长近50%。</p>
+  <p>　　<strong>文化和旅游消费欣欣向荣</strong></p>
+  <p>　　“五一”假期，各地推出丰富多彩的文化旅游产品和服务，加强文旅融合和科技赋能，提升管理水平和服务品质，旅游景区度假区、休闲街区、乡村旅游、红色旅游等各类产品广受欢迎，文化和旅游消费欣欣向荣。</p>
+  <p>　　经文化和旅游部数据中心测算，假期5天，国内出游3.14亿人次，同比增长6.4%；国内游客出游总花费1802.69亿元，同比增长8.0%。</p>
+  <p>　　乘船“漫游”京杭大运河，欣赏沿途人文历史景观，感受江南水乡风情，吸引了众多游客前来体验。“五一”假期前，京杭大运河杭湖游线首次试航。节日期间，浙江发布了“泛舟浙里”13条精品游线，其中杭州“千年运河·钱塘宋韵”串联运河与钱塘江水路，绍兴“船访文豪故里”乘乌篷船游鲁迅故里、书圣故里，温州“塘河夜画”打造沉浸式夜游体验。水上观光、文化体验、体育休闲等多元业态融合，为文旅消费注入新动力。</p>
+  <p>　　行程推荐、路线规划、实时翻译、景区讲解……人工智能给旅途带来新体验。“我们一家5人想从广东广州出发到周边自驾游，希望车程3小时内、有适合5岁小朋友玩的地方，请给我推荐一些合适的目的地。”“五一”假期，广州市民李嘉使用夸克AI，快速敲定了一家人自驾游的行程。</p>
+  <p>　　“以前出游前，查攻略、定行程耗时长、费精力。现在只需拿起手机，输入关键的出游信息，很快就能得到一份详细的旅游路线，甚至还有很多实用的出游提示。”李嘉说。夸克深度搜索的数据显示，“五一”假期用户出游相关问答需求同比增长230%，文化体验、展览演出等成为出游问答的重要主题。</p>
+  <p>　　入境游迎来强劲复苏。携程数据显示，“五一”假期入境游订单量同比增长130%。微信支付外卡数据显示，假期前3天，外籍用户在境内消费笔数、金额同比都增长了近2倍。</p>
+  <p>　　非遗、汉服等文化体验热度越来越高。抖音生活服务数据显示，假期前3天，非遗相关短视频播放量近5亿，国潮妆造体验团购量同比增长502%，非遗打铁花相关团购订单量增长294%，古村古镇和博物馆的团购订单量也分别增长79%和57%。</p>
+  <p>　　<strong>餐饮住宿出行等服务消费红火</strong></p>
+  <p>　　跟着美食去旅游，成为假期出行新风尚。辽宁锦州烧烤、河北定州罩饼、重庆荣昌卤鹅、江苏昆山奥灶面、福建平潭海鲜档……这个假期，不少地方特色餐厅客流爆满。据商务大数据监测，假期全国重点监测餐饮企业销售额同比增长8.7%。“五一”假期，微信支付餐饮行业交易笔数同比增长12%。</p>
+  <p>　　以跨城消费为主的酒店住宿增长显著。美团旅行数据显示，假期以跨城消费为主的酒店住宿消费同比增长14.9%。</p>
+  <p>　　县域乡村旅游走红，带动了当地的餐饮、住宿消费。美团旅行数据显示，“五一”假期，县城高星酒店预订量同比增长超80%，县域接待外来游客的餐饮堂食、文化娱乐、生活休闲商户数量同比分别增长38.4%、38.6%和57.0%。在去哪儿平台上，县城酒店预订量同比增长30%。</p>
+  <p>　　“不少客人在假期前几天就来了，一住就是十几天。”云南大理一家民宿负责人说。这个假期，不少人选择以“慢节奏”旅游代替“打卡式”出游，利用“拼假”的方式，来一次“轻旅居”，带动相关住宿预订明显增长。途家民宿数据显示，假期前后，平台入住时间5天以上的“轻旅居”民宿订单同比增长超四成。途家民宿相关负责人认为，随着旅游需求不断升级，人们注重的不再只是居住本身，而是多元化、本土化体验，民宿领域未来将出现更多满足旅居市场的产品形态。</p>
+  <p>　　“在这里可以领略千年永乐宫壁画的风采，游览黄河湾的壮阔，还能体验非遗剪纸、露营烧烤。”入住携程度假农庄芮城黄河湾联营店的游客朱伟对这次出游很满意。“五一”假期前一周，该农庄假期期间的预订率已经超过92%，两天及两天以上连住订单占比超过三成。</p>
+  <p>　　“五一”假期，交通出行消费增长明显。滴滴出行数据显示，“五一”假期打车需求同比上涨17%，异地打车需求同比上涨29%。与去年相比，长线游需求更加突出，常驻地与目的地相距2000公里以上的异地打车需求同比上涨38%。</p>
+  <p>　　自驾游市场呈现消费升级与出行半径扩大的特点。携程租车数据显示，“五一”假期全国人均租车消费较去年增长24%，平均租车时长延长至4天，异地自驾订单占比高达85%，异地出行规模持续扩容。</p>
+  <p>　　</p>
+  <p>　　“五一”假期</p>
+  <p>　　国内3.14亿人次出游总花费超1800亿元</p>
+  <p>　　记者6日从文化和旅游部获悉：2025年“五一”假期，各地推出丰富多彩的旅游产品、文化活动和惠民举措，着力满足群众多元化和个性化需求。据文化和旅游部数据中心测算，假期5天全国国内出游3.14亿人次，同比增长6.4%；国内游客出游总花费1802.69亿元，同比增长8.0%。</p>
+  <p>　　（本报记者&nbsp;&nbsp;郑海鸥）</p>
+  <p>　　</p>
+  <p>　　消费行业销售收入同比增15.2%</p>
+  <p>　　国家税务总局6日发布的增值税发票数据显示，今年“五一”假期，全国消费相关行业销售收入同比增长15.2%，其中消费品“以旧换新”政策带动家电及通讯器材类商品消费需求旺盛，家居用品及珠宝首饰消费增幅较高，个性化旅游服务消费受到青睐。</p>
+  <p>　　（本报记者&nbsp;&nbsp;王&nbsp;&nbsp;观）&nbsp;&nbsp;</p>
+  <p>　　</p>
+  <p>　　银联网联处理支付交易超234亿笔</p>
+  <p>　　记者6日从中国人民银行获悉：今年“五一”假期，银联、网联共处理支付交易234.39亿笔、金额7.64万亿元，较去年“五一”假期分别增长20.49%、3.21%。其中，处理境外来华人员支付交易笔数、金额较去年同期分别增长244.86%、128.04%。</p>
+  <p>　　（本报记者&nbsp;&nbsp;吴秋余）</p>
+  <p>　</p>
+  <p>　　高速公路服务区充电量创历史同期新高</p>
+  <p>　　今年“五一”假期，新能源汽车流量增长。国家电网智慧车联网平台数据显示，5月1日至5日，平台充电量超1.24亿千瓦时，同比增长超20%。其中，高速公路服务区充电量超3771万千瓦时，同比增长超29%，均创历史同期新高。</p>
+  <p>　　（本报记者&nbsp;&nbsp;丁怡婷）</p>
+  <p>　</p>
+  <p>　　出入境1089.6万人次</p>
+  <p>　　今年“五一”假期，全国口岸出入境安全高效、平稳有序。记者从国家移民管理局获悉：边检机关共保障1089.6万人次中外人员出入境，日均217.9万人次，较去年“五一”假期增长28.7%。入境外国人中，适用免签政策入境38万人次，较去年同期增长72.7%。</p>
+  <p>　　（本报记者&nbsp;&nbsp;张天培）</p>
+  <p>　　</p>
+  <p>　　文博场馆接待观众超6000万人次</p>
+  <p>　　记者从国家文物局获悉：今年“五一”假期，文博场馆人气高涨，全国博物馆接待观众6049.19万人次，较去年“五一”假期参观人数增加了879.87万，同比增长17%，创历史新高；全国55家国家考古遗址公园观众达331.32万人次，同比增长2.3%。</p>
+  <p>　　（本报记者&nbsp;&nbsp;王&nbsp;&nbsp;珏）</p>
+  <p><br></p>
+  <p>　　版式设计：汪哲平</p>
+ </body>
+</html><!--/enpcontent--><!--enpproperty <date>2025-05-07 00:00:00:0</date><author>本报记者  王  珂  江  南</author><subtitle></subtitle><introtitle><p> 商品零售稳步增长，服务消费持续升温，餐饮文旅红红火火 </p></introtitle><keyword></keyword><paperarticleid>30071649</paperarticleid><channel>1</channel><nodeid>0</nodeid><nodename></nodename><url>http://paper.people.com.cn/rmrb/pc/content/202505/07/content_30071649.html</url><urlpad>http://paper.people.com.cn/rmrb/pad/content/202505/07/content_30071649.html</urlpad><siteid>1</siteid><paperid>1921</paperid><title><p> “五一”假期消费热力十足（大数据观察） </p></title><liability></liability>/enpproperty-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom">
+			<div class=" clearfix w1000">
+				<div class="copyright">
+					人 民 网 版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用<br>
+					Copyright &copy; 1997-2025 by www.people.com.cn all rights reserved
+				</div>
+			</div>
+		</div>
+		<div class="go-top" id="go-top">
+			<img src="../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/go_top.png" alt="">
+		</div>
+		<script language=JavaScript>
+			document.write("<div id=detail style=position:absolute;width:300px;></div>");
+		</script>
+		<script language=Javascript
+			src="../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/disname2.js"></script>
+		<script language=Javascript
+			src="../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/new.js"></script>
+		<script>
+
+updateMetaRmrb(location.href);
+			function updateMetaRmrb(webLastUrl) {
+				// console.log(webLastUrl)
+				var x = webLastUrl.indexOf('content_');
+				var y = webLastUrl.indexOf('.html');
+				
+				if (x >= 0) {
+					var publishdate = webLastUrl.substring(x-10, x);
+					publishdate = publishdate.substring(0, 4) + '-' + publishdate.substring(4, 6) + '-' + publishdate.substring(7, 9);
+					var contentid = 'rmrbdzb_' + webLastUrl.substring(x + 8, y);
+					showMetaRmrb(publishdate, contentid);
+				}
+			}
+			function showMetaRmrb(publishdate, contentid) {
+				var metas = document.getElementsByTagName('meta');
+				for (var i = 0; i < metas.length; i++) {
+					if ('contentid' == metas[i].name) {
+						metas[i].content = contentid;
+					} else if ('publishdate' == metas[i].name) {
+						metas[i].content = publishdate;
+					}
+				}
+			}
+
+
+			; (function () {
+				var _global;
+				let duration = 500;//时间参数
+				var plugin = {
+					tipNav: function (tipmain, tipsub) {
+						tipmain.addEventListener('mouseover', function () {
+							tipsub.style.display = 'block'
+						}, false);
+						tipmain.addEventListener('mouseout', function () {
+							tipsub.style.display = 'none'
+						}, false);
+					},
+					replayTop: function (tipmain) {
+						tipmain.addEventListener('click', function () {
+							let topSzie = document.documentElement.scrollTop;
+							let s = topSzie / 600 * 25;  //路程/时间=s *25每隔25ms秒 动的路程
+							let st = setInterval(function () {
+								topSzie -= s;
+								if (topSzie <= 0) {
+									topSzie = 0; //当l<=0时，设置l=0
+									clearInterval(st);
+								}
+								document.documentElement.scrollTop = topSzie;
+							}, 25)
+						}, false);
+
+					}
+				}
+				//赋值全局
+				_global = (function () { return this || (0, eval)('this'); }());
+				!('plugin' in _global) && (_global.plugin = plugin);
+
+			})(window)
+
+
+			var ribaoButton = document.getElementById('ribao');
+			var ribaoBox = document.getElementById('ribaobox');
+			var zhoubaoButton = document.getElementById('zhoubao');
+			var zhoubaoBox = document.getElementById('zhoubaobox');
+			var zazhiButton = document.getElementById('zazhi');
+			var zaizhiBox = document.getElementById('zazhibox');
+			var goTop = document.getElementById('go-top');
+
+			plugin.tipNav(ribaoButton, ribaoBox);
+			plugin.tipNav(zhoubaoButton, zhoubaoBox);
+			plugin.tipNav(zazhiButton, zaizhiBox);
+			plugin.replayTop(goTop);
+
+
+		</script>
+
+<script language=Javascript
+			src="../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/webdig_test.js"></script>
+		<input type="hidden" id="paperID" value="1,921">
+		<input type="hidden" id="siteID" value="1">
+	</body>
+
+
+</html>

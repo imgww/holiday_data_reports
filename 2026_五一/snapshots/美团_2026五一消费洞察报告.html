@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0"/>
+<title>美团发布“五一”消费洞察：北京、成都、上海、重庆、广州位列热门目的地Top5 | 极目新闻</title>
+<meta name="title" content="美团发布“五一”消费洞察：北京、成都、上海、重庆、广州位列热门目的地Top5">
+<meta name="author" content="极目新闻">
+<meta name="keywords" content="极目新闻,极目,楚天,都市报,湖北,武汉,武汉新闻,荆楚,报料,资讯,大武汉,极目云,长江,财经,襄阳,宜昌,黄石,恩施,十堰,荆门,鄂州">
+<meta name="description" content="美团报告显示，“五一”期间，必住榜奢华体验类酒店订单量环比节前增长117%；酒店连订2晚以上订单占比达31%，同比增长7个百分点，“多住一晚”成为越来越多人的假期选择。 美团报告显示，“五一”期间，新疆小团游订单总额同比增长20%，其中“家庭独享团”类日均消费总额同比增长555%，2500-3000元、3500-4000元价格带的小团游订单消费规模同比增速均超900%，长线度假需求带动中高端价格带集中爆发。">
+<meta name="renderer" content="webkit">
+<meta name="referrer" content="no-referrer" />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0"> <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="../libs/swiper3.4.2/css/swiper.min.css">
+<style type="text/css">[v-cloak]{display:none !important;}</style>
+</head>
+<body>
+<div class="main-body" id="jmnews" v-cloak>
+<div class="header-top">
+<a href="http://www.gov.cn/zhuanti/zggcddescqgdbdh/index.htm" target="_blank"><img src="http://www.ctdsb.net/images/header.jpg?t=1015" /></a>
+</div><div class="header">
+<div id="header" :class="{autoH:showAllChannel}">
+<div class="header-w">
+<div class="head-logo">
+<a href="/index.html" title="极目新闻"><img :src="hostPath+'/images/logo.png'"></a>
+</div>
+<div class="head-nav">
+<div class="clearfix">
+<a href="/index.html" class="nav-item" title="推荐">
+<span>推荐</span>
+</a><a href="/c1715.html" class="nav-item" title="观点">
+<span>观点</span>
+</a><a href="/c1747.html" class="nav-item" title="时政">
+<span>时政</span>
+</a><a href="/c1676.html" class="nav-item" title="湖北">
+<span>湖北</span>
+</a><a href="/c1734.html" class="nav-item" title="武汉">
+<span>武汉</span>
+</a><a href="/c1716.html" class="nav-item" title="世相">
+<span>世相</span>
+</a><a href="/c1679.html" class="nav-item" title="环球">
+<span>环球</span>
+</a><a href="/c1495.html" class="nav-item" title="专题">
+<span>专题</span>
+</a><a href="/c1746.html" class="nav-item" title="极客圈">
+<span>极客圈</span>
+</a><a href="/c1666.html" class="nav-item on" title="经济">
+<span>经济</span>
+</a><a href="/c1740.html" class="nav-item" title="城建">
+<span>城建</span>
+</a><a href="/c1673.html" class="nav-item" title="科教">
+<span>科教</span>
+</a><a href="/c1659.html" class="nav-item" title="健康">
+<span>健康</span>
+</a><a href="/c1722.html" class="nav-item" title="悠游">
+<span>悠游</span>
+</a><a href="/c1739.html" class="nav-item" title="相亲">
+<span>相亲</span>
+</a><a href="/c1669.html" class="nav-item" title="汽车">
+<span>汽车</span>
+</a><a href="/c1737.html" class="nav-item" title="房产">
+<span>房产</span>
+</a><a href="/c1738.html" class="nav-item" title="消费">
+<span>消费</span>
+</a><a href="/c1658.html" class="nav-item" title="创意">
+<span>创意</span>
+</a><a href="/c1664.html" class="nav-item" title="文化">
+<span>文化</span>
+</a><a href="/c1720.html" class="nav-item" title="体育">
+<span>体育</span>
+</a><a href="/c1742.html" class="nav-item" title="娱乐">
+<span>娱乐</span>
+</a><a href="/c1741.html" class="nav-item" title="影像">
+<span>影像</span>
+</a><a href="/c1723.html" class="nav-item" title="帅作文">
+<span>帅作文</span>
+</a><a href="/c1743.html" class="nav-item" title="International">
+<span>International</span>
+</a><a href="/c1755.html" class="nav-item" title="职教院">
+<span>职教院</span>
+</a><a href="/c1756.html" class="nav-item" title="酒道">
+<span>酒道</span>
+</a> </div>
+<div class="head-more">
+<span @click="showAllChannel=!showAllChannel;"><img :src="hostPath+'/images/nav_more.png'"></span>
+</div>
+</div>
+<div class="head-info">
+<div class="search-box">
+<span class="login-btn" @click="showLoginDialog(true)" v-if="!logged">登录</span>
+<span class="separator" v-if="!logged">|</span>
+<div class="search-form">
+<span class="search-btn" @click="onSearchHandler"><img :src="hostPath+'/images/search.png'"></span>
+<input type="text" class="search-key" v-model="searcKey" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="app-header">
+<div class="logo"></div>
+<div class="logo_title">极目新闻客户端</div>
+<span class="menu" @click="onAppChannelShow"></span>
+</div>
+<div :class="{'app-channel-box':true,'app-channel-show':showAppChannel}">
+<ul class="app-channel-list">
+<li class="app-channel-item">
+<a class="item" href="/index.html" title="推荐">
+<span>推荐</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1715.html" title="观点">
+<span>观点</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1747.html" title="时政">
+<span>时政</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1676.html" title="湖北">
+<span>湖北</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1734.html" title="武汉">
+<span>武汉</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1716.html" title="世相">
+<span>世相</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1679.html" title="环球">
+<span>环球</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1495.html" title="专题">
+<span>专题</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1746.html" title="极客圈">
+<span>极客圈</span>
+</a>
+</li><li class="app-channel-item on">
+<a class="item" href="/c1666.html" title="经济">
+<span>经济</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1740.html" title="城建">
+<span>城建</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1673.html" title="科教">
+<span>科教</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1659.html" title="健康">
+<span>健康</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1722.html" title="悠游">
+<span>悠游</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1739.html" title="相亲">
+<span>相亲</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1669.html" title="汽车">
+<span>汽车</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1737.html" title="房产">
+<span>房产</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1738.html" title="消费">
+<span>消费</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1658.html" title="创意">
+<span>创意</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1664.html" title="文化">
+<span>文化</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1720.html" title="体育">
+<span>体育</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1742.html" title="娱乐">
+<span>娱乐</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1741.html" title="影像">
+<span>影像</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1723.html" title="帅作文">
+<span>帅作文</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1743.html" title="International">
+<span>International</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1755.html" title="职教院">
+<span>职教院</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1756.html" title="酒道">
+<span>酒道</span>
+</a>
+</li> </ul>
+</div>
+</div> <div class="main">
+<div class="clearfix">
+<div class="main-left">
+<div class="news-detail-container">
+<h1 class="news-title">美团发布“五一”消费洞察：北京、成都、上海、重庆、广州位列热门目的地Top5</h1>
+<div class="junior clearfix">
+<span class="source">极目新闻</span>
+<span class="time">2026-05-06 16:10:03</span>
+<span class="readnum" v-if="!!detailInfo && detailInfo.isShowPlayCount">阅读量：<span v-text="detailInfo.playCount"></span></span>
+</div>
+<div class="content"><p>极目新闻通讯员 隽蒙</p><p>景区门票售罄、热门民宿一房难求、老字号餐厅门口排起长龙……这个五一假期，游客出行热情持续释放。5月5日，美团发布《2026五一消费洞察报告》（以下简称：美团报告）。报告显示，受春假叠加拼假效应驱动，今年五一期间，出行规模显著增长，300公里以上中长线游出行订单占比达46%，Top10热门目的地城市为北京、成都、上海、重庆、广州、杭州、西安、深圳、武汉和南京。</p><p><img src="https://ctdsb.clouddiffuse.xyz/102fc16a04a24d1097cf81a49d78c325.jpg" data-originalurl="/files/imagepath/2026/05/06/cb202605061002453676cd4a77.png"></p><p>与此同时，AI工具也成为不少游客规划行程的重要帮手。美团报告显示，假期期间，美团AI管家“小团”查询量环比春节增长89%，平均消息完读率达61%，户外、文化、体验类目的地是用户问询最集中的方向。</p><p>从奔赴边疆小城到走进赛事现场，从挑战极限体验到“平移式旅行”，这个“五一”，越来越多人不再满足于常规打卡，而是为兴趣、为体验而出发。</p><p><img src="https://ctdsb.clouddiffuse.xyz/f7b80a087dac48b5a9a89b2f73f86c22.jpg" data-originalurl="/files/imagepath/2026/05/06/cb20260506100245128768b019.jpg"></p><p><strong>小城奔县游持续火热</strong></p><p><strong>义乌、开封等目的地领跑</strong></p><p>美团报告显示，今年“五一”，热门大城市不再是唯一答案，越来越多游客将目光投向了那些“人少、原生态、有烟火气”的小城。美团数据显示，“五一”期间，民宿预订热门城市Top10为开封、北海、大同、大理、延边、日照、景德镇、锦州、西双版纳、丽江。</p><p>从城市层级看，五线城市目的地人次增速最快，超四分之一的用户用美团AI管家“小团”寻找小众目的地。景德镇、宜宾、大同等小城在假期迎来客流高峰。美团数据显示，景德镇酒店订单量同比增长36%，宜宾酒店订单量增长27%，大同酒店订单量增长26%。走进小城的游客，告别了“特种兵式打卡”，选择沉浸体验当地文化与地道美食。据美团数据，“景德镇美食”搜索量同比上涨19%，“宜宾美食”搜索量同比上涨23%。</p><p>新疆，是今年“五一”假期亮眼的黑马目的地之一。凭借壮阔的自然风光与浓郁的地域特色，新疆整体文旅预订量同比增长12%，“住宿+”套餐跨品类消费订单同比增长55%。游客不再局限于乌鲁木齐，伊犁、巴音郭楞等地成为主要目的地，非省会城市住宿订单占比高达76%，出行模式从“飞进飞出”转向沿途分散、深度停留。</p><p>县域目的地同样迎来高光时刻。到义乌国际商贸城“买买买”，去温岭感受渔家文化，在曲阜拜谒孔庙，“宝藏县城”正成为年轻人的出游新坐标。美团数据显示，今年“五一”Top10热门区县为浙江义乌、江苏张家港、浙江永嘉、浙江海宁、新疆伊宁、江苏常熟、山东曲阜、浙江温岭、新疆奎屯和江苏江阴。其中，“义乌酒店”搜索热度同比上涨22%，“海宁酒店”同比上涨17%。</p><p><img src="https://ctdsb.clouddiffuse.xyz/9e5411706d5740ebb616de87345aba29.jpg" data-originalurl="/files/imagepath/2026/05/06/cb2026050610024564d1ce7611.png"></p><p>今年，大众点评“必玩榜”首次覆盖逾百座小城，“五一”假期必玩榜整体流量环比节前增幅超130%，小城也是增长的主要来源。在“必吃榜”2026年新开的百座小城中，异地用户占比高达70%，相比节前显著提升。</p><p><strong>赛事、演出、美食联动</strong></p><p><strong>“文旅体商”融合激活消费</strong></p><p>今年“五一”，以中超、苏超为代表的体育赛事以及音乐节、演唱会等活动，带动了一波以兴趣为核心的出行消费热潮。“五一”假期期间，可容纳8万人的上海体育场迎来人气火爆的中超联赛，美团数据显示，比赛期间，“上海体育场附近酒店”的搜索热度同比增长53%。</p><p>赛事带动的不只是住宿，也带动了本地餐饮与周边景区消费。“五一”期间，“苏超”赛事带动淮扬菜订单量同比上涨40%；“南京鸭血粉丝”搜索量同比增长30%，“镇江三怪”搜索量同比增长203%。中山陵、明孝陵、瘦西湖、拙政园等经典景区门票热度同步攀升。</p><p>音乐节与演唱会则成为游客奔赴一座城的另一大理由。“超级银河左岸音乐节”带动泸州文旅酒店民宿预订量同比上涨40%，“太湖湾音乐节”带动常州酒店民宿预订量同比增长8%。美团数据显示，“五一”期间，音乐节相关团购订单增长75%，“应援妆”搜索量同比增长375%，“音乐节充气沙发”搜索量同比增长70%。</p><p>一场赛事、一场演出，正在带动城市吃住行游购娱全链条消费。</p><p><strong>年轻人追求深度体验</strong></p><p><strong>慢游与探索并行</strong></p><p>这届年轻人出游，追求吃住行游全方位的综合体验，不再满足于走马观花，“住得好一点、久一点”成为不少游客的共同选择。美团报告显示，“五一”期间，必住榜奢华体验类酒店订单量环比节前增长117%；酒店连订2晚以上订单占比达31%，同比增长7个百分点，“多住一晚”成为越来越多人的假期选择。</p><p>精品小团游同样走热。美团报告显示，“五一”期间，新疆小团游订单总额同比增长20%，其中“家庭独享团”类日均消费总额同比增长555%，2500-3000元、3500-4000元价格带的小团游订单消费规模同比增速均超900%，长线度假需求带动中高端价格带集中爆发。</p><p>另一批年轻人选择用假期“刷新人生成就”，他们的出行和消费动机，正在从“欣赏美景”转向“突破自我”。大众点评“必玩榜”入围门店中，拳击馆、滑翔伞体验馆、射箭馆等自我挑战类项目订单量环比节前增长均超150%；徒步鞋订单量环比节前增长105%，高海拔目的地西藏酒店预订量同比上涨19%。</p><p>还有一批年轻人，选择为“更有意义的事”出发。美团数据显示，“请到民勤种棵树”活动带动甘肃民勤县生活服务消费订单同比增长79%，假期民勤县所在的武威市文旅预订量同比增长21%。为一片沙漠种一棵树，也可以成为这届年轻人出发的理由。</p><p><strong>“平移式旅行”兴起</strong></p><p><strong>像当地人一样生活几天</strong></p><p>今年“五一”，“平移式旅行”成为年轻人的出游新方式。越来越多人不再为了旅行而改变生活节奏，而是将日常习惯“平移”到目的地，轻装上阵，换个城市像当地人一样生活几天。</p><p>美团数据显示，“五一”期间，“当地特色美食”搜索量同比上涨86%，“当地菜”搜索量同比上涨56%，大众点评“必吃榜”异地用户流量环比节前增长近250%，全国热门商圈为广州长隆商圈、深圳龙华商圈、佛山大良商圈、上海五角场商圈、北京王府井商圈。在三亚，配送至酒店的美容护肤类订单同比增长20%，游客选择不在出行前做过多准备，而是到了目的地再即时下单、灵活安排。</p><p>旅途中的休闲放松和身体管理也没有缺席。假期期间，美团头疗、按摩订单量环比节前增长15%，皮肤清洁订单量环比节前增长10%。此外，美团数据显示，“五一”期间，来上海、深圳、杭州、广州等地旅行的游客，也将健身类消费延伸到了旅途中。</p><p>为一场音乐节奔赴一座城，为一次雨林徒步规划一段旅程，为一顿地方风味延长停留时间，今年“五一”假期，年轻人的旅行选择正在发生新变化：不再只是奔向热门景区、完成标准化打卡，而是更加关注目的地的生活方式、特色服务和真实体验。与此同时，在线预订、AI助手等科技工具的普及，也让旅行从“临时安排”走向“高效规划”。</p><p>美团研究院相关负责人表示，随着目的地供给持续扩容，平台正通过连接餐饮、住宿、休闲玩乐等多元化的本地生活场景，帮助游客更便捷地发现城市特色，为假日消费注入全新活力。</p></div>
+<div class="editor">审核人:周丹&nbsp;</div>
+<praise-component :user="userInfo" :device="deviceId" :params="detailParams" :id="detailInfo.id" v-if="!!detailInfo && detailInfo.allowLikes != false && detailInfo.allowLikes != 0"></praise-component>
+<div class="line"></div>
+<more-news-component :source="!!detailInfo && detailInfo.source"></more-news-component>
+<div class="line"></div>
+<div class="tag-list" v-if="tagList.length > 0">
+<ul class="clearfix">
+<li v-for="item in tagList" :key="item.id" v-text="'# ' + item"></li>
+</ul>
+</div>
+<div class="related-news">
+<div class="related-news-title">
+<div class="title-box">
+<span>相关新闻</span>
+</div>
+</div>
+<div class="related-news-list" v-if="!!detailInfo">
+<ul class="clearfix">
+<li class="related-news-item" v-for="item in relatedList" :key="item.id">
+<div class="news-img">
+<a :href="onRalatedClick(item)" target="_blank" :title="item.title">
+<img :src="item.imgList[0].bigUrl" alt="" v-if="!!item.imgList && item.imgList.length > 0" />
+<img :src="item.imgUrl" alt="" v-else-if="!!item.imgUrl && item.imgUrl.length > 0" />
+<img :src="item.pictureUrls[0]" alt="" v-else-if="!!item.pictureUrls && item.pictureUrls.length > 0" />
+</a>
+</div>
+<div class="news-info">
+<h2 class="title">
+<a :href="onRalatedClick(item)" target="_blank" :title="item.title" v-text="item.title"></a>
+</h2>
+<div class="others">
+<span class="source" v-text="item.source" v-if="item.source && item.source.length > 0"></span>
+<span class="source">极目新闻</span>
+<span class="time" v-text="item.publishTime"></span>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div> <comment-component :user="userInfo" :params="commentParams" v-if="!!detailInfo"></comment-component>
+</div>
+</div>
+<righter-component></righter-component>
+</div>
+</div>
+<footer-component></footer-component>
+<login-component :show="showLogin" @showlogindialog="showLoginDialog" @loggedin="loggedIn"></login-component>
+<div class="bg-mask" id="mask"></div>
+<div class="app-bg-mask" id="appMask"></div>
+<loading-component></loading-component>
+</div>
+<input type="hidden" id="contentId" value="2734745">
+<input type="hidden" id="fromFlag" value="0">
+<input type="hidden" id="cId" value="0">
+<input type="hidden" id="contentType" value="5">
+<input type="hidden" id="columnId" value="1666">
+<script>var _hmt =_hmt ||[];(function() {var hm =document.createElement("script");hm.src ="https://hm.baidu.com/hm.js?d1ebe5509bf48809ff2604cf79a869dd";var s =document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script type="text/javascript">document.write(unescape("%3Cspan style='display: none !important' id='cnzz_stat_icon_1280689875'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1280689875%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript" src="../libs/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../libs/vue.min.js"></script>
+<script type="text/javascript" src="../libs/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../libs/swiper3.4.2/js/swiper.min.js"></script>
+<script type="text/javascript" src="../libs/qrcode/jquery.qrcode.min.js"></script>
+<script type="text/javascript" src="../libs/md5.min.js"></script>
+<script type="text/javascript">var script =document.createElement("script" );script.type ="text/javascript";script.onload =function() {$_BASE.appendCSS('../css/common.css');$_BASE.appendCSS('../css/text.css');$_BASE.appendScript('../js/template.js',function(){$_BASE.appendScript('../js/text.js',function(){});});}
+$("body").append(script );script.src ='../js/common.js?t=' + new Date().getTime();</script>
+</body>
+</html>

@@ -1,0 +1,1063 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="天津双节假期揽客2219.59万人次 游客花费215.75亿元" />
+    <meta name="description" content="天津双节假期揽客2219.59万人次 游客花费215.75亿元" />
+    <base target="_blank" />
+    <title>天津双节假期揽客2219.59万人次 游客花费215.75亿元-天津新闻—中国新闻网</title>
+<!--publish at 2025-10-10 09:33:03-->
+	<link rel="stylesheet" href="//image.cns.com.cn/xinjiang_editor/606bf756/20210106/base.css" type="text/css" />
+	<link rel="stylesheet" href="//image.cns.com.cn/xinjiang_editor/fe85a501/20250421/common.css" type="text/css" />
+	<link rel="stylesheet" href="//image.cns.com.cn/default/492d4a9c/20210208/tianjin-content.css" type="text/css" />
+	
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1c1c98dd97e19849e25d926d8d9b79fc";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+	
+	
+<style>
+ 
+	.yqlj_r{width:930px;} 
+	.ptdiv{width:181px; height:155px;margin:0 0 10px 10px;float:left;overflow:hidden;position:relative;}
+ .ptdiv .video {
+            position: absolute;
+            left:73px;
+            top: 65px;
+            display: block;
+            width: 35px;
+            height: 35px;
+            background: url(//www.tj.chinanews.com/images/video.png) no-repeat center top;
+            z-index: 2;
+        }
+	.ptdiv video,.ptdiv img{width:181px;height:135px;border-radius:5px;}
+	.tdiv {text-align:center;white-space:nowrap;overflow:hidden;}
+	.tdiv a{color:#666;};
+</style>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?359d653ed26cfbe876e0e35aba3d08fd";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    <script src="https://www.chinanews.com/js/jquery1.4.js"></script>
+	<script src="//image.cns.com.cn/xinjiang_editor/606bf756/20201212/jcarousellite.js"></script>
+  
+
+
+    <script src="//www.chinanews.com/test/fabu/2019-02-01/jweixin-1.4.0.js"></script>
+
+    <script type="text/javascript">
+
+        $(function(){
+            var useragent = navigator.userAgent;
+            if(/mobile/ig.test(useragent)){
+                var share_title = '';
+                var share_desc = $(".contentzw").text().replace(/<[^>]+>|&[^>]+;|\n/g,"").trim().substring(0,30);
+                var share_url = window.location.href.split('#')[0];
+                var imgObj = $(".img_wrapper").find('img');//正文里已包含图片1
+                var share_img = "";
+                var localPathArr = share_url.split("/");
+                localPathArr.pop();
+
+                if(imgObj.length>0){
+                    var imgUrl = imgObj.eq(0).attr("src");
+                    var isAbsolutePath = /https|http/g.test(imgUrl);
+                    if(isAbsolutePath){
+                        share_img = imgUrl;
+                    }else{
+                        if(imgUrl.indexOf("/")>=0){
+                            share_img = window.location.origin + imgUrl;
+                        }else{
+                            share_img = localPathArr.join("/") +"/"+ imgUrl;
+                        }
+                    }
+                }
+                /*var did = share_url.split("/").pop().split(".")[0];
+                 if(did=='313335' || did=='313309' || did=='313341'){
+                 alert(imgObj.eq(0).attr("src"));
+                 }*/
+                $.ajax({
+                    url: '//lc.chinanews.com:8090/jssdksign?url=' + encodeURIComponent(location.href.split('#')[0]),
+                    type: 'get',
+                    dataType: 'jsonp',
+                    jsonp:'callback',
+                    success:function(data){
+                        wx.config({
+                            debug: false,
+                            appId: data["appid"],
+                            timestamp:  data["timestamp"],
+                            nonceStr: data["nonceStr"],
+                            signature: data["signature"],
+                            jsApiList: [
+                                'onMenuShareTimeline',
+                                'onMenuShareAppMessage',
+                                'onMenuShareQQ',
+                                'onMenuShareWeibo',
+                                'onMenuShareQZone'
+                            ]
+                        });
+                        wx.ready(function(){
+                            wx.checkJsApi({
+                                jsApiList:['getNetworkType'],
+                                success:function(res){
+                                }
+                            });
+                            //1.分享到朋友圈
+                            wx.onMenuShareTimeline({
+                                title: share_title, // 分享标题
+                                link: share_url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                                imgUrl: share_img // 分享图标
+                            });
+                            //2.分享给朋友
+                            wx.onMenuShareAppMessage({
+                                title: share_title, // 分享标题
+                                desc: share_desc, // 分享描述
+                                link: share_url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                                imgUrl: share_img, // 分享图标
+                                type: 'link', // 分享类型,music、video或link，不填默认为link
+                                dataUrl: ''// 如果type是music或video，则要提供数据链接，默认为空
+                            });
+                            //3.分享到qq
+                            wx.onMenuShareQQ({
+                                title: share_title, // 分享标题
+                                desc: share_desc, // 分享描述
+                                link: share_url, // 分享链接
+                                imgUrl: share_img// 分享图标
+                            });
+                            //4.分享到腾讯微博
+                            wx.onMenuShareWeibo({
+                                title: share_title, // 分享标题
+                                desc: share_desc, // 分享描述
+                                link: share_url, // 分享链接
+                                imgUrl: share_img// 分享图标
+                            });
+                            //5.分享到qq空间
+                            wx.onMenuShareQZone({
+                                title: share_title, // 分享标题
+                                desc: share_desc, // 分享描述,
+                                link: share_url, // 分享链接
+                                imgUrl: share_img// 分享图标
+                            });
+                        });
+                        wx.error(function(res){
+
+                        });
+                    }
+                })
+            }
+        })
+    </script>
+
+    <script>
+        var phoneWidth = parseInt(window.screen.width);
+        var designWidth = 540;
+        var phoneScale = phoneWidth / designWidth;
+        var ua = navigator.userAgent;
+        if (/Android (d+.d+)/.test(ua)) {
+            var version = parseFloat(RegExp.$1);
+            if (version > 2.3) {
+                document.write('<meta name="viewport" content="width=' + designWidth +', minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+            } else {
+                document.write('<meta name="viewport" content="width=' + designWidth +', target-densitydpi=device-dpi">');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=' + designWidth +', user-scalable=no, target-densitydpi=device-dpi">');
+        }
+    </script>
+  
+
+	
+</head>
+
+<body>
+
+<!--头部广告位-->
+<div class="section iswap">
+         <div class="ad1 m_b15" id="ad_home_top" style="overflow:hidden;">
+                         <!--首页顶部通栏广告位    列:0      width="1200px"   -->
+			<ul>
+			</ul>
+        </div>
+</div>
+
+<!--top-->
+<div class="section iswap">
+    <div class="logo left">
+	    <a href="https://www.tj.chinanews.com"><img src="https://www.tj.chinanews.com/images/logo.jpg"></a>
+    </div>
+	
+	<div class="listad" id="ad_zw_logo"  style="overflow:hidden;width:900px;height:100px;">
+	<!--	  id="tj_adhtml_get" port=370 _pos="02正文页logo右侧广告位" _live=true   width="900px" height="100px" order=0 }}-->
+		 			<ul> 
+<li><a href='https://www.chinanews.com.cn/kong/z/zhongxinrenwu/index.shtml'><img src='http://image.cns.com.cn/xinjiang_editor/20250522/hIg2-hersmuc8113703.jpg' alt='中新人物' title='中新人物' width="900px" height="100px"></a></li> 
+<li><a href='http://www.tj.chinanews.com.cn/'><img src='http://image.cns.com.cn/xinjiang_editor/20231122/jisR-hcvcsuf3226041.jpg' alt='美丽天津图片展——河北区' title='美丽天津图片展——河北区' width="900px" height="100px"></a></li> 
+<li><a href='http://www.tj.chinanews.com.cn/'><img src='http://image.cns.com.cn/xinjiang_editor/20231122/peP8-hcvcsuf3226047.jpg' alt='美丽天津图片展——南开区' title='美丽天津图片展——南开区' width="900px" height="100px"></a></li> 
+<li><a href='http://www.tj.chinanews.com.cn/'><img src='http://image.cns.com.cn/xinjiang_editor/20231122/dnLW-hcvcsuf3226049.jpg' alt='美丽天津图片展——河西区' title='美丽天津图片展——河西区' width="900px" height="100px"></a></li> 
+<li><a href='http://www.tj.chinanews.com.cn/'><img src='http://image.cns.com.cn/xinjiang_editor/20231122/uw6N-hcvcsuf3226053.jpg' alt='美丽天津图片展——和平区' title='美丽天津图片展——和平区' width="900px" height="100px"></a></li> 
+			</ul>	</div>
+
+	<div class="clear"></div>
+	
+    <div class="branch_text left">
+		<div style="float:left;width:350px;">
+			<span id="dateymdw" style="padding-right:3px;">
+					<script type="text/javascript">
+                	     var date = new Date();
+                  		  document.write("今天是：" + date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日" + " 星期" + "日一二三四五六".charAt(date.getDay()));
+                   </script>
+			</span> 
+		</div>
+	</div>
+	
+    <div class="weather left">
+         <iframe allowtransparency="true" frameborder="0" width="255" height="64" scrolling="no" src="https://tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=2&d=1&bd=0&k=&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=255&h=64&align=left"> 
+	     </iframe>
+    </div>
+    <div class="connact right" id="tele_mail">新闻热线：022-23122118　　投稿邮箱：zxstj2020@126.com</div>
+</div>
+ 
+<!--nav-->
+<div class="nav">
+    <div class="section">
+        <div class="nav1 left" id="nav1">
+            <ul>
+			<li><a href="/" class="sel">首页</a></li>
+			<li><a href="/yw/index.shtml">要闻</a></li>
+			<li><a href="/pczt/index.shtml">专题</a></li>
+			<li><a href="/jmtz/index.shtml">统战</a></li>
+			<li><a href="/zxjzktj/index.shtml">中新观津</a></li>
+			<li><a href="/jjj/index.shtml">京津冀</a></li>
+			<li><a href="/bhxq/index.shtml">滨城</a></li>
+			<li><a href="/gqsl/index.shtml">各区</a></li>
+			<li><a href="/cj/index.shtml">财经</a></li>
+			<li><a href="/fz/index.shtml">法治</a></li>
+			<li><a href="/wl/index.shtml">文旅</a></li>
+			<li><a href="/kj/index.shtml">科教</a></li>
+			<li><a href="/ms/index.shtml">民生</a></li>
+			<li><a href="/jk/index.shtml">健康</a></li>
+			<li><a href="/sp/index.shtml">视频</a></li>
+			<li><a href="//www.chinanews.com/live.shtml">直播</a></li>
+			<li><a href="/yxtj/index.shtml">图说天津</a></li>
+	       </ul>
+        </div>
+    </div>
+</div>
+
+<!--文字列表-->
+<div class="top">
+    <div class="top_nav">
+		<a href="/">天津分社</a> • <a>正文</a>
+    </div>
+</div>
+
+<div class="connect m_center" id="par">
+    <div class="con_l">
+		<div class="daohang">您当前的位置   >  <a href="//www.tj.chinanews.com">首页</a>   >  <a href="http://www.tj.chinanews.com/wl">文旅</a></div>
+        <div class="underline"></div>
+
+        <div class="content">
+            <!-- 详情页标题开始 -->
+            <div class="title"><h3>天津双节假期揽客2219.59万人次 游客花费215.75亿元</h3></div>
+            <!-- 详情页标题结束 -->
+            <!-- 详情页编辑时间开始 -->
+			<div class="pubtime">时间：2025-10-09 15:30:25   <span id="tele">新闻热线：022-23122118</span>   来源：中国新闻网</div>
+            <!-- 详情页编辑时间结束 -->
+            <!-- 详情页内容开始 -->
+            <div class="contentzw">
+                <div>
+                    <!--新视频播放器1显示start-->
+
+                    
+                                        <!--新视频播放器1显示end-->
+                </div>
+                <!--图片排列开始-->
+
+                                <!--图片排列结束-->
+
+                <!--正文分页开始-->
+                <p>　　中新网天津10月9日电 （记者 周亚强）今年国庆中秋假期，天津文旅市场表现亮眼。记者从天津市文化和旅游局获悉，假日期间全市共接待游客2219.59万人次，较2024年同期可比增长5.7%；游客花费215.75亿元，较2024年同期可比增长13.2%。城市热度与文旅活跃度持续攀升，投诉量与负面舆情实现“双降”。</p>
+<div class="img_wrapper"><img title="图为10月3日晚，市民和游客在天津之眼摩天轮市集打卡游玩。记者 佟郁 摄" src="http://image.cns.com.cn/xinjiang_editor/transform/20251009/_f4y-hevxaaq5999617.jpg" alt="图为10月3日晚，市民和游客在天津之眼摩天轮市集打卡游玩。记者 佟郁 摄" data-link=""><span class="img_descr">图为10月3日晚，市民和游客在天津之眼摩天轮市集打卡游玩。记者 佟郁 摄</span></div>
+<p>　　“上合效应”持续释放，相关参访点及媒体聚焦区域成为假日热门打卡地。梅江会展中心外广场持续开放，吸引众多市民游客参观拍照。海河游船推出系列主题活动，带领游客沉浸式体验沿岸风情。此外，文化中心主题灯光秀、古文化街非遗展演与沉浸式曲艺《海河故影》、五大道民园广场“王者荣耀”电竞赛事、意风区“海河阅读季”等多元活动，深受游客欢迎。</p>
+<p>　　京津冀协同联动为假日文旅注入新动力。三地联合推出千余场文旅活动及秋季主题线路。蓟州区“枫韵流丹 金色蓟州”与滨海新区“相约国庆 向海乐活”两大主题活动，分别吸引京津冀游客前来赏秋览胜、体验滨海风情。市内六区文旅联盟携手举办全新“海河之夜”活动，带动全域各区形成“一区一品”文旅特色和夜间经济亮点。</p>
+<p>　　依托全新升级的夜景灯光体系，天津以“津眼秀”“津门秀”“津钟秀”三大主题点亮8.2公里海河沿线，将全域打造为开放式“城市会客厅”。沿岸“‘桥’见海河 邂逅浪漫”音乐汇轮番上演，鼓楼灯光秀与“天津之眼”、海河游船、观光巴士联动，进一步聚拢人气。</p>
+<div class="img_wrapper"><img title="图为10月2日晚，市民和游客在天津泰达航母主题公园观看焰火秀。记者 佟郁 摄" src="http://image.cns.com.cn/xinjiang_editor/transform/20251009/CVNd-hevxaaq5999621.jpg" alt="图为10月2日晚，市民和游客在天津泰达航母主题公园观看焰火秀。记者 佟郁 摄" data-link=""><span class="img_descr">图为10月2日晚，市民和游客在天津泰达航母主题公园观看焰火秀。记者 佟郁 摄</span></div>
+<p>　　红色旅游在假日期间热度高涨。平津战役纪念馆、周恩来邓颖超纪念馆分别推出专题展览及研学项目，广受关注。航母主题公园上演“津彩盛焰·礼赞祖国”大型沉浸式焰火秀，无人机与焰火协同呈现爱国主题画面；津南区时代记忆园区以“双节同庆 忆韵游园”活动，融民俗体验与家国情怀于一体。</p>
+<p>　　津派文化在假日期间绽放新风采。张韶涵、周深等演唱会带动文化消费。广东会馆京剧演唱会、金街话剧《日出》片段展演、张园《津门往事》沉浸式演绎展、曹禺故居《万公馆往事》等，共同构建全场景艺术体验。全市文博场馆推出65项展览和153项社教活动，“博物馆里过传统节日”成为假日新选择。</p>
+<div class="img_wrapper"><img title="图为10月3日晚，市民和游客在位于天津和平区的中国大戏院观看阳台戏剧快闪。记者 佟郁 摄" src="http://image.cns.com.cn/xinjiang_editor/transform/20251009/ohh7-hevxaaq5999625.jpg" alt="图为10月3日晚，市民和游客在位于天津和平区的中国大戏院观看阳台戏剧快闪。记者 佟郁 摄" data-link=""><span class="img_descr">图为10月3日晚，市民和游客在位于天津和平区的中国大戏院观看阳台戏剧快闪。记者 佟郁 摄</span></div>
+<p>　　国风巡游与文化体验实现再升级。宝坻区“乐韵庆华诞·情满潮白河”文旅嘉年华融合雅乐、体育、非遗与国潮元素；东丽湖《海河之子·忆叔同》湖岸大秀及“津门奇妙游”剧游引人入胜。西青区杨柳青古镇以“古镇绘盛世”展现非遗魅力，武清区李大人庄村丰收美食节、静海区罗各庄村丰收采摘节等，则为市民游客提供丰富的乡村生态休闲体验。（完）</p>                                <!--正文分页结束-->
+            </div>
+            <!-- 详情页内容结束 -->
+            <!-- 文章来源开始 -->
+            <!--            -->
+            <!--            <div class="editor">-->
+            <!--                <em>[编辑：薛淳月]</em>-->
+            <!--            </div>-->
+            <!--            -->
+           
+			 <div class='editor'><em>[编辑：薛淳月]</em></div>			
+            <!-- 文章来源结束 -->
+            <div class="clear"></div>
+
+
+			<div class="block iswap" id="ad_zw_bottom" style="overflow:hidden;width:660px;height:100px">
+			                     <!--正文页左侧正文底部广告位    列:0      width="660px"   height="100px" -->
+			<ul>
+<li><a href='https://www.tj.chinanews.com.cn/'><img src='http://image.cns.com.cn/default/20201124/o9Q3-haeasqx2470729.jpg' alt='中国新闻网1' title='中国新闻网1' width="660px" height="100px"></a></li>
+			</ul>
+			</div>
+
+        </div>
+    </div>
+
+    <!--右侧-->
+    <div class="con_r">
+    <!--右侧ad-->
+    <div id="ad_zw_r01" style="height:240px;width:390px;overflow: hidden;">
+        <!--id="tj_adhtml_get" port=370  _pos="01正文页右侧上广告位" _live=true order=0 width="390px" height="240px"}}-->
+				 			<ul> 
+<li><a href='https://www.tj.chinanews.com.cn'><img src='http://image.cns.com.cn/xinjiang_editor/20201223/S643-haexqwa4615165.jpg' alt='中国新闻社天津分社' title='中国新闻社天津分社' width="390px" height="240px"></a></li> 
+<li><a href='https://www.tj.chinanews.com.cn'><img src='http://image.cns.com.cn/xinjiang_editor/20201223/4zn7-haexqwa4615168.jpg' alt='中国新闻社天津分社' title='中国新闻社天津分社' width="390px" height="240px"></a></li> 
+			</ul>
+    </div>
+    <div class="btbg">
+         <img src="http://www.tj.chinanews.com/images/xwph.jpg"> 
+    </div>
+    <div class="xwph_ul">
+        <ul>
+            <li><a href="http://www.tj.chinanews.com/cj/2025-10-10/detail-ihevwnnh9887380.shtml" target="_blank">从天津小院走向全球舞台 奏响中国制造强劲乐曲</a></li><li><a href="http://www.tj.chinanews.com/wl/2025-10-10/detail-ihevwnnh9887378.shtml" target="_blank">国庆中秋假期天津重点监测企业销售额达31.1亿元 同比增6.2%</a></li><li><a href="http://www.tj.chinanews.com/gqsl/2025-10-10/detail-ihevwnnh9886782.shtml" target="_blank">津西大地新“丰”景：科技赋能“小特产” 艺术点染“大粮仓”</a></li><li><a href="http://www.tj.chinanews.com/wl/2025-10-10/detail-ihevwnnh9886734.shtml" target="_blank">天津北辰：定向运动赋能乡村振兴 赛事点亮打造区域名片</a></li><li><a href="http://www.tj.chinanews.com/yxtj/2025-10-08/detail-ihevwnnh9885934.shtml" target="_blank">天津：航母公园无人机焰火秀点亮国庆假期夜空</a></li><li><a href="http://www.tj.chinanews.com/yxtj/2025-10-08/detail-ihevwnnh9885928.shtml" target="_blank">中国大戏院焕新亮相 阳台戏剧快闪重现天津摩登时代声韵</a></li><li><a href="http://www.tj.chinanews.com/wl/2025-10-08/detail-ihevwnnh9885924.shtml" target="_blank">“戏码头”天津打造“城市即舞台” 观众街头邂逅好戏</a></li><li><a href="http://www.tj.chinanews.com/wl/2025-10-08/detail-ihevwnnh9885922.shtml" target="_blank">11城文创力量汇聚天津 方寸印章激活假日文旅新体验</a></li><li><a href="http://www.tj.chinanews.com/cj/2025-10-08/detail-ihevwnnh9885918.shtml" target="_blank">渤海银行天津滨海新区分行喜迁新址 十九载耕耘再启服务新篇</a></li><li><a href="http://www.tj.chinanews.com/wl/2025-10-06/detail-ihevwnnh9885571.shtml" target="_blank">“稻香话丰年-七里海垂钓比赛”圆满落幕 共享湿地秋日诗篇</a></li>        </ul>
+    </div>
+
+    <!--图片新闻-->
+	<div class="listcon_bt m_t15"><a href="/yxtj/">图片新闻</a></div>
+    <div >
+        <ul>
+            <div class="ptdiv">
+    <a href="http://www.tj.chinanews.com/yxtj/2025-10-08/detail-ihevwnnh9885934.shtml" TARGET=_blank title="天津：航母公园无人机焰火秀点亮国庆假期夜空"><img src="http://image.cns.com.cn/xinjiang_editor/transform/20251008/Gg8o-hevxaaq5997300.png" ></a> 
+    <div class="tdiv">
+        <a href="http://www.tj.chinanews.com/yxtj/2025-10-08/detail-ihevwnnh9885934.shtml" TARGET=_blank>天津：航母公园无人机焰火秀点亮国庆假期夜空</a>
+    </div>
+</div>
+<div class="ptdiv">
+    <a href="http://www.tj.chinanews.com/yxtj/2025-10-08/detail-ihevwnnh9885928.shtml" TARGET=_blank title="中国大戏院焕新亮相 阳台戏剧快闪重现天津摩登时代声韵"><img src="http://image.cns.com.cn/xinjiang_editor/transform/20251008/hp4w-hevxaaq5997296.jpg" ></a> 
+    <div class="tdiv">
+        <a href="http://www.tj.chinanews.com/yxtj/2025-10-08/detail-ihevwnnh9885928.shtml" TARGET=_blank>中国大戏院焕新亮相 阳台戏剧快闪重现天津摩登时代声韵</a>
+    </div>
+</div>
+<div class="ptdiv">
+    <a href="http://www.tj.chinanews.com/yxtj/2025-09-27/detail-ihevmzis5433056.shtml" TARGET=_blank title="2025“汉语桥”小选手天津体验C919模拟机 触摸中国科技力量"><img src="http://image.cns.com.cn/xinjiang_editor/transform/20250926/0Q42-hevnqwe9223826.jpg" ></a> 
+    <div class="tdiv">
+        <a href="http://www.tj.chinanews.com/yxtj/2025-09-27/detail-ihevmzis5433056.shtml" TARGET=_blank>2025“汉语桥”小选手天津体验C919模拟机 触摸中国科技力量</a>
+    </div>
+</div>
+<div class="ptdiv">
+    <a href="http://www.tj.chinanews.com/yxtj/2025-09-17/detail-ihevfuss7657867.shtml" TARGET=_blank title="2025天津国际工业自动化及机器人展启幕"><img src="http://image.cns.com.cn/xinjiang_editor/transform/20250917/SeXY-hevhkfz9219847.jpg" ></a> 
+    <div class="tdiv">
+        <a href="http://www.tj.chinanews.com/yxtj/2025-09-17/detail-ihevfuss7657867.shtml" TARGET=_blank>2025天津国际工业自动化及机器人展启幕</a>
+    </div>
+</div>
+<div class="ptdiv">
+    <a href="http://www.tj.chinanews.com/yxtj/2025-09-15/detail-ihevfuss7654444.shtml" TARGET=_blank title="天津：6000跑者穿越万亩稻田共赴半马之约"><img src="http://image.cns.com.cn/xinjiang_editor/transform/20250915/Nvpy-hevacsa2778040.jpg" ></a> 
+    <div class="tdiv">
+        <a href="http://www.tj.chinanews.com/yxtj/2025-09-15/detail-ihevfuss7654444.shtml" TARGET=_blank>天津：6000跑者穿越万亩稻田共赴半马之约</a>
+    </div>
+</div>
+<div class="ptdiv">
+    <a href="http://www.tj.chinanews.com/yxtj/2025-09-08/detail-iheuzpwq9124087.shtml" TARGET=_blank title="神舟十九号航天员讲“开学第一课” 点燃天津学子航天梦"><img src="http://image.cns.com.cn/xinjiang_editor/transform/20250908/UebX-hevacsa2768963.jpg" ></a> 
+    <div class="tdiv">
+        <a href="http://www.tj.chinanews.com/yxtj/2025-09-08/detail-iheuzpwq9124087.shtml" TARGET=_blank>神舟十九号航天员讲“开学第一课” 点燃天津学子航天梦</a>
+    </div>
+</div>
+        </ul>
+    </div>
+	 <div class="clear"></div>
+    <div id="ad_zw_r02" style="height:130px;width:390px;overflow: hidden;">
+                    <!--正文页右侧下广告位    列:0      width="390px"   height="130px" -->
+			<ul>
+<li><a href='http://www.inewsweek.cn/'><img src='http://image.cns.com.cn/xinjiang_editor/20201230/MZMA-hafcvmr7178229.jpg' alt='中国新闻周刊' title='中国新闻周刊' width="390px" height="130px"></a></li>
+			</ul>
+    </div>
+    <!--热点视频-->
+	<div class="listcon_bt m_t15"><a href="/sp/">热点视频</a></div>
+    <div >
+        <ul>
+            <div class="ptdiv"> 
+    <a href="http://www.tj.chinanews.com/sp/2025-09-30/detail-ihevsfxe1212150.shtml" title="孔子后人：儒家文化对我们的影响就是让我们做好人" TARGET=_blank><div class='video'></div><img src="http://image.cns.com.cn/xinjiang_editor/transform/20250929/hfpl-hevsvpm7321748.png" ></a> 
+    <div class="tdiv"> 
+        <a href="http://www.tj.chinanews.com/sp/2025-09-30/detail-ihevsfxe1212150.shtml" TARGET=_blank>孔子后人：儒家文化对我们的影响就是让我们做好人</a> 
+    </div> 
+</div> 
+<div class="ptdiv"> 
+    <a href="http://www.tj.chinanews.com/sp/2025-09-27/detail-ihevmzis5434530.shtml" title="2025精益数字化创新大会在天津开幕" TARGET=_blank><div class='video'></div><img src="http://image.cns.com.cn/xinjiang_editor/transform/20250927/Bg-K-hevnqwe9225974.png" ></a> 
+    <div class="tdiv"> 
+        <a href="http://www.tj.chinanews.com/sp/2025-09-27/detail-ihevmzis5434530.shtml" TARGET=_blank>2025精益数字化创新大会在天津开幕</a> 
+    </div> 
+</div> 
+<div class="ptdiv"> 
+    <a href="http://www.tj.chinanews.com/sp/2025-09-27/detail-ihevmzis5433063.shtml" title="“汉语桥”参赛选手夜游海河 观赏“一桥一景”独特风光" TARGET=_blank><div class='video'></div><img src="http://image.cns.com.cn/xinjiang_editor/transform/20250926/Ns2T-hevnqwe9223830.png" ></a> 
+    <div class="tdiv"> 
+        <a href="http://www.tj.chinanews.com/sp/2025-09-27/detail-ihevmzis5433063.shtml" TARGET=_blank>“汉语桥”参赛选手夜游海河 观赏“一桥一景”独特风光</a> 
+    </div> 
+</div> 
+<div class="ptdiv"> 
+    <a href="http://www.tj.chinanews.com/sp/2025-09-27/detail-ihevmzis5433039.shtml" title="2025 “汉语桥”小选手天津体验C919模拟机 触摸中国科技力量" TARGET=_blank><div class='video'></div><img src="http://image.cns.com.cn/xinjiang_editor/transform/20250926/m0S2-hevnqwe9223804.png" ></a> 
+    <div class="tdiv"> 
+        <a href="http://www.tj.chinanews.com/sp/2025-09-27/detail-ihevmzis5433039.shtml" TARGET=_blank>2025 “汉语桥”小选手天津体验C919模拟机 触摸中国科技力量</a> 
+    </div> 
+</div> 
+<div class="ptdiv"> 
+    <a href="http://www.tj.chinanews.com/sp/2025-09-25/detail-ihevmzis5432395.shtml" title="全球客商赴天津“觅商机” 中国冰淇淋“冷”资源撬动“热”经济" TARGET=_blank><div class='video'></div><img src="http://image.cns.com.cn/xinjiang_editor/transform/20250925/c91X-hevnqwe9222879.jpg" ></a> 
+    <div class="tdiv"> 
+        <a href="http://www.tj.chinanews.com/sp/2025-09-25/detail-ihevmzis5432395.shtml" TARGET=_blank>全球客商赴天津“觅商机” 中国冰淇淋“冷”资源撬动“热”经济</a> 
+    </div> 
+</div> 
+<div class="ptdiv"> 
+    <a href="http://www.tj.chinanews.com/sp/2025-09-25/detail-ihevmzis5432319.shtml" title="专家：AI时代如何应对网络安全新挑战？" TARGET=_blank><div class='video'></div><img src="http://image.cns.com.cn/xinjiang_editor/transform/20250925/i4Zb-hevnqwe9222326.png" ></a> 
+    <div class="tdiv"> 
+        <a href="http://www.tj.chinanews.com/sp/2025-09-25/detail-ihevmzis5432319.shtml" TARGET=_blank>专家：AI时代如何应对网络安全新挑战？</a> 
+    </div> 
+</div> 
+        </ul>
+    </div>
+	 <div class="clear"></div>
+    <!--中新专题-->
+	<div  style="display:none">
+	<div class="listcon_bt m_t15">
+        <a href="">中新专题</a>
+        <div style="float:right;width:83px;padding-right:10px; position:relative;z-index:1;">
+            <div class="dlyL1" id="dlyL1_n" style="width:83px">
+                <b class="prev" id="_prevhdn"></b>
+                <span><i class='current'>1/10</i> <i class=''>2/10</i> <i class=''>3/10</i> <i class=''>4/10</i> <i
+                        class=''>5/10</i> <i class=''>6/10</i> <i class=''>7/10</i> <i class=''>8/10</i> <i
+                        class=''>9/10</i> <i class=''>10/10</i></span>
+                <b class="next" id="_nexthdn"></b>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="zxztcon" id="dlyL_n">
+
+                                <div class="_rdhtdiv">
+            <div class="leftimg">
+                <a href="http://www.chinanews.com/part/home2013/451/U624P4T451D13F17247DT20200227183622.jpg"><img src="http://image.cns.com.cn/default/20201124/jq4Z-haeasqx2471246.jpg" /></a>
+            </div>
+            <div class="righttext">
+                <strong><a href="http://www.chinanews.com/part/home2013/451/U624P4T451D13F17247DT20200227183622.jpg">近观中国</a></strong>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+                <div class="_rdhtdiv">
+            <div class="leftimg">
+                <a href="https://www.chinanews.com/"><img src="http://image.cns.com.cn/default/20201124/hG6z-haeasqx2471253.jpg" /></a>
+            </div>
+            <div class="righttext">
+                <strong><a href="https://www.chinanews.com/">十九届五中全会</a></strong>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+                <div class="_rdhtdiv">
+            <div class="leftimg">
+                <a href="https://www.chinanews.com/"><img src="http://image.cns.com.cn/default/20201124/zNdp-haeasqx2471255.png" /></a>
+            </div>
+            <div class="righttext">
+                <strong><a href="https://www.chinanews.com/">“十三五”回眸</a></strong>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+                <div class="_rdhtdiv">
+            <div class="leftimg">
+                <a href="https://www.chinanews.com/"><img src="http://image.cns.com.cn/default/20201124/msK5-haeasqx2471257.jpg" /></a>
+            </div>
+            <div class="righttext">
+                <strong><a href="https://www.chinanews.com/">第三届中国国际进口博览会</a></strong>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+                <div class="_rdhtdiv">
+            <div class="leftimg">
+                <a href="https://www.chinanews.com/"><img src="http://image.cns.com.cn/default/20201124/DBUK-haeasqx2471260.jpg" /></a>
+            </div>
+            <div class="righttext">
+                <strong><a href="https://www.chinanews.com/">浦东开发开放30周年</a></strong>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+                <div class="_rdhtdiv">
+            <div class="leftimg">
+                <a href="https://www.chinanews.com/"><img src="http://image.cns.com.cn/default/20201124/Ufmj-haeasqx2471264.jpg" /></a>
+            </div>
+            <div class="righttext">
+                <strong><a href="https://www.chinanews.com/">近观中国2</a></strong>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+                <div class="_rdhtdiv">
+            <div class="leftimg">
+                <a href="https://www.chinanews.com/"><img src="http://image.cns.com.cn/default/20201124/RT1Q-haeasqx2471266.jpg" /></a>
+            </div>
+            <div class="righttext">
+                <strong><a href="https://www.chinanews.com/">十九届五中全会2</a></strong>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+                <div class="_rdhtdiv">
+            <div class="leftimg">
+                <a href="https://www.chinanews.com/"><img src="http://image.cns.com.cn/default/20201124/PuEm-haeasqx2470727.jpg" /></a>
+            </div>
+            <div class="righttext">
+                <strong><a href="https://www.chinanews.com/">“十三五”回眸2</a></strong>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+                <div class="_rdhtdiv">
+            <div class="leftimg">
+                <a href="https://www.chinanews.com/"><img src="http://image.cns.com.cn/default/20201124/RW3--haeasqx2471268.jpg" /></a>
+            </div>
+            <div class="righttext">
+                <strong><a href="https://www.chinanews.com/">第三届中国国际进口博览会2</a></strong>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+                <div class="_rdhtdiv">
+            <div class="leftimg">
+                <a href="https://www.chinanews.com/"><img src="http://image.cns.com.cn/default/20201124/AFyg-haeasqx2471270.jpg" /></a>
+            </div>
+            <div class="righttext">
+                <strong><a href="https://www.chinanews.com/">浦东开发开放30周年2</a></strong>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        
+    </div>
+ </div>
+</div>
+
+    <!--两侧ad
+     t id="tianjinzw_2sides"  -->
+
+    <div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+<!--友情链接-->
+<div class="connect iswap">
+     <div id="tjbottom" style="width: 100%;margin: 0 auto;">
+
+        <style>
+            #tjbottom .yqljj   {display:flex;color:#666;font-family:"microsoft YaHei";font-size: 13px;}
+            #tjbottom .yqlj_ll {width:30px;text-align:center;font-size:16px; line-height:20px;border-right:1px solid #efefef;}
+			#tjbottom .yqlj_rr {display:flex;flex-direction:column;justify-content:space-between;margin-left:7px;line-height:25px;width:100%;}
+            #tjbottom .sites  {display:flex;}
+            #tjbottom .sitetype  {width:70px;height:auto;white-space: nowrap;}
+            #tjbottom .sitelist  {width: 100%;}
+            #tjbottom .yqljj a    {float: left; color: #666;}
+            #tjbottom .footer    {border-top: 5px solid #035bda;text-align: center; margin-top: 5px;}
+            #tjbottom .footer1   {font-size:16px;height: 56px;line-height: 56px;border-bottom: 1px solid #e7eaed;color: #035bda;}
+            #tjbottom .footer1 a {color: #035bda;}
+            #tjbottom .footer2   {font-size:14px; color:#444;line-height: 28px;padding: 20px 0;}
+            #tjbottom .footer2 a {color: #666;}
+        </style>
+
+        <div class="yqljj clearfix">
+            <div class="yqlj_ll">友情链接</div>
+            <div class="yqlj_rr">
+                <div class="sites">
+                    <div class="sitetype"><strong>本地新闻：</strong> </div>
+                    <div class="sitelist">
+                        <a href="//www.tjbh.gov.cn/">滨海 |&nbsp;  </a><a href="//www.tjhp.gov.cn/">和平 |&nbsp;  </a><a href="//www.tjhb.gov.cn/">河北 |&nbsp;  </a><a href="//www.tjhx.gov.cn/">河西 |&nbsp;  </a><a href="//www.tjhd.gov.cn/">河东 |&nbsp;  </a><a href="//www.tjnk.gov.cn/">南开 |&nbsp;  </a><a href="//www.tjhq.gov.cn/">红桥 |&nbsp;  </a><a href="//www.tjdl.gov.cn/">东丽 |&nbsp;  </a><a href="//www.tjxq.gov.cn/">西青 |&nbsp;  </a><a href="//www.tjjn.gov.cn/">津南 |&nbsp;  </a><a href="//www.tjbc.gov.cn/">北辰 |&nbsp;  </a><a href="//www.tjwq.gov.cn/">武清 |&nbsp;  </a><a href="//www.tjbd.gov.cn/">宝坻 |&nbsp;  </a><a href="//www.tjjh.gov.cn/">静海 |&nbsp;  </a><a href="//www.tjnh.gov.cn/">宁河 |&nbsp;  </a><a href="//www.tjjz.gov.cn/">蓟州</a>
+                    </div>
+                </div>
+
+                <div class="sites">
+                    <div class="sitetype"><strong>国内网站：</strong></div>
+                    <div class="sitelist">
+                        <a href="http://www.people.com.cn/">人民网 |&nbsp;</a>
+                        <a href="http://www.xinhuanet.com/">新华网 |&nbsp;</a>
+                        <a href="http://www.china.com.cn/">中国网 |&nbsp;</a>
+                        <a href="http://www.cri.cn/">国际在线 |&nbsp;</a>
+                        <a href="http://www.chinadaily.com.cn/">中国日报 |&nbsp;</a>
+                        <a href="https://www.cctv.com/">央视网 |&nbsp;</a>
+                        <a href="http://www.youth.cn/">中青网 |&nbsp;</a>
+                        <a href="http://www.ce.cn/">经济网 |&nbsp;</a>
+                        <a href="http://www.taiwan.cn/">台湾网 |&nbsp;</a>
+                        <a href="http://www.tibet.cn/">西藏网 |&nbsp;</a>
+                        <a href="http://www.cnr.cn/">央广网 |&nbsp;</a>
+                        <a href="http://www.gmw.cn/">光明网 |&nbsp;</a>
+                        <a href="http://www.81.cn/">军网 |&nbsp;</a>
+                        <a href="http://www.cppcc.gov.cn/">政协网 |&nbsp;</a>
+                        <a href="http://www.legaldaily.com.cn/">法制网</a>
+                    </div>
+                </div>
+
+                <div class="sites">
+                    <div class="sitetype"><strong>中新站点：</strong></div>
+                    <div class="sitelist">
+						<a href="https://www.chinanews.com/">总站|&nbsp;</a>
+                        <a href="https://www.ah.chinanews.com/">安徽|&nbsp;</a>
+                        <a href="https://www.bj.chinanews.com/">北京|&nbsp;</a>
+                        <a href="https://www.cq.chinanews.com/">重庆|&nbsp;</a>
+                        <a href="https://www.fj.chinanews.com/">福建|&nbsp;</a>
+                        <a href="https://www.gs.chinanews.com/">甘肃|&nbsp;</a>
+                        <a href="https://www.gz.chinanews.com/">贵州|&nbsp;</a>
+                        <a href="https://www.gd.chinanews.com/">广东|&nbsp;</a>
+                        <a href="https://www.gx.chinanews.com/">广西|&nbsp;</a>
+                        <a href="https://www.hi.chinanews.com/">海南|&nbsp;</a>
+                        <a href="https://www.heb.chinanews.com/">河北|&nbsp;</a>
+                        <a href="https://www.ha.chinanews.com/">河南|&nbsp;</a>
+                        <a href="https://www.hb.chinanews.com/">湖北|&nbsp;</a>
+                        <a href="https://www.hn.chinanews.com/">湖南|&nbsp;</a>
+                        <a href="https://www.hlj.chinanews.com/">黑龙江|&nbsp;</a>
+                        <a href="https://www.js.chinanews.com/">江苏|&nbsp;</a>
+                        <a href="https://www.jx.chinanews.com/">江西|&nbsp;</a>
+                        <a href="https://www.jl.chinanews.com/">吉林|&nbsp;</a>
+                        <a href="https://www.ln.chinanews.com/">辽宁|&nbsp;</a>
+                        <a href="https://www.nmg.chinanews.com/ ">内蒙古|&nbsp;</a>
+                        <a href="https://www.nx.chinanews.com/">宁夏|&nbsp;</a>
+                        <a href="https://www.qh.chinanews.com/">青海|&nbsp;</a>
+                        <a href="https://www.sd.chinanews.com/">山东|&nbsp;</a>
+                        <a href="https://www.sx.chinanews.com/">山西|&nbsp;</a>
+                        <a href="https://www.shx.chinanews.com/">陕西|&nbsp;</a>
+                        <a href="https://www.sh.chinanews.com/">上海|&nbsp;</a>
+                        <a href="https://www.sc.chinanews.com/">四川|&nbsp;</a>
+						<a href="https://www.tj.chinanews.com/">天津|&nbsp;</a>
+                        <a href="https://www.xj.chinanews.com/">新疆|&nbsp;</a>
+                        <a href="https://www.bt.chinanews.com/">兵团|&nbsp;</a>
+                        <a href="https://www.yn.chinanews.com/">云南|&nbsp;</a>
+                        <a href="https://www.zj.chinanews.com/">浙江</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--footer-->
+        <div class="footer iswap">
+            <div class="footer1">
+                <a href="https://www.tj.chinanews.com.cn/ad/aboutzxs.shtml">中新社简介</a> | <a
+                    href="https://www.tj.chinanews.com.cn/ad/hotline.shtml">新闻热线</a> | <a
+                    href="https://www.tj.chinanews.com.cn/ad/mailbox.shtml">投稿信箱</a> | <a
+                    href="https://www.tj.chinanews.com.cn/ad/law.shtml">法律顾问</a>
+            </div>
+            <div class="footer2">
+                <p>本网站所刊载信息，不代表中新社和中新网观点。 刊用本网站稿件，务经书面授权。</p>
+                <p>未经授权禁止转载、摘编、复制及建立镜像，违者将依法追究法律责任。</p>
+                <p>[网上传播视听节目许可证（0106168)] [京ICP证040655号] [京公网安备：110102003042] [京ICP备05004340号-1]</p>
+                <p>Copyright ©1999-
+                    2025 chinanews.com. All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!--二维码-->
+<style>
+	@media (max-width: 768px){ #full,.index_layer{display: none;}}
+	.close {
+    background: orange;
+    color: red;
+    border-radius: 12px;
+    line-height: 20px;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    font-size: 18px;
+    padding: 1px;
+    top: -10px;
+    right: 8px;
+    position: absolute;
+}
+   .close::before {content: "\2716";}
+</style>
+<script>
+function topclose(){document.getElementById("full").style.display="none";}
+</script>
+ <!--二维码-->
+    <div class="index_layer ie6fixedBR" id="full"  >
+        <a href="javascript:void(0);" class="close" onclick="topclose()"  target="_self"></a>
+        <ul class="index_layerul">
+            <!-- 二维码 -->
+			<!-- <li class="" style="height:80px;*margin:0px;">
+        <a href="https://image.cns.com.cn/xinjiang_editor/606bf756/20210108/WeiXinGongZhongHaoJinWenDianXun_108.jpg">
+          <img src="https://image.cns.com.cn/xinjiang_editor/606bf756/20211108/DongXiLang.png" width="85px"
+            height="80px" /></a>
+      </li> -->
+			<li class="" style="height:123px;*margin:0px;">
+               <img
+                        src="https://image.cns.com.cn/xinjiang_editor/fe85a501/20250721/1f2adf5d12.jpg" width="108px"
+                        height="123px" /> 
+            </li>
+            <li class="" style=" *margin:0px;">
+                <a href="https://www.chinanews.com.cn/app/chinanews/index.shtml"
+                    target="_blank"><img src="https://image.cns.com.cn/xinjiang_editor/606bf756/20210108/zxw.jpg" width="108px"/></a> 
+            </li>
+			 
+            
+            <li class="" style="height:126px;*margin:0px;">
+                <a href="https://weibo.com/u/7518643144?is_all=1"
+                    target="_blank"><img src="https://image.cns.com.cn/xinjiang_editor/606bf756/20210108/WeiBoGongZhongHaoJinWenDianXun_108.jpg
+" width="108px"
+                        height="126px" /></a>
+            </li> 
+            <!-- 返回顶部 -->
+            <li class="back" style="display:none;height:50px;" id="newsbacktop">
+                <a id="backtop" href="#ad_home_top" target="_self"></a>
+            </li>
+        </ul>
+    </div>
+ 
+    <!-- js代码 -->
+    <script type="text/javascript">
+        (function () {
+            var backToTopTxt1 = $(".index_layer").html(),
+                backToTopEle1 = backToTopTxt1,
+                backToTopFun1 = function () {
+                    var stback = $(document).scrollTop(),
+                        winh1 = $(window).height();
+					// $(".index_layer").show();
+                    (stback > 0) ? $("#newsbacktop").css('display', 'block') : $("#newsbacktop").css('display', 'none');
+                    //IE6下的定位
+                    if (!window.XMLHttpRequest) {
+                        $(".index_layer").css("top", stback + winh1 - 550);
+                    }
+                };
+            $(window).bind("scroll", backToTopFun1);
+            backToTopFun1();
+
+        })();
+        $(document).ready(function () {
+            var pw_heigth = $(window).height();
+			var pw_width  = $(window).width();
+            Box = document.getElementById("full");
+            
+			if (pw_width <= 768) Box.style.right = -1000 + "px";
+            if (pw_heigth <= 780) {
+                Box.style.bottom = 0 + "px";
+            } else {
+                Box.style.bottom = 167 + "px";
+            }
+            $(window).resize(function () {
+                var pw_heigth = $(window).height();
+				var pw_width  = $(window).width();
+                Box = document.getElementById("full");
+				if (pw_width <= 768) Box.style.right = -1000 + "px";
+
+                if (pw_heigth <= 780) {
+                    Box.style.bottom = 0 + "px";
+                } else {
+                    Box.style.bottom = 167 + "px";
+                }
+            });
+        });
+    </script>
+	
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        function lhlayer(){
+
+            var $index = 0;
+            var $len1 = $("#dlyL1_n span i").size();
+            //alert($len1);
+            $len1=$len1-1;
+            var $nav = $("#dlyL1_n span i");
+            var $text = $("#dlyL_n h4 a");
+            var $pics = $("#dlyL_n  div._rdhtdiv");
+
+            $("#_prevhdn").mouseover(function(){
+                $("#_prevhdn").removeClass("prev");
+                $("#_prevhdn").addClass("prevsel");
+            });
+
+            $("#_prevhdn").mouseout(function(){
+                $("#_prevhdn").addClass("prev");
+                $("#_prevhdn").removeClass("prevsel");
+            });
+            $("#_nexthdn").mouseover(function(){
+                $("#_nexthdn").removeClass("next");
+                $("#_nexthdn").addClass("nextsel");
+            });
+
+            $("#_nexthdn").mouseout(function(){
+                $("#_nexthdn").addClass("next");
+                $("#_nexthdn").removeClass("nextsel");
+            });
+
+            $("#dlyL1_n span i").click(function(){
+                var $self = $(this);
+                var $index = $nav.index($self);
+                showMzin($index);
+
+                $("#dlyL1_n b.next").click(function(){
+                    if($index<$len1){/* 设置4个显示分页 */
+                        $index++
+                    }
+                    else if($index==$len1){ /* 设置4个显示分页 */
+                        $index=0
+                    }
+                    showMzin($index);
+                });
+
+                $("#dlyL1_n b.prev").click(function(){
+                    if($index>0){
+                        $index--
+                    }
+
+                    else if($index==0){
+                        $index=$len1 /* 设置4个显示分页 */
+                    }
+                    showMzin($index);
+                });
+
+            }).eq(0).trigger("click");
+
+            function showMzin(i){
+                $pics.hide(),
+                    $pics.eq(i).fadeIn("slow"),
+                    $text.hide(),
+                    $text.eq(i).fadeIn("slow"),
+                    $nav.removeClass("current"),
+                    $nav.eq(i).addClass("current");
+            }
+
+            DLYTime =setInterval(function(){
+                $("#dlyL1_n b.next").trigger("click");
+            }, 8000);
+
+            $("#dlyL_n").mouseover(function(){
+                if(DLYTime){clearInterval(DLYTime);}
+            });
+
+            $("#dlyL_n").mouseout(function(){
+                DLYTime =setInterval(function(){
+                    $("#dlyL1_n b.next").trigger("click");
+                },8000);
+            });
+
+        }
+
+        lhlayer();
+    })
+
+</script>
+<script src="//image.cns.com.cn/xinjiang_editor/fe85a501/20250427/tj_ad_reset.js">
+</script>
+	
+ <script>
+        window.onload=function(){
+            if ($("#tjad1 li").length > 1) {
+                $("#tjad1").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: true
+                });
+            }
+            if ($("#tjad2 li").length > 1) {
+                $("#tjad2").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: true
+                });
+            }
+            if ($("#tjad2_1 li").length > 1) {
+                $("#tjad2_1").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: true
+                });
+            }
+            if ($("#tjad2_2 li").length > 1) {
+                $("#tjad2_2").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: true
+                });
+            }
+            if ($("#tjad3_1 li").length > 1) {
+                $("#tjad3_1").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: true
+                });
+            }
+            if ($("#tjad3_2 li").length > 1) {
+                $("#tjad3_2").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: true
+                });
+            }
+            if ($("#tjad4_1 li").length > 1) {
+                $("#tjad4_1").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: true
+                });
+            }
+            if ($("#tjad4_2 li").length > 1) {
+                $("#tjad4_2").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: true
+                });
+            }
+            if ($("#tjad4_3 li").length > 1) {
+                $("#tjad4_3").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: true
+                });
+            }
+            if ($("#tjad5 li").length > 1) {
+                $("#tjad5").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: true
+                });
+            }
+			 
+				if ($("#ad_home_top li").length > 1) {
+                $("#ad_home_top").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: true
+                });
+            }
+            if ($("#ad_zw_logo li").length > 1) {
+                $("#ad_zw_logo").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: true
+                });
+            }
+            if ($("#ad_zw_bottom li").length > 1) {
+                $("#ad_zw_bottom").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: true
+                });
+            }
+            if ($("#ad_zw_left01 li").length > 1) {
+                $("#ad_zw_left01").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: false
+                });
+            }
+            if ($("#ad_zw_left02 li").length > 1) {
+                $("#ad_zw_left02").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: false
+                });
+            }
+            if ($("#ad_zw_left03 li").length > 1) {
+                $("#ad_zw_left03").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: false
+                });
+            }
+            if ($("#ad_zw_right01 li").length > 1) {
+                $("#ad_zw_right01").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: false
+                });
+            }
+            if ($("#ad_zw_right02 li").length > 1) {
+                $("#ad_zw_right02").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: false
+                });
+            }
+            if ($("#ad_zw_right03 li").length > 1) {
+                $("#ad_zw_right03").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: false
+                });
+            }
+            if ($("#ad_zw_r01 li").length > 1) {
+                $("#ad_zw_r01").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: true
+                });
+            }
+			 if ($("#ad_zw_r02 li").length > 1) {
+                $("#ad_zw_r02").jCarouselLite({
+                    speed: 1000,
+                    auto: 2000,
+                    visible: 1,
+                    vertical: true
+                });
+            }
+        } 
+    </script>
+<!--	
+<script>
+
+		    window.onscroll = function () {
+            var fixl = document.getElementById("fixl");
+            var fixr = document.getElementById("fixr");
+            var fixr2 = document.getElementById("fixr2");
+            var par = document.getElementById("par");
+            var st = document.documentElement.scrollTop || document.body.scrollTop;
+            var pt = par.offsetTop;
+            fixl.style.position = st > pt ? "fixed" : "absolute";
+            fixl.style.left = st > pt ? "0" : "-140px";
+            fixr.style.position = st > pt ? "fixed" : "absolute";
+            fixr.style.right = st > pt ? "0" : "-140px";
+            fixr2.style.position = st > pt ? "fixed" : "absolute";
+            fixr2.style.right = st > pt ? "0" : "-140px";
+		
+        }
+</script>
+-->	
+</body>
+</html>
+<!--<meta name="chinanews_site_verification" content="73cc1d291f0f756c0cea5d699a5478f0"/>-->
+<!--published at 2025-10-10 09:33:04 by-->

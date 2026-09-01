@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>贵州日报</title>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/css.css">
+	<link rel="stylesheet" href="../../assets/css/search.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/li.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../../assets/css/calendar.css" />
+	<script src="../../assets/js/calendar.js"></script>
+	<script type="text/javascript">
+
+</script>
+</head>
+<body>
+    <div class="top">
+        <div class="container">
+            <img src="../../img/logo.png" />
+            <div class="wq-btn">
+				<a href="http://www.ddcpc.cn/" class="btn" target="_blank">当代先锋网</a>
+			    <a href="http://szbold.eyesnews.cn/" class="btn" target="_blank">旧版数字报刊</a>
+            </div>
+            <p class="text-right">
+			<span>贵州日报报刊社   贵州日报当代融媒体集团 出版</span>
+			<span>国内统一刊号：CN52-0013 代号65-1</span>
+			</p>
+        </div>
+    </div>
+		<!--<div style="text-align:center;">
+	<img src="../../img/gg_1.jpg" />
+	</div>-->
+    <div class="container">
+        <div class="center clearfix" style="">
+            <div class="left-btn">
+                <ul>
+                    <li>
+					<a class="r-btn btn-bg" id="candler"><i></i>日<br />历</a>
+					<div class="time-control" style="display:none;">
+									<div class="time-control-title text-center" >按日期查询</div>
+									<!--日历 begin-->
+									<div class="data_box" id="data_box" style="z-index:10000;">
+										<table cellspacing="0" cellpadding="0" style="background-color:#fff;width:213px;">
+											<tbody>
+												<tr>
+													<td>
+														<!--<img src="pre_year.gif" id="pre_y" onclick="changeY(-1);">-->
+														<span class="mr15 ft18 pointer" class="ft18" onclick="changeY(-1);">‹</span>
+														<!--<img id="pre_m" src="pre_month.gif">-->
+													</td>
+													<td>
+														<table cellspacing="0" cellpadding="0">
+															<tbody>
+																<tr>
+																	<td>
+																		<select id="year_box" onchange="changeDate();">
+																			<script type="text/javascript">
+																				yearList();
+																			</script>
+																	</td>
+																	<td align="center"><span class="ft18 ml15 pointer" onclick="changeY(1);">›</span></td>
+																	<td align="center"><span style="margin-right: 10px;" class="ft18 pointer" onclick="changeMn(-1);">‹</span></td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+													<td>
+														<table cellspacing="0" cellpadding="0">
+															<tbody>
+																<tr>
+																	<td>
+																		<select id="month_box" onchange="changeDate();">
+																			<script type="text/javascript">
+																				monthList();
+																			</script>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+													<td>
+														<span class="ft18 pointer" onClick="changeMn(1);">›</span>
+
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<table cellspacing="0" cellpadding="0" class="data_table" id="data_table">
+											<thead>
+												<tr>
+													<th>日</th>
+													<th>一</th>
+													<th>二</th>
+													<th>三</th>
+													<th>四</th>
+													<th>五</th>
+													<th>六</th>
+												</tr>
+											</thead>
+											<tbody>
+												<script type="text/javascript">
+													tdlist();
+													loadCalendar();
+												</script>
+											</tbody>
+										</table>
+									</div>
+									<!--日历 end-->
+								</div>
+					</li>
+                    <li><a href="#" class="t-btn btn-bg" id="goPrePeriod"><i></i>上<br />一<br />期</a></li>
+                    <li><a href="#" class="b-btn btn-bg" id="goNextPeriod">下<br />一<br />期<i></i></a></li>
+                </ul>
+            </div>
+            <div class="right-btn">
+			
+			<li><a class="f-btn" href="../../../layout/202608/01/node_03.html"><i></i>返<br />回</a></li>
+                <ul>
+                    <li><a href="../../../layout/202608/01/node_02.html" class="t-btn"><i></i>上<br />一<br />版</a></li>
+                    <li><a href="../../../layout/202608/01/node_04.html" class="b-btn">下<br />一<br />版<i></i></a></li>
+                </ul>
+
+            </div>
+            <div class="col-md-6" style="width:47%;">
+				<div class="search bar3">
+						 <div class="date">
+							
+								<div class="cb-text">
+								<span id="paperdate">2026年08月01日</span>
+								</div>
+
+						 </div>	
+						<!--<form action="http://10.1.1.42:8088/founder/SearchServlet.do" onsubmit="per_submit();" name="form1" method="post" target="_blank">
+							<input type="text" placeholder="请输入您要搜索的内容...">
+							<button type="submit"></button></form>-->
+							<form name="form1" id="f1" action="http://szbjs.eyesnews.cn/founder/SearchServlet.do" method="POST" style="margin:0px; padding:0px" target="_blank">
+	                         <input name="content" type="text" size="50" maxlength="50" placeholder="请输入您要搜索的内容..." class="searchText" style="height:42px;">
+	                         <button type="submit"></button>
+                             <input type="hidden" name="siteID" value="1">
+	                         <input type="hidden" name="paperID" value="1">
+                        </form>
+				</div>
+ 					<!--<form action="http://218.76.92.155:83/servlet/SearchServlet.do" onSubmit="per_submit();" name="form1" method="post" target="_blank">
+                        <div class="clearfix">
+							
+								<div class="cb-text">
+									<span id="paperdate">2026年08月01日</span>
+									<span style="margin:0;"><input type="text" name="contentKey" class="form-control" id="contentKey" placeholder=""></span>
+								</div>
+
+								<div class="cx-btn">
+									<a onClick="javascript:per_submit()"><img src="../../img/cx-btn.png" /></a>
+								</div>
+							</div>
+                    </form>-->
+				
+                <div class="newspaper-pic" style="position: relative;">
+                       <img class="preview" src="../../../pic/202608/01/282dc7bb-1405-4506-a0c6-b034ce4fc1fe.jpg.1" usemap="#PagePicMap" > 
+						<MAP NAME="PagePicMap"><Area coords="329.91366200000004,109.0909125,329.91366200000004,65.03496750000001,24.743524,65.03496750000001,24.743524,109.0909125,24.743524,258.04195500000003,329.91366200000004,258.04195500000003" shape="polygon" href="content_185619.html"><Area coords="24.743524,270.62937,329.91366200000004,270.62937,329.91366200000004,536.0139825,24.743524,536.0139825" shape="polygon" href="content_185620.html"><Area coords="351.5642468,65.03496750000001,500.02539600000006,65.03496750000001,500.02539600000006,369.2307675,351.5642468,369.2307675" shape="polygon" href="content_185621.html"><Area coords="500.02539600000006,414.33566249999996,500.02539600000006,380.7692325,351.5642468,380.7692325,351.5642468,414.33566249999996,351.5642468,503.4965025000001,500.02539600000006,503.4965025000001" shape="polygon" href="content_185622.html"><Area coords="351.5642468,513.9860175,500.02539600000006,513.9860175,500.02539600000006,729.0209775,351.5642468,729.0209775" shape="polygon" href="content_185623.html"><Area coords="334.03758439999996,547.5524475,20.6196016,547.5524475,20.6196016,569.58042,20.6196016,602.0979,334.03758439999996,602.0979" shape="polygon" href="content_185624.html"><Area coords="334.03758439999996,647.2027949999999,334.03758439999996,613.636365,20.6196016,613.636365,20.6196016,647.2027949999999,20.6196016,729.0209775,334.03758439999996,729.0209775" shape="polygon" href="content_185625.html"></MAP>
+						<div id="popupid" style="position:absolute;top:2.496px;left:221.55px;z-index:10;display:none;" class="popbox"></div>
+                </div>
+
+            </div>
+            <div class="col-md-6" style="width:53%; padding-right:0;">
+                <div class="ewm text-right">
+                    <span><img src="../../img/1.png" /></span>
+					<span><img src="../../img/2.png" /></span>
+					<span><img src="../../img/3.png" /></span>
+					<span><img src="../../img/4.png" /></span>
+                </div>
+                <div class="row mt40">
+				
+					<div class="detail" style="height: 700px;overflow-y: scroll;margin-right:20px;">
+                        <div class="detail-art">
+                            <div class="totalTitle">
+                                <h5 class="introtitle text-center" id="PreTitle">从“卖清凉”到“卖生活”</h5>
+                                <h2 id="Title" class="art-title text-center">贵州多元业态引爆避暑游</h2>
+                                <h5 class="subtitle text-center" id="SubTitle"></h5>
+                            </div>
+
+                            <div class="attachment" align="center">
+                                <!--高级资源列表-->
+                            </div>
+                            <div id="ozoom" style="zoom:100%;" class="content">
+						<founder-content>
+							<!--enpcontent--><p> 经济日报记者 王新伟 吴秉泽</p><p>凭借凉爽气候，贵州避暑旅游热度持续攀升，成为暑期避暑旅游的热门目的地，清凉资源加速转化为发展动能。来自去哪儿旅行等平台的数据显示，贵州多地暑期机票预订量同比增长超两成，安顺、铜仁等地跻身全国避暑小城机票预订量增长的前十位。</p><p>人流热度印证市场活力。今年暑运启动后，大量游客涌入贵州避暑，作为旅游枢纽的贵阳，客流大幅激增。据成都铁路局集团贵阳车站党委副书记张显飞介绍，今年暑运以来，贵阳地区三大火车站日均发送旅客16万人次，日均到达旅客超过16.2万人次，预计整个暑运期间旅客发送量将达1104万人次。</p><p>民航市场同样持续火爆。7月1日至23日，贵阳龙洞堡国际机场累计旅客吞吐量突破182.8万人次，单日吞吐量先后14次突破8万人次。</p><p>近年来，贵州深度挖掘山地资源、民族文化、生态本底与超级工程特色，持续完善产业体系，打造多点融合、全域开花的多样业态，有力支撑了文旅产业高质量发展。</p><p>如今的贵州避暑旅游不止于“凉快”，而是通过“避暑+文化”“避暑+非遗”“避暑+演艺”“避暑+运动”等多元融合，打造出一批具有差异化竞争力的新产品，实现了从“卖清凉”到“卖生活”的跨越。</p><p>体旅融合，激活县域经济活力。贵州以“村超”“村BA”“村马”“村舞”等乡土爆款体育赛事为牵引，串联峡谷漂流、山地攀岩、户外露营、乡村音乐节等特色体验场景，持续盘活乡村文旅资源、激活基层消费市场，“一场赛事带火一座城”的故事不断上演。</p><p>7月25日晚，2026第四届贵州“村超”联赛总决赛落下帷幕，比赛现场累计观赛人次超2.8万，全网累计观看量突破千万。榕江县以“村超”超级IP为核心，深耕民族文化、做实全域旅游，全面带动食宿、文创、农产品销售等关联产业蓬勃发展。今年前5个月，榕江县共接待游客331.21万人次，实现旅游收入33.49亿元。</p><p>非遗食旅融合，做强特色支柱产业。今年6月，贵州南山婆食品加工有限公司成功通过全球食品安全标准（BRCGS）A+认证，突破贵州特色食品出海高端资质壁垒。在文旅产业的强力带动下，贵州酸汤产业发展势头迅猛，2025年全产业链产值突破80亿元，规模以上工业增加值同比增长27.4%，成为食旅深度融合、助力农户增收的特色支柱产业。</p><p>农旅融合，赋能乡村全面振兴。铜仁依托8.5万亩优质抹茶基地，倾力打造“梵净抹茶”区域公共品牌，构建“茶园—工厂—小镇—街区—景区”全场景体验体系，研发推出180余款抹茶衍生产品，布局179个专属体验门店、2700余个融合消费场景，形成集游览、品鉴、采购、旅居、研学于一体的抹茶农旅融合生态体系。</p><p>红旅融合，厚植文旅育人底色。贵州长征数字科技艺术馆（红飘带）深度融合文化、科技、艺术元素，创新红色文化传播模式，成为省内红色文旅全新地标。据了解，该馆自开馆以来累计演出超2.4万场、接待人次超240万人次。</p><p>除了红色文化的浸润，贵州的夜经济同样精彩纷呈。贵州大力发展夜间文旅经济，依托特色村寨、城市街区、滨江景观、山野营地等多元载体，培育夜间演艺、民俗市集、灯火夜游、户外夜娱等新兴业态，建成26个省级夜间文化和旅游消费集聚区。</p><p>贵州省文化和旅游厅相关负责人表示，贵州将持续深化“旅游+”融合发展模式，丰富文旅业态，擦亮“多彩贵州”文旅新品牌，全力推动全省文旅产业高质量发展。 </p><!--/enpcontent--><!--enpproperty <date>2026-08-01 00:00:00:0</date><author></author><subtitle></subtitle><introtitle>从“卖清凉”到“卖生活”</introtitle><keyword></keyword><paperarticleid>185621</paperarticleid><channel>1</channel><nodeid>0</nodeid><nodename></nodename><url>http://szb.eyesnews.cn/pc/cont/202608/01/content_185621.html</url><urlpad>http://szb.eyesnews.cn/pad/cont/202608/01/content_185621.html</urlpad><siteid>1</siteid><paperid>1</paperid><title>贵州多元业态引爆避暑游</title>/enpproperty-->
+						</founder-content>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+		
+		
+        <div class="footer">
+            <p>Copyright 贵州日报数字报刊<span>|</span>所有内容为 贵州日报报刊社 版权所有.未经授权不得复制转载或建立镜像</p>
+			<p>为了更好的体验,请使用极速模式或谷歌浏览器浏览</p>
+        </div>
+    </div>
+	
+	
+	
+	<script>
+	
+		$("#candler").click(function(){
+		     //alert(1111)
+			 $(".time-control").toggle();
+		});
+	</script>	
+	<script src="../../assets/js/index.js" type="text/javascript" charset="utf-8"></script>
+
+	<table style="display:none;">
+<tr><td>-->
+
+<!--enpproperty
+<error><!--#include bot=INFOYEAR para="" --><!--enpend --></error>
+<date>2026-08-01</date>
+<author></author>
+<subtitle></subtitle>
+<introtitle>从“卖清凉”到“卖生活”</introtitle>
+<keyword></keyword>
+<id>1</id>
+<nodeid>1</nodeid>
+<nodename>贵州日报</nodename>
+<url>content_185621.html</url>
+<siteid>1</siteid>
+<title>贵州多元业态引爆避暑游</title> 
+/enpproperty-->
+</td></tr>
+</table>
+
+<div id="titleList" style="display:none;">	
+
+content_185619.html-在数字云端，看见中国—东盟职业教育新图景,
+content_185620.html-四足机器人十二个关节“贵安造”,
+content_185621.html-贵州多元业态引爆避暑游,
+content_185622.html-贵州省烈士英名录数字化展示系统二期投用,
+content_185623.html-新型电网更安全更绿色更智慧,
+content_185624.html-“都匀红鲤”入选全国名特优新农产品,
+content_185625.html-“编外技术员”盘活企业创新链条,
+
+</div>
+</body>
+<script>
+    var words = $("#titleList").text().split(",").slice(0,-1);
+    String.prototype.replaceAll = function(s1,s2){ 
+         return this.replace(new RegExp(s1,"gm"),s2); 
+    }
+    String.prototype.trim=function() {
+        return this.replace(/(^\s*)|(\s*$)/g,'');
+    }
+	$('.newspaper-pic area').hover(function(e){
+		var url = $(this).attr("href");
+		var coords = $(this).attr("coords");
+		var coordsArr = coords.split(",");
+		for(var i = 0; i < words.length; i++){
+            var listItem = words[i].split("-")[0];
+            listItem =listItem.replaceAll('\n','');
+            listItem =listItem.replaceAll('\r','');
+            listItem = listItem.trim();
+            if(url==listItem){
+                var title = words[i].split("-")[1];
+                console.log(title)
+                $('#popupid').text(title);
+                console.log("left:"+coordsArr[6]+"px","top:"+coordsArr[7]+"px")
+                $('#popupid').css({"left":coordsArr[6]+"px","top":coordsArr[7]+"px"});
+            }
+		}
+		
+		$('#popupid').show();
+	}, function(){
+	    $('#popupid').hide();
+	});
+	
+	</script>
+</html>

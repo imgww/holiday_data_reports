@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="icon" type="image/x-icon" href="/r/cms/www/default/images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/r/cms/www/default/libs/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/r/cms/www/default/libs/swiper3.4.2/swiper-3.4.2.min.css">
+<link rel="stylesheet" type="text/css" href="/r/cms/www/default/css/common.css">
+<link rel="stylesheet" type="text/css" href="/r/cms/www/default/css/detail.css">
+<script type="text/javascript" src="/r/cms/www/default/libs/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="/r/cms/www/default/libs/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/r/cms/www/default/libs/swiper3.4.2/swiper-3.4.2.min.js"></script>
+<script type="text/javascript" src="/r/cms/www/default/libs/qrcode/jquery.qrcode.min.js"></script>
+<script type="text/javascript" src="/r/cms/www/default/libs/vue.min.js"></script>
+<title>武汉刷榜“五一”文旅排行榜 斩获多项TOP10 - 湖北日报新闻客户端</title>
+</head>
+<body>
+<div class="header">
+    <input type="hidden" id="hidChannelId" value="1476" />
+    <input type="hidden" id="hidChannelFromId" value="1476" />
+    <input type="hidden" id="hidChannelName" value="热推" />
+    <input type="hidden" id="hidFullSearch" value="/pc/fullsearch.html" />
+    <input type="hidden" id="hidVideoChannel" data-url="/pc/video.html" value="视频" />
+    <input type="hidden" id="hidVideoChannelId" data-url="/pc/video.html" value="5" />
+    <input type="hidden" id="hidSelfMediaChannel" data-url="/pc/selfmedia.html" value="湖北号" />
+    <input type="hidden" id="hidSelfMediaChannelId" data-url="/pc/selfmedia.html" value="3" />
+    <input type="hidden" id="hidFromNewsId" value="5468045" />
+    <input type="hidden" id="hidFromNewsContentId" value="4927554" />
+    <input type="hidden" id="hidContentType" value="5">
+    <input type="hidden" id="hidContentTitle" value="武汉刷榜“五一”文旅排行榜 斩获多项TOP10">
+    <input type="hidden" id="hidContentKeyword" value="">
+    <input type="hidden" id="hidMemberId" value="2898">
+    <input type="hidden" id="hidNickName" value="曾振求">
+    <input type="hidden" id="hidCreateTime" value='2026-05-05 19:48:35'>
+    <input type="hidden" id="hidReleaseTime" value='2026-05-05 19:59:15'>
+    <input type="hidden" id="hidContentSubjectId" value="0" />
+    <input type="hidden" id="hidContentColumnId" value="0" />
+    <input type="hidden" id="hidContentMediaId" value="0" />
+    <div id="header">
+        <div class="header-w">
+            <div class="head-logo">
+                <a href="/" title="湖北日报新闻客户端">
+                    <img src="/r/cms/www/default/images/logo.png">
+                </a>
+            </div>
+            <div class="head-nav" id="head-nav"></div>
+            <div class="head-info">
+                <a id="registerBtn" href="javascript:;" onclick="showRegist()">注册</a>
+                <a id="loginBtn" href="javascript:;" style="border: none;" onclick="showLogin()">登录</a>
+                <a class="myCollect" data-id="myHistory" href="/pc/mycollect.html" target="_blank">历史</a>
+                <a class="myCollect" data-id="myCollect" href="/pc/mycollect.html" target="_blank">收藏</a>
+                <a id="btnLogout" href="javascript:;"  style="display: none;border: none;">注销</a>
+                <div id="memberInfoDiv" style="display: none;float: right;height: 30px;line-height: 15px;padding-top: 5px;"></div>
+                <div class="search-box">
+                    <div class="search-form" id="searchForm">
+                        <input type="button" id="searchBtn" class="search-btn">
+                        <input type="text" id="searchKey" class="search-key">
+                    </div>
+                    <div class="search-icon" onclick="showSearch(this)"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="channel-box" id="channelArea">
+    <div class="arrow-box">
+        <div class="arrow-up"></div>
+    </div>
+    <div class="channel-list-box">
+        <ul class="channel-list clearfix" id="channelAreaList"></ul>
+    </div>
+</div>
+
+<div class="bg-mask" id="mask"></div>
+<!-- 登录-->
+<div class="user-dialog" id="userDialog">
+    <div class="title">
+        <span class="title-con">登录</span>
+        <span class="d-close" onclick="hideUserDialog()"></span>
+    </div>
+    <div class="content">
+        <div class="login-form">
+            <div class="phone-box">
+                <input type="text" id="phone" name="phone" class="phone" placeholder="请输入手机号">
+                <button class="send-code" id="sendCode" onclick="sendCode()">获取验证码</button>
+            </div>
+            <div class="imgcode-box">
+                <input type="text" id="imgCode" name="code" class="imgcode" placeholder="请输入图片验证码">
+                <img id="verifyCodeImage" class="code-img" onclick="refreshVerifyCodeImage()">
+            </div>
+            <div class="verifycode-box">
+                <input type="text" id="verifyCode" name="code" class="verifycode" placeholder="请输入短信验证码">
+            </div>
+            <div class="operate-btns clearfix">
+                <div class="to-regist">没有账户，请先<span onclick="switchRegist()">注册</span></div>
+                <div class="to-login">已有账户，马上<span onclick="switchLogin()">登录</span></div>
+            </div>
+            <div class="login-btn" onclick="submitLogin()">登 录</div>
+        </div>
+        <div class="third-part">
+            <div class="third-title">第三方登录</div>
+            <div class="third-list">
+                <ul class="clearfix">
+                    <li class="third-item">
+                        <a href="javascript:;" class="wechat"></a>
+                    </li>
+                    <li class="third-item">
+                        <a href="javascript:;" class="qq"></a>
+                    </li>
+                    <li class="third-item">
+                        <a href="javascript:;" class="weibo"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="clearfix">
+        <div class="main-left">
+            <div class="news-detail-container">
+                <div class="news-title" id="news-title">武汉刷榜“五一”文旅排行榜 斩获多项TOP10</div>
+                <div class="we-media" id="we-media" style="display: none"></div>
+                <div class="news-detail-box">
+                    <div class="source">
+                        <span>湖北日报</span>
+                        <span class="source-item">2026-05-05 19:59:15</span>
+                    </div>
+                    <div class="detail-cont">
+                        <p><strong>湖北日报全媒记者冯袁玥 通讯员武文旅</strong></p><p>“五一”假期刚刚落幕，一组组亮眼数据刷屏网络。综合多家旅游平台数据，武汉在今年“五一”假期文旅市场中表现抢眼。其中，同程旅行将武汉列为热门长线游、亲子游、观演游三大榜单TOP10；去哪儿旅行将其评为国内热门目的地第七位，同时也是外国游客最喜爱的中国城市之一；携程旅行则显示，武汉位列“五一”展演赛事热门目的地第六位。</p><p>从出游趋势看，跨省长线游热度大幅攀升。武汉凭借丰富的文旅资源和便捷的交通优势，成为全国游客长线出行的重要选择。假期期间，全市酒店跨城预订热度同比增长近20%，来自安徽、江西、江苏等周边省份及北方城市的游客占比显著提升。</p><p style="text-align: left;"><img class="img-cover-full-20241111" src="https://hbrbapp.hubeidaily.net/d758c43c33ce485a818a8bacbb940b5f.png" data-originalurl="/files/imagepath/2026/05/05/cb20260505193122f8d849191d.png" data-source="wordImport"></p><p>2026年“五一”长假叠加部分地区春假政策利好，旅游消费集中释放。亲子游需求尤为旺盛，特色体验成为吸引游客的关键。武汉假期酒店亲子房预订热度同比增长近60%，成功跻身全国亲子游目的地TOP10。主题乐园与人文古迹是亲子游的核心热门，黄鹤楼、古德寺、武汉野生动物园、武汉欢乐谷等景区预订热度持续高涨。</p><p style="text-align: left;"><img class="img-cover-full-20241111" src="https://hbrbapp.hubeidaily.net/e6c04db2aaec4138bc32b87ce3bbc373.png" data-originalurl="/files/imagepath/2026/05/05/cb202605051931224043f3e78c.png" data-source="wordImport"></p><p>其中，黄鹤楼公园日场与夜场游客总人数较去年稳步增长，“五一”全新亮相的互动式文化演出《南楼有戏》首演即出圈，假期共演出60场，场场满员。武汉野生动物园推出“八只小熊见面会”及“熊孩子春游派对”活动，萌趣互动与科普宣传相结合，单日入园游客量突破3.6万人次。</p><p>“观演游”势头强劲，“票根经济”带动效应显著。同程数据显示，武汉凭借丰富的演出资源跻身全国热门“观演游”目的地TOP10；携程数据也显示，武汉位列“五一”展演赛事热门目的地第六，音乐演出与体育赛事正成为引流新引擎。</p><p style="text-align: left;"><img class="img-cover-full-20241111" src="https://hbrbapp.hubeidaily.net/5adb2cdeaa6b49c9910ec1f1e2f72044.jpg" data-originalurl="/files/imagepath/2026/05/05/cb20260505193122cbb4332c34.jpg" data-source="wordImport"></p><p>假期期间，武汉举办了多场大型演出，包括Beyond乐队叶世荣、周深巡回演唱会等。其中，周深演唱会于5月2日、3日在武汉体育中心连唱两晚，单场观众超3.8万人，省外观众占比高达69.5%。据武汉经开区商务局预测，演唱会期间拉动全区消费超6000万元。</p><p style="text-align: left;"><img class="img-cover-full-20241111" src="https://hbrbapp.hubeidaily.net/7c81ab60153348468c5bc637a909578e.jpg" data-originalurl="/files/imagepath/2026/05/05/cb2026050519312238fc1dd59d.jpg" data-source="wordImport"></p><p>除大型演唱会外，各类小剧场、戏剧演出等“小而美”的演艺业态遍布全市景区与街区。武汉欢乐谷举办国潮戏剧嘉年华，引入阿那亚戏剧节明星剧目《市郎图》、乌镇戏剧节爆款《兵马没有俑》等，凭借“一出好戏”实现单日客流2.2万人次。武汉极地海洋度假区则凭借精彩的国际马戏演出，5天累计接待游客突破15万人次，单日最高接待游客超5万人次。此外，5月4日湖北省城市足球联赛武汉主场赛事顺利举行，进一步丰富了文旅消费场景，带动周边餐饮、住宿消费持续升温，场馆周边酒店入住率同比增长五成。</p><p style="text-align: left;"><img class="img-cover-full-20241111" src="https://hbrbapp.hubeidaily.net/6c2c6ab37b80485987288dac62c1e8ae.jpg" data-originalurl="/files/imagepath/2026/05/05/cb20260505193122a52af75594.jpg" data-source="wordImport"></p><p>与此同时，武汉本地文旅消费亮点纷呈。以“惠游武汉 乐享生活”为主题的133项文旅活动全面铺开，江汉路、黎黄陂路等网红打卡点人气爆棚，其中武汉江汉路步行街/汉口江滩入选“2026‘五一’全国热门商圈”第六位。长江游船、城市漫步等休闲体验备受青睐，武汉红巷码头客流量较去年同期暴涨3倍。总体来看，武汉形成了传统景区与新兴业态共生共荣的良好发展格局，为“五一”假期交出了一份亮眼的文旅答卷。</p>
+                    </div>
+                    <div class="content-edit">
+                        <span>责任编辑：曾振求</span>
+                    </div>
+                    <div class="praise-collect-box">
+                        <div class="praise-box">
+                            <span class="praise">点赞 0</span>
+                        </div>
+                        <div class="collect-box">
+                            <span class="collect">收藏</span>
+                        </div>
+                    </div>
+                    <div class="share-box">
+                        <ul>
+                            <li class="share-wechat icon wechat" data-link="https://news.hubeidaily.net/mobile/mobile/c_5468045.html">
+                                <span class="icon wechat"></span>
+                                <span>微信</span>
+                            </li>
+                            <li class="share-weibo" title="分享到微博" data-link="https://news.hubeidaily.net/mobile/mobile/c_5468045.html" data-title="武汉刷榜“五一”文旅排行榜 斩获多项TOP10" data-pic="https://hbrbapp.hubeidaily.net/355afe403e1b4cd8a4a2514edfc06d67.jpg">
+                                <span class="icon weibo"></span>
+                                <span>微博</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="related-news-title">
+                <div class="box-title">
+                    <span id="related-news-title-span"></span>
+                </div>
+            </div>
+            <div class="related-news-container">
+                <ul class="related-news-list clearfix" id="related-news-list">
+                </ul>
+            </div>
+            <div class="news-comments">
+                <div class="news-comment-new">
+                    <textarea id="commText" class="comment-text" autoHeight="true" placeholder="我要跟帖..."></textarea>
+                    <div class="text-right">
+                        <span class="word-tip">已输入<span id="wordNum">0</span>个字</span>
+                    </div>
+                    <div class="text-right">
+                        <button class="submit-btn" id="submit-btn">发表</button>
+                    </div>
+                </div>
+                <div class="box-title">
+                    <span>全部评论</span>
+                </div>
+                <div class="news-comment-list" id="newsCommentList">
+                    <ul class="clearfix" v-if="!!commentList && commentList.length > 0">
+                        <li class="comment-item" v-for="item in commentList">
+                            <div class="portrait">
+                                <div class="img">
+                                    <img :src="item.memberImg">
+                                </div>
+                                <img :class="'pos pos'+item.identityInfo.topLeftResourceId" :src="item.identityInfo.bottomResourceUrl" v-if="!!item.identityInfo && JSON.stringify(item.identityInfo) != '{}'"/>
+                            </div>
+                            <div class="text">
+                                <div class="clearfix">
+                                    <div class="name" v-text="item.memberName"></div>
+                                    <div class="create-time" v-text="item.createdTime"></div>
+                                    <div class="praise-box">
+                                        <span class="praise" v-text="item.topCount" @click="onClickCommentPraise($event, item)"></span>
+                                    </div>
+                                    <div class="reply" @click="showReplay(item)">回复</div>
+                                </div>
+                                <div class="comm-text" v-html="item.comment"></div>
+                                <div class="comm-replay" v-if="item.isReplay">
+                                    <textarea :id="'commText'+item.id" class="comment-text" placeholder="我要回复..."></textarea>
+                                    <div class="text-right">
+                                        <button class="submit-btn" @click="submitReplay(item)">发表</button>
+                                    </div>
+                                </div>
+                                <div class="sub_comm" v-if="item.replyCount > 0">
+                                    <ul class="sub_comm_list">
+                                        <li class="sub_comm_item" v-for="subItem in item.childArray" :key="subItem.id">
+                                            <div class="clearfix">
+                                                <span class="name" v-text="subItem.memberName"></span>
+                                                <span class="create-time" v-text="subItem.createdTime"></span>
+                                                <div class="praise-box">
+                                                    <span class="praise" v-text="subItem.topCount" @click="onClickCommentPraise($event, subItem)"></span>
+                                                </div>
+                                            </div>
+                                            <div class="comm-text" v-html="subItem.comment"></div>
+                                        </li>
+                                        <li class="sub_comm_item" v-if="item.replyCount > 2 && item.childArray.length <= 2">
+                                            <span class="sub_comm_more" @click="onClickCommentMoreReply(item)" v-if="item.replyCount <= 10">查看全部{{ item.replyCount }}条回复></span>
+                                            <span class="sub_comm_more" @click="onClickCommentMoreReply(item)" v-else>查看更多回复></span>
+                                        </li>
+                                        <li class="sub_comm_item" v-else-if="item.replyCount > 2 && item.childArray.length > 2 && item.replyCount > item.childArray.length">
+                                            <span class="sub_comm_more" @click="onClickCommentMoreReply(item)">查看更多回复></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="load-more-box">
+                        <span class="load-more" v-if="!commentLoadOver" @click="loadMoreComment">查看更多评论<span class="down"></span></span>
+                        <span v-else>没有更多评论了</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-right">
+            <div class="epa-box">
+                <div class="box-title">
+                    <span>电子报</span>
+                </div>
+                <div class="epa-img">
+                    <a href="http://hbrb.cnhubei.com/cache/paper_hbrb.aspx" id="newsPic" target="_blank"></a>
+                </div>
+                <div class="epa-tabs">
+                    <ul class="clearfix">
+                        <li class="tab-item on">湖北日报</li>
+                        <li class="tab-item len">楚天都市报</li>
+                        <li class="tab-item">农村新报</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="activity-report-box">
+                <div class="box-title">
+                    <span>政情</span>
+                </div>
+                <div class="leader-list">
+                    <ul class="clearfix" id="leader-list">
+                    </ul>
+                </div>
+            </div>
+            <div class="recommend-box">
+                <div class="box-title">
+                    <span>精彩推荐</span>
+                </div>
+                <div class="recommend-list">
+                    <ul id="recommend-list">
+                    </ul>
+                </div>
+            </div>
+            <div class="qrcode-box">
+                <ul class="qrcode-list">
+                    <li class="qrcode-item">
+                        <img src="/r/cms/www/default/images/qrcode_app.jpg">
+                        <span>湖北日报客户端</span>
+                    </li>
+                    <li class="qrcode-item">
+                        <img src="/r/cms/www/default/images/qrcode_wechat.jpg">
+                        <span>湖北日报官方微信</span>
+                    </li>
+                    <li class="qrcode-item">
+                        <img src="/r/cms/www/default/images/qrcode_weibo.png">
+                        <span>湖北日报官方微博</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="foot-link">
+        <ul class="link-list clearfix">
+            <li class="link-item"><a href="https://www.hubeidaily.net/GroupSurvey.html" target="_blank">湖北日报集团简介</a></li>
+            <li class="link-item"><a href="https://epaper.hubeidaily.net"  target="_blank">湖北日报数字报</a></li>
+            <li class="link-item"><a href="http://www.hubeidaily.net/PublicNotice/"  target="_blank">公示公告</a></li>
+            <li class="link-item"><a href="/pc/legalStatement.html">法律声明</a></li>
+            <li class="link-item"><a href="/pc/contactUs.html">联系我们</a></li>
+        </ul>
+    </div>
+    <div class="foot-cp clearfix">
+        <div class="copyright">
+            <span>Copyright © 湖北日报 [鄂ICP备12007957-2号]</span>
+            <span>|</span>
+            <span>湖北日报传媒集团出品</span>
+        </div>
+        <div class="iconlist">
+            <a href="javascript:;"><img src="/r/cms/www/default/images/ft_icon1.png"></a>
+            <a href="javascript:;"><img src="/r/cms/www/default/images/ft_icon2.png"></a>
+            <a href="javascript:;"><img src="/r/cms/www/default/images/ft_icon3.png"></a>
+            <a href="javascript:;"><img src="/r/cms/www/default/images/ft_icon4.png"></a>
+        </div>
+    </div>
+</div>
+
+<script src="/r/cms/www/default/libs/zDialog/zDialog.js"></script>
+<script type="text/javascript" src="/r/cms/www/default/js/md5.min.js"></script>
+<script type="text/javascript" src="/r/cms/www/default/js/common.js"></script>
+<script type="text/javascript" src="/r/cms/www/default/js/header.js"></script>
+<script type="text/javascript" src="/r/cms/www/default/js/right.js"></script>
+<script type="text/javascript" src="/r/cms/www/default/js/hdbDetail.js"></script>
+<script type="text/javascript" src="/r/cms/www/default/js/statistics_tj.js"></script>
+<script type="text/javascript">document.write(unescape("%3Cspan style='display: none !important' id='cnzz_stat_icon_1281085254'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/z_stat.php%3Fid%3D1281085254' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">
+    $("#commText").keyup(function(){
+        var n = $(this).val().length;
+        $("#wordNum").text(n);
+    });
+
+
+    $(function(){
+        var localUrl = window.location.href;
+        var url = localUrl;
+        $('.share-weibo').data('link',url);
+        $('.share-wechat').data('link',url);
+        $.fn.autoHeight = function(){
+            function autoHeight(elem){
+                elem.style.height = 'auto';
+                elem.scrollTop = 0; //防抖动
+                elem.style.height = elem.scrollHeight + 'px';
+            }
+            this.each(function(){
+                autoHeight(this);
+                $(this).on('keyup', function(){
+                    autoHeight(this);
+                });
+            });
+        }
+        $('textarea[autoHeight]').autoHeight();
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=dege,chrome=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>�������α�����һ�غ��ԡ���������ơ� -  �й������ܿ���</title>
+<!--[972,2,21260] published at 2024-02-20 14:26:49 from #10 by ����-->
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="�й������ܿ���" />
+<link rel="stylesheet" type="text/css" href="/css/base.css">
+<link rel="stylesheet" type="text/css" href="/content.css">
+<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+<!--��վ��㿪ʼ-->
+
+<!--��վ������-->
+</head>
+<body>
+<a onclick="topFunction()" class="top"></a>
+<!--header-->
+<script>
+var width_body = document.body.clientWidth;
+if(width_body>600){
+      $("body").on('mouseover','.allitem',function(){
+         $(".navbar").css('display', 'block'); 
+         $("body").on('mouseleave','.navbar',function(){
+             $(".navbar").css('display', 'none'); 
+         });
+     });
+     
+}else{
+      $("body").on('click','.allitem',function(){
+        var obj = document.getElementsByClassName("navbar");
+        if(obj[0].style.display=="none"){
+            obj[0].style.display = "block";  
+        }else{
+           obj[0].style.display = "none";
+        }   
+     });
+}
+
+$(".navbar").hover(function() {
+        $(this).css('display', 'block');;
+   }, function() {
+        $(this).css('display', 'none');
+});
+	
+ 
+
+		 
+ 
+// �����ť�����ض���
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+<style>
+.logo img {
+    display: block;
+    margin-top: 2px;
+    width: 243px;
+}
+</style>
+
+<div class="header">
+<div class="nav">
+<div class="logo fl">
+			<!-- <a href="//www.inewsweek.cn/"><img src="//www.inewsweek.cn/10/2018/0906/xwzk-logo.png" alt="" /></a> -->
+                        <a href="//www.inewsweek.cn/"><img src="//www.inewsweek.cn/10/2018/1225/logo.png" alt="" /></a>
+		</div>
+<div class="navlist fl">
+<ul>
+<li><a href="//news.inewsweek.cn/cover/">����</a></li>
+<li><a href="//news.inewsweek.cn/politics/">ʱ��</a></li>
+<li><a href="//news.inewsweek.cn/society/">���</a></li>
+<li><a href="//news.inewsweek.cn/finance/">����</a></li>
+<li><a href="//news.inewsweek.cn/world/">����</a></li>
+<li><a href="//news.inewsweek.cn/survey/">����</a></li>
+<li><a href="//news.inewsweek.cn/people/">����</a></li>
+<li><a href="//auto.inewsweek.cn/">����</a></li>
+<li><a href="//style.inewsweek.cn/">����˼����</a></li>
+<li><a href="//video.inewsweek.cn/">��Ƶ</a></li>
+<li><a href="//cartoon.inewsweek.cn/">��ѽ����</a></li>
+<li><a href="//event.inewsweek.cn/">�</a></li>
+</ul>
+</div>
+
+<div class="allitem fl" style="cursor:pointer">
+ȫ����Ŀ��
+</div>
+<div class="navbar" style="display:none">
+<div class="wap_nav">
+
+ <input type="text" value="������ؼ���" onclick="this.value='',this.style.color='#fff'" name="q" id="q"
+                       class="wapinput1" onkeydown="checksubmit()">
+
+                <a class="wapinput2" onclick="submitFun()"/>����</a>
+
+                <script type="text/javascript">
+
+                    function checksubmit() {
+                        var code = event.keyCode;
+                        if (code == 13) submitFun();
+                    }
+
+                    function submitFun() {
+
+                        var hotword = document.getElementsByName('q')[0].value;
+
+                        if (hotword == '') {
+
+                            alert('������ؼ���!');
+
+                            return false;
+
+                        }
+                        else {
+                            window.open("//channel-inewsweek.chinanews.com/search.do?&q=" + encodeURIComponent(hotword));
+                        }
+
+                    }
+
+                </script>
+
+
+<div class="waphome"><a href="//www.inewsweek.cn/">��ҳ</a></div>
+<div class="waplm">ȫ����Ŀ��</div>
+
+</div>
+
+<ul>
+<li class="bg1"><a href="//news.inewsweek.cn/cover/">����</a></li>
+<li class="bg2"><a href="//news.inewsweek.cn/politics/">ʱ��</a></li>
+<li class="bg3"><a href="//news.inewsweek.cn/society/">���</a></li>
+<li class="bg4"><a href="//news.inewsweek.cn/finance/">����</a></li>
+<li class="bg5"><a href="//news.inewsweek.cn/world/">����</a></li>
+<li class="bg6"><a href="//news.inewsweek.cn/survey/">����</a></li>
+
+<li class="bg23"><a href="//news.inewsweek.cn/wh/">�Ļ�</a></li>
+<li class="bg24"><a href="//news.inewsweek.cn/qy/">����</a></li>
+<li class="bg25"><a href="//news.inewsweek.cn/kj/">�Ƽ�</a></li>
+
+<li class="bg7"><a href="//news.inewsweek.cn/people/">����</a></li>
+<li class="bg21"><a href="//news.inewsweek.cn/history/">����</a></li>
+<li class="bg8"><a href="//auto.inewsweek.cn/">����</a></li>
+<li class="bg11"><a href="//news.inewsweek.cn/special/">�ظ�</a></li>
+<li class="bg12"><a href="//news.inewsweek.cn/viewpoint/">�۵�</a></li>
+<li class="bg13"><a href="//news.inewsweek.cn/life/">����</a></li>
+<li class="bg14"><a href="//iread.inewsweek.cn/">Ҽ��</a></li>
+<li class="bg15"><a href="//video.inewsweek.cn/">��Ƶ</a></li>
+<li class="bg16"><a href="//news.inewsweek.cn/observe/">Ʒ�ƹ۲�</a></li>
+<li class="bg17"><a href="//magazine.inewsweek.cn/">����</a></li>
+<li class="bg18"><a href="//journalist.inewsweek.cn/">����</a></li>
+<li class="bg20"><a href="//event.inewsweek.cn/">�</a></li> 
+<li class="bg19"><a href="//visual.inewsweek.cn/">ͼƬ����</a></li>
+<li class="bg9"><a href="//style.inewsweek.cn/">����˼����</a></li>
+<li class="bg9"><a href="//cartoon.inewsweek.cn/">��ѽ����</a></li>
+<li class="bg22"><a href="//aboutus.inewsweek.cn/">��������</a></li> 
+</ul>
+</div>
+
+
+<a href="//channel-inewsweek.chinanews.com/search.do?q=%E5%91%A8%E5%88%8A" class="search fl"></a>
+
+</div>
+</div>
+<!--<meta name="chinanews_site_verification" content="b64d5b6396e4fc8359c70014f57744e6"/>-->
+<!--972,9,8 published at 2026-07-27 09:34:42 by 305-->
+<div class="clear"></div>
+<div class="contentdiv">
+
+<h1>�������α�����һ�غ��ԡ���������ơ�</h1>
+<div class="editor">��Խ����2024-02-20 14:26:48</div>
+<div class="contenttxt">
+
+<div class="clear"></div>
+
+<p class="txt"></p>
+
+
+<p>���괺�ڼ��ڵ��������ݳ�¯�ˡ�</p>
+
+<p>&nbsp;</p>
+
+<p>�Ļ������β����·����Ĳ���������ʾ��2024�괺��8�����������δ�4.74���˴Σ������οͳ����ܻ���6326.87��Ԫ��</p>
+
+<p>&nbsp;</p>
+
+<p>�Աȿ����������γ����˴�ͬ������34.3%�����ɱȿھ���2019��ͬ������19.0%�������οͳ����ܻ�����ͬ������47.3%�����ɱȿھ���2019��ͬ������7.7%��</p>
+
+<p>&nbsp;</p>
+
+<p>���۶Ա�ȥ�꣬��������֮ǰ��2019�꣬��һ�������ݶ��Ƶ������ۡ�</p>
+
+<p>&nbsp;</p>
+
+<p>���ڴ��������У���������Ŀ�ĵصĳɼ������ɱ��ܹ�ע�����ǽ��꣬�����������ı��֣�</p>
+
+<p>&nbsp;</p>
+
+<p><strong>�����������족</strong></p>
+
+<p>&nbsp;</p>
+
+<p>�ڽ��괺�ڼ��ڵ���֮ǰ���ٶȵ�ͼ���Ͻ�ͨ���䲿��·��ѧ�о�Ժ�Ȼ��������ġ�2024�괺�ڼ��ڳ���Ԥ�ⱨ�桷��ͨ�������ݼ�ⷢ�֣����ڳ��г��֡����������족�������ѩ���εġ������������������ů�Ĺ��ݡ���˫���ɵȵأ���Ϊ����Ŀ�ĵء�</p>
+
+<p>&nbsp;</p>
+
+<p>�����յ�������һ���̶���ӡ֤����һԤ�⡣</p>
+
+<p>&nbsp;</p>
+
+<p>���磬ȫ��������Դ��Ϊ�ḻ�����ϣ��ɼ����ۡ�������ʡ�Ļ���������ͳ�ƣ�2024�괺��8����ڣ�����ʡʵ������������637.4��Ԫ�������괺�ڿɱȿھ�����45.1%����һ�ɼ���Ŀǰ�ѹ������������ʡ���У������ڶ������У���˫�������Ļ������ξֹ�����������ʾ��ͬ��ȫ�ݽӴ��ο�392���˴Σ�ͬ������8%������������49��Ԫ��ͬ������27%��</p>
+
+<p>&nbsp;</p>
+
+<p>ͬ������Ϊ�ǡ��ܺ�������Ŀ�ĵصĹ��ݣ�ͬ�ڹ��Ӵ������οͳ���1555���˴Σ�ͬ��������58%�����������ܶ112��Ԫ��ͬ��������65%��</p>
+
+<div class="img_wrapper" style="text-align: center;"><span style="font-size: 12px;"><img src='http://www.inewsweek.cn/2024/0220/U695P972DT20240220142504.jpg' /></span></div>
+
+<p style="text-align: center;"><span style="font-size: 12px;">������Խ�㹫԰ӭ����չ��ͼ/ͼ�洴��</span></p>
+
+<p>&nbsp;</p>
+
+<p>���뵽2024�꣬������ʡ���������ȫ���𱬡���Ȧ�������ڼ��ڣ����������Ļ��ȣ�����ֱ�Ӵ�����ȫʡ�����������ݵĴ��������</p>
+
+<p>&nbsp;</p>
+
+<p>������ʡ������������������ʾ�����괺�ڼ����ڼ䣬������ʡ�ۼƽӴ��ο�2220.7���˴Σ�ͬ������75.9%����2019������62%��ʵ����������Ϊ271.9��Ԫ��ͬ��ȥ���ֵ����102.1%����2019������61.7%��</p>
+
+<p>&nbsp;</p>
+
+<p>ͬ�ڣ��������οͽӴ�����������������ﵽ��ʷ��ֵ�����������Ļ��������ξֵ�������ʾ�����ڼ��ڹ������ۼƽӴ��ο�1009.3���˴Σ��վ�ͬ������81.7%��ʵ������������164.2��Ԫ�����ɱȿھ�ͬ������235.4%������ζ�Ž��괺���ڼ䣬�����������ο�����Լռȫʡ��45%������ռ���򳬹���ȫʡ���������60%��</p>
+
+<div class="img_wrapper" style="text-align: center;"><span style="font-size: 12px;"><img src='http://www.inewsweek.cn/2024/0220/U695P972DT20240220142523.jpg' /></span></div>
+
+<p style="text-align: center;"><span style="font-size: 12px;">��������ѩ�������⡣ͼ/ͼ�洴��</span></p>
+
+<p>&nbsp;</p>
+
+<p>�����Ž����ѩ���μ�����β�������������ܷ���������ٴ��������ۡ�</p>
+
+<p>&nbsp;</p>
+
+<p>���й������о�Ժ���о�Ա��諿�����һ�����������г��ܷ�����𱬣���Ҫһ��������������Դ�Ƿ���ж����ԡ������ݵ�ý���ȳ��϶����ȥ����������������롮���졯�����費���ھ�����ص������㡣��</p>
+
+<p>&nbsp;</p>
+
+<p>���ͬʱ������ʡ�ݴ��������г��ı���Ҳ�������γ����������ۡ�</p>
+
+<p>&nbsp;</p>
+
+<p>����ʡ������������ʾ������8����ں���ȫʡ�Ӵ��ο�951.45���˴Σ�ʵ������������151.27��Ԫ����ȥ��ͬ����ȣ��ֱ�����48.8%��62.7%����2019��ͬ�ڶԱȣ��ֱ�����52.6%��76.7%��</p>
+
+<p>&nbsp;</p>
+
+<p>�οͱ���֮�󣬽����յķ��̸߷壬������Ϊ�ÿ͡��������׳����ѡ�ƵƵ�������ѡ����������˵ȴ�ʮ����Сʱ��������Դ���������ֶ�Ʊ�������Ȼ�����������㷺���ۡ�</p>
+
+<p>&nbsp;</p>
+
+<p>�����Ϊ��δ��������Ҫ���Ӳ��ֽ�ͨ������ʩ���裬���������ε��³��ֵ����⣬���ɷ�ӳ��Ŀǰ����������ҵ��չ��һ��������</p>
+
+<p>&nbsp;</p>
+
+<p>��˵����Ŀǰ���ڲ����ο�ϲ���ڹ������ռ������Σ�ԭ�����ڲ�����ҵ��н�ݼ�û�еõ��ܺõ���ʵ�������Ľ���ǲ����������ڼ���֮����Ҫ�Ӵ��������οͣ����󳬹��˵������ĳ�����������������������������������ʩ�����������ٽϴ����ã��˷���Դ�����⣬Ŀǰ�ҹ�����ҵ��ʼ�ɵ����Ĺ۹���������ȼ١�����������ת�������Ժ���Ϊ�����Ķȼ�������ģʽ���������ڶ�Ĺ������ڣ�����б�Ȼ����ۿۡ���</p>
+
+<p>&nbsp;</p>
+
+<p>�ڻ�諿������������ϸˮ�����������⣬������Σ���δ����������ҵ��Ҫ����̽���Ŀ��⡣</p>
+
+<p>&nbsp;</p>
+
+<p><strong>һ�ء���������ơ�</strong></p>
+
+<p>&nbsp;</p>
+
+<p>��Ŀǰ�ѹ���2024���ڼ������γɼ��ĸ���ʡ���У��㶫��ùھ���</p>
+
+<p>&nbsp;</p>
+
+<p>�㶫ʡ�Ļ���������������������ʾ���ݳ������㣬2024�괺�ڼ��ڰ���ȫʡ���Ӵ��ο�7606.9���˴Σ���2023�괺������68.4%����2019�괺������20.2%��ʵ����������693.6��Ԫ����2023�괺������160.8%��</p>
+
+<p>&nbsp;</p>
+
+<p>ֵ��ע����ǣ��������ڼ��ڣ��㶫�Ӵ��ο�Լռȫ�������ο�������16%����������Լռȫ�������ܻ��ѵ�11%���㶫�Ӵ��οͺ����������2023�������������ȫ����</p>
+
+<p>&nbsp;</p>
+
+<p>��һ���꣬���ٵط���������������Խ��Խ�������������þֳ��������裬Ҳ��ʡ�������˺�һ������߰�ʮ����Ƶ���㶫������������Ϊ����ϵ����������������ʾ��2023�꣬�㶫ȫʡ�Ӵ��ο�7.77���˴Ρ����������볬9500��Ԫ��λ��ȫ����һ��</p>
+
+<p>&nbsp;</p>
+
+<p>���������������������㶫ʵ����ȱ����һ��������������������Ʊ������ǡ��ʹ��������֪�����㡣�㶫����ȡ�������ĳɼ�����Ӵ������ȡ�Ӳ�ˡ�ʵ��ϢϢ��ء����㶫ʡ���Ժ����ѧ�о�Ա���������й������ܿ���</p>
+
+<p>&nbsp;</p>
+
+<p>��諷�����������ҵ��չ��������ҵĿ�ĵ��ִ�����ҵ���ۺϿ���Խ��Խ��Ҫ����������ȫ�Ծ������ε�˼ά˼���������οͳ��Σ�Խ��Խ���Ӷ���ʳ��ס�޵�һϵ���ִ�����ҵ�Ŀ��������Ź��ڴӹ�ҵ�������ҵ��������ת�䣬����Խ��Խ�������У�����ҵҲ���ɵ����Ĺ۹������Σ������жȼ���ת���������������У���ʳ��ס�޺ͽ�ͨ���ۺ�ʵ����ǿ�Ĺ㶫�����ɾ߱�һ�����ơ���</p>
+
+<p>&nbsp;</p>
+
+<p>��ҵ�о�����ǰհ��ҵ�о�Ժ��������ʾ������2022���ȫ���Ǽ��Ƶ������ܼ�7337�ң����й㶫�Ǽ��Ƶ�����λ��ȫ����һ���Ӹ�ʡ���Ǽ��Ƶ�Ӫҵ��������������㶫ʡ��119.65��Ԫλ�е�һ��ռȫ���Ǽ��Ƶ�Ӫҵ�����ܶ��10.16%��</p>
+
+<p>&nbsp;</p>
+
+<p>���⣬��������˿ڽ϶���ص㣬�㶫����ԡ�������ꡱ����������</p>
+
+<p>&nbsp;</p>
+
+<p>2024�괺��ǰϦ�����㶫���������ϸ����з����Ƴ����뵽�㶫�����ꡱϵ��ר�⣬�������ϱ��У����굽�㶫����Ϊ�������ںš�</p>
+
+<p>&nbsp;</p>
+
+<p>����������ʾ���㶫��������ꡱ�����������������ڿ�ʼǰ��3��ʱ���ڣ���ȫ�����ط����㶫�����������Ԥ������ȥ��ͬ��������2�������к��ϡ����������������ϡ������ȵ��Ǵ��ڼ���ǰ���㶫���ε����ſ�Դ�أ�����Щʡ�ݲ��������������������˿ڵ���Ҫ��Դ�ء�</p>
+
+<p>&nbsp;</p>
+
+<p>�������Ѵ����ݣ����۰Ĵ�������Ϊ������ڵ���������Ŀ�ĵأ����й��ݸ߾ӹ������ų��еڶ��������ڱ�������Я�̡�������ƽ̨��������λ�Ӵ�����������Ŀ�ĵ�ǰ�����������⣬����Ҳ�������ų���ǰʮ��</p>
+
+<p>&nbsp;</p>
+
+<p>����֮�⣬ʡ�����εĻ��ȶ��������������ݵ�Ӱ��ͬ�����ɺ��ӡ��ڶ����������㶫��Ϊȫ�����õ�һǿʡ���������������������ˮƽ��ȫ��λ��ǰ�У����һ���ٳ���ʡ�ڶ�;���εĻ��ȡ�</p>
+
+<p>&nbsp;</p>
+
+<p>���磬�㶫ʡ��ӵ�зḻ�ı�������Ȫ��Դ���ݵ���֪���������֮�ý��ܣ����ڻƽ���8�죬����ÿ�췢����100��ʡ���ܱ����Ŷӣ����۰��г����嶩������2023��ͬ��������100%��</p>
+
+<p>&nbsp;</p>
+
+</div>
+
+
+</div>
+<!--fotter-->
+<div class="footer">
+	<div class="container">
+		<div class="foot_link">
+		<p>��
+		<span class="divider"><a href="https://beian.miit.gov.cn">��ICP�� 2021002309��</a>��������������Ϣ��������֤��10120170040</span>��
+		<span class="divider">Υ���Ͳ�����Ϣ�ٱ��绰����010��68318080-691</span>
+                 <span class="divider">��Ȩ���У����й������ܿ�����־�����޹�˾</span></p>
+		</div>
+		
+	</div>
+</div>
+<!--����΢�ŷ�����ʾ����ͼ-->
+<script src="//res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+<script src="//www.chinanews.com.cn/part/cns_public/120/wxshare.js"></script>
+<script>
+$(document).ready(function(){
+   var ua = navigator.userAgent.toLowerCase();
+   if(/micromessenger/ig.test(ua)){
+      var share_title = '�������α�����һ�غ��ԡ���������ơ�';
+      var share_desc = document.querySelectorAll('meta[name=description]')[0].getAttribute("content");
+      share_desc = !!share_desc?share_desc:share_title;
+      var share_url = window.location.href.split('#')[0];
+      var cont = document.querySelector(".contenttxt").querySelector("img");
+      var share_img = !!cont?cont.src:"https://i2.chinanews.com/thumbnailzhi44.png";
+      wxshare(share_title,share_desc,share_img,share_url,"zhoukan",false,false); //�ļҹ��ں�;΢�Žӿ����ǲ���debug;�Ƿ�ʹ�ò���wxshare�ӿ�
+   }
+})
+</script>
+</body>
+</html>

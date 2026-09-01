@@ -1,0 +1,203 @@
+<html>
+	<head>
+		<title>“十一”我省累计游客3694.3万人次</title>
+		<meta http­equiv="Content­Type" content="text/html; charset=utf­8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+		<meta name="format­detection" content="telephone=no">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		 
+		<script src="https://mqjwb.tidenews.com.cn/epaper/public/js/jquery-1.10.2.js"></script>
+
+		<script src="https://mqjwb.tidenews.com.cn/epaper/public/js/jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" href="https://mqjwb.tidenews.com.cn/epaper/public/css/jquery.mobile-1.4.5.min.css">
+		<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+		
+		<script type="text/javascript">
+			(function (para) {
+				var w = window, n = para.name;
+				// GetuiData
+				w['GetuiData'] = n;
+				w[n] = w[n] || function(a) {return function() {(w[n]._q = w[n]._q || []).push([a, arguments]);}};
+				var ifs = ['init', 'track', 'autoTrack'];
+				for (var i = 0; i < ifs.length; i++) {
+					w[n][ifs[i]] = w[n].call(null, ifs[i]);
+				}
+				var s =document.createElement('script');
+				s.type='text/javascript';
+				s.async=true;
+				s.src=para.sdk_url;
+				var x =document.getElementsByTagName('script')[0];
+				w[n].customPara = para;
+				x.parentNode.insertBefore(s, x);
+			})({
+				sdk_url: 'https://cdn-getuigw.getui.com/iopsdk/getuidata.min.js',
+				name: 'GetuiDataSDK',
+				appId: '347',
+				server_url: 'https://bggt.tmuyun.com/iop-ps/sdk/data.gif',
+				show_log: true
+			});
+			GetuiDataSDK.autoTrack();
+		</script>
+		<script type="text/javascript">
+			var articleID = 4273163;
+			var date = "2024-10-08";
+			var baseUrl = "https://mqjwb.tidenews.com.cn/epaper/";
+			var shareTitle = "“十一”我省累计游客3694.3万人次";
+			var shareDescription = "更多资讯，尽在潮新闻客户端。";
+			var shareImg = "https://act.thehour.cn/epaper/public/images/tide_logo.png";
+			var shareLink = baseUrl+"article/"+date+"/"+articleID;
+			var wxReady = false;
+			
+			function goBack () {
+				const ref = document.referrer.indexOf(baseUrl) > -1;
+				if (isThehour()) {
+					history.back();
+				}
+				else {
+					if (document.referrer === '') {
+						window.location.href = baseUrl+'page/'+date+'/77';
+
+					}
+					else if (ref) {
+						history.back();
+					}
+					else {
+						window.location.href = baseUrl+'page/'+date+'/77';
+					}
+				}
+			}
+
+			$(function() {
+				if(isZjolapp()){
+					$('#back-btn').hide();
+				}
+				appShareData();
+				wechatShareData();
+				$.ajax({
+				    type:"get",  
+				    async:true,  
+				    url: baseUrl+"stat/"+date+"/"+articleID,
+				    dataType:"json",
+				    success:function(result){
+				        //console.log(result);
+				        if (result.state == 0) {
+				            //console.log('pv:'+result.pv);
+				            $('#pv').text(result.pv);
+				        }
+				        else {
+				            console.log('error');
+				        }
+				        
+				    },  
+				    error:function(result){  
+				        console.log('failed');
+				        
+				    }  
+				});
+			});
+
+			function appShareData() {
+				//客户端分享
+				//分享标题
+				window.h24_msg_title = shareTitle;
+				//分享摘要
+				window.h24_msg_desc = shareDescription;
+				//分享图片url
+				window.h24_msg_cdn_url = shareImg;
+				//分享链接
+				//window.h24_msg_link = shareLink;
+			}
+			function wechatShareData() {
+							}
+			function device() {
+			    const u = navigator.userAgent;
+			    const isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+			    const isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+			    if (isAndroid)
+			      return 'android';
+			    if (isiOS)
+			      return 'ios';
+			}
+			function isThehour() {
+				const u = navigator.userAgent;
+				return u.indexOf('TwentyFourHours') > -1;
+			}
+			function isZjolapp() {
+				const u = navigator.userAgent;
+				return u.indexOf('zjolapp') > -1;
+			}
+		</script>
+
+		<style>
+			.content{padding:30px 16px 0 16px; font-size:1.14rem;}
+			.content .i-title h1{font-size:1.7rem; font-weight:400;}
+			.content .i-title h3 { font-weight: normal;  }
+			.content .i-title p{padding-top:10px; font-size: 0.857rem; color:#a9a9a9;}
+			.content .i-time{margin-right:12px;}
+			.content .i-content{padding-top:25px; line-height:1.57rem; word-break:break-all; text-align:justify;}
+			.content .i-content p{margin-bottom:14px;}
+			.content .i-content img{display:block; max-width:100%; margin-bottom:14px; margin-left:auto; margin-right:auto; height:auto !important;}
+			.content .i-content embed{width:100% !important; height:auto !important;}
+
+			#info {color: #AAA; font-size: 12px;}
+
+			#author {margin-right: 10px;}
+
+		</style>	
+	</head>
+	<body>
+		<div style="display:none;"><img src="https://mqjwb.tidenews.com.cn/epaper/public/images/qb_wx_logo.jpg"></div>
+		<div data-role="page" id="main-page" data-url="main-page" data-dom-cache="false">
+			<div data-role="header" data-theme="a">
+			<h1 id="page-title">“十一”我省累计游客3694.3万人次</h1>
+				<!--<a href="#left-panel" data-theme="b" data-icon="carat-r" data-iconpos="left" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon ui-btn-b">版次</a>-->
+				<a id="back-btn" href="#" onclick="goBack();" data-theme="a" data-shadow="false" class="ui-nodisc-icon ui-btn-b" data-ajax="false">返回</a>
+			</div><!-- /header -->
+			<div role="main" class="ui-content">
+				<div class="content">
+					<div class="i-title">
+						<h3 class="article-pretitle"></h3>
+						<h1 class="article-title">“十一”我省累计游客3694.3万人次</h1>
+						<h3 class="article-subtitle">超1700万人次游杭州，同比增长近五成</h3>
+						<!--
+						<p><span class="i-time"></span>
+						<span class="i-source"></span></p>-->
+						<div id="info">
+							<span id="author">作者：本报记者 周丰 杨希林 通讯员 杨展望 刘博 徐少华 </span>							阅读数：<span id="pv">0</span>
+						</div>
+					</div>
+					<div class="i-content">
+						        <table><tbody><tr><td><img src="https://qjwb.tidenews.com.cn/images/2024-10/08/qjwb20241008a0013v02b004.jpg" width="100%"></td></tr>     <tr><td>    杭州文广旅游发布微信公众号制图<br/></td></tr></tbody></table>  <div class="main-content"><p>　　这个“十一”假期，多少游客来浙江游玩？</p><p>　　昨天，浙江省文化广电和旅游厅发布今年国庆假期的全省数据，浙江省累计全域旅游人数3694.3万人次，其中接待过夜游客2092.3万人次。</p><p>　　“杭州文广旅游发布”微信公众号同时发布，国庆假期杭州市各景区景点（含乡村旅游）累计接待游客1758.58万人次，同比增长48.07%。</p><p>　　综合运营商手机信令大数据和旅游花费抽样调查，2024年国庆假期，浙江省累计全域旅游人数3694.3万人次，按可比口径（下同）增长16.6%，比2019年同期增长22.7%。其中，接待过夜游客2092.3万人次，同比增长13.8%，比2019年同期增长16.7%。</p><p>　　全域旅游综合收入508.1亿元，同比增长20.4%，比2019年同期增长21%；游客人均花费1375.4元，同比增长3.3%，创假日抽样调查（2021年）以来同期最高。</p><p>　　据“杭州文广旅游发布”微信公众号，国庆假期杭州市各景区景点（含乡村旅游）累计接待游客1758.58万人次，同比增长48.07%。其中外地来杭游客1213.5万人次，同比增长12.3%，涉旅行业总消费161.71亿元，同比增长31.78%。</p><p>　　受《黑神话：悟空》IP的带动，如灵山景区、灵栖洞景区和瑶琳景区今年客流较大。“亚运小镇”度假区四天内接待超过1.5万人次，创造了600余万元的营收。</p><p>　　杭温高铁开通，也带动了周边游客“高铁游”杭州。据“富阳发布”微信公众号，国庆假期首日，位于桐庐东站附近的瑶琳仙境景区接待游客超6000人次，客流量同比去年上涨203%，其中大部分是高铁沿线城市的游客。</p><p>　　国庆期间，杭州市住宿单位累计接待过夜游客227.9万人次，同比（比去年同期）上升10.1%。假期杭州日均入住32.6万人次，杭州市酒店平均入住率71%，按可比口径同比增长15%。大数据显示，10月2日~4日为来杭游客入住酒店的高峰期，三天期间酒店平均入住率超过80%，高品质经济型酒店和高星级酒店接近满房状态。第三方平台携程大数据显示，来杭游客在该平台上预订的酒店价格多集中在450-600元区间，1000元以上的高端房型占总量的16%。这个假期，杭州民宿市场的表现也令人瞩目，尤其是桐庐、建德、临安等地的民宿在长假期间整体入住率超过85%。余杭区的民宿平均房价在10月5日达到1400元以上。</p><p>　　国庆假期全省景区</p><p>　　日均到访人数TOP10</p><p>　　1.杭州市西湖风景名胜区</p><p>　　2.杭州市京杭大运河·杭州景区</p><p>　　3.杭州市千岛湖景区</p><p>　　4.台州市台州府城文化旅游区</p><p>　　5.杭州市西溪湿地景区</p><p>　　6.嘉兴市乌镇景区</p><p>　　7.温州市楠溪江风景区</p><p>　　8.湖州市南浔古镇景区</p><p>　　9.金华市横店影视城</p><p>　　10.嘉兴市南湖旅游区</p><p></p></div>					</div>
+				</div><!--content end-->
+			</div><!-- /content -->
+			<br>
+			
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		function app_getArticleTitles() {
+			return {
+						"pretitle": document.getElementsByClassName('article-pretitle')[0].innerText,
+						"title": document.getElementsByClassName('article-title')[0].innerText,
+						"subtitle": document.getElementsByClassName('article-subtitle')[0].innerText
+					};
+		}
+
+		function app_getArticleContent() {
+			return document.getElementsByClassName('main-content')[0].innerText;
+		}
+	</script>
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?a3398207bfdc2d3f28dfff22409449ca";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+	<!--<script id="_trs_ta_js" src="//ta.8531.cn/c/js/ta.js?mpid=209" async="async" defer="defer"></script>-->
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  
+  <meta charset="utf-8" />
+  <meta name="keywords" content="chinahotel 中国饭店协会">
+  <meta name="description" content="chinahotel 中国饭店协会">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="_csrf_header" content="X-CSRF-TOKEN"/>
+  <meta name="_csrf" content="656564b7-4d37-42f8-ac1e-ceca8fb8a1b8"/>
+  <link rel="stylesheet" href="/css/hotel/slick.css" />
+  <link rel="stylesheet" href="/css/hotel/bootstrap.min.css"/>
+  <link rel="stylesheet" href="/css/hotel/style.css?v=20250806"/>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+  <link rel="Bookmark" href="/favicon.ico" />
+  <link rel="Shortcut Icon" href="/favicon.ico" />
+  <!--[if lt IE 9]>
+  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+  <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <title>指数发布 | 中国住宿业消费指数报告（2026年7月）发布_中国饭店协会</title>
+  <style>
+    td {
+      border: solid;
+    }
+    .right_bg {
+      background-color: #fff;
+      padding: 20px;
+    }
+    .news-title {
+      font-size: 32px;
+      font-weight: 600;
+      word-wrap:break-word;
+      word-break:break-word;
+    }
+    .news-sub-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #666;
+      font-size: 16px;
+    }
+    .repeatX {
+      width: 100%;
+      background: url(/images/hotel/repeatBg_xb.png) 0 0 repeat-x;
+      height: 8px;
+    }
+    .news-content {
+      padding-bottom: 40px;
+      margin: 0 auto;
+      color: #404040;
+      font-size: 20px;
+      line-height: 200%;
+    }
+    .news-content p {
+      margin-bottom: 20px;
+      outline: none;
+    }
+    .main_content {
+      word-wrap:break-word;
+      word-break:break-word;
+    }
+    .main_content ul, ol {
+        list-style: revert;
+        padding: revert;
+        margin: revert;
+    }
+    .main_content img {
+      max-width: 100%;
+      height: auto!important;
+    }
+    .news-declaration a {
+      color: #007bff;
+    }
+    .news-declaration a:hover {
+      color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .right_bg {
+        padding: 10px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <div class="header dong">
+      <div class="wrap clearfix ovh">
+        <a href="/" class="logo fl">中国饭店协会</a>
+        <div class="info fr dong">
+          <div class="link text-right">
+            <a href="https://hyuan.chinahotel.org.cn/" class="an text-center">入会申请</a>
+            <a href="https://hyuan.chinahotel.org.cn/" target="_blank" class="an text-center">会员登录</a>
+            <span><img alt="" src="/images/hotel/icon/language.svg"
+                       style="vertical-align: sub; height: 18px; margin: 0 2px 0 15px" /><a href="/en" class="lang-text">英文</a></span>
+          </div>
+          <div class="search">
+            <input class="input-global-search" type="text" placeholder="请输入搜索的内容..." />
+            <button type="button" class="global-search bg-r color-f dong">
+              <img alt="" src="/images/hotel/icon/search.svg" style="vertical-align: sub; height: 18px; padding-right: 5px"/>搜 索</button>
+          </div>
+        </div>
+        <a href="javascript:void(0);" id="navToggle" class="fr"></a>
+      </div>
+      <div class="wrap clearfix mobHide">
+        <div class="navBar">
+          <!--<ul class="navbar_nav text-center" data-in="fadeInDown" data-out="fadeOutUp">
+            <li>
+              <a href="/" th:classappend="${tab == 'index'}? 'slt'">首页</a>
+            </li>
+            <li class="dropdown">
+              <a href="javascript:void(0)">关于协会</a>
+              <div class="dropdown_menu">
+                <a href="/categories/2" class="textH">会长致辞</a>
+                <a href="/categories/3" class="textH">协会简介</a>
+                <a href="/categories/4" class="textH">协会章程</a>
+                <a href="/categories/5" class="textH">领导机构</a>
+                <a href="/categories/6" class="textH">组织机构</a>
+                <a href="/categories/9" class="textH">联系方式</a>
+              </div>
+            </li>
+            <li class="dropdown" th:classappend="${tab == 'xiehuidongtai'}? 'slt'">
+              <a href="javascript:void(0)">协会动态</a>
+              <div class="dropdown_menu">
+                <a href="/categories/11" class="textH">会展活动</a>
+                <a href="/categories/12" class="textH">报告标准</a>
+                <a href="/categories/13" class="textH">在线申报</a>
+                <a href="/categories/14" class="textH">年度计划</a>
+              </div>
+            </li>
+            <li th:classappend="${tab == 'dangjiantiandi'}? 'slt'">
+              <a href="/categories/15">党建天地</a>
+            </li>
+            <li class="dropdown" th:classappend="${tab == 'lvsepingjia'}? 'slt'">
+              <a href="javascript:void(0)">绿色评价</a>
+              <div class="dropdown_menu">
+                <a href="/categories/17" class="textH">绿色饭店国家标准</a>
+                <a href="/categories/18" class="textH">绿色餐饮国家标准</a>
+                <a href="/categories/19" class="textH">绿色食堂</a>
+                <a href="/categories/20" class="textH">绿色外卖</a>
+                <a href="/categories/21" class="textH">绿色公寓</a>
+                <a href="/categories/22" class="textH">绿色民宿</a>
+              </div>
+            </li>
+            <li class="dropdown" th:classappend="${tab == 'jiaoyupeixun'}? 'slt'">
+              <a href="javascript:void(0)">教育培训</a>
+              <div class="dropdown_menu">
+                <a href="/categories/24#" class="textH">教育部1+X证书</a>
+                <a href="/categories/25" class="textH">培训计划</a>
+                <a href="/categories/26" class="textH">培训体系介绍</a>
+                <a href="/categories/27" class="textH">培训动态</a>
+              </div>
+            </li>
+            <li class="dropdown" th:classappend="${tab == 'pinpaixiangmu'}? 'slt'">
+              <a href="javascript:void(0)">品牌项目</a>
+              <div class="dropdown_menu">
+                <a href="/categories/29" class="textH">中国饭店文化节</a>
+                <a href="/categories/30" class="textH">中国美食节</a>
+                <a href="/categories/31" class="textH">全国饭店业职业技能竞赛</a>
+                <a href="/categories/32" class="textH">金鼎奖</a>
+                <a href="/categories/33" class="textH">地标美食</a>
+              </div>
+            </li>
+            <li class="dropdown" th:classappend="${tab == 'hangyeyanjiu'}? 'slt'">
+              <a href="javascript:void(0)">行业研究</a>
+              <div class="dropdown_menu">
+                <a href="/categories/35" class="textH">行业报告</a>
+                <a href="/categories/36" class="textH">全国饮食服务业标准化技术委员会</a>
+                <a href="/categories/37" class="textH">标准工作</a>
+                <a href="/categories/38" class="textH">优秀案例</a>
+                <a href="/categories/39" class="textH">权威论坛</a>
+              </div>
+            </li>
+            <li class="dropdown" th:classappend="${tab == 'youpinzhongxin'}? 'slt'">
+              <a href="javascript:void(0)">优品中心</a>
+              <div class="dropdown_menu">
+                <a href="/categories/41" class="textH">优品云采</a>
+                <a href="/categories/42" class="textH">产业链合作伙伴</a>
+              </div>
+            </li>
+            <li><a href="/categories/43" th:classappend="${tab == 'fenzhijigou'}? 'slt'">分支机构</a></li>
+          </ul>-->
+          <ul class="navbar_nav text-center" data-in="fadeInDown" data-out="fadeOutUp">
+            <li>
+              <a href="/">首页</a>
+              
+            </li>
+            <li class="dropdown">
+              <a href="javascript:void(0)">关于协会</a>
+              <div class="dropdown_menu">
+                <a class="textH" href="/articles/16388">会长致辞</a><a class="textH" href="/articles/16389">协会简介</a><a class="textH" href="/articles/16387">协会章程</a><a class="textH" href="/articles/16386">领导机构</a><a class="textH" href="/articles/16974">联系方式</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="/categories/10">协会动态</a>
+              <div class="dropdown_menu">
+                <a class="textH" href="/categories/95">工作动态</a><a class="textH" href="/categories/11">会展活动</a><a class="textH" href="/categories/45">通知公告</a><a class="textH" href="/categories/14">年度计划</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="/categories/15">党建天地</a>
+              <div class="dropdown_menu">
+                <a class="textH" href="/categories/98">支部动态</a><a class="textH" href="/categories/97">行业动态</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="/categories/16">绿色评价</a>
+              <div class="dropdown_menu">
+                <a class="textH" href="/categories/17">国家标准</a><a class="textH" href="/categories/18">管理办法</a><a class="textH" href="https://green.chinahotel.org.cn">申报管理</a><a class="textH" href="/categories/20">公告公示</a><a class="textH" href="/categories/69">绿色动态</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="/categories/23">教育培训</a>
+              <div class="dropdown_menu">
+                <a class="textH" href="http://x.chinahoteledu.com/">教育部1+X证书</a><a class="textH" href="/categories/25">培训计划</a><a class="textH" href="/categories/26">培训体系介绍</a><a class="textH" href="/categories/27">培训动态</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="javascript:void(0)">品牌项目</a>
+              <div class="dropdown_menu">
+                <a class="textH" href="/event/11">中国美食节</a><a class="textH" href="/event/5">中国饭店文化节</a><a class="textH" href="/event/9">中国饭店协会饭店业金鼎奖</a><a class="textH" href="/event/8">全国饭店业职业技能竞赛</a><a class="textH" href="/event/4">中国绿色饭店消费季</a><a class="textH" href="/event/12">中国国际饭店业大会</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="/categories/34">行业研究</a>
+              <div class="dropdown_menu">
+                <a class="textH" href="/categories/35">行业报告</a><a class="textH" href="/categories/54">标准规范</a><a class="textH" href="/categories/36">全国饮食服务业标准化技术委员会</a><a class="textH" href="/categories/38">优秀案例</a><a class="textH" href="/categories/39">权威论坛</a><a class="textH" href="/categories/153">专家工作委员会</a>
+              </div>
+            </li>
+            <li>
+              <a href="/categories/43">地方促消费</a>
+              
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="m_nav">
+      <div class="top clearfix"><img src="/images/hotel/closed.png" alt="" class="closed" /></div>
+      <!--<ul class="ul fontB" data-in="fadeInDown" data-out="fadeOutUp">
+        <li><a href="/">首页</a></li>
+        <li><a href="javascript:void(0)">关于协会</a>
+          <div class="dropdown_menu">
+            <a href="/categories/2" class="textH">会长致辞</a>
+            <a href="/categories/3" class="textH">协会简介</a>
+            <a href="/categories/4" class="textH">协会章程</a>
+            <a href="/categories/5" class="textH">领导机构</a>
+            <a href="/categories/6" class="textH">组织机构</a>
+            <a href="/categories/9" class="textH">联系方式</a>
+          </div>
+
+        </li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="jt">协会动态</a>
+          <div class="dropdown_menu">
+            <a href="/categories/11" class="textH">会展活动</a>
+            <a href="/categories/12" class="textH">报告标准</a>
+            <a href="/categories/13" class="textH">在线申报</a>
+            <a href="/categories/14" class="textH">年度计划</a>
+          </div>
+        </li>
+        <li><a href="/categories/15">党建天地</a></li>
+        <li><a href="javascript:void(0)">绿色评价</a>
+          <div class="dropdown_menu">
+            <a href="/categories/17" class="textH">绿色饭店国家标准</a>
+            <a href="/categories/18" class="textH">绿色餐饮国家标准</a>
+            <a href="/categories/19" class="textH">绿色食堂</a>
+            <a href="/categories/20" class="textH">绿色外卖</a>
+            <a href="/categories/21" class="textH">绿色公寓</a>
+            <a href="/categories/22" class="textH">绿色民宿</a>
+          </div>
+
+        </li>
+        <li><a href="javascript:void(0)">教育培训</a>
+          <div class="dropdown_menu">
+            <a href="/categories/24#" class="textH">教育部1+X证书</a>
+            <a href="/categories/25" class="textH">培训计划</a>
+            <a href="/categories/26" class="textH">培训体系介绍</a>
+            <a href="/categories/27" class="textH">培训动态</a>
+          </div>
+        </li>
+        <li><a href="javascript:void(0)">品牌项目</a>
+          <div class="dropdown_menu">
+            <a href="/categories/29" class="textH">中国饭店文化节</a>
+            <a href="/categories/30" class="textH">中国美食节</a>
+            <a href="/categories/31" class="textH">全国饭店业职业技能竞赛</a>
+            <a href="/categories/32" class="textH">金鼎奖</a>
+            <a href="/categories/33" class="textH">地标美食</a>
+          </div>
+
+        </li>
+        <li><a href="javascript:void(0)">行业研究</a>
+          <div class="dropdown_menu">
+            <a href="/categories/35" class="textH">行业报告</a>
+            <a href="/categories/36" class="textH">全国饮食服务业标准化技术委员会</a>
+            <a href="/categories/37" class="textH">标准工作</a>
+            <a href="/categories/38" class="textH">优秀案例</a>
+            <a href="/categories/39" class="textH">权威论坛</a>
+          </div>
+        </li>
+        <li><a href="javascript:void(0)">优品中心</a>
+          <div class="dropdown_menu">
+            <a href="/categories/41" class="textH">优品云采</a>
+            <a href="/categories/42" class="textH">产业链合作伙伴</a>
+          </div>
+        </li>
+        <li><a href="/categories/43">分支机构</a></li>
+      </ul>-->
+      <ul class="ul fontB" data-in="fadeInDown" data-out="fadeOutUp">
+        <li>
+          <a
+            href="/"
+            class=" ">首页</a>
+          
+        </li>
+        <li class="dropdown">
+          <a
+            href="javascript:void(0)"
+            class=" jt">关于协会</a>
+          <div class="dropdown_menu">
+            <a class="textH" href="/articles/16388">会长致辞</a><a class="textH" href="/articles/16389">协会简介</a><a class="textH" href="/articles/16387">协会章程</a><a class="textH" href="/articles/16386">领导机构</a><a class="textH" href="/articles/16974">联系方式</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a
+            href="/categories/10"
+            class=" jt">协会动态</a>
+          <div class="dropdown_menu">
+            <a class="textH" href="/categories/95">工作动态</a><a class="textH" href="/categories/11">会展活动</a><a class="textH" href="/categories/45">通知公告</a><a class="textH" href="/categories/14">年度计划</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a
+            href="/categories/15"
+            class=" jt">党建天地</a>
+          <div class="dropdown_menu">
+            <a class="textH" href="/categories/98">支部动态</a><a class="textH" href="/categories/97">行业动态</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a
+            href="/categories/16"
+            class=" jt">绿色评价</a>
+          <div class="dropdown_menu">
+            <a class="textH" href="/categories/17">国家标准</a><a class="textH" href="/categories/18">管理办法</a><a class="textH" href="https://green.chinahotel.org.cn">申报管理</a><a class="textH" href="/categories/20">公告公示</a><a class="textH" href="/categories/69">绿色动态</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a
+            href="/categories/23"
+            class=" jt">教育培训</a>
+          <div class="dropdown_menu">
+            <a class="textH" href="http://x.chinahoteledu.com/">教育部1+X证书</a><a class="textH" href="/categories/25">培训计划</a><a class="textH" href="/categories/26">培训体系介绍</a><a class="textH" href="/categories/27">培训动态</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a
+            href="javascript:void(0)"
+            class=" jt">品牌项目</a>
+          <div class="dropdown_menu">
+            <a class="textH" href="/event/11">中国美食节</a><a class="textH" href="/event/5">中国饭店文化节</a><a class="textH" href="/event/9">中国饭店协会饭店业金鼎奖</a><a class="textH" href="/event/8">全国饭店业职业技能竞赛</a><a class="textH" href="/event/4">中国绿色饭店消费季</a><a class="textH" href="/event/12">中国国际饭店业大会</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a
+            href="/categories/34"
+            class=" jt">行业研究</a>
+          <div class="dropdown_menu">
+            <a class="textH" href="/categories/35">行业报告</a><a class="textH" href="/categories/54">标准规范</a><a class="textH" href="/categories/36">全国饮食服务业标准化技术委员会</a><a class="textH" href="/categories/38">优秀案例</a><a class="textH" href="/categories/39">权威论坛</a><a class="textH" href="/categories/153">专家工作委员会</a>
+          </div>
+        </li>
+        <li>
+          <a
+            href="/categories/43"
+            class=" ">地方促消费</a>
+          
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+<div class="container">
+  <div class="row my-3" style="min-height: 500px">
+    <div class="col-md-10 mx-auto right_bg">
+      <div class="news-title my-4 text-center">指数发布 | 中国住宿业消费指数报告（2026年7月）发布</div>
+      <div class="news-sub-info my-2 row">
+        
+        <div class="col-md-6">
+          <span>日期：<span>2026-08-27</span></span>
+          
+        </div>
+      </div>
+      <div class="repeatX mt-3 mb-4"></div>
+      <div class="news-content">
+        <div class="main_content"><p>为贯彻落实提振消费相关政策，真实反映中国住宿餐饮业市场消费情况，以数据引导促消费政策精准发力，为行业发展提供参考建议，中国饭店协会每月公开发布&ldquo;中国饭店业消费指数体系&rdquo;，包含&ldquo;中国住宿业消费指数（China Hotel Industry Consumption Index, HCI）&rdquo;与&ldquo;中国餐饮业消费指数(China Catering Industry Consumption Index, CCI)&rdquo;，欢迎关注。</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" title="中国住宿业消费指数报告（2026年7月）发布1.webp.png" src="/sfs/cms/ad79dac9b1d9ab98a6f8827c83283c1a.png" alt="" width="673" height="228" /></p>
+<p><strong>一、指数总体结果：暑期旺季效应显现 消费市场企稳回升</strong></p>
+<p>2026年7月，中国住宿业消费指数（HCI）为97.3，环比6月上升9%，同比增长1.6%。7月作为暑期旅游出行旺季的开端，消费指数在6月淡季低谷后出现规律性反弹，多项分项指数回升至基准线以上。从上半年走势延续来看，7月指数虽未恢复至上半年的峰值水平，但较6月低谷已有显著回升，表明住宿业消费市场在旺季效应带动下企稳回升。同比保持正增长，说明消费市场基本大盘较去年同期有所扩大。</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" title="中国住宿业消费指数报告（2026年7月）发布2.webp.png" src="/sfs/cms/ee98a09487eeaf8936b2197767796504.png" alt="" width="446" height="351" /></p>
+<p style="text-align: center;"><span style="color: #95a5a6;"><strong><span style="font-size: 14px;">注：以2025年5月数据为基准（100）进行转化处理。</span></strong></span></p>
+<p style="text-align: center;"><span style="color: #95a5a6;"><strong><span style="font-size: 14px;">图1 中国住宿业消费指数（综合指数）</span></strong></span></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" title="中国住宿业消费指数报告（2026年7月）发布3.webp.png" src="/sfs/cms/b57740e90cd95223888ddbef3949b5cb.png" alt="" width="444" height="340" /></p>
+<p><strong>二、分项指数分析</strong></p>
+<p><strong>平均房价指数：旺季环比回升 同比仍承压明显</strong></p>
+<p>7月，平均房价指数为100.8，环比6月上升9%，同比下降5.9%。环比来看，这是该指数自2月以来再次突破基准线水平，表明暑期旺季对平均房价的拉动效应明显，市场定价能力在旺季得到有效修复。但同比降幅较为显著，且较6月同比降幅（-5.5%）进一步扩大，表明在供给持续扩张的背景下，平均房价面临的同比压力不降反增。旺季的回暖更多体现为季节性修复，而非趋势性改善，市场供给侧过剩问题仍然突出。</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" title="中国住宿业消费指数报告（2026年7月）发布4.webp.png" src="/sfs/cms/9fe42b84b8aa88a5d289990111facde9.png" alt="" width="547" height="431" /></p>
+<p style="text-align: center;"><span style="color: #95a5a6; font-size: 14px;"><strong>注：以2025年5月数据为基准（100）进行转化处理。</strong></span></p>
+<p style="text-align: center;"><span style="color: #95a5a6; font-size: 14px;"><strong>图2 平均房价指数</strong></span></p>
+<p>为进一步反映不同类型酒店客房消费价格变动情况，绘制住宿业客房消费价格点数对比图（见图3）。数据显示，经济型酒店客房消费价格点数为102.7，舒适性为143.7，高档型为186.9，豪华型为355.4。暑期带动各类型酒店客房价格水平环比回升，环比涨幅分别为11%、10.1%，7.7%和5.1%。但与去年同期相比均有所下降：经济型同比下降4.9%，舒适型同比下降4.6%，高档型同比下降6.3%，豪华型同比下降9%。</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" title="中国住宿业消费指数报告（2026年7月）发布5.webp.png" src="/sfs/cms/2d8ca7925444c3e7d528aaa46f2c5072.png" alt="" width="423" height="332" /></p>
+<p style="text-align: center;"><span style="color: #95a5a6; font-size: 14px;"><strong>注：1.以2025年5月经济型酒店数据为基准（100）进行指数化处理，月度及类型之间均可比。2.客房价格点数基于平台月平均房价数据计算，旨在反映不同类型酒店的价格档位区间和价格波动情况，数值越大则代表价格档位越高。根据补充数据，报告对2026年2月以来的点数数据进行了修订。</strong></span></p>
+<p style="text-align: center;"><span style="color: #95a5a6; font-size: 14px;"><strong>图3 住宿业消费价格点数对比图</strong></span></p>
+<p><strong>入住率指数：暑期需求集中释放 入住率显著回升</strong></p>
+<p>7月，入住率指数为104.3，环比6月上升13.9%，同比下降1.3%。入住率指数在6月触及低点后出现大幅反弹，重返基准线以上水平。7月暑期旅游出行需求集中释放，学生放假、家庭出游、避暑度假等消费场景共同推动入住率显著回升。因6月升学考试而后置到7月释放的消费需求在数据中得到印证。但同比下降1.3%，表明在供给端持续扩张的背景下，即使旺季需求回升，入住率的绝对水平仍略低于去年同期，供给增速快于需求增速的结构性问题依然存在。</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" title="中国住宿业消费指数报告（2026年7月）发布6.webp.png" src="/sfs/cms/0cbc47bd837927ef90f18f995bea39f6.png" alt="" width="511" height="403" /></p>
+<p style="text-align: center;"><span style="color: #95a5a6; font-size: 14px;"><strong>注：以2025年5月数据为基准（100）进行转化处理。</strong></span></p>
+<p style="text-align: center;"><span style="color: #95a5a6; font-size: 14px;"><strong>图4 入住率指数</strong></span></p>
+<p><strong>在线预订指数：持续高位运行 同比增长强劲</strong></p>
+<p>7月，在线预订指数为112.5，环比6月微增1.4%，同比增长10.1%。在线预订指数在上半年始终维持高位运行的基础上，7月继续保持基准线以上水平。环比增幅虽有所收窄，但考虑到6月已处于111.0的高位，7月在此基础上仍实现正增长，表明在线预订需求在暑期旺季进一步释放。同比实现两位数增长，增幅显著，表明住宿业线上消费市场规模持续快速扩张，数字化渠道渗透率加速提升，线上消费习惯不断深化，整体消费需求持续增长。</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" title="中国住宿业消费指数报告（2026年7月）发布7.webp.png" src="/sfs/cms/f710b8681be252ae6f91f84f04144ad3.png" alt="" width="454" height="358" /></p>
+<p style="text-align: center;"><span style="color: #95a5a6; font-size: 14px;"><strong>注：以2025年5月数据为基准（100）进行转化处理。</strong></span></p>
+<p style="text-align: center;"><span style="color: #95a5a6; font-size: 14px;"><strong>图5 在线预订指数</strong></span></p>
+<p>为进一步反映不同类型酒店消费热度变动情况，绘制住宿业客房消费热度点数对比图（见图6）。数据显示，7月各类型酒店消费热度点数分布相对均衡：经济型为113.7，舒适型为114.4，高档型为110.7，豪华型为113.0。与去年同期相比，四类酒店消费热度点数均实现增长：经济型同比上升9.6%，舒适型同比上升10.1%、高档型同比上升5.9%、豪华型同比上升10%。经济型、舒适型和豪华型热度增幅均达10%左右，表明暑期旺季需求全面释放；高档型增幅相对较小，反映出该档次产品在消费升级与性价比消费的双重趋势下面临一定的竞争挤压。舒适型酒店热度最高，延续上半年稳健表现，作为拉动市场增长的牵引作用持续。</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" title="中国住宿业消费指数报告（2026年7月）发布8.webp.png" src="/sfs/cms/a8ea995c294666e8decc7a6abaca08e5.png" alt="" width="364" height="286" /></p>
+<p style="text-align: center;"><span style="color: #95a5a6; font-size: 14px;"><strong>注：1.以2025年5月经济型酒店数据为基准（100）进行指数化处理，月度及类别之间均可比。2.客房消费热度点数基于入住率及订单量相关数据计算，旨在反映市场中不同类型酒店的消费选择情况，数值越大则表明该产品的消费人次越多、热度越高。</strong></span></p>
+<p style="text-align: center;"><span style="color: #95a5a6; font-size: 14px;"><strong>图6 住宿业消费热度点数对比图</strong></span></p>
+<p><strong>酒店餐饮营收指数：环比回升但同比大幅下降 市场压力加剧</strong></p>
+<p>7月，酒店餐饮营收指数为68.4，环比6月上升8.7%，同比下降17.9%。酒店餐饮营收虽在暑期带动下出现环比回升，但仍是所有分项指数中远低于基准线水平的一项。同比降幅较高，较6月同比降幅基本持平，表明酒店餐饮板块面临的同比压力并未因旺季而得到缓解。从上半年走势看，该指数波动最为剧烈，期内峰值与谷值差异悬殊，反映出酒店餐饮高度依赖节假日等外部因素刺激，难以形成独立、稳定的营收能力。在社会餐饮竞争持续加剧的环境下，酒店餐饮营收面临的结构性困境未得到有效缓解。</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" title="中国住宿业消费指数报告（2026年7月）发布9.webp.png" src="/sfs/cms/f7feea0867be909807f14225ea2d2dba.png" alt="" width="430" height="339" /></p>
+<p style="text-align: center;"><span style="color: #95a5a6;"><strong><span style="font-size: 14px;">注：以2025年5月数据为基准（100）进行转化处理。</span></strong></span></p>
+<p style="text-align: center;"><span style="color: #95a5a6;"><strong><span style="font-size: 14px;">图7 酒店餐饮营收指数（2026年7月）</span></strong></span></p>
+<p><strong>信心指数：旺季提振明显 同比大幅改善</strong></p>
+<p>7月，信心指数为104.3，环比6月上升13.7%，同比增长43.9%。信心指数在6月跌至低谷后迅速反弹至基准线以上，表明暑期旺季的强劲表现显著提振了从业者信心。同比增幅显著，表明在政策环境稳定且持续赋能、消费市场持续扩大的背景下，从业者预期较去年同期得到大幅改善。</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" title="中国住宿业消费指数报告（2026年7月）发布10.webp.png" src="/sfs/cms/4e59329649b4a2df185cb0e66e4004af.png" alt="" width="469" height="369" /></p>
+<p style="text-align: center;"><span style="color: #95a5a6; font-size: 14px;"><strong>注：以2025年5月数据为基准（100）进行转化处理。</strong></span></p>
+<p style="text-align: center;"><span style="color: #95a5a6; font-size: 14px;"><strong>图8 信心指数</strong></span></p>
+<p><strong>结论与建议</strong></p>
+<p>暑期旺季效应显著，消费市场企稳回升。7月中国住宿业消费指数（HCI）为97.3，同比环比均实现增长。消费指数在6月低谷后迅速反弹，多项指标重返基准线以上。暑期旅游出行需求的集中释放是本轮回升的主要驱动力，平均房价指数突破基准线、入住率指数环比大幅回升，表明旺季定价能力和入住转化均得到有效修复。但酒店餐饮营收指数仍远低于基准线，结构性短板尚未补齐。</p>
+<p>同比表现分化加剧，增长动力与下行压力并存。7月各分项指数同比表现呈现显著分化：反映规模情况的在线预订指数以及市场预期的信心指数同比增长，而营收性指标&mdash;&mdash;平均房价指数同比下降5.9%、酒店餐饮营收指数同比下降17.9%、入住率指数同比下降1.3%，反映出市场竞争加剧和酒店餐饮结构性困境等问题依然突出。增长与下降的并存格局表明，住宿业消费市场正处于转型升级的关键阶段。</p>
+<p>价格体系整体承压，以价换量特征明显。暑期旺季需求集中释放，消费热度点数同比普遍增长，但消费价格点数同比不升反降，表明市场呈现明显的&ldquo;以价换量&rdquo;特征，存量市场竞争加剧仍是制约价格修复的核心矛盾。</p>
+<p>结合7月消费市场表现及即将到来的秋季市场，建议住宿业经营重点关注以下方面：</p>
+<p>提前布局秋季市场，把握国庆黄金周收益窗口。随着暑期旺季逐步进入尾声，建议酒店企业着眼即将到来的秋季市场，重点围绕国庆中秋黄金周提前谋划产品设计和收益策略。秋季商务出行、会议会展等非假日刚性需求将逐步回升，建议结合周末微度假、秋季赏秋出游等消费场景，推出主题化、差异化的住宿产品，提升平均房价与入住率的联动表现。同时充分利用在线预订指数持续高位运行、同比强劲增长的优势，通过数字化渠道优化获客效率，确保秋季收益最大化。</p>
+<p>加快酒店餐饮板块创新转型。面对酒店餐饮营收承压的现实，应加快产品创新和模式转型。建议酒店尝试与品牌化社会餐饮加强合作，引入社会化餐饮资源优势，通过品牌联名、联合出品、空间共享等方式提升餐饮产品的市场竞争力和吸引力。同时可考虑推出秋季主题餐饮产品、针对商务客群推出品质工作餐、拓展便民外摆等日常消费场景，在社会餐饮竞争中寻求差异化突破。酒店餐饮板块亟需从依赖节假日刺激向独立、稳定的营收能力转变。</p>
+<p>提前布局淡季市场，平滑营收波动。根据上半年峰谷交替规律，11月后将进入传统淡季，建议在9&mdash;10月即启动四季度淡季的市场预热，挖掘商务出行、会议会展等非假日刚性需求，通过产品组合和价格策略平滑全年营收波动。</p>
+<p>优化产品结构，强化价格与成本管理。建议酒店集团在中端产品线上持续加大投入，提升服务标准化和数字化体验水平，同时保持经济型产品的价格竞争力和服务质量。面对房价下行压力，应避免陷入单一价格战，强化收益管理与成本管控，利用大数据对不同客群、不同渠道实施差异化动态定价，在稳定入住率的同时逐步修复平均房价，缓解&ldquo;以价换量&rdquo;对盈利能力的侵蚀。</p>
+<p><strong>附注说明</strong></p>
+<p>1.指数说明：&ldquo;中国住宿业消费指数（HCI）&rdquo;由&ldquo;平均房价指数&rdquo;&ldquo;入住率指数&rdquo;&ldquo;在线预订指数&rdquo;&ldquo;酒店餐饮营收指数&rdquo;和&ldquo;信心指数&rdquo;五个分项指数构成。指数基于酒店客房和餐饮销售相关数据计算，不包含康养、娱乐等收入。</p>
+<p>2.指数数据来源：去哪儿、华客科技等大数据平台及本地生活服务平台数据；协会面向全国30个酒店集团、约110家门店回收的调研数据。</p>
+<p>3.住宿产品类型与市面常用住宿产品分级的对应关系如下：经济型-二星及以下、舒适型-三星、高档型-四星、豪华型-五星（铂金/奢华/顶奢）。</p>
+<p>4.指数用于反映行业消费市场特征和变化情况，文中所有趋势性表述是在非极端条件下基于指数数据和当前行业情况做出的合理性推测，不作为投资依据，仅供参考。</p>
+<p>5.本文部分图表由AI工具生成。</p></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <script src="/vendor/jquery-3.5.1.min.js"></script>
+  <script src="/vendor/ajax.handler.js"></script>
+  <script src="/vendor/bootstrap-4.5.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/js/hotel/navBar.js" ></script>
+  <script src="/vendor/moment-2.19.2/moment.min.js"></script>
+  <script src="/vendor/moment-2.19.2/zh-cn.js"></script>
+
+  <script>
+    $(".input-global-search").keypress(function (event) {
+      if (event.keyCode === 13) {
+        search(event)
+      }
+    });
+    $(".global-search").click(function (event) {
+      search(event)
+    });
+
+    function search(event) {
+      var keyword = $(event.target).parents('.search').find('.input-global-search').val();
+      var url = '/search'
+      if (keyword == null || keyword === '') {
+        alert("请输入搜索条件");
+        return;
+      }
+      if (keyword) {
+        url += '?keyword=' + encodeURIComponent(keyword)
+      }
+      window.location.href = url;
+    };
+
+    function getYear() {
+      var date = new Date();
+      var year = date.getFullYear();
+      $('#copyright-year').text(year)
+    }
+    getYear()
+
+    // 外链跳转提示
+    $(document).ready(function() {
+      // 监听所有链接的点击事件
+      $('a').on('click', function(event) {
+        const href = $(this).attr('href'); // 获取链接的 href 属性
+        const isExternal = isExternalLink(href); // 判断是否为外链
+
+        if (isExternal) {
+          event.preventDefault(); // 阻止默认跳转行为
+          const confirmJump = confirm('您即将离开协会官网，跳转至：' + href); // 弹出提示框
+          if (confirmJump) {
+            window.location.href = href; // 用户确认后跳转
+          }
+        }
+      });
+
+      // 判断是否为外链的函数
+      function isExternalLink(url) {
+        // 排除空链接、锚点链接、站内链接
+        if (!url || url.startsWith('#') || url.startsWith('/') || url.startsWith('javascript:')) {
+          return false;
+        }
+        // 判断是否包含当前域名
+        return !url.includes(window.location.hostname);
+      }
+    });
+  </script>
+
+<script src="/vendor/vue.min.js"></script>
+<script src="/vendor/element-ui/lib/2.15.10/index.js"></script>
+
+</body>
+</html>

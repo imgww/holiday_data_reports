@@ -1,0 +1,398 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+
+
+
+
+
+<html>
+<head lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv=“X-UA-Compatible” content=“IE=8″>
+<meta name="SiteName" content="国家移民管理局">
+<meta name="SiteDomain" content="www.nia.gov.cn">
+<meta name="SiteIDCode" content="bm86000001">
+<meta name="ColumnName" content="$subject.name">
+<meta name="keywords" content="国家移民管理局、组织机构、新闻发布、政务公开、办事服务、互动交流">
+<meta name="description"
+	content="国家移民管理局，开设“组织机构、新闻发布、政务公开、办事服务、互动交流”栏目，及时发布相关信息，详情请进入访问。">
+<link rel="shortcut icon"
+	href="https://www.nia.gov.cn/titlepic/new-guohui.ico"
+	type="image/x-icon" />
+
+<title></title>
+<link type="text/css" href="../new/css/mxh20191205.css" rel="stylesheet" />
+<link href="css/iconfont.css" type="text/css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript"
+	src="/News/new/js/main.js"></script>
+<script type="text/javascript"
+	src="/News/new/js/index.js"></script>
+<script type="text/javascript"
+	src="/News/new/js/json2.js"></script>
+<script type="text/javascript">
+	var id ='1787566';
+   	var appName='/News';
+	var conObj;
+	var names = [ [ 'svobjcat', 'ztfl' ], [ 'subcat', 'zpfl' ],
+			[ 'themecat', 'tcfl' ], [ 'organcat', 'fbjg' ] ];
+
+	$(function() {
+		$(".leftsidebar li label").click(function() {
+			$(".leftsidebar li label").css({
+				"background-color" : "#fff",
+				"color" : "#2d66a5"
+			});
+			$(this).css({
+				"background-color" : "#2d66a5",
+				"color" : "#fff"
+			});
+		});
+	});
+
+	$().ready(
+			function() {
+				var qparams = new Array();
+				var params = {};
+				params.goPage = 1;
+				params.orderBy = getSearchOrderByParams();
+				params.pageSize = 20;
+				var param = {};
+				param.shortName = "id";
+				param.value = id;
+				qparams.push(param);
+				params.queryParam = qparams;
+				var str = JSON2.stringify(params);
+				str = encodeURIComponent(str);
+				str = encodeURIComponent(str);
+				jQuery.getJSON(appName + "/searchIndex.jsp?params=" + str
+						+ "&callback=?", function(result) {
+					var con = result.resultMap;
+					if (con.length > 0) {
+						displayContent(con);
+					}
+				});
+			});
+	displayContent = function(content) {
+		if(null!=content[0].wblj&&""!=content[0].wblj) {
+		   window.location.href=content[0].wblj;
+		}
+		conObj = content[0];
+		$('#syh').html(content[0]['syh'] ? content[0]['syh'] : '&nbsp;'); // 索引
+		$('#mc').html(content[0]['mc'] ? content[0]['mc'] : '&nbsp;'); //名称
+		$('#title').html(content[0]['title'] ? content[0]['title'] : '&nbsp;'); //
+		$('#scrq').html(
+				content[0]['publishTime'] ? content[0]['publishTime']
+						.substring(0, 4)
+						+ "-"
+						+ content[0]['publishTime'].substring(4, 6)
+						+ "-"
+						+ content[0]['publishTime'].substring(6, 8) : '&nbsp;'); // 发布时间
+		$('#ztfl').html(content[0]['ztfl'] ? content[0]['ztfl'] : '&nbsp;'); //主题分类
+		$('#mc').html(content[0]['mc'] ? content[0]['mc'] : '&nbsp;'); //标题
+		$('#gjc').html(content[0]['gjc'] ? content[0]['gjc'] : '&nbsp;'); // 关键词
+		$('#fwzh').html(content[0]['wh'] ? content[0]['wh'] : '&nbsp;'); //发字文号
+		$('#fzrq').html(content[0]['fzrq'] ? content[0]['fzrq'] : '&nbsp;'); //废止时间 
+		$('#fwdw').html(content[0]['fwdw'] ? content[0]['fwdw'] : '&nbsp;');
+		$('#zwsj').html(formatTime(content[0]['publishTime'])); //正文时间
+		$('#cwrq').html(content[0]['scrq'] ? content[0]['scrq'] : '&nbsp;'); // 成文日期
+		var htmlContent = content[0]['htmlContent'] ? content[0]['htmlContent']
+				: '&nbsp;';
+		htmlContent = initHtml(htmlContent);
+		document.title = content[0]['title'];
+		$('#htmlContent').html(htmlContent);
+		$("#htmlContent p").css({
+			'font-Size' : '16pt',
+			'line-height' : '30pt'
+		});
+	}
+
+	function initHtml(htmlContent) {
+		var td = $("<td></td>");
+
+		var re = /<!--([^a]|a)*?-->/gi;
+		htmlContent = htmlContent.replace(re, "");
+		re = /<br\s*\/?>\s*/gi;
+		htmlContent = htmlContent.replace(re, "<br>");
+
+		re = /<br>/gi;
+		htmlContent = htmlContent.replace(re, "</p><p>");
+		re = /(\s|&nbsp\;)+<\/p>/gi;
+		htmlContent = htmlContent.replace(re, "</p>");
+		re = /(\s|&nbsp\;)+<br>/gi;
+		htmlContent = htmlContent.replace(re, "<br>");
+		re = /<p(\s[^>]*)?>(&nbsp\;|\s)*<\/p>/gi;
+		htmlContent = htmlContent.replace(re, "");
+		re = /(<br>)+/gi;
+		htmlContent = htmlContent.replace(re, "<br>");
+		td.html(htmlContent);
+		td.find('p,div').each(function(i) {
+			var obj = $(this);
+			obj.css("line-height", '2');
+		});
+		return td.html();
+	}
+
+	function getSearchOrderByParams() {
+		var params = new Array();
+		var param = {};
+		param.orderBy = 'orderTime';
+		param.reverse = true;
+		params.push(param);
+		return params;
+	}
+
+	function changeFontSize(fontSize) {
+		var htmlContent = $('#htmlContent').html();
+		if (!htmlContent)
+			return false;
+		var td = $("<td></td>");
+		td.html(htmlContent);
+		td.find('p,div,td,th,span,font,ul,li,a').each(function(i) {
+			var obj = $(this);
+			obj.css("font-size", fontSize + 'px');
+		});
+
+		$('#htmlContent').css("font-size", fontSize + 'px');
+		$('#htmlContent').html(td.html());
+	}
+</script>
+<style>
+#removeA a {
+	text-decoration: none;
+	color: #ffffff;
+}
+</style>
+</head>
+
+<body>
+	<div class="bgbox">
+		<div class="w1100">
+			<div class="header">
+				<h2 class="stywhite txt35">
+					<img src="images/gh_new.png" />国家移民管理局
+				</h2>
+				<h1 class="textc stywhite txt100">政府信息公开</h1>
+			</div>
+			<div class="main clearfix" style="background: #f0f0f0;">
+				<div class="searchbox clearfix">
+					<div class="fl line w240">--</div>
+					<div class="fl search">
+						<input type="text" class="ipt w440 fl" id="searchContent" /> <input
+							type="image" src="images/ss.png" onclick="search()">
+					</div>
+					<div class="fl line w240">--</div>
+				</div>
+				<div class="fl w240 leftsidebar">
+					<ul class="cd-accordion-menu animated">
+						<li class="has-children shaw"><input type="checkbox"
+							name="group-3" id="group-3"> <label for="group-3"
+							class="sec" id="zc" style="padding-left: 10px;"> <i
+								class="icon iconfont fl fro"></i> <span class="fl w100 txt"
+								style="margin-top: 19px;">政&nbsp;&nbsp;&nbsp;&nbsp;策</span>
+						</label>
+							<ul id="zcul" style="display: none;">
+								<li class="has-children"><input type="checkbox"
+									name="sub-group-level-3" id="sub-group-level-3"> <a
+									href="javascript:void(0)" onclick="openUrl();"
+									class="txt18 xnew"> <label for="sub-group-level-3"
+										class="ej txt18 xnewlabel">规章</label></a></li>
+								<li class="has-children"><input type="checkbox"
+									name="sub-group-level-3" id="sub-group-level-3"> <a
+									href="javascript:void(0)" class="txt18 xnew"> <label
+										for="sub-group-level-3" class="ej txt18 xnewlabel">行政规范性文件</label></a>
+								</li>
+								<li class="has-children"><input type="checkbox"
+									name="sub-group-level-3" id="sub-group-level-3"> <a
+									href="javascript:void(0)" class="txt18 xnew"> <label
+										for="sub-group-level-3" class="ej txt18 xnewlabel">其他文件</label></a>
+								</li>
+							</ul></li>
+						<li class="has-children shaw mar15"><a
+							href="javascript:void(0);" class="lia"> <label
+								id="gkzn" atype="zhinancat" acode="/1/741421/741440/741587/788494"
+								onclick="showSecondList(this);"> <i
+									class="icon iconfont fl fro"></i> <span class="fl w100 txt">政府信息公开指南</span>
+							</label>
+						</a></li>
+						<li class="has-children shaw mar15"><a
+							href="javascript:void(0);" class="lia"> <label
+							id="gkzd" atype="zhiducat" acode="/1/741421/741440/741587/931450" 
+							onclick="showSecondList(this);"> <i 
+							class="icon iconfont fl fro"></i> <span class="fl w100 txt">政府信息公开制度</span>
+							</label>
+						</a></li>
+						<li class="has-children shaw mar15"><input type="checkbox"
+							name="group-5" id="group-5"> <label for="group-5"
+							class="sec" id="gknr"> <i class="icon iconfont fl fro"></i> <span
+								class="fl w100 txt">法定主动公开内容</span>
+						</label>
+							<ul id="gknrul" style="display: none;">
+								<li class="has-children"><input type="checkbox"
+									name="sub-group-level-3" id="sub-group-level-3"> <a
+									atype="svobjcat" acode="svobjcat"
+									href="javascript:void(0)" onclick="showSecondList(this)"
+									class="txt18"> <label for="sub-group-level-3"
+										class="sec ej txt18">主题分类</label></a></li>
+								<li class="has-children"><input type="checkbox"
+									name="sub-group-level-3" id="sub-group-level-3"> <a
+									atype="organcat" acode="organcat"
+									href="javascript:void(0)" onclick="showSecondList(this)"
+									class="txt18"> <label for="sub-group-level-3"
+										class="sec ej txt18">机构分类</label></a></li>
+								<li class="has-children"><input type="checkbox"
+									name="sub-group-level-3" id="sub-group-level-3"> <a
+									atype="themecat" acode="themecat"
+									href="javascript:void(0)" onclick="showSecondList(this)"
+									class="txt18"> <label for="sub-group-level-3"
+										class="sec ej txt18">体裁分类</label></a></li>
+							</ul></li>
+
+						<li class="has-children shaw mar15"><input type="checkbox"
+							name="group-4" id="group-4"> <label for="group-4"
+							class="sec" id="gknb"> <i class="icon iconfont fl fro"></i> <span
+								class="fl w100 txt">政府信息公开年报</span>
+						</label>
+							<ul id="gknbul" style="display: none;">
+								<li><a class="txt18" atype="nbaocat" acode="/1/741421/741440/741587/788504/1783035" href="javascript:void(0)" onclick="showSecondList(this)">2026</a></li><li><a class="txt18" atype="nbaocat" acode="/1/741421/741440/741587/788504/1714621" href="javascript:void(0)" onclick="showSecondList(this)">2025</a></li><li><a class="txt18" atype="nbaocat" acode="/1/741421/741440/741587/788504/1644198" href="javascript:void(0)" onclick="showSecondList(this)">2024</a></li><li><a class="txt18" atype="nbaocat" acode="/1/741421/741440/741587/788504/1575246" href="javascript:void(0)" onclick="showSecondList(this)">2023</a></li><li><a class="txt18" atype="nbaocat" acode="/1/741421/741440/741587/788504/1499494" href="javascript:void(0)" onclick="showSecondList(this)">2022</a></li><li><a class="txt18" atype="nbaocat" acode="/1/741421/741440/741587/788504/1405737" href="javascript:void(0)" onclick="showSecondList(this)">2021</a></li><li><a class="txt18" atype="nbaocat" acode="/1/741421/741440/741587/788504/1278417" href="javascript:void(0)" onclick="showSecondList(this)">2020</a></li><li><a class="txt18" atype="nbaocat" acode="/1/741421/741440/741587/788504/1275865" href="javascript:void(0)" onclick="showSecondList(this)">2019</a></li>
+							</ul></li>
+
+						<li class="has-children shaw mar15"><a
+							href="javascript:void(0);" class="lia"> <label id="sqgk"
+								atype="ysqgkcat" acode="/1/741421/741440/741587/1473658"
+								onclick="showSecondList(this);"> <i
+									class="icon iconfont fl fro"></i> <span class="fl w100 txt">依申请公开</span>
+							</label>
+						</a></li>
+					</ul>
+				</div>
+				<div class="fr w770 shaw cont" id="rightDiv">
+					<h3 class="fontw textc styblue txt32" id="title"></h3>
+					<p class="info txt15 textc">
+						<span class="fbtime" style="padding-right: 10px;">发布时间：<span
+							id="zwsj"></span></span> <span class="fsize">字体：[<a
+							href="javascript:changeFontSize('20')"
+							style="padding-right: 4px;">大</a><a
+							href="javascript:changeFontSize('16')"
+							style="padding-right: 4px;">中</a><a
+							href="javascript:changeFontSize('12')">小</a>]
+						</span>
+					</p>
+					<div class="txtbox" style="padding-top: 20px;">
+						<table width="100%" border="1" align="center" cellpadding="0"
+							cellspacing="0" class="mytable">
+							<tbody>
+								<tr>
+									<td height="15" align="center" class="pmingcheng"
+										bgcolor="#dddddd" width="12%"><strong>索&nbsp;引&nbsp;号</strong></td>
+									<td class="pmingcheng" style="padding: 0 5px; width: 325px;"
+										align="left" id="syh"></td>
+									<td align="center" class="pmingcheng" bgcolor="#dddddd"
+										width="12%"><strong>主题分类</strong></td>
+									<td class="pmingcheng" style="padding: 0 5px" align="left"
+										id="ztfl"></td>
+								</tr>
+								<tr>
+									<td height="15" align="center" class="pmingcheng"
+										bgcolor="#dddddd" width="12%"><strong>发文机关</strong></td>
+									<td class="pmingcheng" style="padding: 0 5px; width: 325px;"
+										align="left" id="fwdw"></td>
+									<td align="center" class="pmingcheng" bgcolor="#dddddd"
+										width="12%"><strong>成文日期</strong></td>
+									<td class="pmingcheng" style="padding: 0 5px" align="left"
+										id="cwrq"></td>
+								</tr>
+								<tr>
+									<td height="25" align="center" class="pmingcheng"
+										bgcolor="#dddddd"><strong>标&nbsp;&nbsp;&nbsp;&nbsp;题</strong></td>
+									<td colspan="3" class="pmingcheng" style="padding: 0 5px"
+										align="left" id="mc"></td>
+								</tr>
+								<tr>
+									<td height="15" align="center" class="pmingcheng"
+										bgcolor="#dddddd" width="12%"><strong>发字文号</strong></td>
+									<td class="pmingcheng" style="padding: 0 5px; width: 325px;"
+										align="left" id="fwzh"></td>
+									<td align="center" class="pmingcheng" bgcolor="#dddddd"
+										width="12%"><strong>发布时间</strong></td>
+									<td class="pmingcheng" style="padding: 0 5px" align="left"
+										id="scrq"></td>
+								</tr>
+								<tr>
+									<td height="15" align="center" class="pmingcheng"
+										bgcolor="#dddddd" width="12%"><strong>关键词</strong></td>
+									<td class="pmingcheng" style="padding: 0 5px; width: 325px;"
+										align="left" id="syh"></td>
+									<td align="center" class="pmingcheng" bgcolor="#dddddd"
+										width="12%"><strong>废止时间</strong></td>
+									<td class="pmingcheng" style="padding: 0 5px" align="left"
+										id="fwjg"></td>
+								</tr>
+							</tbody>
+						</table>
+						<div id="htmlContent"></div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<style type="text/css">
+.foot{background-color:#0b5fb4; padding:24px 0; color:#b7d9fa;}
+.copyright{position:relative; text-align:center; font-size:12px; line-height:24px;}
+.copyright a{color:#b7d9fa;}
+.ic_gov{display:block; position:absolute; left:360px; top:0;}
+.ic_finderror{display:block; position:absolute; right:290px; top:0;}
+
+</style>
+
+<div class="foot">
+<div class="common_wrap copyright">
+
+<a href="http://bszs.conac.cn/sitename?method=show&amp;id=8F5BF4F36C142B7AE05310291AAC68AC" class="ic_gov" target="_blank"><img src="https://www.nia.gov.cn/template/741871/741889.png"></a>
+
+<a target="_blank" class="ic_finderror"><script id="_jiucuo_" sitecode="bm86000001" src="https://zfwzgl.www.gov.cn/exposure/jiucuo.js"></script><span id="_span_jiucuo"><img onclick="Link('bm86000001')" style="margin:0;border:0;cursor: pointer;"></span></a>
+
+<div style="font-size:14px;"><a style="font-size:14px;" href="https://www.nia.gov.cn/Map_index.html" target="_blank">网站地图</a>&nbsp;&nbsp;&nbsp;&nbsp; <span> © 国家移民管理局版权所有</span></div>
+<div style="font-size:14px;"> <span><a href="https://www.nia.gov.cn/n1439376/c1439348/content.html" target="_blank">联系我们</a></span>&nbsp;&nbsp;&nbsp;&nbsp; <span>地址：北京市东城区东长安街6号 </span>&nbsp;&nbsp;&nbsp;&nbsp; <span>邮编：100006</span></div>
+<div style="font-size:14px;"><a style="font-size:14px;" href="http://beian.miit.gov.cn/state/outPortal/loginPortal.action" target="_blank">京ICP备18064790号</a>&nbsp;&nbsp;&nbsp;&nbsp; <a style="font-size:14px;" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010102003814" class="gonganwangbei" target="_blank"><span class="gatubiao"></span> 京公安网安备&nbsp;&nbsp;11010102003814号</a>&nbsp;&nbsp;&nbsp;&nbsp;<span>标识码：bm86000001</span> </div>
+
+</div>
+<!--无障碍-->
+<script type="text/javascript" src="https://www.nia.gov.cn/dbsource/1453111/1453113.js"></script>
+
+</div>
+	<script type="text/javascript">
+		$(function() {
+			$(".leftsidebar dt").css({
+				"background-color" : "#fff",
+				"color" : "#2d66a5"
+			});
+			$(".leftsidebar dt .beh").text("&#xe601;");
+			$(".leftsidebar dt img").attr("src", "images/add.png");
+			$(".leftsidebar dd").hide();
+			$(".leftsidebar dt").click(function() {
+				$(".leftsidebar dt").css({
+					"background-color" : "#fff",
+					"color" : "#2d66a5"
+				});
+				$(this).css({
+					"background-color" : "#2d66a5",
+					"color" : "#fff"
+				});
+				$(".leftsidebar dt img").attr("src", "images/add.png");
+				$(this).find('img').attr("src", "images/sub.png");
+
+				$(".leftsidebar dd").hide();
+
+				$(this).siblings('dd').show();
+				$(this).siblings('dd').addClass("menu_chioce");
+
+			});
+		})
+	</script>
+</body>
+</html>

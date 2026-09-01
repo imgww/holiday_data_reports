@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	
+	<title>欢欢喜喜过大年 乐游江西迎新春</title>
+
+	<meta name="Keywords" content=""/>
+	<meta name="Description" content=""/>
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta name="" content=""/>
+	<link rel="stylesheet" type="text/css" href="../../../../../../amucsite/freePaper/pc/static/css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="../../../../../../amucsite/freePaper/pc/static/css/css.css"/>
+	<link rel="stylesheet" type="text/css" href="../../../../../../amucsite/freePaper/pc/static/css/calendar.css"/>
+	<script src="../../../../../../amucsite/freePaper/pc/static/js/jquery-1.6.4.min.js" type="text/javascript"></script>
+	<script src="../../../../../../amucsite/freePaper/pc/static/js/index.js" type="text/javascript" charset="utf-8"></script>
+       <style>
+    /*尾部*/
+.footer {
+       margin-top: 25px;
+    overflow: hidden;
+    width: 100%;
+    margin: 20px auto;
+    padding-top: 20px;
+}
+.footer-nav {
+    height: 40px;
+    line-height: 40px;
+    background-color: #26a0d3;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.foot-nav__head{
+    color: #fff;
+    margin-right: 40px;
+}
+
+.foot-nav__body, .foot-nav__head{
+    float: left;
+}
+
+.foot-nav__body{
+    font-size: 0;
+}
+.foot-nav__item{
+    display: inline-block;
+    margin-right: 10px;
+    padding-top: 7px;
+}
+.copyright {
+    padding: 15px 0 10px;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+	<div class="header">
+		<div class="blueLine">
+			<div class="wrap">
+				<img class="logo1 pull-left" src="../../../../../../amucsite/freePaper/pc/static/images/13.png" alt="" />
+				<ul class="pull-right">
+					<li class="pull-left"><a href="#">第一新闻</a></li>
+					<li class="pull-left"><a href="#">民生</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header-mid">
+			<div class="wrap">
+				 <a href="//www.ctnews.com.cn/index.html" target="_blank"><img class="logo" width="325px" height="58px" class="pull-left mgt6" src="//www.ctnews.com.cn/images/logo.png" alt="" style="display:block;float:right"></a>	
+				<div class="pull-right">
+					 
+						 <div class="header-time pull-right" id="week" style="margin-left:6px;"></div>
+						<div class="header-time pull-right" id="paperdate">2024年02月20日</div>
+
+					<div style="clear: both;"></div>
+					<img src="../../../../../../amucsite/freePaper/pc/static/images/18.png" alt="" style="display:none" />
+				</div>
+			</div>
+		</div>
+		<div class="header-bottom"></div>
+	</div>
+	<div class="wrap">
+		<div class="nav">
+				<span class="pull-left dateTime" style="margin-top:10px;">
+				 
+				  
+				 	<span class="paperName" >日期：</span>
+				 	2024年02月20日
+
+
+			</span>	
+			<form name="form1" action="https://www.ctnews.com.cn:8088/founder/SearchServlet.do"  method="POST" style="" class="" target="_blank">
+		  <div class="pull-left" style="margin-left:50px;margin-top:10px;">
+				<input name="content" id="content"  type="text" size="20" maxlength="50">
+				<input type="submit" value="搜索" name="search" class="searchBtn"> 
+				
+				<input type="hidden" name="op" value="single">
+				<input type="hidden" name="siteID" value="1">
+				
+				<input type="hidden" id="publishate" value="2024-02-20">
+				<input type="hidden" id="publishCate" value="2024/02/20">
+
+		  </div>	
+			</form>
+			
+			<span class="pull-right" style="margin-top:10px;" >
+				<span><a href="javascript:void(0)" id="go_PrePeriod" onclick="go_prePaper();" >&lt;&nbsp;上一期</a>&nbsp;&nbsp;<a id="go_NextPeriod" href="javascript:void(0)" onclick="go_nextPaper();"  >下一期&nbsp;&gt;</a></span>
+			</span>
+
+		<script language="javascript">
+
+
+function formatlong(dat){
+
+    //获取年月日，时间
+    var year = dat.getFullYear();
+    var mon = (dat.getMonth()+1) < 10 ? "0"+(dat.getMonth()+1) : dat.getMonth()+1;
+    var data = dat.getDate()  < 10 ? "0"+(dat.getDate()) : dat.getDate();
+/*    var hour = dat.getHours()  < 10 ? "0"+(dat.getHours()) : dat.getHours();
+    var min =  dat.getMinutes()  < 10 ? "0"+(dat.getMinutes()) : dat.getMinutes();
+    var seon = dat.getSeconds() < 10 ? "0"+(dat.getSeconds()) : dat.getSeconds();
+  */               
+    var newDate = year +"-"+ mon +"-"+ data/* +" "+ hour +":"+ min +":"+ seon*/;
+    return newDate;
+}
+
+
+
+			var myDate = new Date();
+	
+			if (document.getElementById('publishate').value==formatlong(myDate))
+				document.getElementById('go_NextPeriod').style.display="none";
+			
+			if (document.getElementById('publishCate').value=="2018/01/01")
+				document.getElementById('go_PrePeriod').style.display="none";
+			
+
+			function getDate(strDate){
+				  var date = eval('new Date(' + strDate.replace(/\d+(?=-[^-]+$)/, 
+				   function (a) { return parseInt(a, 10) - 1; }).match(/\d+/g) + ')');
+				  return date;
+			}
+
+			Date.prototype.Format = function (fmt) { //author: meizz 
+			var o = {
+				"M+": this.getMonth() + 1, //月份 
+				"d+": this.getDate(), //日 
+				"h+": this.getHours(), //小时 
+				"m+": this.getMinutes(), //分 
+				"s+": this.getSeconds(), //秒 
+				"q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+				"S": this.getMilliseconds() //毫秒 
+			};
+			if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+			for (var k in o)
+			if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+			return fmt;
+		}
+
+			function preDate(Currdate){
+				curr_date=Currdate;
+				pre_paperDate=curr_date.setDate(curr_date.getDate()-1);
+				pre_paperDate=new Date(pre_paperDate);
+				return pre_paperDate;
+				}
+	
+			function next_Date(Currdate){
+				curr_date=Currdate;
+				pre_paperDate=curr_date.setDate(curr_date.getDate()+1);
+				pre_paperDate=new Date(pre_paperDate);
+				return pre_paperDate;
+				}
+
+			function go_prePaper(){
+				p_date=getDate(document.getElementById('publishate').value);
+				p_date=preDate(p_date);				
+				if ((p_date.getDay()==0) || (p_date.getDay()==6))
+					p_date=preDate(p_date);
+				if ((p_date.getDay()==0) || (p_date.getDay()==6))
+					p_date=preDate(p_date);
+
+				str_Date=p_date.Format('yyyy-MM-dd');
+				a_Date=str_Date.split('-');
+				strUrl="//www.ctnews.com.cn/paper/"+a_Date[0]+a_Date[1]+'/'+a_Date[2]+"/node_01.html";
+				window.location.href=strUrl;	
+				}
+
+			function go_nextPaper(){
+				p_date=getDate(document.getElementById('publishate').value);
+				p_date=next_Date(p_date);					
+				if ((p_date.getDay()==0) || (p_date.getDay()==6))
+					p_date=next_Date(p_date);
+				if ((p_date.getDay()==0) || (p_date.getDay()==6))
+					p_date=next_Date(p_date);
+
+				str_Date=p_date.Format('yyyy-MM-dd');
+				a_Date=str_Date.split('-');
+				strUrl="//www.ctnews.com.cn/paper/"+a_Date[0]+a_Date[1]+'/'+a_Date[2]+"/node_01.html";
+				window.location.href=strUrl;			
+				}
+
+		</script>
+
+		</div>
+
+
+		<div class="content clearfix">
+			<div class="newspaper-pic pull-left">
+				
+				<img class="preview" src="../../../pic/202402/20/3c036a9b-1ba1-484a-88ca-b1ebf1e2da8e.jpg.2"  USEMAP=#PagePicMap>
+				<MAP NAME="PagePicMap"><Area coords="331.27800639000003,117.66441415,370.21307120999995,109.73198378000001,370.21307120999995,48.25563227,61.37222103,48.25563227,61.37222103,109.73198378000001,22.43715621,131.5461717,22.43715621,280.9403132,99.64737084000001,280.9403132,99.64737084000001,131.5461717,112.84569606,197.64977377,253.40787674999999,197.64977377,253.40787674999999,280.9403132,331.27800639000003,280.9403132" shape="polygon" href="content_89421.html"><Area coords="401.88905841,387.36711717,401.88905841,382.0788283,401.88905841,342.41666471,137.92251648,342.41666471,137.92251648,382.0788283,14.51815941,387.36711717,14.51815941,443.55517980999997,93.70812324,443.55517980999997,93.70812324,406.53716359,244.82896494,406.53716359,244.82896494,456.11486661000004,87.76887564,456.11486661000004,87.76887564,494.45495358,14.51815941,494.45495358,14.51815941,551.96509284,165.63900528,551.96509284,165.63900528,508.99774944000006,250.10829753000002,508.99774944000006,250.10829753000002,430.33446057000003,322.03917957,430.33446057000003,322.03917957,551.96509284,401.88905841,551.96509284" shape="polygon" href="content_89422.html"></MAP>
+				<div class="mgb25">
+					<div class="pull-left">
+						<span id="layout">第08版：<span class="font-weight">旅游报08版</span></span>
+					</div>
+					<div class="pull-right">
+						<span><a class="preart" href="../../../202402/20/node_07.html">上一版</a> </span>
+						 </span>
+						<a href="../../../att/202402/20/a357de4d-37e8-40d2-bc56-634775dc9a31.pdf" download><img class="pull-right mgl8" src="../../../../../../amucsite/freePaper/pc/static/images/09.png"></a>
+					</div>
+					
+					
+				</div>
+			</div>
+			<div class="detail pull-left">
+				<div class="detail-title">
+                	<span class="pull-left"><a href="//www.ctnews.com.cn/paper/">首页</a></span>
+                	<span class="pull-left mgl10"><a href="javascript:history.back();">返回上一级</a></span>
+					 </span>
+					<span class="pull-left mgl10"><a class=preart href="content_89422.html">下一篇</a> </span>
+					
+
+					<div class="pull-right">
+						<a class="font-weight" onClick="zoomIn();" href="javascript:;">放大+</a>
+						&nbsp;<a class="font-weight" onClick="zoomOut();" href="javascript:;">缩小-</a>
+						&nbsp; <a class="font-weight" onClick="zoomDe();" href="javascript:;">默认<span class="font18">o</span></a>
+					</div>
+					  
+				</div>
+				<div class="detail-art">
+					 
+					 <p class="introtitle text-center" id="PreTitle"></p> 
+                     <h2 id="Title" class="art-title text-center">欢欢喜喜过大年 乐游江西迎新春</h2> 
+                     <p class="subtitle text-center"  id="SubTitle">——江西春节文旅市场人气旺消费热活力足</p>
+						<div class="attachment" align="center">
+						<!--高级资源列表-->
+						</div>
+					<div id=ozoom style="zoom:100%;" class="content">
+					<founder-content>
+						<!--enpcontent--><html>
+ <head></head>
+ <body>
+  <p> </p>
+  <p> 2024年春节假期，江西省文化和旅游系统深入贯彻党的二十大精神和习近平总书记考察江西重要讲话精神，全面落实江西省委、省政府部署安排，聚焦“走在前、勇争先、善作为”目标要求，以“时时放心不下”的责任感，做好春节假日文化和旅游工作。2024年春节假期（2月10日—2月17日），江西省累计接待入赣游客1698.48万人次，外省入赣游客占比50.44%。按可比口径，江西省接待游客人数同比增长37.2%，比2019年增长10.5%；旅游收入同比增长42.8%，比2019年增长11.9%。春节期间，江西省文旅系统累计出动1034个安全检查组，出动执法人员2924人次，检查各类文旅经营场所3959家，排查并督促整改隐患490个，通过“责任架构、隐患排查、应急处置”三个闭环，合力守牢文旅安全底线，全省无重大旅游投诉、无重大负面舆情、未发生旅游安全事故。</p>
+  <p> </p>
+  <p> 景区火爆 消费火热</p>
+  <p> 赣鄱新春“满堂红”</p>
+  <p> </p>
+  <p> 以“欢欢喜喜过大年 乐游江西迎新春”为主题，江西省文旅系统组织开展了1970余项特色活动，并通过发放价值5180余万元惠民消费券，推动文旅迎春成为新年俗。江西省博物馆“御瓷归来”主题特展深受喜爱，出现了“馆中馆”的火爆场景。江西省美术馆重点推出六场新春跨年展览，让游客体验“花样”新春。各地市精彩“好戏”轮番上演，南昌市、赣州市、吉安市举办迎新烟花秀，鹰潭市、萍乡市、新余市的百姓春晚、新春庙会、新春大集火爆开场，九江市、景德镇市、宜春市、上饶市、抚州市开展非遗迎新活动，各具特色、年味十足的文旅活动吸引了众多游客参与，点燃了文旅消费热潮。春节期间，游客人均消费同比增长14.98%，比2019年增长13.07%。全省5A级景区、重点4A级景区接待游客476.49万人次，同比增长98.49%，比2019年增长225.8%；实现门票收入2.69亿元，同比增长63.92%，比2019年增长197.2%。</p>
+  <p> 以客为友 以客为亲</p>
+  <p> 温暖服务“心连心”</p>
+  <p> 江西各大市场主体聚力“品质提升、服务暖心”，及时响应游客诉求，切实做好精细服务、延伸服务和个性化服务。如南昌市上线“美住南昌”旅游饭店住宿指南，春节期间路边停车泊位免费；三清山景区公安、交警等人员协同，设置专用停车场10个、转运线路3条、免费大巴50辆，全力分流疏导游客；武功山景区推出出行无忧助残服务，“接力式”全程陪同残障人士购票、乘车、乘坐索道；龙虎山景区优化入园流程、增加咨询点、提升旅游公共服务；抚州文昌里历史文化街区志愿服务站为游客提供“一站式”精准服务；江南宋城街区NPC式零距离服务游客；各地和景区持续以游客满意为目标，以优质服务换取游客舒适体验，让五湖四海的游客感受到江西“温度”。</p>
+  <p> 全屏宣传 全域联动</p>
+  <p> 节日氛围“别样浓”</p>
+  <p> 持续“火热”的文旅市场和“暖心”服务，得到媒体的广泛关注，营造了“来江西过大年”浓厚氛围。春节期间，中央广播电视总台、新华社、人民日报等国家级媒体，江西广播电视台、江西日报等省属媒体推出有关江西文旅宣传内容1488条（篇），其中，央视《朝闻天下》《新闻直播间》等栏目重点宣传江西省节日期间文旅市场火热场面489条（次）。与此同时，全面加强新媒体宣传，全省文旅新媒体矩阵推发宣传信息5924条，“大屏+小屏”推动“江西风景独好”品牌破圈出圈。</p>
+  <p> 下一步，江西省文化和旅游厅将进一步深入学习贯彻习近平文化思想和习近平总书记考察江西重要讲话精神，勇担新时代新的文化使命，以永不懈怠的精神状态、一往无前的奋斗姿态，开拓进取、砥砺前行，加快推进文化和旅游高质量发展，为奋力谱写中国式现代化江西篇章贡献新的力量。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> 游客接待量前三的城市</p>
+  <p> 及游客人次占游客总量比</p>
+  <p> 赣州市18.11％</p>
+  <p> 上饶市14.60％</p>
+  <p> 南昌市13.58％</p>
+  <p> </p>
+  <p> 江西省闸机客流排名前十的景区</p>
+  <p> 赣州瑞金共和国摇篮旅游区70.48万人次</p>
+  <p> 鹰潭龙虎山旅游景区66.73万人次</p>
+  <p> 九江庐山风景名胜区64.47万人次</p>
+  <p> 上饶三清山风景名胜区35.91万人次</p>
+  <p> 九江庐山西海风景名胜区25.03万人次</p>
+  <p> 景德镇陶溪川文创街区景区24.38万人次</p>
+  <p> 上饶铅山葛仙山景区24.35万人次</p>
+  <p> 宜春明月山旅游区23.49万人次</p>
+  <p> 赣州三百山景区23.38万人次</p>
+  <p> 上饶龟峰景区18.11万人次</p>
+  <p> </p>
+  <p> 全省非闸机客流排名前十的景区</p>
+  <p> 赣州江南宋城历史文化旅游区62.22万人次</p>
+  <p> 抚州文昌里历史文化街区57.54万人次</p>
+  <p> 南昌万寿宫历史文化街区景区57.06万人次</p>
+  <p> 抚州黎川古城景区32.15万人次</p>
+  <p> 赣州于都中央红军长征集结出发地纪念园景区32万人次</p>
+  <p> 赣州南康区家居小镇景区19.35万人次</p>
+  <p> 宜春万载古城19.29万人次</p>
+  <p> 景德镇高岭·中国村景区17.14万人次</p>
+  <p> 赣州兴国苏区干部好作风纪念园16.22万人次</p>
+  <p> 上饶琵琶湖景区13.44万人次 </p>
+ </body>
+</html><!--/enpcontent--><!--enpproperty <date>2024-02-20 00:00:00:0</date><author></author><subtitle>——江西春节文旅市场人气旺消费热活力足</subtitle><introtitle></introtitle><keyword></keyword><paperarticleid>89421</paperarticleid><channel>1</channel><nodeid>0</nodeid><nodename></nodename><url>https://www.ctnews.com.cn/paper/content/202402/20/content_89421.html</url><urlpad>https://www.ctnews.com.cn/pad/content/202402/20/content_89421.html</urlpad><siteid>1</siteid><paperid>1</paperid><title>欢欢喜喜过大年 乐游江西迎新春</title><liability></liability>/enpproperty-->
+					</founder-content>
+					</div>
+				</div>
+				<div class="detail-title mgt10 mgb25">
+					 </span>
+					<span class="pull-left mgl10"><a class=preart href="content_89422.html">下一篇</a> </span>
+
+					<div class="pull-right">
+						<a class="font-weight" onClick="zoomIn();" href="javascript:;">放大+</a>
+						&nbsp;<a class="font-weight" onClick="zoomOut();" href="javascript:;">缩小-</a>
+						&nbsp; <a class="font-weight" onClick="zoomDe();" href="javascript:;">默认<span class="font18">o</span></a>
+				
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+		<!--标准尾-->
+	 <div class="footer">
+             <div class="footer-nav">
+			
+            </div>
+			</div>
+           <div class="footer_sqd">
+            <span><a href="https://www.ctnews.com.cn/gsjs2023/content_147172.html" target="_blank">中国旅游报社简介</a> </span>
+	    <span class="mt16" >
+	    	<a href="#">国内统一刊号：CN11-0013 </a>|
+	    	<a href="#">邮发代号：1-40</a>| 
+	    	<a href="#">新闻热线：010-85168005</a>
+		</span>
+	    <span>中国互联网不良信息举报中心 中华人民共和国互联网新闻信息许可证 （国新网 许可证编号：1012006032）</span>
+	     <span>CopyRight by www.ctnews.com.cn　 京ICP备05019093号-4 <div style="display:none;"> <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1278972842'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1278972842%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script></div></span>
+        <span>版权所有 中国旅游报 中国 北京</span>
+	    <img src="../../../../../../amucsite/freePaper/pc/static/images/footer_nav_sqd.jpg" alt="" />
+	</div>
+        </div>
+	</div>
+	<!--标准尾end-->
+	
+	
+<table style="display:none;">
+<tr><td>
+
+<!--enpproperty
+<error><!--enpend --></error>
+<date>2024-02-20</date>
+<author></author>
+<subtitle>——江西春节文旅市场人气旺消费热活力足</subtitle>
+<introtitle></introtitle>
+<keyword></keyword>
+<id>1</id>
+<nodeid>1</nodeid>
+<nodename>中国旅游报</nodename>
+<url>content_89421.html</url>
+<siteid>1</siteid>
+<title>欢欢喜喜过大年 乐游江西迎新春</title> 
+/enpproperty-->
+
+</td></tr>
+</table>
+
+
+
+
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JjDZRJjPYur3koyI",ck: "JjDZRJjPYur3koyI"})</script>
+
+</body>
+</html>

@@ -1,0 +1,526 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<title>湖北文旅集团迎来最火“国庆档”--湖北文明网</title>
+<meta name="keywords" content="文明湖北,湖北好人,精神文明,文明创建,道德模范" /> 
+<meta name="description" content=" 湖北文明网是由湖北省文明委、省文明办主管主办的宣传湖北省精神文明建设工作成果的窗口性网站，网站集中宣传文明创建、道德模范、湖北好人、讲文明树新风、未成年人思想道德建设、志愿服务等方面的工作成果。" />
+
+<link href="/css/index.css" rel="stylesheet" type="text/css" ignoreapd="1" />
+<link href="/css/common_2014.css" rel="stylesheet" type="text/css" ignoreapd="1" />
+<link href="/css/index_2015.css" rel="stylesheet" type="text/css" ignoreapd="1" />
+<link href="/css/index_2021a.css?a=20250327" rel="stylesheet" type="text/css" ignoreapd="1" />
+<link href="/css/index_2024.css" rel="stylesheet" type="text/css" ignoreapd="1" />
+
+<link type="text/css" rel="stylesheet" href="/assets/css/basic2018.css" />
+<script type="text/javascript" src="/js/jquery3.min.js" ignoreapd="1"></script>
+<script type="text/javascript" src="/js/jquery.SuperSlide.2.1.3.js" ignoreapd="1"></script>
+<script type="text/javascript" src="/js/pageControl.js" ignoreapd="1"></script>
+<script type="text/javascript" src="/js/js-calendar-converter.js" ></script>
+<script type="text/javascript" src="/js/wxUtils.js" ignoreapd="1"></script>
+<script type="text/javascript">
+wxUtils.init({}, function(){ 
+  wxUtils.wxShare("湖北文旅集团迎来最火“国庆档”", "全国优秀地方文明网站",  'http://www.hbwmw.gov.cn/images/wx.jpg'); 
+})
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+ $(".nav").click(function(){
+	 $("nav").fadeToggle();
+ })
+ $("nav b").click(function(){
+ 	 $("nav").fadeToggle();
+ })
+ $("nav i").click(function(){
+ 	 $("nav").fadeToggle();
+ })
+})
+ function a1(){
+ 	var n1=$(".hbwmw_nr .p2").css("font-size");
+	var n2=parseFloat(n1 , 10);
+	var unit = n1.slice(-2); //获取单位
+	if(n2<22)
+	{
+		n2=n2+2;
+		$(".hbwmw_nr .p2").css("font-size",n2+unit)
+		$(".hbwmw_nr .p2 p").css("font-size",n2+unit)
+		$(".hbwmw_nr .p2 font").css("font-size",n2+unit)
+	}
+ }
+ function a2(){
+ 	var n1=$(".hbwmw_nr .p2").css("font-size");
+	var n2=parseFloat(n1 , 10);
+	var unit = n1.slice(-2); //获取单位
+	if(n2>12)
+	{
+		n2=n2-2;
+		$(".hbwmw_nr .p2").css("font-size",n2+unit)
+		$(".hbwmw_nr .p2 p").css("font-size",n2+unit)
+		$(".hbwmw_nr .p2 p font").css("font-size",n2+unit)
+	}
+ }
+function preview(oper)
+{
+if (oper < 10){
+bdhtml=window.document.body.innerHTML;//获取当前页的html代码
+sprnstr="<!--startprint"+oper+"-->";//设置打印开始区域
+eprnstr="<!--endprint"+oper+"-->";//设置打印结束区域
+prnhtml=bdhtml.substring(bdhtml.indexOf(sprnstr)+18); //从开始代码向后取html
+prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr));//从结束代码向前取html
+window.document.body.innerHTML=prnhtml;
+window.print();
+window.document.body.innerHTML=bdhtml;
+} else {
+window.print();
+}
+}
+</script>
+<base target="_blank" />
+<style>
+.hbwmw_nr .p2{ width:100%;padding:35px 0}
+.pc{ display: block;}
+.wap{ display: none;}
+@media screen and (max-width: 1200px) {
+.pc{ display: none;}
+.wap{ display: block;}
+} 
+</style>
+
+<script language="javascript" type="text/javascript">
+  function refocus() {
+      var getquery = document.getElementById("query");
+      //getquery.value = "";
+      getquery.autocomplete = "off";
+      getquery.focus();
+
+  }
+  function reblur() {
+      var getquery = document.getElementById("query");
+      if (getquery.value == "") {
+          //getquery.value = "请输入搜索关键字";
+      }
+  }
+  String.prototype.trim = function () {
+      return this.replace(/(^\s*)|(\s*$)/g, "");
+  }
+
+  //站内提交方法
+  function sub() {
+      //必需，先将文本转换为utf-8
+      document.charset = "utf-8";
+      var fixvalue = document.getElementById("query").value;
+      fixvalue = fixvalue.replace(/\~|\!|\*|\?|\^|\\|\(|\)|\[|\]|\+|\-|\:|\{|\}|\"/g, "");
+      if (fixvalue.trim() == "" || fixvalue.trim() == "请输入搜索关键字") {
+          document.getElementById("query").value = "";
+          alert("关键字不能为空！");
+          document.getElementById("query").focus();
+          return false;
+      }
+      else {
+          var thisChanId = $('#chan_id input[name="gonggao"]:checked ').val();
+          var thisOpenUrl = "/ggw/js/?query=" + encodeURIComponent(fixvalue) + "&sort=publishDate";
+          if (!isNaN(thisChanId)) { thisOpenUrl = thisOpenUrl + "&chan_id=" + thisChanId; }
+          window.open(thisOpenUrl);
+      }
+      //必需，最后将文本转换为gb2312
+      document.charset = "gb2312"
+      return false;
+  }
+
+
+  //站内回车提交方法
+  function EnterSub() {
+
+      var len = arguments.length;
+      var event;
+      if (len == 1) {
+          event = arguments[0];
+      }
+      var evt = event ? event : (window.event ? window.event : null);
+      if (evt.keyCode == 13) {
+          var fixvalue = document.getElementById("query").value;
+          fixvalue = fixvalue.replace(/\~|\!|\*|\?|\^|\\|\(|\)|\[|\]|\+|\-|\:|\{|\}|\"/g, "");
+          if (fixvalue.trim() == "" || fixvalue.trim() == "请输入搜索关键字") {
+              document.getElementById("query").value = "";
+              alert("关键字不能为空！");
+              document.getElementById("query").focus();
+              return false;
+          }
+          else {
+              var thisOpenUrl = "/ggw/js/?query=" + encodeURIComponent(fixvalue) + "&sort=publishDate";
+              window.open(thisOpenUrl);
+              return true;
+          }
+          return false;
+      }
+  }
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?f40c3b85a0bf4a28caf6a902a809deff";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+<!--main-->
+<div class="pc">
+
+
+<div class="hbwmw_header">
+<div class="dyds_main">
+    <div  class="hbwmw_nynav">
+		<dl id="navs">
+			<dt><a href="/" target="_blank"><span>首页</span></a></dt>
+			<dt><span><a href="/dtt/" target="_blank">头条</a>·<a href="/wmywsytj/" target="_blank">要闻</a></span></dt>
+			
+			
+				<dt><a href="/xcdt/" target="_blank"><span>宣传动态</span></a></dt>
+			
+				<dt><a href="/llwz/" target="_blank"><span>理论武装</span></a></dt>
+			
+				<dt><a href="/zxbb/" target="_blank"><span>资讯播报</span></a></dt>
+			
+				<dt><a href="/jcwh/" target="_blank"><span>荆楚文化</span></a></dt>
+			
+				<dt><a href="/wmpy/" target="_blank"><span>文明培育</span></a></dt>
+			
+				<dt><a href="/xsdwmsj/" target="_blank"><span>文明实践</span></a></dt>
+			
+				<dt><a href="/wmcj/" target="_blank"><span>文明创建</span></a></dt>
+			
+				<dt><a href="/wmdjt/" target="_blank"><span>评论言论</span></a></dt>
+			
+				<dt><a href="/wmzt/" target="_blank"><span>专题专栏</span></a></dt>
+			
+			
+		</dl>
+      <div id="menu">
+		  <ul></ul>
+		  <ul></ul>
+      	
+      	
+      		<ul>
+      			
+      			
+      			
+      		</ul>
+      	
+      		<ul>
+      			
+      			
+      			
+      		</ul>
+      	
+      		<ul>
+      			
+      			
+      			
+      		</ul>
+      	
+      		<ul>
+      			
+      			
+                  
+      				<li><a href="/jcwh/jfcy/"><span>荆风楚韵</span></a></li>
+      			
+                  
+      			
+                  
+                  
+      			<li>┊</li>
+      			<li><a href="/wmdjr/"><span>我们的节日</span></a></li>
+                    
+      			
+                  
+                  
+      			<li>┊</li>
+      			<li><a href="/sxjc/"><span>书香荆楚</span></a></li>
+                    
+      			
+                  
+                  
+      			<li>┊</li>
+      			<li><a href="/hbfy/"><span>湖北非遗</span></a></li>
+                    
+      			
+      			
+      		</ul>
+      	
+      		<ul>
+      			
+      			
+                  
+      				<li><a href="/xjdx/ddmf/"><span>道德模范</span></a></li>
+      			
+                  
+      			
+                  
+                  
+      			<li>┊</li>
+      			<li><a href="/wmpy/sdkm/"><span>时代楷模</span></a></li>
+                    
+      			
+                  
+                  
+      			<li>┊</li>
+      			<li><a href="/wmpy/jckm/"><span>荆楚楷模</span></a></li>
+                    
+      			
+                  
+                  
+      			<li>┊</li>
+      			<li><a href="/xjdx/zghr/"><span>中国好人</span></a></li>
+                    
+      			
+                  
+                  
+      			<li>┊</li>
+      			<li><a href="/wmpy/hbhr/"><span>湖北好人</span></a></li>
+                    
+      			
+                  
+                  
+      			<li>┊</li>
+      			<li><a href="/wmpy/xsdhsn/"><span>新时代好少年</span></a></li>
+                    
+      			
+                  
+                  
+      			<li>┊</li>
+      			<li><a href="/wmpy/zmrw/"><span>最美人物</span></a></li>
+                    
+      			
+                  
+                  
+      			<li>┊</li>
+      			<li><a href="/wcnr/"><span>未成年人思想道德建设</span></a></li>
+                    
+      			
+                  
+                  
+      			<li>┊</li>
+      			<li><a href="/jwmsxf/"><span>文明风尚</span></a></li>
+                    
+      			
+      			
+      		</ul>
+      	
+      		<ul>
+      			
+      			
+      			
+      		</ul>
+      	
+      		<ul>
+      			
+      			
+                  
+      				<li><a href="/wmcj/wmcs/"><span>文明城市</span></a></li>
+      			
+                  
+      			
+                  
+                  
+      			<li>┊</li>
+      			<li><a href="/wmcj/wmdw/"><span>文明单位</span></a></li>
+                    
+      			
+                  
+                  
+      			<li>┊</li>
+      			<li><a href="/wmcj/wmcz/"><span>文明村镇</span></a></li>
+                    
+      			
+                  
+                  
+      			<li>┊</li>
+      			<li><a href="/wmcj/wmjt/"><span>文明家庭</span></a></li>
+                    
+      			
+                  
+                  
+      			<li>┊</li>
+      			<li><a href="/wmcj/wmxy/"><span>文明校园</span></a></li>
+                    
+      			
+      			
+      		</ul>
+      	
+      		<ul>
+      			
+      			
+      			
+      		</ul>
+      	
+      		<ul>
+      			
+      			
+      			
+      		</ul>
+      	
+      	
+      </div>
+  </div>
+  <script type="text/javascript">	jQuery(".hbwmw_nynav").slide({ titCell:"#navs dt", mainCell:"#menu", startFun:function(i,c){
+        var menu=$("#menu ul").eq(i).html()
+		if($.trim(menu).length!="")
+		{
+			$("#navs dt").eq(i).children("a").removeAttr("href")
+			console.log(i)
+		}
+    }});	</script>
+        <div class="hbwmw_sysc">
+          <p id="pDate"></p>
+          <script>
+             var content = JSON.stringify(calendar.solar2lunar(), null, 4);
+             obj = JSON.parse(content);
+             document.getElementById("pDate").innerHTML= obj.date+'&nbsp;&nbsp;&nbsp;'+obj.ncWeek+'&nbsp;&nbsp;&nbsp;'+obj.gzYear+'年'+'&nbsp;&nbsp;&nbsp;'+obj.lunarDate;
+          </script>
+        </div>
+    </div>
+</div>
+<div class="blank40"></div>
+<div class="hbwmw_head">
+	<div class="dyds_main">
+		<div class="sy_ss1">
+		  <div class="sy_ss_zuo">
+			<input name="query" type="text" class="ss_srk" onfocus="return refocus();" onkeydown="EnterSub(event);" onblur="return reblur();" id="query" placeholder="请输入搜索关键字" autocomplete="off">
+		  </div>
+		  <div class="sy_ss_you">
+			<input class="ss_an" value="搜　索" type="button" onclick="sub();">
+		  </div>
+		</div>
+    	<a class="fleft" href="/"><img src="/images/wmlogo.jpg" /></a>
+        
+        
+       
+        <img class="fright" src="/images/hbwmw_13.jpg" />
+    </div>
+</div>
+<div class="blank15"></div>
+<div class="blank15"></div>
+<div class="hbwmw_zw">
+	<div class="dyds_main">
+    	<div class="hbwmw_lj hbwmw_lj1"><a href='/' target='_blank'>首页</a>&nbsp;&gt;&nbsp;<a href='/wmywsytj/'>文明要闻首页推荐</a></div>
+        <div class="blank15"></div>
+        <!--startprint1-->
+                <!--打印内容开始-->
+        <div class="hbwmw_nr">
+        	<div class="p1">
+            	<h1>湖北文旅集团迎来最火“国庆档”</h1>
+                <div class="hbwmw_nrsj">
+                	<div class="hbwmw_nrfx">
+                    	<div class="d1"><a target="_self" class="anniu" href="javascript:void(0);" onclick="a2()">A<sup>-</sup></a>&nbsp;&nbsp;&nbsp;<a class="anniu" onclick="a1()" target="_self" href="javascript:void(0);">A<sup>+</sup></a>&nbsp&nbsp&nbsp&nbsp</div>
+						<div class="d2"><a href="javascript:void(0);" onclick="preview(1)"><img src="/images/hbwmw_15.jpg" /></a></div>
+                     </div>
+                     发表时间：2024年10月10日&nbsp;&nbsp;&nbsp;&nbsp;来源：湖北文明网
+            </div>
+            <div class="p2">
+               <div style="text-align: center;"><p><strong>线上订单增长115.73% 接待200万名游客</strong></p><p><img src="/upload/resources/image/2024/10/10/58554_10000x10000.jpeg" width="550px" style="box-sizing: border-box; margin: 0px; padding: 0px; border-width: 0px; border-style: initial; vertical-align: middle;"/></p><p><span style="color: #1F497D;">恩施大峡谷景区组织“盛世华诞国旗飞扬”土苗儿女同唱《我和我的祖国》快闪活动。</span></p><img src="/upload/resources/image/2024/10/10/58555_10000x10000.jpeg" width="550px" style="box-sizing: border-box; margin: 0px; padding: 0px; border-width: 0px; border-style: initial; vertical-align: middle;"/><p><span style="color: #1F497D;">仙桃沔阳小镇超级焰火群星狂欢节。</span></p><img src="/upload/resources/image/2024/10/10/58556_10000x10000.jpeg" width="550px" style="box-sizing: border-box; margin: 0px; padding: 0px; border-width: 0px; border-style: initial; vertical-align: middle;"/><p><span style="color: #1F497D;">楚天通航新疆赛里木湖直升机跳伞彰显体育蓬勃活力。</span></p></div><div style="text-indent: 2em; text-align: justify;"><founder-content><p>2024年国庆期间，湖北文旅集团取得亮眼成绩，该集团各景区举办特色活动超200余场，全网曝光量达1.5亿次。恩施大峡谷、神农架景区、宜昌清江画廊、十堰武当山、仙桃沔阳小镇等景区频上社交媒体热搜。其旗下景区、酒店、旅行社各项经营数据全线飘红，游客接待量及综合旅游收入刷新历史纪录，多家景区日均接待量创下历年之最。整个国庆期间，游客接待总量超200万人次，同比增长59.36%，营收同比增长67.48%。</p><p><strong>景区焕新点燃新盛宴</strong></p><p>湖北文旅集团各大景区积极践行焕新行动，将多彩非遗、传统民俗与国潮风尚巧妙融合，打造出一系列新场景、新体验、新融合与新服务，持续七天不断掀起旅游热潮。恩施大峡谷、神农架等景区日接待量日均同比呈多倍增长，因客流暴增连续多日实施限流管控。</p><p>恩施大峡谷景区组织“盛世华诞国旗飞扬”土苗儿女同唱《我和我的祖国》快闪活动，游客接待量及景区营收增幅超过50%。神农架景区推出华中屋脊升国旗、特色歌舞等共贺国庆系列活动，《秘境神农架》演出现场新增游客互动，7天假期接待游客超32万人次，实现营收同比增幅达到90%以上。宜昌清江画廊解锁直升机空中游览新体验，6分钟空中俯瞰倒影峡、北纬三十度岛、平洛湖等景点，全视角体验秀美迤逦的清江，国庆首日起连续5天日接待游客超万人次。</p><p>仙桃沔阳小镇假期连续三天举办超级焰火群星狂欢节，以“明星+焰火+文旅”的视听盛宴，吸引游客，景区7天接待游客超10万人次。襄阳古隆中景区推出“寻梦三国”沉浸式实景演出，日均客流量同比增长41.06%。黄梅东山问梅村以“国潮庆华诞”为主题，将黄梅戏经典曲目、打铁花、火壶等非遗文化演出与景区深度融合，辅以国风巡游、杂技表演、无人机、光影秀展等项目，形成爆点产品，客流连续4天破万，综合营收增幅近65%。荆州·荆街举办非遗火壶贺国庆、国潮音乐会等，游客接待量、景区营收实现30%以上增幅，夜经济活力全面释放。梁子岛景区以“蟹舞金秋韵、非遗绽华彩”为主题吸引万余名游客齐登岛，游客量和营收连续3天超历史最高水平。随州大洪山景区举办大洪山神话旅游节，引入神话演绎、国风集市和互动娱乐活动，以神奇、魔幻的故事表演让游客身临其境。洪湖湿地公园开展“萌兔·烟火乐彩印花章”狂欢嘉年华，精彩不间断。</p><p><strong>酒店增值赋能新感受</strong></p><p>国庆假期，该集团旗下各酒店以增值特色服务，全方位呈现荆楚待客之道。</p><p>洪山宾馆、黄梅东山问梅村客栈等多个酒店实现连续满房，洪山宾馆结合热点景区开发一价全包和长住特惠产品，推出100余款“景+酒”组合套餐，假期7天入住率达到85%以上。皇冠假日酒店结合武汉网球公开赛、武汉斯诺克公开赛等提前宣传造势，赠送国庆及赛事期间观赛礼包，针对不同出游群体推出多款酒店套餐，开展传统非遗活动、儿童手作课堂，国庆假期平均出租率近80%。</p><p>东山问梅村客栈通过非遗打铁花、超视觉3D、武戏精粹、黄梅戏等景区客流带动，假期前5日客栈所有房源提前20天售罄，假期整体入住率超过90%。洪湖金湾酒店主攻婚宴市场，累计接待婚宴30余场、600余桌，餐饮宴席营收超百万元。</p><p><strong>体育康养引领新消费</strong></p><p>湖北文旅集团以“体育+”与“康养+”经济为引擎，持续为假期消费市场注入强劲新动力。</p><p>国庆假期，该集团体育产业实现总收入同比增长率高达146.36%。楚天通航赛里木湖直升机跳伞营地线上线下相结合，截至目前，共接待跳伞游客逾700人次，创造营业收入逾100万元，彰显了体育消费的蓬勃活力。东湖帆船基地亦热闹非凡，一系列精彩活动轮番上演，日均吸引1500余名游客参与，进一步推动了体育产业的繁荣发展。</p><p>康养服务领域，丽江颐养中心与九峰街养老综合体同步开启预约通道，全面开放样板间、护理室及活动室等区域，并依托智能监控、健康监测等先进设施，为参观者提供了便捷、舒适的体验。得益于优越的地理位置、便捷的交通条件、完善的医疗配套设施以及国企的服务保障，两个项目在5天内便吸引了超过500名长者前来参观，成为众多长者心中的理想养老之地。</p><p><strong>“引客入鄂”激发新活力</strong></p><p>湖北文旅集团各旅行社出行平台深入市场调研，精心策划并推出了一系列定制化、个性化的跟团游线路、直通车产品及单项预订服务，以满足广大游客的多元需求。</p><p>海外（中旅）集团积极响应政策号召，特别推出了“引客入鄂”恩施专线团，旨在通过加大江苏、山东、广东等地的客源引流力度，促进旅游市场的繁荣发展。假日期间，该专线团累计接待超过3000名外省游客，为当地旅游经济注入新的活力。</p><p>同时，该集团还推出了不同主题的特色出境游和国内游产品，带动订单数量实现115.73%的激增。其中，“游湖北”平台作为重要的推广渠道，通过发放国庆通用优惠券和上线“惠购国庆、畅游湖北”专题活动，进一步激发了游客的出游热情。假期累计服务游客数量超30万人，同比增长139.3%，为湖北旅游市场的繁荣作出了积极贡献。（湖北日报 王熙璐）</p></founder-content></div><p style="text-indent: 2em;"></p>
+                <div class="blank15"></div>
+                <div class="pageControl">
+                			
+                       </div>
+			</div>
+            <div class="blank1"></div>
+            <div class="p3"><font>责任编辑：</font>李欢</div>
+		</div>
+        <!--打印内容结束-->
+		<!--endprint1-->
+        
+       </div>
+    </div>
+</div>
+<div class="blank40"></div>
+
+<style>
+.hbwmw_main { width: 1280px; margin: 0 auto;}
+.hbwmw_footer{ text-align: center; background-color: #fff8ef; padding: 10px 0; border-top: 4px solid #f6ede0;}
+.hbwmw_footer h3{ font-size: 20px; color: #d80c18; margin-bottom: 10px;}
+.hbwmw_footer .f1{ display: inline-block; font-size: 16px; color: #333; line-height: 30px; height: 60px; padding: 10px 0; margin-right: 10px;}
+.hbwmw_footer .f1 img{ vertical-align: -3px;}
+.hbwmw_footer a{ color: #333;}
+.hbwmw_footer .f2{ display: inline-block; width: 80px; height: 80px;    vertical-align: -20px;}
+.hbwmw_footer .f2 img{}</style>
+<div class="hbwmw_footer">
+<div class="hbwmw_main">
+	<div class="blank21"></div>
+	<h3>中共湖北省委宣传部（湖北省精神文明建设办公室） 主办</h3>
+	<div class="f1">技术支持：荆楚网&nbsp;&nbsp;&nbsp;&nbsp;投稿邮箱：hbswmbxxbs@163.com<br><a href="/images/hlwxwxxxkz.jpg">互联网新闻信息许可证 42120170001</a>&nbsp;&nbsp;&nbsp;&nbsp;鄂ICP备18025215号&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42010602004607"><img src="/images/sy_ga_img.jpg" alt="">&nbsp;&nbsp;鄂公网安备&nbsp;&nbsp;&nbsp;&nbsp;42010602004607号</a></div>
+	<div class="f2"><a href="https://bszs.conac.cn/sitename?method=show&id=A9378EFF16753590E05310291AAC165D"><img src="https://dcs.conac.cn/image/red.png" alt=""></a></div>
+</div>
+</div>
+</div>
+<div class="wap">
+	
+	<nav>
+		<b>×</b>
+		<i></i>
+		<div class="box">
+		<a href="/">首页</a>
+		<a href="/wmywsytj/">要闻</a>
+		<a href="/xcdt/">宣传动态</a>
+		<a href="/wmjc/">文明荆楚</a>
+		<a href="/wmxx/gsgg/">公示公告</a>
+		<a href="/wmcj/">文明创建</a>
+		<a href="/xjdx//">先进典型</a>
+		<a href="/xsdwmsj/">新时代文明实践</a>
+		<a href="/wcnr/">未成年人</a>
+		<a href="/wmdjt/">文明大家谈</a>
+		<a href="/wmzt/">专栏</a>
+		</div>
+	</nav>
+	<header>
+		<div class="logo">
+			<a href="/"><img src="/images/hbwmw_alogo.png" ignoreapd="1" /></a>
+		</div>
+		<div class="nav"><img src="/images/hbwmw_anav.png" ignoreapd="1" /></div>
+		
+	</header>
+	<div class="hbwmw_almm">
+		<div class="blank10"></div>
+		<div class="hbwmw_awz">
+			<div class="t1">
+				<h1>湖北文旅集团迎来最火“国庆档”</h1>
+				<p>发表时间：2024-10-10     来源：湖北文明网</p>
+			</div>
+			<div class="blank21"></div>
+			<div class="t2">
+				<div style="text-align: center;"><p><strong>线上订单增长115.73% 接待200万名游客</strong></p><p><img src="/upload/resources/image/2024/10/10/58554_10000x10000.jpeg" width="550px" style="box-sizing: border-box; margin: 0px; padding: 0px; border-width: 0px; border-style: initial; vertical-align: middle;"/></p><p><span style="color: #1F497D;">恩施大峡谷景区组织“盛世华诞国旗飞扬”土苗儿女同唱《我和我的祖国》快闪活动。</span></p><img src="/upload/resources/image/2024/10/10/58555_10000x10000.jpeg" width="550px" style="box-sizing: border-box; margin: 0px; padding: 0px; border-width: 0px; border-style: initial; vertical-align: middle;"/><p><span style="color: #1F497D;">仙桃沔阳小镇超级焰火群星狂欢节。</span></p><img src="/upload/resources/image/2024/10/10/58556_10000x10000.jpeg" width="550px" style="box-sizing: border-box; margin: 0px; padding: 0px; border-width: 0px; border-style: initial; vertical-align: middle;"/><p><span style="color: #1F497D;">楚天通航新疆赛里木湖直升机跳伞彰显体育蓬勃活力。</span></p></div><div style="text-indent: 2em; text-align: justify;"><founder-content><p>2024年国庆期间，湖北文旅集团取得亮眼成绩，该集团各景区举办特色活动超200余场，全网曝光量达1.5亿次。恩施大峡谷、神农架景区、宜昌清江画廊、十堰武当山、仙桃沔阳小镇等景区频上社交媒体热搜。其旗下景区、酒店、旅行社各项经营数据全线飘红，游客接待量及综合旅游收入刷新历史纪录，多家景区日均接待量创下历年之最。整个国庆期间，游客接待总量超200万人次，同比增长59.36%，营收同比增长67.48%。</p><p><strong>景区焕新点燃新盛宴</strong></p><p>湖北文旅集团各大景区积极践行焕新行动，将多彩非遗、传统民俗与国潮风尚巧妙融合，打造出一系列新场景、新体验、新融合与新服务，持续七天不断掀起旅游热潮。恩施大峡谷、神农架等景区日接待量日均同比呈多倍增长，因客流暴增连续多日实施限流管控。</p><p>恩施大峡谷景区组织“盛世华诞国旗飞扬”土苗儿女同唱《我和我的祖国》快闪活动，游客接待量及景区营收增幅超过50%。神农架景区推出华中屋脊升国旗、特色歌舞等共贺国庆系列活动，《秘境神农架》演出现场新增游客互动，7天假期接待游客超32万人次，实现营收同比增幅达到90%以上。宜昌清江画廊解锁直升机空中游览新体验，6分钟空中俯瞰倒影峡、北纬三十度岛、平洛湖等景点，全视角体验秀美迤逦的清江，国庆首日起连续5天日接待游客超万人次。</p><p>仙桃沔阳小镇假期连续三天举办超级焰火群星狂欢节，以“明星+焰火+文旅”的视听盛宴，吸引游客，景区7天接待游客超10万人次。襄阳古隆中景区推出“寻梦三国”沉浸式实景演出，日均客流量同比增长41.06%。黄梅东山问梅村以“国潮庆华诞”为主题，将黄梅戏经典曲目、打铁花、火壶等非遗文化演出与景区深度融合，辅以国风巡游、杂技表演、无人机、光影秀展等项目，形成爆点产品，客流连续4天破万，综合营收增幅近65%。荆州·荆街举办非遗火壶贺国庆、国潮音乐会等，游客接待量、景区营收实现30%以上增幅，夜经济活力全面释放。梁子岛景区以“蟹舞金秋韵、非遗绽华彩”为主题吸引万余名游客齐登岛，游客量和营收连续3天超历史最高水平。随州大洪山景区举办大洪山神话旅游节，引入神话演绎、国风集市和互动娱乐活动，以神奇、魔幻的故事表演让游客身临其境。洪湖湿地公园开展“萌兔·烟火乐彩印花章”狂欢嘉年华，精彩不间断。</p><p><strong>酒店增值赋能新感受</strong></p><p>国庆假期，该集团旗下各酒店以增值特色服务，全方位呈现荆楚待客之道。</p><p>洪山宾馆、黄梅东山问梅村客栈等多个酒店实现连续满房，洪山宾馆结合热点景区开发一价全包和长住特惠产品，推出100余款“景+酒”组合套餐，假期7天入住率达到85%以上。皇冠假日酒店结合武汉网球公开赛、武汉斯诺克公开赛等提前宣传造势，赠送国庆及赛事期间观赛礼包，针对不同出游群体推出多款酒店套餐，开展传统非遗活动、儿童手作课堂，国庆假期平均出租率近80%。</p><p>东山问梅村客栈通过非遗打铁花、超视觉3D、武戏精粹、黄梅戏等景区客流带动，假期前5日客栈所有房源提前20天售罄，假期整体入住率超过90%。洪湖金湾酒店主攻婚宴市场，累计接待婚宴30余场、600余桌，餐饮宴席营收超百万元。</p><p><strong>体育康养引领新消费</strong></p><p>湖北文旅集团以“体育+”与“康养+”经济为引擎，持续为假期消费市场注入强劲新动力。</p><p>国庆假期，该集团体育产业实现总收入同比增长率高达146.36%。楚天通航赛里木湖直升机跳伞营地线上线下相结合，截至目前，共接待跳伞游客逾700人次，创造营业收入逾100万元，彰显了体育消费的蓬勃活力。东湖帆船基地亦热闹非凡，一系列精彩活动轮番上演，日均吸引1500余名游客参与，进一步推动了体育产业的繁荣发展。</p><p>康养服务领域，丽江颐养中心与九峰街养老综合体同步开启预约通道，全面开放样板间、护理室及活动室等区域，并依托智能监控、健康监测等先进设施，为参观者提供了便捷、舒适的体验。得益于优越的地理位置、便捷的交通条件、完善的医疗配套设施以及国企的服务保障，两个项目在5天内便吸引了超过500名长者前来参观，成为众多长者心中的理想养老之地。</p><p><strong>“引客入鄂”激发新活力</strong></p><p>湖北文旅集团各旅行社出行平台深入市场调研，精心策划并推出了一系列定制化、个性化的跟团游线路、直通车产品及单项预订服务，以满足广大游客的多元需求。</p><p>海外（中旅）集团积极响应政策号召，特别推出了“引客入鄂”恩施专线团，旨在通过加大江苏、山东、广东等地的客源引流力度，促进旅游市场的繁荣发展。假日期间，该专线团累计接待超过3000名外省游客，为当地旅游经济注入新的活力。</p><p>同时，该集团还推出了不同主题的特色出境游和国内游产品，带动订单数量实现115.73%的激增。其中，“游湖北”平台作为重要的推广渠道，通过发放国庆通用优惠券和上线“惠购国庆、畅游湖北”专题活动，进一步激发了游客的出游热情。假期累计服务游客数量超30万人，同比增长139.3%，为湖北旅游市场的繁荣作出了积极贡献。（湖北日报 王熙璐）</p></founder-content></div><p style="text-indent: 2em;"></p>
+			</div>
+		</div>
+		<div class="blank30"></div>
+	</div>
+	<div class="fooder">
+		<img src="/images/hbwmw_aewm.jpg" ignoreapd="1" />
+		<div class="food">
+			<p>湖北省精神文明建设办公室主办</p>
+			<p>技术支持：荆楚网</p>
+			<p>投稿邮箱: hbwmwxxbs@vip.163.com </p>
+		</div>
+	</div>
+</div>
+
+<script src="/cms/stat/front/stat.js" type="text/javascript"></script>
+<script>
+if(window._zcms_stat)_zcms_stat("SiteID=2&CatalogInnerCode=000022&Type=Article&LeafID=60869&Dest=/cms/front/stat/dealer");
+</script>
+
+<!-- App=cnhubei(荆楚网云网站内容管理平台-E708aBZgVL1KD/7VUd7eXFC/RkL78ToPy7plyz0i5r+4EyY=) ,CostTime=5,PublishDate=2026-07-28 15:58:08 -->
+
+<script src="/cms/recommend/js/fingerprint.js" type="text/javascript"></script>
+
+<script src="/cms/recommend/js/recommendstat.js" type="text/javascript"></script>
+<script>
+if(window._zcms_recommendstat)_zcms_recommendstat("SiteID=2&ContentID=60869&RecommendType=Content&Dest=/cms/front/recommends/dealer");
+</script>
+</body>
+</html>

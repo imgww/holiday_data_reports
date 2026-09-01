@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="Shortcut Icon"
+      href="https://res.dahecube.com/nweb/res/bitbug_favicon.ico"
+      type="image/x-icon"
+    />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="x-ua-compatible" content="IE=Edge,chrome=1" />
+    <meta name="applicable-device" content="pc" />
+    <meta name="keywords" content="大河财立方" />
+    <meta name="description" content="大河财立方" />
+    <meta property="og:title" content="大河财立方" />
+    <meta property="og:description" content="大河财立方" />
+    <meta name="SiteName" content="大河财立方" />
+    <meta name="ContentSource" content="大河财立方" />
+    <meta name="author" content="大河财立方" />
+    <meta name="copyright" content="大河财立方版权所有" />
+    <title>大河财立方</title>
+    <link
+      rel="stylesheet"
+      href="https://res.dahecube.com/nweb/res/pc/css/common.1.0.css?v=202604011125"
+    />
+    <link
+      rel="stylesheet"
+      href="https://res.dahecube.com/nweb/res/pc/css/pc.1.0.css?v=20240715"
+    />
+    <script src="https://res.dahecube.com/nweb/res/jquery-3.4.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://res.dahecube.com/nweb/res/pc/css/qiniuplayer.min.css"
+    />
+    <style>
+      .articleWrap {
+        position: relative;
+      }
+      .video {
+        width: 100%;
+        height: 394px;
+        margin: 0 auto;
+      }
+      .read-more-box {
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0), #ffffff);
+        z-index: 9;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      .read-more-box .total-text {
+        color: #666666;
+        font-size: 15px;
+        font-weight: 500;
+        padding-bottom: 7px;
+        text-align: center;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0), #ffffff);
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      .read-more-box .more-down {
+        padding: 0 20px;
+        background: #ffffff;
+        position: relative;
+      }
+      .read-more-box .more-down img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 头部 -->
+    <div class="navTopWrap">
+      <div class="navTop bodyWrap">
+        <div class="siteLogo fl">
+          <img src="https://res.dahecube.com/nweb/res/pc/img/logo.png" alt="" />
+        </div>
+        <div class="siteNav fr">
+          <ul id="siteNav"></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 内容 -->
+    <div class="pageCon mt45">
+      <div class="pageConBox bodyWrap clear">
+        <!-- 新闻区域 -->
+        <div class="conBox fl">
+          <h2 class="articleTitle">&nbsp;</h2>
+          <div class="articleInfo">
+            <span class="admin">&nbsp;</span>
+            <span class="time">&nbsp;</span>
+          </div>
+
+          <div class="articleWrap">&nbsp;</div>
+          <div class="imgBig" id="imgBig"></div>
+          <!-- 相关 -->
+          <div class="similar">
+            <h3 class="title">相关资讯</h3>
+            <div class="similarList" id="similarList"></div>
+          </div>
+          <!-- 往期回顾 -->
+          <div class="historyBox">
+            <h3 class="titleBox">往期回顾</h3>
+            <div class="historyList" id="historyDataList"></div>
+          </div>
+          <!--  -->
+        </div>
+        <!-- 侧边区域 -->
+        <div class="sideBarBox fr">
+          <!-- 热门文章 -->
+          <div class="indexHotBox">
+            <div class="titleBox clear">
+              <span class="titleImg">热门文章</span>
+            </div>
+            <div class="hotList" id="hotList"></div>
+          </div>
+          <!-- goApp -->
+          <div class="goApp">
+            <a target="_blank" href="down.html"
+              ><img src="https://res.dahecube.com/nweb/res/pc/img/2.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </body>
+  <script src="https://res.dahecube.com/nweb/res/app/js/apidef.js?v=20260529"></script>
+  <script src="https://res.dahecube.com/nweb/res/pc/js/common.1.0.js?v=20240729"></script>
+  <!-- <script src="https://res.dahecube.com/nweb/res/pc/js/currentNews.1.0.js?v=20200819"></script> -->
+  <script src="https://res.caijinxiansheng.cn/res/js/qiniuplayer.min.js"></script>
+  <script src="https://res.dahecube.com/nweb/res/pc/js/article.1.0.js?v=20250801"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#footer").load("https://res.dahecube.com/pc/footer.html");
+    });
+  </script>
+</html>
