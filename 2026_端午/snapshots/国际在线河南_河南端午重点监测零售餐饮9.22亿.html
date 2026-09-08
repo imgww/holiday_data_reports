@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="apple-touch-fullscreen" content="yes" /> <!--  一会试验下是否有必要存在 -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="x-rim-auto-match" content="none" />
+<title>零售企业销售额9.04亿元 消费市场有新意有看点</title>
+<link href="//f2.cri.cn/M00/01/76/CqgNOlmC62iAAPEKAAAAAAAAAAA0892782.style-imp.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+autoRem();
+window.onresize = function(){
+	autoRem();
+}
+function autoRem(){
+    var view_width = document.getElementsByTagName('html')[0].getBoundingClientRect().width;
+
+	var _html = document.getElementsByTagName('html')[0];
+	view_width>750?_html.style.fontSize = 750 / 16 + 'px':_html.style.fontSize = view_width / 16 + 'px';
+}
+</script>
+<script src="//f2.cri.cn/M00/01/76/CqgNOlmC62iATA3sAAAAAAAAAAA8257121.jquery.js"></script>
+<script src="https://f2.cri.cn/M00/AA/2F/CqgNOls8JfyAUYysAAAAAAAAAAA2777345.hls.js"></script>
+<script>!window.jQuery && document.write("<script src=\"//f2.cri.cn/M00/4F/D3/CqgNOl0-aB2AZ27lAAAAAAAAAAA5883992.jquery172.js\">"+"</scr"+"ipt>");</script>
+<script>
+var sUserAgent = navigator.userAgent.toLowerCase();
+var isWhat = {
+    bIsIpad: sUserAgent.match(/ipad/i) == "ipad",
+    bIsIphoneOs: sUserAgent.match(/iphone os/i) == "iphone os",
+    bIsMidp: sUserAgent.match(/midp/i) == "midp",
+    bIsUc7: sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4",
+    bIsUc: sUserAgent.match(/ucweb/i) == "ucweb",
+    bIsCE: sUserAgent.match(/windows ce/i) == "windows ce",
+    bIsWM: sUserAgent.match(/windows mobile/i) == "windows mobile",
+    // bIsAndroid: sUserAgent.indexOf('android') > -1 || sUserAgent.indexOf('linux') > -1, 
+    bIsAndroid: sUserAgent.indexOf('android') > -1, 
+    bIsTrident: sUserAgent.indexOf('trident') > -1,
+    bIsPresto: sUserAgent.indexOf('presto') > -1, 
+    bIsWebKit: sUserAgent.indexOf('applewebkit') > -1, 
+    bIsGecko: sUserAgent.indexOf('gecko') > -1 && sUserAgent.indexOf('khtml') == -1, 
+    bIsMobile: !!sUserAgent.match(/applewebkit.*mobile.*/)||!!sUserAgent.match(/appleWebkit/), 
+    bIsIos: !!sUserAgent.match(/\(i[^;]+;( u;)? cpsuseragent.+mac os x/), 
+    // bIsIPhone: sUserAgent.indexOf('iphone') > -1 || sUserAgent.indexOf('mac') > -1, 
+    bIsWebApp: sUserAgent.indexOf('safari') == -1
+};
+if ((isWhat.bIsIpad || isWhat.bIsIphoneOs || isWhat.bIsMidp || isWhat.bIsUc7 || isWhat.bIsUc || isWhat.bIsAndroid || isWhat.bIsCE || isWhat.bIsWM)){
+
+}else{
+window.onload = function () {
+
+  $(".body_video").each(function(i,video){
+      const videoUrl = video.src;
+      if (videoUrl.endsWith('.m3u8')) {
+          if (Hls.isSupported()) {
+              const hls = new Hls();
+              hls.loadSource(videoUrl);
+              hls.attachMedia(video);
+              video.src = videoUrl;
+              hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                  video.play();
+              });
+          } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+              video.src = videoUrl;
+              video.addEventListener('loadedmetadata', function() {
+                  video.play();
+              });
+          } else {
+              alert("Your browser does not support HLS playback.");
+          }
+      } else {
+          video.src = videoUrl;
+          //video.play();
+      }
+
+    })
+}
+}
+</script><link rel="shortcut icon" href="https://p2.cri.cn/M00/C2/80/CqgNOljfE-mAKXPxAAAAAAAAAAA517.16x16.ico" type="image/x-icon">
+</head>
+
+<body>
+<meta name='apple-itunes-app' content='app-id=1207275230' />
+<link rel="stylesheet" href="//f2.cri.cn/M00/75/57/CqgNOlq0quuALZnOAAAAAAAAAAA3084154.player.css" /><!--ChinaNews稿件库页面自定义视频播放器样式-->
+<style type="text/css">
+*{margin:0;padding:0}
+#openApp{display:none;width:150px;height:30px;line-height: 30px; text-align: center; text-decoration: none; border-radius: 15px;background:#2056ac;color:#fff; font-size: 12px; position:fixed;bottom:10px;left:50%;margin-left:-75px;z-index:100;}
+/*无图模式*/
+.abody img {display:none;}
+/*无图模式*/
+</style>
+<a href="javascript:;" id="openApp">打开ChinaNews阅读</a>
+<script type="text/javascript">
+
+var http = location.href;
+var numUrl= http.indexOf("?");
+var urlPlay=http.substr(0,numUrl); 
+
+var smallNumber= http.indexOf("&");
+var data0bject=http.substr(smallNumber+1); 
+function UrlSearch()
+{
+   var name,value;
+   var str=location.href; //取得整个地址栏
+   var num=str.indexOf("?")
+   str=str.substr(num+1); //取得所有参数   stringvar.substr(start [, length ]
+
+   var arr=str.split("&"); //各个参数放到数组里
+   for(var i=0;i < arr.length;i++){
+    num=arr[i].indexOf("=");
+    if(num>0){
+     name=arr[i].substring(0,num);
+     value=arr[i].substr(num+1);
+     this[name]=value;
+     }
+    }
+}
+var Request=new UrlSearch(); //实例化
+if(Request.chinaNewsType=="app"){
+document.getElementById('openApp').style.display="block";
+}
+document.getElementById('openApp').onclick = function(e){
+	
+	if(navigator.userAgent.match(/(iPhone|iPod|iPad);?/i))
+	   {
+		window.location.href = "com.chinanews://";//ios app协议
+               window.location.href = "https://wxxcx.crionline.cn/test/appopen.html?url="+urlPlay+"&"+data0bject;//ios9 universal link
+		window.setTimeout(function() {
+			window.location.href = "https://itunes.apple.com/cn/app/id1207275230";
+		}, 2000)
+	   }
+	if(navigator.userAgent.match(/android/i))
+	{
+		//window.location.href = "chinanews://app?key=123"; //android app协议
+              window.location.href = "chinanews://app?url="+urlPlay+"&"+data0bject; //android app协议
+		window.setTimeout(function() {
+			//window.location.href = "https://f2.cri.cn/M00/ED/0A/CqgNOllWBjKAdu2TAOqY2dmnjn0096.apk";//android 下载地址
+window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=cn.crionline.www.chinanews&from=singlemessage&isappinstalled=1";//android 应用宝下载地址
+		}, 2000)    
+	}
+};
+
+</script>
+<div class="w750">
+	<div class="cn-abody-box">
+		<h1 class="cn-abody-title">零售企业销售额9.04亿元 消费市场有新意有看点</h1>
+		<h2 class="cn-abody-addTime"><span id="asource" class="asource"><a href="https://newpaper.dahe.cn/hnrb/html/2026-06/22/content_10_1798489.htm" target="_blank" rel="nofollow">河南日报</a></span><strong id="acreatedtime" class="acreatedtime">2026-06-22 11:07:21</strong></h2>
+		<div class="bd_2"></div>
+		<div class="h10"></div>
+		<div class="cn-abody-inner abody" id="abody">
+			<p>　　今年端午假期，河南消费市场有新意、有看点。6月21日，记者从河南省商务厅获悉，端午假期，河南重点监测的零售和餐饮企业累计实现销售额9.22亿元，其中，零售企业销售额9.04亿元。</p>
+<p>　　“孩子刚高考完，消费品以旧换新补贴加上厂家补贴、店里优惠，一台手机能便宜不少钱。”6月20日，苏宁易购花园路超级体验店内，郑州市民朱梅正在给孩子选购手机。近期该店针对不同消费群体，推出“暑假清凉季”“换个大屏看世界杯”等专题促销，带动家电、3C等商品销量实现环比上升。</p>
+<p>　　据了解，河南省积极抢抓“6·18”购物节、暑期消费季等传统消费节点，持续加码补贴，有效激活家电、汽车等大宗商品消费潜力。端午假期，河南省参与以旧换新活动的家电数码商品交易额超10亿元。</p>
+<p>　　家庭聚餐是传统佳节的重头戏。河南省多地餐饮门店推出特色套餐，在有奖发票、消费补贴等助力下，掀起餐饮消费新热潮。开封某中餐厅，店家结合假期特点推出了“聚香欢聚”端午套餐，并给每桌赠送粽子，吸引了不少消费者。“这桌消费了160元，参与发票抽奖后又中了20元，很惊喜。”开封市民魏女士说。除郑州、开封两地参与国家“有奖发票”活动试点外，洛阳、焦作、安阳、三门峡等地结合自身特点，在餐饮、住宿、文体等领域自主开展发票抽奖活动。端午假期，河南省重点监测的餐饮企业营业收入同比增长21%。</p>
+<p>　　传统文化玩出新花样，消费者偏爱为“心动”买单。端午假期，河南省多地充分挖掘并运用传统文化元素，推出不少新产品、新场景。洛阳魏坡新序，一场“有意思大会”吸引了不同年龄段消费者参与，大家在戏剧、音乐等活动中享受假日惬意生活；“世界艾乡”南阳将一株小艾草做出大产业，艾绒香包、精油、布艺摆件等特色文创颇受年轻人青睐；华豫佰佳、鲜风生活等超市内，低糖低脂粽子、杂粮粽子、榴莲粽子等新口味、新产品俏销；各商场内，艾草扎成的花束吸引着年轻消费者的目光，不少人当场下单，并在社交平台发布这份独属于自己的“仪式感”……端午假期，河南省重点监测的零售企业烟酒、饮料、食品类商品销售额同比分别增长20.4%、9.2%、4.6%。（全媒体记者&nbsp;王歌）</p>
+		</div>
+		<h2 class="cn-abody-addTime">
+                      <div class="readNum clearfix"><div class="fl">阅读</div><div class="Num fl">&nbsp;</div></div>
+                      <span id="aeditor" class="aeditor">责编：魏寒冰</span>
+                </h2>
+	</div>
+	
+<!--not found: portal2_https://hn.cri.cn/gg/chinanews/details-gg.inc--> 
+
+<div class="bd_1"></div><div class="cn-aboutnews-box-b"><h1 class="cn-aboutnews-title-b">—&nbsp;&nbsp;相关新闻&nbsp;&nbsp;—</h1><ul><li><a href="//hn.cri.cn/20260618/0efbf874-271f-4c49-84f4-e910441af249.html"><dl><dt class="textEff">2026年河南省重大国际产业合作项目名单发布 55个项目上榜</dt><dd><strong class="setDate">2026/06/22 08:22:02</strong></dd></dl></a></li><li><a href="//hn.cri.cn/20260618/9b9eb97d-72cf-448c-8052-d7e3303c03f1.html"><dl><dt class="textEff">新华鲜报丨“三夏”时节 中美代表相聚河南共议农业合作</dt><dd><strong class="setDate">2026/06/22 08:22:02</strong></dd></dl></a></li><li><a href="//hn.cri.cn/20260618/7de57f03-ad2c-40be-90d5-e32d7c28b655.html"><dl><dt class="textEff">平顶山市叶县举办2026年“我们的节日·端午”文明实践主题活动</dt><dd><strong class="setDate">2026/06/22 08:22:02</strong></dd></dl></a></li></ul></div>
+
+</div>
+
+<!--WAP版
+<div id="SOHUCS" ></div>
+<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" 
+src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=cysNc9gHz&conf=prod_c2c675e526956ce8f5fa9f51d911fbf2">
+</script>--> 
+<script src="//f2.cri.cn/M00/75/57/CqgNOlq0quuAI6Q9AAAAAAAAAAA5932023.playerNew.js"></script>
+<script src="//f2.cri.cn/M00/01/76/CqgNOlmC62iATA3sAAAAAAAAAAA8257121.setDate.js"></script>
+</body>
+</html>

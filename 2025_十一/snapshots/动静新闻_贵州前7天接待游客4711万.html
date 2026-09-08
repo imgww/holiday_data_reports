@@ -1,0 +1,4014 @@
+
+<!DOCTYPE html>
+<html lang="zh-hans"> 
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no"
+    name="viewport" />
+
+  <meta name="description" content="">
+  <meta name="keywords"
+    content="">
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://movement.gzstv.com/static/app/8.0/css/common.css?ver=2026-09-08">
+
+  <script src="https://mstatic.gzstv.com/static/lib/jquery/dist/jquery.min.js"></script>
+  
+  <script src="https://mstatic.gzstv.com/static/lib/jquery_lazyload/jquery.lazyload.js"></script>
+  <script type="text/javascript" src="https://dongjing-app-static.gzstv.com/js/jquery.timeago.js"></script>
+  <script type="text/javascript" src="https://dongjing-app-static.gzstv.com/js/jquery.timeago.zh-CN.js"></script>
+  <script type="text/javascript" src="https://dongjing-app-static.gzstv.com/js/fastclick.js"></script>
+  <!-- 埋点 -->
+  <script type="text/javascript" src="https://t.gzstv.com/content-tracking.js"></script>
+  <script type="text/javascript" src="https://t.gzstv.com/event-main-1.0.0.min.js"></script>
+
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+
+  <!-- md5 -->
+  <script src="https://movement.gzstv.com/static/js/jquery.md5.js"></script>
+
+  <!-- audio player -->
+  <link rel="stylesheet" type="text/css" href="https://movement.gzstv.com/static/app/8.0/js/dj-audio/dj-aplayer.css?ver=20240101" />
+  <script type="text/javascript" src="https://movement.gzstv.com/static/app/8.0/js/dj-audio/dj-aplayer.js?ver=20240101"></script>
+
+  <!-- swiper 需要做动态加载 -->
+  <link rel="stylesheet" href="https://mstatic.gzstv.com/static/lib/swiper/package/css/swiper.min.css">
+  <script src="https://mstatic.gzstv.com/static/lib/swiper/package/js/swiper.min.js"></script>
+
+  <script src="https://mstatic.gzstv.com/static/app/js/swipeSlide.min.js"></script>
+
+  <!-- swiper https://3.swiper.com.cn/ -->
+  <link rel="stylesheet" href="https://movement.gzstv.com/static/libs/swiper/swiper8/swiper-bundle.min.css" />
+  <script src="https://movement.gzstv.com/static/libs/swiper/swiper8/swiper-bundle.min.js"></script>
+
+  <!-- fancybox -->
+  <script type="text/javascript" src="https://movement.gzstv.com/static/libs/fancybox/jquery.fancybox.min.js"></script>
+  <link rel="stylesheet" href="https://movement.gzstv.com/static/libs/fancybox/jquery.fancybox.min.css">
+ 
+  <!-- Lottie库 -->
+  <script src="https://movement.gzstv.com/static/app/8.0/js/lottie-5.9.1.min.js"></script>
+
+  <!-- commonJs -->
+  <script src="https://movement.gzstv.com/static/app/8.0/js/common.js?ver=2026-09-08"></script>
+  <script>
+    commonJs.getDjUserInfor();//需要用户信息 进入页面直接获取
+  </script>
+
+  <link rel="icon" type="image/GIF" href="/static/images/favicon_2021.ico">
+  <title>国庆、中秋长假前七天 贵州累计接待游客超4700万人次</title>
+
+  <script>
+    var openid = '';
+    var obj_type = 'news.article',
+      obj_id = 333102;
+
+    
+
+    function Pop_ups(title) {
+      $('<div class="msg-wrap"><div><div class="msg-title">' + title + '</div></div></div>').appendTo("body").delay(1000)
+        .fadeOut(400, function () {
+          $(this).remove();
+        });
+    }
+
+    $(function () {
+      // QQ浏浏览器点击延迟问题
+      FastClick.attach(document.body);
+
+      // input 在部分ios机型不能触发焦点问题的解决
+      FastClick.prototype.focus = function (targetElement) {
+        "use strict";
+        targetElement.focus();
+      };
+    });
+    
+  </script>
+
+  <style>
+    .weichat-login {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 9999;
+      /* display: none; */
+      overflow: hidden;
+      -webkit-overflow-scrolling: touch;
+      outline: 0;
+
+      overflow-x: hidden;
+      overflow-y: auto;
+      background-color: rgba(0, 0, 0, 0.45);
+
+      text-align: center;
+
+      display: none;
+    }
+
+    .weichat-login>div {
+      width: 90.1%;
+      max-width: 338px;
+      border-radius: 15px;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+    }
+
+    .weichat-login .top {
+      color: #666;
+      width: 71.7%;
+      margin: 0 auto;
+      padding: 40px 0;
+      border-bottom: 1px solid #ededed;
+    }
+
+    .weichat-login .bottom {
+      display: flex;
+      /* padding: 8.5px 0; */
+      /* 有两个时候 */
+    }
+
+    .weichat-login .bottom span {
+      flex: 1;
+      line-height: 1;
+      text-align: center;
+      font-size: 1.33rem;
+      color: #333;
+      padding: 23px 0;
+    }
+
+    .weichat-login .bottom span:nth-child(2) {
+      color: #F13023;
+      border-left: 1px solid #ededed;
+    }
+
+    .weichat-login h2 {
+      font-size: 1.08rem;
+      font-weight: normal;
+      line-height: 1;
+    }
+
+    .wxlogin span {
+      width: 100%;
+      font-size: 1.33rem;
+      color: #333;
+      padding: 23px 0 22px;
+      text-align: center;
+      display: block;
+    }
+
+    .praise .praise-btn span.disable {
+      /* font-size: 16px;
+      font-size: 1.333rem;
+      color: rgba(255,255,255,1);
+      line-height: 0;
+      display: inline-block;
+      margin: 20px 0;
+      padding: 20px 28px;
+      border-radius: 5px;
+      background: rgba(241,48,35,1);
+      cursor: pointer;
+      */
+      opacity: 0.3;
+    }
+  </style>
+
+  <!-- <script src="https://movement.gzstv.com/swp/libs/vconsole/vconsole.min.js"></script>
+  <script>
+    var vConsole = new VConsole({});
+  </script> -->
+</head>
+
+<body>
+  <div class="container h5-wrap">
+    <!-- 下载 顶部推荐-->
+    <div class="download">
+  <div class="logo-slogon">
+    <picture class="logo">
+      <!-- User prefers light mode: -->
+      <source srcset="https://movement.gzstv.com/static/app/8.0/images/download-logo.png" media="(prefers-color-scheme: light)"/>
+      <!-- User prefers dark mode: -->
+      <source srcset="https://movement.gzstv.com/static/app/8.0/images/download-logo-dark.png"  media="(prefers-color-scheme: dark)"/>
+
+      <img src="https://movement.gzstv.com/static/app/8.0/images/download-logo.png" alt="logo" />
+    </picture>
+
+    <picture class="slogon">
+      <!-- User prefers light mode: -->
+      <source srcset="https://movement.gzstv.com/static/app/8.0/images/2026/download-slogon.png" media="(prefers-color-scheme: light)"/>
+      <!-- User prefers dark mode: -->
+      <source srcset="https://movement.gzstv.com/static/app/8.0/images/2026/download-slogon-dark.png"  media="(prefers-color-scheme: dark)"/>
+
+      <img src="https://movement.gzstv.com/static/app/8.0/images/2026/download-slogon.png" alt="slogon" />
+    </picture>
+  </div>
+
+  <div class="notWx jump">打开</div>
+  <wx-open-launch-app class="launch-btn" appid="wx78b18c0891d90cb3" extinfo="https://movement.gzstv.com">
+    <script type="text/wxtag-template">
+      <style>
+        .btn {
+          width: 75px;
+          height: 56px;
+          line-height: 100%;
+          padding-right: 15px;
+          background-image: url(https://movement.gzstv.com/static/app/8.0/images/download-btn.png);
+          background-repeat: no-repeat;
+          background-size: auto 100%;
+          background-position: 0;
+
+          color: #fff;
+          font-size: 1.25rem;
+          font-weight: bold;
+          text-align: center;
+          cursor: pointer;
+
+          display: flex;
+          align-items: center;
+          justify-content: right;
+        }
+        @media (prefers-color-scheme: dark) {
+          .btn {
+            color: #D1D1D1;
+            background-image: url(https://movement.gzstv.com/static/app/8.0/images/download-btn-dark.png);
+          }
+        }
+      </style>
+      <div class="btn">打开</div>
+    </script>
+  </wx-open-launch-app>
+</div>
+
+
+<div class="recommend-swiper">
+  <div class="swiper recommendSwiper">
+    <div class="swiper-wrapper">
+      
+      <a class="swiper-slide" href='https://movement.gzstv.com/news/detail/podp1/'>
+        <div class="pic">
+          
+          <img src="https://mstatic.gzstv.com/media/thumbnails/articles/2020/10/08/t_s4ufc4IPFFjo_320x320_8skdrGLd.jpg" />
+          
+        </div>
+
+        <div class="title">国庆长假：快乐亲子游拉动假日消费</div>
+      </a>
+      
+      <a class="swiper-slide" href='https://movement.gzstv.com/news/detail/9dMro/'>
+        <div class="pic">
+          
+          <img src="https://mstatic.gzstv.com/media/thumbnails/articles/2020/10/08/t_BVLSgTVe-0Av_320x320_8skdrGLd.jpg" />
+          
+        </div>
+
+        <div class="title">八天长假全国共接待国内游客6.37亿人次 同比恢复79%</div>
+      </a>
+      
+      <a class="swiper-slide" href='https://movement.gzstv.com/news/detail/MPKPK/'>
+        <div class="pic">
+          
+          <img src="https://mstatic.gzstv.com/media/thumbnails/articles/2020/10/08/t_oNbYC-QV11K5_320x320_8skdrGLd.png" />
+          
+        </div>
+
+        <div class="title">重要提醒！</div>
+      </a>
+      
+      <a class="swiper-slide" href='https://movement.gzstv.com/news/detail/v6l88/'>
+        <div class="pic">
+          
+          <img src="https://mstatic.gzstv.com/media/thumbnails/articles/2020/10/08/t_wr673E2UgffF_320x320_8skdrGLd.jpg" />
+          
+        </div>
+
+        <div class="title">国庆假期前7天，全国接待国内游客6.18亿人次</div>
+      </a>
+      
+      <a class="swiper-slide" href='https://movement.gzstv.com/news/detail/MPZDX/'>
+        <div class="pic">
+          
+          <img src="https://mstatic.gzstv.com/media/thumbnails/articles/2020/10/07/t_S76UK-DmlCKx_320x320_8skdrGLd.jpg" />
+          
+        </div>
+
+        <div class="title">国庆出游忆峥嵘岁月 红色景点传革命精神</div>
+      </a>
+      
+      <a class="swiper-slide" href='https://movement.gzstv.com/news/detail/v6lDq/'>
+        <div class="pic">
+          
+          <img src="https://mstatic.gzstv.com/media/thumbnails/articles/2020/10/07/t_Av1HvSHJHcXI_320x320_8skdrGLd.jpg" />
+          
+        </div>
+
+        <div class="title">超速王、醉驾王、违法王曝光！国庆期间贵州交警查处重点违法近23万起</div>
+      </a>
+      
+    </div>
+  </div>
+</div>
+
+
+<style>
+  /* 分享详情页下载 */
+  .download {
+    width: 100%;
+    max-width: 900px;
+    height: 56px;
+    margin: 0 auto;
+    padding: 0 0 0 20px;
+    box-sizing: border-box;
+    background-color: #f1f4fb;
+    border-left: none;
+    border-right: none;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .download .logo-slogon {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .download .logo-slogon picture {
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .download .logo-slogon picture img {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 100%;
+  }
+
+  .download .logo-slogon picture.logo {
+    height: 70%;
+    margin-right: 16px;
+  }
+
+  .download .logo-slogon picture.logo img {
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+
+  .download .logo-slogon picture.slogon {
+    height: 55%;
+  }
+
+  .download .jump {
+    width: 100px;
+    height: 100%;
+    line-height: 100%;
+    padding-right: 15px;
+    background-image: url(https://movement.gzstv.com/static/app/8.0/images/download-btn.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: 0;
+
+    color: #fff;
+    /* font-size: 30px; */
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+
+  /* 顶部推荐 */
+  .recommend-swiper {
+    width: 100%;
+    max-width: 900px;
+    height: 56px;
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+    background-color: #F1F4FB;
+    z-index: 101;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+  }
+
+  .recommend-swiper .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .recommend-swiper .swiper-slide {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .recommend-swiper .swiper-slide .pic {
+    width: 40px;
+    padding-bottom: 40px;
+    border-radius: 4px;
+    background-color: #eee;
+    background-image: url(https://mstatic.gzstv.com/static/images/2022/djw.png);
+    background-size: auto 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+  }
+
+  .recommend-swiper .swiper-slide .pic img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .recommend-swiper .swiper-slide .title {
+    width: calc(100% - 50px);
+    /* font-size: 28px; */
+    font-size: 1.167rem;
+    color: #5B5E62;
+    line-height: 20px;
+
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-overflow: -o-ellipsis-lastline;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  /* 暗黑模式 */
+  @media (prefers-color-scheme: dark) {
+    .download {
+      background-color: #242424;
+    }
+
+    .download .jump {
+      color: #D1D1D1;
+      background-image: url(https://movement.gzstv.com/static/app/8.0/images/download-btn-dark.png);
+    }
+
+    .recommend-swiper {
+      background-color: #242424;
+    }
+
+    .recommend-swiper .swiper-slide .title {
+      color: #A4A4A4;
+    }
+  }
+</style>
+
+<script>
+  $(function () {
+    // 轮播初始化
+    var swiper = new Swiper(".recommendSwiper", {
+      direction: "vertical",
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      loop: true,
+    });
+
+    if (!window.downloadNotScroll) {
+      if ("6" >= 1) {
+        let $download = $(".download"),
+          $recommendSwiper = $(".recommend-swiper");
+        // 判断页面是向上滚动还是向下滚动  向上：隐藏    向下：显示
+        var p = 0, t = 0;
+        $(window).scroll(function (e) {
+          p = document.documentElement.scrollTop || document.body.scrollTop;
+          if (t > p || (t <= 0 && p <= 0)) {
+            if (p <= 50) {
+              $download.fadeIn("fast");
+              $recommendSwiper.fadeOut("slow");
+            }
+          } else {
+            if (p >= 50) {
+              $download.fadeOut("slow");
+              $recommendSwiper.fadeIn("fast");
+            }
+          }
+          setTimeout(function () { t = p; }, 0);
+        });
+      }
+    }
+
+    var $notWx = $(".notWx"),
+      launchBtn = document.getElementsByClassName('launch-btn');
+    if (commonJs.isPC()) {
+      $notWx.show();
+      $(launchBtn).hide();
+    } else {
+      if (!commonJs.getIsWxClient()) {
+        $notWx.show();
+        $(launchBtn).hide();
+        $notWx.attr("href", "djnews://movement/?u=https://movement.gzstv.com/" + window.location.href.split(".com")[1]);
+        $notWx[0].click();
+      } else {
+        $notWx.hide();
+        $(launchBtn).show();
+        $(".launch-btn").attr("extinfo", window.location.href)
+      }
+    }
+
+    for (let i = 0; i < $notWx.length; i++) {
+      $($notWx[i])[0].addEventListener("click", function (res) {
+        setTimeout("window.location = 'https://movement.gzstv.com';", 1000);
+      });
+    }
+
+    for (let i = 0; i < launchBtn.length; i++) {
+      launchBtn[i].addEventListener('launch', function (e) {
+      });
+      launchBtn[i].addEventListener('error', function (e) {
+        window.location.href = "https://movement.gzstv.com";
+      });
+    }
+  })
+</script>
+
+    <!-- 内容详情 -->
+    <div class="simplify content-detail">
+      <h1 class="article-title">国庆、中秋长假前七天 贵州累计接待游客超4700万人次</h1>
+
+      <div class="origin-icons-time">
+        <div class="origin-icons">
+          
+          <div class="origin">
+            
+            
+            
+            <span>省文化和旅游厅</span>
+            
+          </div>
+          
+        </div>
+        
+        <div class="flex-center">
+          <div class="pub-time">1602134940</div>
+          
+          <div class="icons">
+            
+  
+            <picture>
+              <source srcset="https://movement.gzstv.com/static/app/8.0/images/ic_font_set@2x.png" media="(prefers-color-scheme: light)"/>
+              <source srcset="https://movement.gzstv.com/static/app/8.0/images/ic_font_set_black@2x.png"  media="(prefers-color-scheme: dark)"/>
+              <img class="word-small no-filter" src="https://movement.gzstv.com/static/app/8.0/images/ic_font_set@2x.png" />
+            </picture>
+            <picture>
+              <source srcset="https://movement.gzstv.com/static/app/8.0/images/ic_font_set2@2x.png" media="(prefers-color-scheme: light)"/>
+              <source srcset="https://movement.gzstv.com/static/app/8.0/images/ic_font_set2_black@2x.png"  media="(prefers-color-scheme: dark)"/>
+              <img class="word-big no-filter" src="https://movement.gzstv.com/static/app/8.0/images/ic_font_set2@2x.png" />
+            </picture>
+          </div>
+        </div>
+      </div>
+
+      <!-- 推广banner -->
+      <!--  -->
+
+<style>
+  .promotion-banner {
+    width: 100%;
+    margin: 0 auto 16px;
+  }
+
+  .promotion-banner img {
+    /* border-radius: 10px; */
+  }
+</style>
+
+<script>
+  $(function(){
+    // 渲染推广banner
+    function renderBanner(){
+      var $bannerDemo;
+      
+    }
+
+    // 前提条件为发布时间在2024年12月12日0点整之后
+    function showPointsBanner() {
+      let t1 = new Date('2024/12/12 00:00').getTime(),
+        pubTime = new Date(('1602134940') * 1000).getTime(),
+        isShow = false;
+
+      if (pubTime < t1) {
+        isShow = false;
+      } else {
+        // show_promotion，没有这个字段也显示，只有为fasle不显示
+        if ('True' == 'False') {
+          isShow = false;
+        } else {
+          isShow = true;
+        }
+      }
+
+      if (isShow) {
+        renderBanner();
+      }
+    }
+
+    showPointsBanner();
+  });
+</script>
+<!-- 推广banner -->
+
+
+      <!-- banner -->
+      
+
+      <div class="article-content normal">
+        
+
+        
+
+        <!-- 详情 -->
+        <div class="article-details">
+          
+          <p class="dj-indent"><img alt="" class="content_img lazy" data-original="temp_encode|6xYePXC81kwZOXs475PkfcfqX3Kf94w6lfiMK_-lYhlWVy5fqRVWzWi5Pt3ZdgoVS64Ip5D0hXld6x6_-CKvHmGPPBh4XrvzJx9RDPuJwdhuQIVgYB0H8vDlScMO0wv5" data-resolution="600x412" src="https://movement.gzstv.com/static/app/8.0/images/1px.png"/></p>
+<p class="dj-indent">记者从省文化和旅游厅了解到，国庆、中秋长假前七天，贵州累计接待游客4711.56万人次，实现旅游收入332.97亿元；按可比口径，两项指标分别恢复到去年同期水平的84.10%和76.71%。</p>
+<p class="dj-indent">国庆、中秋长假第七天，梵净山、大小七孔、遵义会议会址等热门景区热度不减。周边中短途自驾游成为很多家庭的首选。红色旅游、生态旅游、乡村旅游、文化旅游、温泉游等产品受到更多游客青睐。</p>
+<p class="dj-indent">各地景区和文化文博场馆举办了丰富多样的文化旅游活动，增添了节日氛围，丰富了游客的出游体验，不少游客走进贵州省博物馆参观。</p>
+<p class="dj-indent">阴雨天气也抵挡不住游客出游的热情。</p>
+<p class="dj-indent">其中，青岩古镇、花溪公园、花溪黄金大道游人如织；桐梓夜郎水寨举办了“国庆中秋同欢庆，夜郎水寨赏月情”文艺晚会；夜郎文化博物馆继续为游客免费开放，并安排专业的讲解员讲解红色文化、夜郎文化、农耕文化等。播州湿地公园、花茂村、大发天渠景区吸引了大批游客前往。</p>
+<p class="dj-indent">兴仁县放马坪、兴义贵州醇景区爱情花海、贞丰三岔河等景区景点成为年轻情侣休闲度假的好去处。</p>
+<p class="dj-indent">彩霞村庄的石磨豆腐、打糍粑等农事体验，以及景区内的露天烧烤、农耕文化体验、特色歌舞表演、篝火晚会等活动，吸引了大量省内外游客。</p>
+<p class="dj-indent">据统计，国庆、中秋长假第七天，全省接待游客569.04万人次，实现旅游收入41.09亿元。按可比口径，两项指标分别恢复到去年同期水平的90.91%和83.82%。</p>
+<p class="dj-indent">截至10月7日17时，全省未接到旅游安全事故报告，未接到新冠肺炎疫情、重大投诉和安全事故报告，未发生重大涉旅舆情。省文化和旅游厅有效处理游客投诉5起，帮助协调处理游客咨询和反映问题3起。全省文化旅游市场整体平安稳定有序。</p>
+        </div>
+        <script>
+          $(function () {
+            var u = navigator.userAgent.toLowerCase();
+            var isAndroid = u.indexOf('android') > -1 || u.indexOf('adr') > -1; //android终端
+            var isQQ = u.indexOf('mobile mqqbrowser') > -1;
+            var te = 0;
+
+            $('.video_in_content').each(function () {
+              var $this = $(this);
+
+              /* video poster */
+              
+              var article_thumbnail = ''
+              if (!$this.attr('poster') && article_thumbnail) {
+                $this.attr('poster', article_thumbnail);
+              }
+              
+
+              var poster_src = $this.attr('poster');
+
+              $this.parent().addClass('imgp');
+
+              var addom = '<div class="aimgp" style="max-width: 100%;margin: 10px 0;display: none;position: relative;">' +
+                '<img style="max-width: 100%" src="' + poster_src + '" alt="">' +
+                '<img style="width: 44px;height:44px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);" src="https://dongjing-app-static.gzstv.com/images/news-detail-video-btn-play@2x.png" alt="">' +
+                '</div>';
+
+              $this.after(addom);
+
+              // if ( isAndroid && /MicroMessenger/i.test(navigator.userAgent) || isAndroid && isQQ ) {
+              //   //alert($this.html())
+              //   //$this[0].addEventListener("playing", function() {
+              //     $this.hide();
+              //     $this.parent().find('.aimgp').show();
+              //   //});
+              // }
+              // $this.parent().find('.aimgp').click(function(){
+              //   $this[0].play();
+              // });
+            });
+
+          });
+        </script>
+      </div>
+
+      <!-- 作者信息 -->
+      <div class="author-group">
+  
+
+  
+
+  
+
+  
+  <div class="author-group-item">
+    <p>编辑</p>
+    <p>徐晨晰</p>
+  </div>
+  
+
+  
+
+  
+
+  
+  <div class="author-group-item">
+    <p>责编</p>
+    <p>孔薇</p>
+  </div>
+  
+
+  
+
+  
+  <div class="author-group-item">
+    <p>编审</p>
+    <p>苏姝</p>
+  </div>
+  
+</div>
+
+<style>
+  /* 作者信息 */
+  .author-group {
+    margin-bottom: 16px;
+  }
+
+  .author-group .author-group-item {
+    position: relative;
+    padding-left: 2.5em;
+  }
+
+  .author-group .author-group-item p {
+    /* font-size: 28px; */
+    font-size: 1.16rem;
+    font-weight: bold;
+    color: #5B5E62;
+    line-height: 28px;
+  }
+
+  .author-group .author-group-item.four {
+    padding-left: 4.5em;
+  }
+
+  .author-group .author-group-item p:first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .author-group .author-group-item p:last-child {
+    padding-left: 1em;
+  }
+
+  .author-group .author-group-item.four p:last-child {
+    padding-left: 1.2em;
+  }
+
+  .author-group .author-group-item p:last-child::before {
+    content: "|";
+    display: inline-block;
+    position: absolute;
+    left: 2.5em;
+    top: 0;
+  }
+
+  .author-group .author-group-item.four p:last-child::before {
+    left: 4.5em;
+  }
+</style>
+
+      <!-- 相关专栏 -->
+      
+
+<style>
+  .related-columns {
+    max-width: 640px;
+    padding: 15px;
+    margin: 0 auto 16px;
+    border-radius: 10px;
+    background-color: #F1F4FB;
+    text-decoration: none;
+    display: block;
+
+    font-size: 28px;
+    font-size: 1.16rem;
+    color: #6A6B6D;
+    position: relative;
+
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+  }
+
+  .related-columns .tags-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .related-columns .tags {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .related-columns .tags-item {
+    color: #6A79A0;
+    text-decoration: none;
+    margin-right: 15px;
+  }
+
+  .related-columns .r-link {
+    min-width: calc(15% + 24px);
+    color: #ADB1BD;
+    text-align: right;
+    padding-right: 24px;
+    position: relative;
+  }
+
+  .related-columns .r-link::after {
+    width: 24px;
+    height: 24px;
+    content: "";
+    display: inline-block;
+    background: url("https://movement.gzstv.com/static/app/8.0/images/jiantou_icon@2x.png") no-repeat center center;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;
+  }
+
+  /* 暗黑模式 */
+  @media (prefers-color-scheme: dark) {
+    .related-columns {
+      color: #fff;
+      background-color: #242424;
+    }
+
+    .related-columns .tags-item {
+      color: #4C6CD0;
+    }
+
+    .related-columns .r-link {
+      color: #A4A4A4;
+    }
+  }
+</style>
+
+<script>
+  $(function () {
+    // 点击事件
+    var clickOrTouch = (('ontouchend' in window)) ? 'click' : 'click';
+
+    // 归属一个专栏
+    let $relatedColumns = $(".related-columns"),
+      $rLink = $relatedColumns.find(".r-link");
+    if ($rLink.length >= 1) {
+      $relatedColumns.attr("href", $relatedColumns.find(".tags-item").attr("href"));
+    }
+
+    // 专栏跳转
+    $relatedColumns.on(clickOrTouch, function (event) {
+      if ($(event.target).hasClass("tags-item")) {
+        event.stopPropagation();
+      } else {
+        event.preventDefault();
+        if ($(this).attr("href")) {
+          window.location.href = $(this).attr("href");
+        }
+      }
+    });
+  });
+</script>
+
+      <!-- 联系方式 -->
+      <div class="article-contact">
+  
+  <div class="contact-item">
+    <picture>
+      <source srcset="https://movement.gzstv.com/static/app/8.0/images/2026/article_img_1.png" media="(prefers-color-scheme: light)"/>
+      <source srcset="https://movement.gzstv.com/static/app/8.0/images/2026/article_img_1_black.png"  media="(prefers-color-scheme: dark)"/>
+      <img class="no-filter" src="https://movement.gzstv.com/static/app/8.0/images/2026/article_img_1.png" alt="联系我们" />
+    </picture>
+  </div>
+  
+
+  
+
+  <div class="contact-item">
+    <a href="https://movement.gzstv.com/news/detail/HEe1xD/">
+      <picture>
+        <source srcset="https://movement.gzstv.com/static/app/8.0/images/article_img_3.png" media="(prefers-color-scheme: light)"/>
+        <source srcset="https://movement.gzstv.com/static/app/8.0/images/article_img_3_black.png"  media="(prefers-color-scheme: dark)"/>
+        <img class="no-filter" src="https://movement.gzstv.com/static/app/8.0/images/article_img_3.png" alt="互联网违法和不良信息举报窗口" />
+      </picture>
+    </a>
+  </div>
+</div>
+
+<style>
+  .article-contact {
+    margin: 0 0 16px;
+  }
+
+  .article-contact .contact-item {
+    margin: 0 auto 16px;
+    border-radius: 10px;
+    max-width: 640px;
+  }
+
+  .article-contact .contact-item:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .article-contact .contact-item img {
+    border-radius: 10px;
+  }
+</style>
+
+    </div>
+
+    <!-- 文章展开 -->
+    <div class="read-more">
+      <style>
+        .read-more .launch-btn {
+          font-size: 0;
+          display: block;
+          width: 92.53%;
+          margin: 0 auto;
+          background-color: #0A1A4C;
+          box-shadow: 0px 10px 30px 0px rgba(10, 26, 76, 0.3);
+        }
+      </style>
+      <div class="read-unfold">
+        <i class="icon"></i>
+        <!-- <img src="https://mstatic.gzstv.com/static/images/2021/article_unfold@2x.png" alt=""> -->
+      </div>
+    </div>
+
+    <!--评论 点赞 分享 -->
+    <div class="likeShare no-select">
+  <div class="comment-entrance">
+    <span>说点什么...</span>
+    <!-- <img src="https://movement.gzstv.com/static/app/8.0/images/sending_icon@2x.png" alt=""> -->
+  </div>
+
+  <a href="#targetComments" class="btns article-comment">
+    <picture>
+      <!-- User prefers light mode: -->
+      <source
+        srcset="
+          https://movement.gzstv.com/static/app/8.0/images/comment_icon_default@2x.png
+        "
+        media="(prefers-color-scheme: light)"
+      />
+      <!-- User prefers dark mode: -->
+      <source
+        srcset="
+          https://movement.gzstv.com/static/app/8.0/images/comment_icon_dark@2x.png
+        "
+        media="(prefers-color-scheme: dark)"
+      />
+
+      <img
+        class="no-filter"
+        src="https://movement.gzstv.com/static/app/8.0/images/comment_icon_default@2x.png"
+      />
+    </picture>
+
+    <span>评论</span>
+  </a>
+
+  <div class="btns article-praise">
+    <div class="icon icon-praise"></div>
+    <span>点赞</span>
+
+    <div class="praise-lottie">
+      <div class="lottie-btn hidden" id="lottie-like0"></div>
+      <div class="lottie-btn hidden" id="lottie-like1"></div>
+      <div class="lottie-btn hidden" id="lottie-like2"></div>
+      <div class="lottie-btn hidden" id="lottie-like3"></div>
+      <div class="lottie-btn hidden" id="lottie-like4"></div>
+      <div class="lottie-btn hidden" id="lottie-like5"></div>
+      <div class="lottie-btn hidden" id="lottie-like6"></div>
+      <div class="lottie-btn hidden" id="lottie-like7"></div>
+      <div class="lottie-btn hidden" id="lottie-like8"></div>
+      <div class="lottie-btn hidden" id="lottie-like9"></div>
+    </div>
+  </div>
+
+  <div class="btns article-share">
+    <picture>
+      <!-- User prefers light mode: -->
+      <source
+        srcset="
+          https://movement.gzstv.com/static/app/8.0/images/forward_icon_default@2x.png
+        "
+        media="(prefers-color-scheme: light)"
+      />
+      <!-- User prefers dark mode: -->
+      <source
+        srcset="
+          https://movement.gzstv.com/static/app/8.0/images/forward_icon_default-dark@2x.png
+        "
+        media="(prefers-color-scheme: dark)"
+      />
+
+      <img
+        class="no-filter"
+        src="https://movement.gzstv.com/static/app/8.0/images/forward_icon_default@2x.png"
+      />
+    </picture>
+
+    <span>分享</span>
+  </div>
+</div>
+
+
+<!-- 分享蒙版 -->
+<div class="share-modal no-select">
+  <img
+    src="https://mstatic.gzstv.com/static/images/2020/dj-share-img.png"
+    class="dj"
+  />
+  <img
+    src="https://mstatic.gzstv.com/static/tianzhu/images/tz-share-img.png"
+    class="tz"
+  />
+</div>
+
+<style>
+  .container.h5-wrap {
+    padding-bottom: 100px;
+  }
+
+  .likeShare {
+    width: 100%;
+    max-width: 900px;
+    padding: 15px 16px;
+    box-sizing: border-box;
+    border-top: 1px solid #f1f4fb;
+    background-color: #fff;
+    position: fixed;
+    z-index: 1000;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .likeShare .btns {
+    width: 40px;
+    font-size: 0;
+    color: #acb2bd;
+    line-height: initial;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .likeShare .btns .icon {
+    width: 24px;
+    height: 24px;
+    margin: 0 auto 4px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+  }
+
+  .likeShare .btns .icon {
+    background-image: url("https://movement.gzstv.com/static/app/8.0/images/like_icon_default@2x.png");
+  }
+
+  .likeShare .btns.active .icon {
+    background-image: url("https://movement.gzstv.com/static/app/8.0/images/like_icon_selected@2x.png");
+  }
+
+  .likeShare .btns img {
+    width: 25px;
+    height: 25px;
+    margin: 0 auto 4px;
+  }
+
+  .likeShare .btns.article-comment img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .likeShare .btns span {
+    font-size: 1rem;
+  }
+
+  .likeShare .btns.active {
+    /* color: #f21a7b; */
+  }
+
+  .likeShare .btns.article-praise {
+    position: relative;
+  }
+
+  .likeShare .btns .praise-lottie {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .likeShare .btns .praise-lottie .lottie-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .likeShare .btns .praise-lottie .hidden {
+    display: none;
+  }
+
+  .likeShare .comment-entrance {
+    /* width: 160px; */
+    width: 46.37%;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    border-radius: 20px;
+    background-color: #f1f4fb;
+    /* flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; */
+  }
+
+  .likeShare .comment-entrance span {
+    /* font-size: 26px; */
+    font-size: 1.08rem;
+    color: #acb2bd;
+  }
+
+  .likeShare .comment-entrance img {
+    width: 24px;
+  }
+
+  /* 暗黑模式 */
+  @media (prefers-color-scheme: dark) {
+    .likeShare {
+      border-color: #454545;
+      background-color: #242424;
+    }
+
+    .likeShare .comment-entrance {
+      background-color: #141414;
+    }
+
+    .likeShare .comment-entrance span {
+      color: #6d6d6d;
+    }
+
+    .likeShare .btns {
+      color: #6d6d6d;
+    }
+
+    .likeShare .btns.active {
+      /* color: #d35e86; */
+    }
+
+    .likeShare .btns .icon {
+      background-image: url("https://movement.gzstv.com/static/app/8.0/images/like_icon_default-dark@2x.png");
+    }
+
+    .likeShare .btns.active .icon {
+      background-image: url("https://movement.gzstv.com/static/app/8.0/images/like_icon_selected-dark@2x.png");
+    }
+  }
+</style>
+
+<script>
+  $(function () {
+    // ========== 点赞动画Lottie ===========
+    // 引入点赞动画json
+    var animLikeData,
+      animLikeNum = null, //点赞动作的次数
+      animLikeLottie = {}; //点赞动画实例-定义10个
+    $.getJSON(
+      window.location.origin + "/static/app/8.0/json/like.json",
+      function (data) {
+        animLikeData = data;
+      }
+    );
+
+    // 初始化Lottie动画实例
+    setTimeout(() => {
+      for (let i = 0; i < 10; i++) {
+        animLikeLottie[i] = lottie.loadAnimation({
+          container: $("#lottie-like" + i)[0], // 使用jQuery选择器选择容器
+          renderer: "svg", // 使用SVG渲染器，也可以使用'canvas'
+          loop: true, // 设置动画循环播放
+          autoplay: false, // 设置动画自动播放
+          animationData: animLikeData, // 动画数据
+        });
+      }
+    }, 500);
+
+    // =========== 点赞动画Lottie ==========
+
+    //评论点赞分享-初始数据，在latest-comment.html文件内写入
+
+    // 点赞按钮只区分显示隐藏, 评论框不允许和置灰情况进行提示，分享按钮不判断
+    let allowUp = "1"; // 0-不允许点赞（按钮置灰）  1-允许点赞   2-隐藏点赞按钮
+    let allowComment = "True"; // false-不允许评论（按钮置灰）  true-允许评论   null-不允许评论且隐藏评论按钮
+    let allowShare = "True"; // false-不允许分享（按钮置灰）  true-允许分享   null-不允许分享且隐藏分享按钮
+    if (allowUp == 0 || allowUp == 2) {
+      $(".article-praise").remove();
+      $(".likeShare .comment-entrance").css("width", "82%");
+    }
+    // 根据 allowShare 隐藏分享按钮
+    if (allowShare == "False" || allowShare == "None") {
+      $(".article-share").remove();
+      $(".share-modal").remove();
+    }
+
+    // 点击事件
+    let clickOrTouch = "ontouchend" in window ? "click" : "click";
+
+    // 点赞cookie -  通过cookie判断当前文章是否点赞过
+    let user = commonJs.djUserInfor,
+      likeCookieArr = [],
+      likeCookie = commonJs.getCookie("praiseArray"), //获取点赞cookie
+      isLike = function (arr, val) {
+        return arr.some(
+          (item) => item.id === val.id && item.ctype == val.ctype
+        );
+      };
+    // 分享页无用户信息 - 点赞拿cookie数据
+    if (!user.token) {
+      if (likeCookie != null && likeCookie != "") {
+        likeCookieArr = JSON.parse(likeCookie).arr;
+      }
+      let obj = {
+        id: obj_id,
+        ctype: obj_type,
+      };
+      if (isLike(likeCookieArr, obj)) {
+        $(".article-praise").addClass("active"); // 已点赞
+      }
+    }
+
+    // 文章点赞（分享页）
+    $(".h5-wrap").on(clickOrTouch, ".article-praise", function (event) {
+      event.preventDefault();
+      let $this = $(this)
+      let data = {}
+      if (obj_type == "short_drama.shortdramaepisode") {
+        data = {
+          ctype: obj_type,
+          object_hashid: obj_id,
+        };
+      } else {
+        data = {
+          ctype: obj_type,
+          object_pk: obj_id,
+        };
+      }
+
+      commonJs.commentArticleLike(data, $this);
+
+      // 触发事件通知聊天室组件同步
+      $(document).trigger('articleLiked', { ctype: obj_type, objectId: obj_id });
+
+      //点赞动作的次数
+      if (animLikeNum == null) {
+        animLikeNum = 0;
+      } else {
+        if (animLikeNum >= 9) {
+          animLikeNum = 0;
+        } else {
+          animLikeNum++;
+        }
+      }
+      let thisNum = animLikeNum,
+        lottieDoms = $(".praise-lottie .lottie-btn"),
+        curLottie = $(lottieDoms[thisNum]);
+      if (curLottie.hasClass("hidden")) {
+        curLottie.removeClass("hidden");
+        animLikeLottie[thisNum].play();
+      }
+
+      let curTimer = setTimeout(() => {
+        curLottie.addClass("hidden");
+        animLikeLottie[thisNum].pause();
+        clearTimeout(curTimer);
+      }, 1000);
+    });
+
+    // 分享模板
+    if ($(".tz-app").length >= 1) {
+      $(".share-modal .dj").hide();
+    } else {
+      $(".share-modal .tz").hide();
+    }
+
+    $(".comment-entrance").on(clickOrTouch, function () {
+      if (allowComment == "False" || allowComment == "Null") {
+        commonJs.toastMsg("该内容暂不支持评论");
+        return false;
+      }
+      let commentFunc = function () {
+        $(".comment-modal").fadeIn("fast").attr({
+          "data-m": 0, // 0-文章的评论
+          "data-id": "",
+        });
+        $("#comment-textarea").focus();
+      };
+      commonJs.needUserAction(commentFunc);
+    });
+    $(".article-share").on(clickOrTouch, function () {
+      $(".share-modal").show();
+      $("body").addClass("scroll-body"); //禁止滚动
+    });
+    $(".share-modal")
+      .on("touchend", function () {
+        $(".share-modal").hide();
+        $("body").removeClass("scroll-body"); //禁止滚动
+      })
+      .on(clickOrTouch, function () {
+        $(".share-modal").hide();
+        $("body").removeClass("scroll-body"); //禁止滚动
+      });
+  });
+</script>
+
+
+    <!-- 登录弹窗 -->
+    <div class="login-modal">
+  <div class="login-content">
+    <picture>
+      <source srcset="https://movement.gzstv.com/static/app/8.0/images/login-logo@2x.png" media="(prefers-color-scheme: light)"/>
+      <source srcset="https://movement.gzstv.com/static/app/8.0/images/login-logo_black@2x.png"  media="(prefers-color-scheme: dark)"/>
+      <img class="logo no-filter" src="https://movement.gzstv.com/static/app/8.0/images/login-logo@2x.png" />
+    </picture>
+
+    <div class="form">
+      <div class="form-tab">
+        <span class="active" data-type="form-inp">账号登录</span>
+        <span class="qrtab" data-type="form-code">扫码登录</span>
+      </div>
+
+      <div class="form-inp">
+        <div class="inp">
+          <picture>
+            <source srcset="https://movement.gzstv.com/static/app/8.0/images/phone_icon_normal@2x.png" media="(prefers-color-scheme: light)"/>
+            <source srcset="https://movement.gzstv.com/static/app/8.0/images/phone_icon_black_normal@2x.png"  media="(prefers-color-scheme: dark)"/>
+            <img class="no-filter" src="https://movement.gzstv.com/static/app/8.0/images/phone_icon_normal@2x.png" />
+          </picture>
+          <input class="phone_number-inp" type="tel" name="tel" placeholder="请输入手机号" maxlength="11" autocomplete="off">
+        </div>
+
+        <div class="inp code">
+          <picture>
+            <source srcset="https://movement.gzstv.com/static/app/8.0/images/code_icon_normal@2x.png" media="(prefers-color-scheme: light)"/>
+            <source srcset="https://movement.gzstv.com/static/app/8.0/images/code_icon_black_normal@2x.png"  media="(prefers-color-scheme: dark)"/>
+            <img class="no-filter" src="https://movement.gzstv.com/static/app/8.0/images/code_icon_normal@2x.png" />
+          </picture>
+          <input class="code-inp" type="text" name="code" placeholder="请输入验证码" maxlength="6" autocomplete="off">
+          <button type="button" class="send-code">获取验证码</button>
+        </div>
+
+        <button type="submit" class="submit-btn">登录</button>
+
+        <div class="notWx tips">打开动静APP</div>
+        <wx-open-launch-app class="launch-btn" appid="wx78b18c0891d90cb3" extinfo="https://movement.gzstv.com">
+          <script type="text/wxtag-template">
+            <style>
+              .tips {
+                font-size: 16px;
+                font-weight: bold;
+                color: #ACB2BD;
+                text-align: center;
+              }
+            </style>
+            <div class="tips">打开动静APP</div>
+          </script>
+        </wx-open-launch-app>
+      </div>
+
+      <div class="form-code">
+        <div class="qr-img">
+          <img class="img" src="">
+          <div class="tips">使用动静 APP 扫描二维码</div>
+        </div>
+
+        <div class="mask-tips to-confirm">
+          <div>
+            <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m7 10 2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+            <div class="tips txt">扫描成功<br>请在客户端中确认！</div>
+          </div>
+        </div>
+
+        <div class="mask-tips is-cancel">
+          <div>
+            <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+            <div class="tips txt">客户端已操作取消登录！</div>
+          </div>
+        </div>
+
+        <div class="mask-tips refresh-code">
+          <div>
+            <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M16 1v5h-5M2 19v-5h5m10-4a8 8 0 0 1-14.947 3.97M1 10a8 8 0 0 1 14.947-3.97" />
+            </svg>
+            <div class="tips txt">已过期<br>请刷新二维码</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="form-btn">
+                登录
+              </div> -->
+    </div>
+
+    <picture>
+      <source srcset="https://movement.gzstv.com/static/app/8.0/images/x@2x.png" media="(prefers-color-scheme: light)"/>
+      <source srcset="https://movement.gzstv.com/static/app/8.0/images/x_black@2x.png"  media="(prefers-color-scheme: dark)"/>
+      <img class="close-btn no-filter" src="https://movement.gzstv.com/static/app/8.0/images/x@2x.png" />
+    </picture>
+  </div>
+</div>
+
+<style>
+  .login-modal {
+    width: 100%;
+    height: 100vh;
+    min-height: 640px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+  }
+
+  .login-content {
+    width: 100%;
+    height: 100%;
+    max-width: 640px;
+    padding-top: 75px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+    background: url("https://movement.gzstv.com/static/app/8.0/images/login-bg@2x.png") no-repeat center center;
+    background-size: 100% 100%;
+    position: relative;
+  }
+
+  .login-content .logo {
+    width: 29.6%;
+    max-width: 222px;
+    margin: 0 auto 5.3%;
+  }
+
+  .login-content .form {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .login-content .form-tab {
+    margin: 0 15.66% 7.66%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .login-content .form-tab span {
+    /* font-size: 32px; */
+    font-size: 1.33rem;
+    font-weight: bold;
+    color: #7A8189;
+    padding-bottom: 7px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .login-content .form-tab span.active {
+    color: #2A2F37;
+  }
+
+  .login-content .form-tab span.active::after {
+    width: 43.85%;
+    height: 3px;
+    content: "";
+    display: inline-block;
+    background: url("https://movement.gzstv.com/static/app/8.0/images/login-tab@2x.png") no-repeat center center;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .login-content .form-inp .inp {
+    margin-bottom: 6%;
+    position: relative;
+  }
+
+
+  .login-content .form-inp .inp img {
+    width: 8%;
+    position: absolute;
+    left: 4.5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .login-content .form-inp .inp .send-code {
+    /* font-size: 32px; */
+    font-size: 1.33rem;
+    font-weight: 500;
+    color: #416CF6;
+    /* color: rgba(65, 108, 246, 0.7); */
+    opacity: 0.7;
+
+    padding: 0;
+    border: none;
+    height: 100%;
+    background-color: transparent;
+
+    position: absolute;
+    right: 4.5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .login-content .form-inp .inp .send-code.active {
+    opacity: 1;
+  }
+
+  .login-content .form-inp input,
+  .login-content .form-inp .submit-btn {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4.66% 0;
+    max-height: 100px;
+    border: none;
+    /* font-size: 32px; */
+    font-size: 1.33rem;
+    font-weight: bold;
+    line-height: 1.375;
+    border-radius: 25px;
+    outline: none;
+  }
+
+  .login-content .form-inp input {
+    padding-left: 15%;
+    padding-right: 15px;
+    color: #ACB2BD;
+    border: 2px solid transparent;
+  }
+
+  .login-content .form-inp .code input {
+    padding-right: 34%;
+  }
+
+  /* .login-content .form-inp input {
+    padding-left: 49px;
+    padding-right: 15px;
+    margin-bottom: 6%;
+    color: #ACB2BD;
+
+    background: url('https://movement.gzstv.com/static/app/8.0/images/phone_icon_normal@2x.png') no-repeat 15px center;
+    background-size: 24px 24px;
+    background-color: #fff;
+    position: relative;
+  }
+
+  .login-content .form-inp input::before {
+    width: 8%;
+    padding-bottom: 8%;
+    content: "3";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: red;
+  }
+
+  .login-content .form-inp input[name='code'] {
+    background-image: url('https://movement.gzstv.com/static/app/8.0/images/code_icon_normal@2x.png');
+  } */
+
+  .login-content .form-inp input::-webkit-input-placeholder {
+    color: #ACB2BD;
+  }
+
+  .login-content .form-inp input:-moz-placeholder {
+    color: #ACB2BD;
+  }
+
+  .login-content .form-inp input:-ms-input-placeholder {
+    color: #ACB2BD;
+  }
+
+  .login-content .form-inp .submit-btn {
+    color: #fff;
+    margin: 6% 0;
+    background: url('https://movement.gzstv.com/static/app/8.0/images/login-button@2x.png') no-repeat center center;
+    background-size: 100% 100%;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  .login-content .form-inp .submit-btn.active {
+    opacity: 1;
+  }
+
+  .login-content .form-code {
+    width: 67.66%;
+    margin: 0 auto;
+    position: relative;
+    display: none;
+  }
+
+  .login-content .form-code .img {
+    margin-bottom: 3.33%;
+  }
+
+  .login-content .form-code .mask-tips {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+  }
+
+  .login-content .form-code .mask-tips>div {
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    opacity: 0.95;
+  }
+
+  .login-content .form-code .mask-tips .icon {
+    width: 40px;
+    display: block;
+  }
+
+  .login-content .form-code .mask-tips .txt {
+    font-weight: normal;
+    margin-top: 10px;
+  }
+
+  .login-content .form-code .to-confirm,
+  .login-content .form-code .to-confirm .txt {
+    color: rgb(22, 163, 74);
+  }
+
+  .login-content .form-code .is-cancel,
+  .login-content .form-code .is-cancel .txt,
+  .login-content .form-code .refresh-code .txt {
+    color: rgb(220, 38, 38);
+  }
+
+  .login-content .form-code .refresh-code {
+    color: rgb(75, 89, 99);
+  }
+
+  .login-content .tips {
+    /* font-size: 32px; */
+    font-size: 1.33rem;
+    font-weight: bold;
+    color: #ACB2BD;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .login-content .close-btn {
+    width: 13.6%;
+    max-width: 102px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    bottom: 45px;
+    transform: translateX(-50%);
+  }
+
+  @media screen and (min-width:600px) {
+    .login-content .form-inp .inp.code input {
+      padding-right: 120px;
+    }
+
+    .login-content .form-inp input,
+    .login-content .form-inp .submit-btn {
+      border-radius: 50px;
+    }
+  }
+
+  /* 暗黑模式 */
+  @media (prefers-color-scheme: dark) {
+    .login-content {
+      background-image: url("https://movement.gzstv.com/static/app/8.0/images/login-bg_black@2x.png");
+    }
+
+    .login-content .form-tab span {
+      color: #A4A4A4;
+    }
+
+    .login-content .form-tab span.active {
+      color: #D1D1D1;
+    }
+
+    .login-content .form-inp input {
+      border-color: #454545;
+      background-color: #242424;
+    }
+
+    .login-content .form-inp input::-webkit-input-placeholder {
+      color: #A4A4A4;
+    }
+
+    .login-content .form-inp input:-moz-placeholder {
+      color: #A4A4A4;
+    }
+
+    .login-content .form-inp input:-ms-input-placeholder {
+      color: #A4A4A4;
+    }
+
+    .login-content .form-inp .inp .send-code {
+      color: #4C6CD0;
+    }
+
+    .login-content .form-inp .submit-btn {
+      background-image: url("https://movement.gzstv.com/static/app/8.0/images/login-button_black@2x.png");
+    }
+
+    .login-content .tips {
+      color: #A4A4A4;
+    }
+  }
+</style>
+
+<script>
+  $(function () {
+    // 点击事件
+    let clickOrTouch = (('ontouchend' in window)) ? 'click' : 'click';
+
+    let $loginModal = $(".login-modal"),
+      $phoneNumber = $(".phone_number-inp"),
+      $codeInp = $(".code-inp"),
+      $qr_img = $(".qr-img"),
+      $to_confirm = $(".to-confirm"),
+      $is_cancel = $(".is-cancel"),
+      $refresh_code = $(".refresh-code"),
+      $sendCode = $(".send-code"),
+      $submitBtn = $(".submit-btn");
+
+    let qr_token = null,
+      qrImg = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=",
+      maxTimeoutCount = 20,
+      timeoutCount = 0;
+
+    // 获取登录二维码
+    function getQRCode() {
+      timeoutCount = maxTimeoutCount;
+
+      fetch('https://movement.gzstv.com/qrlogin/qrcode/?appid=' + commonJs.webShareAppid)
+        .then(response => response.json()) // 将response数据解析成json
+        .then(json => {
+          qr_token = json.token;
+          qrImg = 'data:image/png;base64,' + json.qrcode;
+          checkResult();
+          $qr_img.find("img").attr("src", qrImg);
+          $qr_img.siblings(".mask-tips").fadeOut("fast");
+        });
+    }
+
+    // 检查二维码是否过期
+    function checkResult() {
+      timeoutCount--;
+      // 已过期，请刷新二维码
+      if (timeoutCount <= 0) {
+        $qr_img.siblings(".mask-tips").fadeOut("fast");
+        timeoutCount == 0 ? $refresh_code.fadeIn("fast") : "";
+        return
+      } else {
+        fetch('https://movement.gzstv.com/qrlogin/result/?appid=' + commonJs.webShareAppid + '&token=' + qr_token)
+          .then((response) => response.json())
+          .then((json) => {
+            // 扫描成功，请在客户端中确认！
+            if (json.result.scanned && $to_confirm.is(":hidden")) {
+              $qr_img.siblings(".mask-tips").fadeOut("fast");
+              $to_confirm.fadeIn("fast");
+            }
+            // 客户端已操作取消登录！
+            if (json.result.canceled) {
+              $qr_img.siblings(".mask-tips").fadeOut("fast");
+              $is_cancel.fadeIn("fast");
+              for (let i = 1; i < 99; i++) window.clearInterval(i)
+              return
+            }
+            // 登录成功
+            if (json.result.confirm) {
+              commonJs.setCookie("djshare_openid", json.result.token, 7);
+              location.reload();
+            } else {
+              setTimeout(() => {
+                checkResult();
+              }, 1000);
+            }
+          })
+      }
+    }
+
+    // 登录弹窗的操作
+    $loginModal
+      // 关闭弹窗
+      .on(clickOrTouch, ".close-btn", function (event) {
+        event.preventDefault();
+        $loginModal.fadeOut("slow");
+
+        // 关闭弹窗后 - 重置数据相关
+        timeoutCount = 0;
+        $qr_img.siblings(".mask-tips").fadeOut("fast");
+        $($loginModal.find(".form-tab span")[0]).click();
+      })
+      // tab切换
+      .on(clickOrTouch, ".form-tab span", function (event) {
+        event.preventDefault();
+        let $this = $(this);
+        if ($this.hasClass("active")) {
+          return false;
+        }
+
+        $this.siblings("span").removeClass("active");
+        $this.toggleClass("active")
+        $("." + $this.data("type") + "").show(); // fadeIn("fast");
+        $("." + $this.siblings("span").data("type") + "").hide(); // fadeOut("slow");
+
+        if ($this.data("type") == "form-code") {
+          getQRCode();
+        } else {
+          timeoutCount = 0;
+          $qr_img.siblings(".mask-tips").fadeOut("fast");
+        }
+      })
+      // 发送验证码
+      .on(clickOrTouch, ".send-code", function (event) {
+        event.preventDefault();
+        let num = $phoneNumber.val().trim();
+        if (num.length >= 11) {
+          commonJs.postRequest("https://movement.gzstv.com/api/u/send-code/", { phone_number: num }, (res) => {
+            if ( !res.error ) {
+              commonJs.toastMsg("验证码发送成功！");
+              $sendCode.removeClass("active")
+              let t = 60;
+              let times = setTimeout(countDown, 1000);
+              $sendCode.text(t + 's');
+
+              function countDown() {
+                if ( t > 0 ) {
+                  t--;
+                  $sendCode.text(t + 's');
+                  times = setTimeout(countDown, 1000);
+                } else {
+                  clearTimeout(times);
+                  $sendCode.text('获取验证码');
+                }
+              }
+            } else {
+              commonJs.toastMsg("验证码发送失败！请检查输入的手机号码。");
+            }
+          });
+        } else {
+          commonJs.toastMsg("请输入正确手机号！");
+        }
+      })
+      // 开始登录
+      .on(clickOrTouch, ".submit-btn", function (event) {
+        event.preventDefault();
+        if (!$(this).hasClass("active")) {
+          return false;
+        }
+
+        let num = $phoneNumber.val().trim(),
+          code = $codeInp.val().trim();
+        commonJs.postRequest("https://movement.gzstv.com/api/u/get-token/", {
+          appid: commonJs.webShareAppid,
+          code: code,
+          phone_number: num,
+        }, (res) => {
+          if (res.token) {
+            $loginModal.fadeOut("fast");
+            commonJs.toastMsg("登录成功");
+            commonJs.setCookie("djshare_openid", res.token, 7);
+            location.reload();
+
+            // let timer = setTimeout(() => {
+            //   location.reload();
+            //   clearTimeout(timer);
+            // }, 1500);
+          } else {
+            commonJs.toastMsg("登录失败，请检查验证码。");
+          }
+        });
+      })
+      // 重新获取二维码
+      .on(clickOrTouch, ".refresh-code", function (event) {
+        event.preventDefault();
+        getQRCode();
+      })
+
+    // .on(clickOrTouch, "",function(event){ event.preventDefault();})
+
+    // 输入框的监听
+    $phoneNumber.on('input', function () {
+      let p = $(this).val().trim();
+      if (p.length >= 11) {
+        $sendCode.addClass("active");
+      } else {
+        $sendCode.removeClass("active");
+      }
+    });
+    $codeInp.on('input', function () {
+      let c = $(this).val().trim(),
+        n = $phoneNumber.val().trim();
+      if (c.length >= 6) {
+        $submitBtn.addClass("active");
+      } else {
+        $submitBtn.removeClass("active");
+      }
+    });
+
+    // leen add
+    if ( commonJs.isMobile() ) {
+      $('.qrtab').hide();
+    }
+  });
+</script>
+
+    <!-- 相关推荐 -->
+    
+<div class="recommend no-select">
+  <h1 class="title">相关推荐</h1>
+
+  <ul class="recommend-list">
+    
+    <li class="recommend-lis-item">
+      <a class="recommended_link" href='https://movement.gzstv.com/news/detail/podp1/'
+        id="a_333237" data-id="333237" data-ctype="news.article"
+        data-redirect_type=""
+        data-redirect_target=""
+        data-from="related_333102">
+        <div class="pic">
+          
+          <img src="https://mstatic.gzstv.com/media/thumbnails/articles/2020/10/08/t_s4ufc4IPFFjo_320x320_8skdrGLd.jpg" alt="国庆长假：快乐亲子游拉动假日消费" />
+          
+        </div>
+
+        <div class="detail">
+          <p class="detail-title">国庆长假：快乐亲子游拉动假日消费</p>
+          <div class="detail-date">
+            <time class="time" datetime="2020-10-09T06:43:00+08:00">2020-10-09T06:43:00+08:00</time>
+            
+          </div>
+        </div>
+      </a>
+    </li>
+    
+    <li class="recommend-lis-item">
+      <a class="recommended_link" href='https://movement.gzstv.com/news/detail/9dMro/'
+        id="a_333218" data-id="333218" data-ctype="news.article"
+        data-redirect_type=""
+        data-redirect_target=""
+        data-from="related_333102">
+        <div class="pic">
+          
+          <img src="https://mstatic.gzstv.com/media/thumbnails/articles/2020/10/08/t_BVLSgTVe-0Av_320x320_8skdrGLd.jpg" alt="八天长假全国共接待国内游客6.37亿人次 同比恢复79%" />
+          
+        </div>
+
+        <div class="detail">
+          <p class="detail-title">八天长假全国共接待国内游客6.37亿人次 同比恢复79%</p>
+          <div class="detail-date">
+            <time class="time" datetime="2020-10-08T18:40:00+08:00">2020-10-08T18:40:00+08:00</time>
+            
+          </div>
+        </div>
+      </a>
+    </li>
+    
+    <li class="recommend-lis-item">
+      <a class="recommended_link" href='https://movement.gzstv.com/news/detail/MPKPK/'
+        id="a_333164" data-id="333164" data-ctype="news.article"
+        data-redirect_type=""
+        data-redirect_target=""
+        data-from="related_333102">
+        <div class="pic">
+          
+          <img src="https://mstatic.gzstv.com/media/thumbnails/articles/2020/10/08/t_oNbYC-QV11K5_320x320_8skdrGLd.png" alt="重要提醒！" />
+          
+        </div>
+
+        <div class="detail">
+          <p class="detail-title">重要提醒！</p>
+          <div class="detail-date">
+            <time class="time" datetime="2020-10-08T15:50:00+08:00">2020-10-08T15:50:00+08:00</time>
+            
+          </div>
+        </div>
+      </a>
+    </li>
+    
+    <li class="recommend-lis-item">
+      <a class="recommended_link" href='https://movement.gzstv.com/news/detail/v6l88/'
+        id="a_332946" data-id="332946" data-ctype="news.article"
+        data-redirect_type=""
+        data-redirect_target=""
+        data-from="related_333102">
+        <div class="pic">
+          
+          <img src="https://mstatic.gzstv.com/media/thumbnails/articles/2020/10/08/t_wr673E2UgffF_320x320_8skdrGLd.jpg" alt="国庆假期前7天，全国接待国内游客6.18亿人次" />
+          
+        </div>
+
+        <div class="detail">
+          <p class="detail-title">国庆假期前7天，全国接待国内游客6.18亿人次</p>
+          <div class="detail-date">
+            <time class="time" datetime="2020-10-08T08:38:00+08:00">2020-10-08T08:38:00+08:00</time>
+            
+          </div>
+        </div>
+      </a>
+    </li>
+    
+    <li class="recommend-lis-item">
+      <a class="recommended_link" href='https://movement.gzstv.com/news/detail/MPZDX/'
+        id="a_332864" data-id="332864" data-ctype="news.article"
+        data-redirect_type=""
+        data-redirect_target=""
+        data-from="related_333102">
+        <div class="pic">
+          
+          <img src="https://mstatic.gzstv.com/media/thumbnails/articles/2020/10/07/t_S76UK-DmlCKx_320x320_8skdrGLd.jpg" alt="国庆出游忆峥嵘岁月 红色景点传革命精神" />
+          
+        </div>
+
+        <div class="detail">
+          <p class="detail-title">国庆出游忆峥嵘岁月 红色景点传革命精神</p>
+          <div class="detail-date">
+            <time class="time" datetime="2020-10-08T07:07:00+08:00">2020-10-08T07:07:00+08:00</time>
+            
+          </div>
+        </div>
+      </a>
+    </li>
+    
+    <li class="recommend-lis-item">
+      <a class="recommended_link" href='https://movement.gzstv.com/news/detail/v6lDq/'
+        id="a_332890" data-id="332890" data-ctype="news.article"
+        data-redirect_type=""
+        data-redirect_target=""
+        data-from="related_333102">
+        <div class="pic">
+          
+          <img src="https://mstatic.gzstv.com/media/thumbnails/articles/2020/10/07/t_Av1HvSHJHcXI_320x320_8skdrGLd.jpg" alt="超速王、醉驾王、违法王曝光！国庆期间贵州交警查处重点违法近23万起" />
+          
+        </div>
+
+        <div class="detail">
+          <p class="detail-title">超速王、醉驾王、违法王曝光！国庆期间贵州交警查处重点违法近23万起</p>
+          <div class="detail-date">
+            <time class="time" datetime="2020-10-07T21:27:00+08:00">2020-10-07T21:27:00+08:00</time>
+            
+          </div>
+        </div>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+<style>
+  .recommend {
+    padding-top: 20px;
+    margin-bottom: 16px;
+    border-top: 4px solid #F1F4FB;
+  }
+
+  .recommend .title {
+    /* font-size: 36px; */
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+    padding-left: 24px;
+  }
+
+  .recommend .recommend-list {
+    width: 100%;
+  }
+
+  .recommend .recommend-lis-item {
+    font-size: 0;
+    /* margin-bottom: 20px; */
+    padding: 10px 24px;
+    box-sizing: border-box;
+  }
+
+  .recommend .recommend-lis-item:active {
+    background-color: #eee;
+  }
+
+  .recommend .recommend-lis-item:last-child {
+    border-bottom: none;
+  }
+
+  .recommend .recommend-lis-item .recommended_link,
+  .recommend .recommend-lis-item .column_link {
+    line-height: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .recommend .recommend-lis-item .pic {
+    width: 33.33%;
+    padding-bottom: 19.08%;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    background-color: #eee;
+
+    background-image: url("https://movement.gzstv.com/static/app/8.0/images/djw.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .recommend .recommend-lis-item .pic img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .recommend .recommend-lis-item .pic img.column-mark {
+    position: absolute;
+    display: inline;
+    transform: none;
+    width: auto;
+    height: 16px;
+    right: 4px;
+    top: auto;
+    bottom: 4px;
+  }
+
+  .recommend .recommend-lis-item .detail {
+    width: 64.22%;
+    position: relative;
+  }
+
+  .recommend .recommend-lis-item .fullwidth-detail {
+    width: 100%;
+  }
+
+  .recommend .recommend-lis-item .detail-title,
+  .recommend .recommend-lis-item .detail-title-column {
+    /* font-size: 16px; */
+    font-size: 1.333rem;
+    color: #1A1F24;
+    line-height: 1.3;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+  }
+
+  .recommend .recommend-lis-item .detail-title-column {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: .1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-line-clamp: 1;
+  }
+
+  .recommend .recommend-lis-item .detail-date,
+  .recommend .recommend-lis-item .detail-column-category {
+    line-height: 1;
+    position: absolute;
+    bottom: 0;
+
+    /* display: none; */
+  }
+
+  .recommend .recommend-lis-item .detail-column-category {
+    bottom: .5rem;
+  }
+
+  .recommend .recommend-lis-item .detail-date span,
+  .recommend .recommend-lis-item .detail-date time,
+  .recommend .recommend-lis-item .detail-column-category span {
+    /* font-size: 10px; */
+    font-size: 0.833rem;
+    color: #ACB2BD;
+  }
+
+  .recommend .recommend-lis-item .detail-date time {
+    margin-right: 13px;
+  }
+
+  .recommend .recommend-lis-item .detail-date span:nth-child(2) {
+    padding-left: 16px;
+    background: url("https://mstatic.gzstv.com/static/images/2020/content-view.png") no-repeat left center;
+    background-size: 14px 8px;
+  }
+
+  @media screen and (min-width: 600px) {
+    .recommend .recommend-lis-item .pic {
+      width: 236px;
+      padding-bottom: 133px;
+    }
+
+    .recommend .recommend-lis-item .detail {
+      width: calc(100% - 236px - 16px);
+    }
+  }
+
+  /* 暗黑模式 */
+  @media (prefers-color-scheme: dark) {
+    .recommend {
+      border-color: #111111;
+    }
+
+    .recommend .title {
+      color: #D1D1D1;
+    }
+
+    .recommend .recommend-lis-item .detail-title,
+    .recommend .recommend-lis-item .detail-title-column {
+      color: #D1D1D1;
+    }
+
+    .recommend .recommend-lis-item .detail-date time {
+      color: #fff;
+    }
+
+    .recommend .recommend-lis-item:active {
+      background-color: #000;
+    }
+  }
+</style>
+
+<script>
+  $(function () {
+    let platformOs = commonJs.get_os(); //平台信息
+
+    // 客户端内的处理
+    if (platformOs == 'Android' || platformOs == 'iOS') {
+      $(".recommend-list .recommended_link").attr("href", "javascript:;")
+    }
+
+    // 相关推荐 日期
+    var $relatedLi = $(".recommend li");
+    $relatedLi.each(function (i, item) {
+      var $time = $(item).find(".time");
+      var t = $time.attr("datetime");
+
+      if (t) {
+        var d = t.replace(/年/, '/').replace(/月/, '/').replace(/日/, '');
+        // var t = new Date(d).getTime()/1000;
+        var nT = new Date(new Date(d).getTime()).toISOString();
+        $time.attr("datetime", nT);
+        $time.timeago();
+      }
+
+      // 客户端内隐藏阅读量
+      if (platformOs == 'Android' || platformOs == 'iOS') {
+        $relatedLi.find(".read").hide();
+      }
+    });
+  });
+</script>
+
+
+    <!-- 热门推荐 -->
+    
+    <div class="recommend hots-recommend no-select" style="display: none;">
+      <h1 class="title">— 热门推荐 —</h1>
+      <ul class="recommend-list">
+        
+        
+        <li class="recommend-lis-item">
+          <a href='https://movement.gzstv.com/news/detail/qa7Pj/' class="recommended_link"
+            id="a_qa7Pj">
+            <div class="pic">
+              
+              <img src="https://mstatic.gzstv.com/media/images20260831/t_QsAnM0mb9PF__320x320_8skdrGLd.jpg" alt="“学习身边榜样 争做黔进先锋”系列微党课开讲啦" />
+              
+            </div>
+            <div class="detail">
+              <p class="detail-title">“学习身边榜样 争做黔进先锋”系列微党课开讲啦</p>
+              <!-- <div class="detail-date"><time class="time" datetime="1788226320">1788226320</time></div> -->
+              <!--  -->
+            </div>
+          </a>
+        </li>
+        
+        
+        
+        <li class="recommend-lis-item">
+          <a href='https://movement.gzstv.com/news/detail/YpzD2/' class="recommended_link"
+            id="a_YpzD2">
+            <div class="pic">
+              
+              <img src="https://mstatic.gzstv.com/media/thumbnails/articles/2021/03/10/t_n11CxhYfFYXn_320x320_8skdrGLd.jpg" alt="大热日剧《轮到你了》拍电影版 讲述平行世界故事" />
+              
+            </div>
+            <div class="detail">
+              <p class="detail-title">大热日剧《轮到你了》拍电影版 讲述平行世界故事</p>
+              <!-- <div class="detail-date"><time class="time" datetime="1615429260">1615429260</time></div> -->
+              <!--  -->
+            </div>
+          </a>
+        </li>
+        
+        
+        
+        <li class="recommend-lis-item">
+          <a href='https://movement.gzstv.com/news/detail/DYrJA/' class="recommended_link"
+            id="a_DYrJA">
+            <div class="pic">
+              
+              <img src="https://mstatic.gzstv.com/media/images20240113/t_3KWZbG7DOs9T_320x320_8skdrGLd.jpg" alt="菲律宾榴莲、贝宁菠萝、老挝芒果…农产品“进口圈”再扩大！" />
+              
+            </div>
+            <div class="detail">
+              <p class="detail-title">菲律宾榴莲、贝宁菠萝、老挝芒果…农产品“进口圈”再扩大！</p>
+              <!-- <div class="detail-date"><time class="time" datetime="1705110060">1705110060</time></div> -->
+              <!--  -->
+            </div>
+          </a>
+        </li>
+        
+        
+        
+        <li class="recommend-lis-item">
+          <a href='https://movement.gzstv.com/news/detail/lWNWN/' class="recommended_link"
+            id="a_lWNWN">
+            <div class="pic">
+              
+            </div>
+            <div class="detail">
+              <p class="detail-title">遵义市中小学、幼儿园公共卫生科普系列短视频（第一期）</p>
+              <!-- <div class="detail-date"><time class="time" datetime="1788244980">1788244980</time></div> -->
+              <!--  -->
+            </div>
+          </a>
+        </li>
+        
+        
+        
+        <!--  -->
+        
+        
+        
+        <!--  -->
+        
+        
+        
+        <!--  -->
+        
+        
+        
+        <!--  -->
+        
+        
+        
+        <!--  -->
+        
+        
+        
+        <!--  -->
+        
+        
+      </ul>
+    </div>
+    
+
+    <!-- 评论列表模块 -->
+    <div class="comments-wrap-border"></div>
+
+<div class="no-select comments-wrap hot-comments" data-type="hot">
+  <div class="title">
+    <img
+      class="hot"
+      src="https://movement.gzstv.com/static/app/8.0/images/hot_icon@2x.png"
+      alt=""
+    />
+    <span>精选评论</span>
+  </div>
+
+  <div class="comment-list"></div>
+
+  <!-- <div class="comment-more">查看更多</div>
+
+  <div class="comment-full">已隐藏部分评论</div>
+
+  <div class="no-comments">
+    <img class="img" src="https://movement.gzstv.com/static/app/8.0/images/nocomments@2x.png">
+    <span class="tip">这里还没有新评论～</span>
+    <div class="btn">去评论</div>
+  </div> -->
+</div>
+
+<div
+  id="targetComments"
+  class="no-select comments-wrap whole-comments"
+  data-type="whole"
+>
+  <div class="title">
+    <span>最新评论</span
+    ><!--共<i>0</i>条评论-->
+  </div>
+
+  <div class="comment-list"></div>
+
+  <div class="comment-more">查看更多</div>
+
+  <div class="comment-full">已经到底了</div>
+
+  <div class="no-comments">
+    <picture>
+      <source
+        srcset="
+          https://movement.gzstv.com/static/app/8.0/images/nocomments@2x.png
+        "
+        media="(prefers-color-scheme: light)"
+      />
+      <source
+        srcset="
+          https://movement.gzstv.com/static/app/8.0/images/nocomments-black@2x.png
+        "
+        media="(prefers-color-scheme: dark)"
+      />
+      <img
+        class="img no-filter"
+        src="https://movement.gzstv.com/static/app/8.0/images/nocomments@2x.png"
+      />
+    </picture>
+    <span class="tip">这里还没有新评论～</span>
+    <!-- <div class="btn">去评论</div> -->
+  </div>
+
+  <!-- 客户端内评论 -->
+  
+  <!--  -->
+  
+
+  <!-- 分享页评论 -->
+  
+  <!--  -->
+  
+</div>
+
+<div class="comment-modal">
+  <div class="comment-inp">
+    <textarea
+      id="comment-textarea"
+      name=""
+      rows="1"
+      autocomplete="off"
+      maxlength="200"
+    ></textarea>
+    <div class="btn">
+      <div class="num"><b class="t">0</b>/200</div>
+      <button>发送</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .comments-wrap-border {
+    padding-bottom: 20px;
+    border-top: 4px solid #f1f4fb;
+  }
+
+  .hot-comments {
+    position: relative;
+    display: none;
+  }
+
+  .hot-comments::after {
+    content: "";
+    width: calc(100% - 24px - 24px);
+    height: 1px;
+    display: block;
+    background-color: #f1f4fb;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .comments-wrap {
+    padding: 0 0 20px 0;
+    margin-bottom: 20px;
+  }
+
+  .comments-wrap .title {
+    /* font-size: 24px; */
+    font-size: 1rem;
+    font-weight: 400;
+    color: #acb2bd;
+    padding: 0 20px;
+    margin-bottom: 6.5px;
+  }
+
+  .comments-wrap .title span {
+    /* font-size: 36px; */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #121212;
+    margin-right: 10px;
+  }
+
+  .comments-wrap .title i {
+    font-style: normal;
+  }
+
+  .hot-comments .title {
+    display: flex;
+    align-items: center;
+  }
+
+  .comments-wrap .title .hot {
+    width: 24px;
+    margin-right: 5px;
+  }
+
+  .comments-wrap .comment-list-item {
+    padding: 8px 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .comments-wrap .comment-list-item:active {
+    /* background-color: #eee; */
+  }
+
+  .comments-wrap .comment-list-item .portrait {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+  }
+
+  .comments-wrap .comment-list-item .comment-content {
+    width: calc(100% - 40px - 8px);
+    font-size: 0;
+  }
+
+  .comments-wrap .comment-list-item .comment-content .user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .comments-wrap .comment-list-item .comment-content .username {
+    /* font-size: 28px; */
+    font-size: 1.16rem;
+    font-weight: bold;
+    color: #7a8189;
+    line-height: 1;
+    padding-right: 30px;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+  }
+
+  .comments-wrap .comment-list-item .comment-content .username .icon {
+    width: 52px;
+    /* position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%); */
+    margin-right: 5px;
+    display: none;
+  }
+
+  .comments-wrap .comment-list-item .comment-content .wb-rk {
+    width: 16px;
+  }
+
+  .comments-wrap .comment-list-item .comment-content .info {
+    /* font-size: 28px; */
+    font-size: 1.16rem;
+    font-weight: 400;
+    color: #282d31;
+    line-height: 1.4;
+    margin-top: 8px;
+
+    text-align: left;
+
+    /* 自动换行 */
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+  }
+
+  .comments-wrap .comment-list-item .comment-content .info .u {
+    color: #7a8189;
+    font-weight: normal;
+  }
+
+  .comments-wrap .comment-list-item .comment-content .info .comment_emotion {
+    width: 50px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .comments-wrap .comment-list-item .comment-content .handle {
+    /* font-size: 22px; */
+    font-size: 0.916rem;
+    font-weight: 400;
+    color: #adb1bd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0px;
+
+    height: 16px;
+    line-height: 16px;
+  }
+
+  .comments-wrap .comment-list-item .comment-content .handle .btns {
+    display: flex;
+  }
+
+  .comments-wrap .comment-list-item .comment-content .handle .like-btn,
+  .comments-wrap .comment-list-item .comment-content .handle .reply-btn {
+    display: inline-block;
+    height: 100%;
+  }
+
+  .comments-wrap .comment-list-item .comment-content .handle .like-btn {
+    margin-right: 18px;
+    display: flex;
+    align-items: center;
+  }
+
+  .comments-wrap .comment-list-item .comment-content .handle .like-btn.active {
+    color: #fb5089;
+  }
+
+  .comments-wrap .comment-list-item .comment-content .handle .like-btn img {
+    width: 16px;
+    margin-right: 4px;
+  }
+
+  .comments-wrap .comment-list-item .comment-content .handle .like-btn .icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+    display: inline-block;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("https://movement.gzstv.com/static/app/8.0/images/like_icon@2x.png");
+  }
+
+  .comments-wrap
+    .comment-list-item
+    .comment-content
+    .handle
+    .like-btn.active
+    .icon {
+    background-image: url("https://movement.gzstv.com/static/app/8.0/images/like_icon_selected@2x.png");
+  }
+
+  .comments-wrap .reply {
+    line-height: normal;
+  }
+
+  .comments-wrap .reply .reply-more {
+    padding: 0 15px 0 7px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: #f1f4fb;
+
+    /* font-size: 22px; */
+    font-size: 0.916rem;
+    color: #878889;
+    display: inline-block;
+    position: relative;
+  }
+
+  .comments-wrap .reply .reply-more::after {
+    width: 10px;
+    height: 10px;
+    content: "";
+    display: inline-block;
+    background: url("https://movement.gzstv.com/static/app/8.0/images/huifu_jiantou@2x.png")
+      no-repeat center center;
+    background-size: 10px 10px;
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .comments-wrap .reply .reply-more.active {
+    background-color: transparent;
+  }
+
+  /* 评论回复 */
+  .comments-wrap .comment-list-children.no-con {
+    /* font-size: 28px; */
+    font-size: 1.16rem;
+    font-weight: 400;
+    color: #adb1bd;
+    background-color: #f1f4fb;
+    border-radius: 6px;
+    margin-top: 13px;
+    padding: 0 10px;
+    line-height: 34px;
+    height: 34px;
+  }
+
+  .comments-wrap .comment-list-children .comment-list-item {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .comments-wrap .comment-list-children .comment-list-item:first-of-type {
+    margin-top: 18px;
+  }
+
+  .comments-wrap .comment-list-children .comment-list-item:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .comments-wrap .comment-list-children .comment-list-item .portrait {
+    width: 34px;
+    height: 34px;
+  }
+
+  /* 列表提示 */
+  .comments-wrap .no-comments {
+    /* font-size: 28px; */
+    font-size: 1.167rem;
+    font-weight: 400;
+    color: #acb2bd;
+    text-align: center;
+    display: none;
+  }
+
+  .comments-wrap .no-comments .img {
+    width: 48%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .comments-wrap .no-comments .btn {
+    width: 24.53%;
+    max-width: 184px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 13px;
+    margin: 15px auto 0;
+    background: url("https://movement.gzstv.com/static/app/8.0/images/tips-button@2x.png")
+      no-repeat center center;
+    background-size: 100% 100%;
+
+    /* font-size: 24px; */
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ffffff;
+  }
+
+  .comments-wrap .comment-more,
+  .comments-wrap .comment-full {
+    /* font-size: 28px; */
+    font-size: 1.167rem;
+    color: #acb2bd;
+    line-height: 1;
+    text-align: center;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .comments-wrap .comment-more:active {
+    background-color: #f1f4fb;
+  }
+
+  /* ============== */
+
+  .comments-wrap .comment-list-item .comment-list-item-content .imgs {
+    margin-top: 5px;
+    display: -webkit-flex;
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .comments-wrap .comment-list-item .comment-list-item-content .imgs-item {
+    width: calc((100% / 3) - (4px / 3 * 2));
+    padding-bottom: calc((100% / 3) - (4px / 3 * 2));
+    margin-bottom: 4px;
+    position: relative;
+  }
+
+  .comments-wrap .comment-list-item .comment-list-item-content .imgs-item img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .comments-wrap
+    .comment-list-item
+    .comment-list-item-content
+    .imgs-item:nth-child(3n + 1) {
+    margin-right: calc(4px / 3 * 2);
+  }
+
+  .comments-wrap
+    .comment-list-item
+    .comment-list-item-content
+    .imgs-item:nth-child(3n-1) {
+    margin-left: calc(4px / 3);
+    margin-right: calc(4px / 3);
+  }
+
+  .comments-wrap
+    .comment-list-item
+    .comment-list-item-content
+    .imgs-item:nth-child(3n) {
+    margin-left: calc(4px / 3 * 2);
+  }
+
+  .comments-wrap
+    .comment-list-item
+    .comment-list-item-content
+    .imgs-item:last-child,
+  .comments-wrap
+    .comment-list-item
+    .comment-list-item-content
+    .imgs-item:nth-last-child(2),
+  .comments-wrap
+    .comment-list-item
+    .comment-list-item-content
+    .imgs-item:nth-last-child(3) {
+    margin-bottom: 0;
+  }
+
+  .comments-wrap .comment-list-item .comment-list-item-content .reply-more {
+    font-size: 1rem;
+    color: #acb2bd;
+    line-height: 1;
+    margin-top: 10px;
+    display: inline-block;
+    border-bottom: 1px solid #acb2bd;
+  }
+
+  /* 评论框弹窗 */
+  .comment-modal {
+    font-size: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .comment-modal .comment-inp {
+    width: 100%;
+    max-width: 900px !important;
+    padding: 10px;
+    background-color: #ffffff;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .comment-modal .comment-inp #comment-textarea {
+    width: 100%;
+    min-height: 40px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #f1f4fb;
+
+    outline: 0;
+    border: none;
+    resize: none;
+    overflow: hidden;
+
+    font-size: large;
+  }
+
+  .comment-modal .comment-inp .btn {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .comment-modal .comment-inp .num {
+    color: #acb2bd;
+    font-size: 1.33rem;
+    margin-right: 14px;
+  }
+
+  .comment-modal .comment-inp b {
+    font-weight: normal;
+  }
+
+  .comment-modal .comment-inp button {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 16px;
+    background: #f1f4fb;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.33rem;
+    font-weight: 500;
+    color: #416cf6;
+  }
+
+  .comment-modal .comment-inp button.active {
+    color: #ffffff;
+    background-color: #416cf6;
+  }
+
+  /* 暗黑模式 */
+  @media (prefers-color-scheme: dark) {
+    .comments-wrap-border {
+      border-color: #111111;
+    }
+
+    .hot-comments::after {
+      background-color: #454545;
+    }
+
+    .comments-wrap .title {
+      color: #6d6d6d;
+    }
+
+    .comments-wrap .title span {
+      color: #e1e1e1;
+    }
+
+    .comments-wrap .comment-list-item .comment-content .username {
+      color: #d1d1d1;
+    }
+
+    .comments-wrap .comment-list-item .comment-content .info {
+      color: #a4a4a4;
+    }
+
+    .comments-wrap .comment-list-item .comment-content .handle {
+      color: #6d6d6d;
+    }
+
+    .comments-wrap .comment-list-item .comment-content .handle .like-btn .icon {
+      background-image: url("https://movement.gzstv.com/static/app/8.0/images/like_icon_dark@2x.png");
+    }
+
+    .comments-wrap
+      .comment-list-item
+      .comment-content
+      .handle
+      .like-btn.active {
+      color: #d35e86;
+    }
+
+    .comments-wrap
+      .comment-list-item
+      .comment-content
+      .handle
+      .like-btn.active
+      .icon {
+      background-image: url("https://movement.gzstv.com/static/app/8.0/images/like_icon_selected-dark@2x.png");
+    }
+
+    .comments-wrap .reply .reply-more {
+      color: #6d6d6d;
+      background-color: #242424;
+    }
+
+    .comments-wrap .comment-list-children.no-con {
+      color: #6d6d6d;
+      background-color: #242424;
+    }
+
+    .comments-wrap .comment-list-item .comment-content .info .u {
+      color: #e1e1e1;
+    }
+
+    .comments-wrap .comment-more:active {
+      background-color: #141414;
+    }
+
+    .comments-wrap .comment-more,
+    .comments-wrap .comment-full {
+      color: #6d6d6d;
+    }
+
+    .comment-modal .comment-inp {
+      background-color: #242424;
+    }
+
+    .comment-modal .comment-inp #comment-textarea {
+      color: #d1d1d1;
+      background-color: #141414;
+    }
+
+    .comment-modal .comment-inp .num {
+      color: #6d6d6d;
+    }
+
+    .comment-modal .comment-inp button {
+      color: #3a5dcd;
+      background-color: #2e2d2d;
+    }
+
+    .comment-modal .comment-inp button.active {
+      color: #d1d1d1;
+      background-color: #3a5dcd;
+    }
+
+    .comments-wrap .no-comments {
+      color: #6d6d6d;
+    }
+
+    .comments-wrap .no-comments .btn {
+      filter: brightness(0.8);
+    }
+  }
+
+  html {
+    height: auto;
+  }
+</style>
+
+<script>
+  $(function () {
+    let allowComment = "True"; // false-不允许评论（按钮置灰）  true-允许评论   null-不允许评论且隐藏评论按钮
+
+    // 点击事件
+    let clickOrTouch = "ontouchend" in window ? "click" : "click";
+
+    // 变量定义
+    let platformOs = commonJs.get_os(), //平台信息
+      fixedToken = "nonencIlFo4ZRtb7Kj3bPskJ1JawOZL6", //固定token
+      userOpenId = commonJs.getParamsQuery("openid"), //授权token
+      allowCommentVar = "True",
+      showCommentsVar = "True";
+
+    // let comParams = {
+    //   ctype: obj_type,
+    //   object_pk: obj_id,
+    // }; //公用的参数
+
+    let comParams = {}
+    if (obj_type == "short_drama.shortdramaepisode") {
+      comParams = {
+        ctype: obj_type,
+        object_hashid: obj_id,
+      };
+    } else {
+      comParams = {
+        ctype: obj_type,
+        object_pk: obj_id,
+      };
+    }
+
+    let limitPage = 10, //分页限制
+      limitChildPage = 5, //分页限制-评论回复
+      last_from_pk = {
+        hot: 0,
+        whole: 0,
+      }, //起始评论的id —— 翻页用
+      $commentsWrap = $(".comments-wrap"),
+      $wholeComments = $(".whole-comments"), //未分类 - 所有
+      $hotComments = $(".hot-comments"); //精选 - 热门
+
+    let isLoadingComment = false; //是否正在加载评论中
+
+    // 文章评论点赞数查询
+    let getCommentData = function () {
+      if (platformOs == "Android" || platformOs == "iOS") {
+        if (allowCommentVar == "True" && showCommentsVar == "True") {
+        }
+      } else {
+        if (allowCommentVar == "True") {
+          comParams.appid = commonJs.webShareAppid;
+          commonJs.postRequest(
+            "https://interaction-api.gzstv.com/commen-web/news/interaction-data",
+            comParams,
+            (res) => {
+              let $praiseBtn = $(".likeShare .article-praise");
+              // $wholeComments.find(".title i").text(res.commentCount);
+              if (res.upCount > 0) {
+                $praiseBtn
+                  .find("span")
+                  .text(commonJs.setDealNum("like", res.upCount));
+              }
+              if (res.voted) {
+                $praiseBtn
+                  .addClass("active")
+                  .find("img")
+                  .attr(
+                    "src",
+                    "https://movement.gzstv.com/static/app/8.0/images/like_icon_selected@2x.png"
+                  ); // 已点赞
+              }
+
+              if (res.commentCount >= 1) {
+                $(".article-comment span").text(
+                  commonJs.setDealNum("comment", res.commentCount)
+                );
+                if ($wholeComments.find(".comment-list").html() == "") {
+                  $wholeComments
+                    .find(".no-comments .tip")
+                    .text("内容等待审核中");
+                }
+              }
+
+              if (res.shareCount > 0) {
+                $(".article-share span").text(
+                  commonJs.setDealNum("share", res.shareCount)
+                );
+              }
+            }
+          );
+        }
+      }
+    };
+    getCommentData();
+
+    // 评论列表item的内容  type: 0-父级 1-子级
+    let setCommentCon = function (arr, type) {
+      // 点赞cookie - 通过cookie判断当前评论是否点赞过
+      let user = commonJs.djUserInfor,
+        likeCookieArr = [],
+        likeCookie = commonJs.getCookie("praiseArray"), //获取点赞cookie
+        isLike = function (arr, val) {
+          return arr.some(
+            (item) => item.id === val.id && item.ctype == val.ctype
+          );
+        };
+      if (likeCookie != null && likeCookie != "") {
+        likeCookieArr = JSON.parse(likeCookie).arr;
+      }
+
+      let $newLi = "";
+      $.each(arr, (idx, item) => {
+        // 分享页无用户信息 - 点赞拿cookie数据
+        if (!user.token) {
+          if (isLike(likeCookieArr, item)) {
+            item.voted = true;
+          }
+        }
+
+        let user_type = item.user_type;
+
+        // 图片
+        let imgArr = item.comment_images,
+          $imgUL = "";
+        if (imgArr.length >= 1) {
+          let $imgLI = "";
+          $.each(imgArr, function (i, imgEle) {
+            $imgLI +=
+              '<li class="imgs-item"><img src="' +
+              imgEle.image +
+              '" alt="">\</li>';
+          });
+          $imgUL = ' <ul class="imgs">' + $imgLI + "</ul>";
+        }
+
+        // type: 0-父级 1-子级
+        let parentReply =
+          item.children_count > 0
+            ? '<div class="comment-list-children"></div><div class="reply" data-num="' +
+              item.children_count +
+              '"><span class="reply-more">' +
+              item.children_count +
+              "条回复</span></div>"
+            : "";
+
+        // JSON.stringify(item).replaceAll("\"", "\'")
+        $newLi +=
+          '<div class="comment-list-item" data-id="' +
+          item.id +
+          '" data-obj=' +
+          JSON.stringify(item) +
+          '>\
+            <img class="portrait" src="' +
+          (item.avator
+            ? item.avator
+            : "https://mstatic.gzstv.com/static/images/2020/avatar_default.png") +
+          '" alt="' +
+          item.name +
+          '">\
+            <div div class="comment-content" >\
+              <div class="user">\
+                <span class="username" style="' +
+          (user_type.nickname_color
+            ? "color:#" + user_type.nickname_color
+            : "") +
+          '">' +
+          (user_type.icon
+            ? '<img class="icon" src="' + user_type.icon + '" />'
+            : "") +
+          item.name +
+          '</span>\
+                <!-- <img class="wb-rk light-mode" src="https://movement.gzstv.com/static/app/8.0/images/comment_more@2x.png" alt="">\
+                <img class="wb-rk dark-mode" src="https://movement.gzstv.com/static/app/8.0/images/comment_more-dark@2x.png" alt=""> -->\
+              </div>\
+              <div class="info">' +
+          (type == 1 ? '回复<b class="u">' + item.parent.name + "：</b>" : "") +
+          commonJs.emotionsConvert(item.comment) +
+          '</div>\
+              <div class="handle">\
+                <div class="tip">\
+                  <time class="timeago" datetime="' +
+          new Date(item.submit_date * 1000).toISOString() +
+          '">' +
+          new Date(item.submit_date * 1000).toISOString() +
+          '</time>\
+                  <span class="from" style="' +
+          (item.ip_province ? "" : "display: none;") +
+          '">·' +
+          item.ip_province +
+          '</span>\
+                </div>\
+                <div class="btns">\
+                  <div class="' +
+          (item.voted ? "like-btn active" : "like-btn") +
+          '" data-id="' +
+          item.id +
+          '" data-type="' +
+          item.ctype +
+          '">\
+                    <span data-up="' +
+          item.up +
+          '">' +
+          (item.up >= 1 ? item.up : "") +
+          '</span><i class="icon"></i>\
+                  </div>\
+                  <span class="reply-btn" data-id="' +
+          item.id +
+          '" data-type="' +
+          item.ctype +
+          '">回复</span>\
+                </div>\
+              </div>\
+              ' +
+          (type == 0 ? parentReply : "") +
+          "\
+            </div>\
+          </div>";
+      });
+
+      return $newLi;
+    };
+
+    // 渲染评论列表-whole
+    window.renderWholeCommentList = function (res) {
+      if (typeof res === "string") {
+        res = JSON.parse(
+          res
+            .replace(/\n/g, "\\n")
+            .replace(/\r/g, "\\r")
+            .replace(/\t/g, "\\t")
+            .replace(/\\/g, "\\\\")
+            // 转义 comment 内容中的双引号，避免破坏 JSON.parse
+            .replace(/"comment"\s*:\s*"(.*?)"(\s*[,}\]])/g, function (
+              match,
+              p1,
+              p2
+            ) {
+              return (
+                '"comment":"' + p1.replace(/"/g, '\\"') + '"' + p2
+              );
+            })
+        );
+      }
+
+      let commentsArr = res;
+      if (platformOs == "Android" || platformOs == "iOS") {
+        commentsArr = res.result;
+      }
+
+      if (commentsArr.length <= 0) {
+        let $noComments = $wholeComments.find(".no-comments");
+        $wholeComments.find(".comment-more").hide();
+        last_from_pk.whole == 0 ? $noComments.show() : "";
+
+        if (Number($wholeComments.find(".title i").text()) >= 1) {
+          $noComments.find(".tip").text("内容等待审核中");
+        } else {
+          $noComments.find(".tip").text("这里还没有新评论～");
+        }
+
+        return false;
+      } else {
+        $wholeComments.find(".no-comments").hide();
+      }
+
+      if (commentsArr.length < limitPage) {
+        $wholeComments.find(".comment-full").show();
+        $wholeComments.find(".comment-more").hide();
+      } else {
+        $wholeComments.find(".comment-full").hide();
+        $wholeComments.find(".comment-more").show();
+      }
+
+      let $lis = setCommentCon(commentsArr, 0); //父级列表
+
+      if (last_from_pk.whole == 0) {
+        $wholeComments.find(".comment-list").empty(); //清空列表
+      }
+      $wholeComments.find(".comment-list").append($lis);
+      $wholeComments.find("time.timeago").timeago();
+      last_from_pk.whole = commentsArr.slice(-1)[0].id; //翻页用
+
+      isLoadingComment = false; //重置加载状态
+    };
+
+    // 渲染评论列表-hot
+    window.renderHotCommentList = function (res) {
+      if (typeof res === "string") {
+        res = JSON.parse(
+          res
+            .replace(/\n/g, "\\n")
+            .replace(/\r/g, "\\r")
+            .replace(/\t/g, "\\t")
+            .replace(/\\/g, "\\\\")
+        );
+      }
+
+      let commentsArr = res;
+      if (platformOs == "Android" || platformOs == "iOS") {
+        commentsArr = res.result;
+      }
+
+      if (commentsArr.length > 0) {
+        // let $noComments = $hotComments.find(".no-comments");
+        // $hotComments.find('.comment-more').hide();
+        // last_from_pk.hot == 0 ? $noComments.show() : '';
+
+        // if (Number($hotComments.find(".title i").text()) >= 1) {
+        //   $noComments.find(".tip").text("内容等待审核中");
+        // } else {
+        //   $noComments.find(".tip").text("这里还没有新评论～");
+        // }
+        $hotComments.show();
+      } else {
+        return false;
+      }
+
+      if (commentsArr.length < limitPage) {
+        $hotComments.find(".comment-full").show();
+        $hotComments.find(".comment-more").hide();
+      } else {
+        $hotComments.find(".comment-full").hide();
+        $hotComments.find(".comment-more").show();
+      }
+
+      let $lis = setCommentCon(commentsArr, 0); //父级列表
+
+      if (last_from_pk.hot == 0) {
+        $hotComments.find(".comment-list").empty(); //清空列表
+      }
+      $hotComments.find(".comment-list").append($lis);
+      $hotComments.find("time.timeago").timeago();
+      last_from_pk.hot = commentsArr.slice(-1)[0].id; //翻页用
+
+      isLoadingComment = false; //重置加载状态
+    };
+
+    // 渲染评论详情-查看更多的列表
+    let $curReply, //当前点击的更多回复按钮
+      $curReplyCon; //当前更多回复的节点盒子
+    window.renderCommentReply = function (res) {
+      if (typeof res === "string") {
+        res = JSON.parse(
+          res
+            .replace(/\n/g, "\\n")
+            .replace(/\r/g, "\\r")
+            .replace(/\t/g, "\\t")
+            .replace(/\\/g, "\\\\")
+        );
+      }
+
+      let replyArr = res;
+      if (platformOs == "Android" || platformOs == "iOS") {
+        replyArr = res.result;
+      }
+
+      if (replyArr.children.length == 0) {
+        if ($curReplyCon.html() == "") {
+          $curReplyCon.text("内容等待审核中").addClass("no-con");
+        }
+      }
+
+      $curReply.text("更多回复").addClass("active");
+      if (replyArr.children.length < limitChildPage) {
+        $curReply.hide();
+      }
+
+      let $childLis = setCommentCon(replyArr.children, 1); //子级列表
+      $curReplyCon.append($childLis);
+      $("time.timeago").timeago();
+    };
+
+    // 获取app评论列表-whole
+    let getAppWholeComments = function (callback) {
+      let data = $.extend({}, comParams, {
+        from_pk: last_from_pk.whole,
+        num: limitPage,
+      });
+      commonJs.callApi("/v2/comments/list/", data, callback);
+    };
+
+    // 获取web评论列表-whole
+    let getWebWholeComments = function (callback) {
+      let params = $.extend({}, comParams, {
+        appid: commonJs.webShareAppid,
+        from_pk: last_from_pk.whole,
+        limit: limitPage,
+      });
+      commonJs.postRequest(
+        "https://interaction-api.gzstv.com/commen-web/comments/list",
+        params,
+        renderWholeCommentList
+      );
+    };
+
+    // 获取app评论列表-hot
+    let getAppHotComments = function (callback) {
+      let data = $.extend({}, comParams, {
+        from_pk: last_from_pk.hot,
+        num: limitPage,
+      });
+      commonJs.callApi("/v2/comments/cream-list/", data, callback);
+    };
+
+    // 获取web评论列表-hot
+    let getWebHotComments = function (callback) {
+      let params = $.extend({}, comParams, {
+        appid: commonJs.webShareAppid,
+        from_pk: last_from_pk.hot,
+        limit: limitPage,
+      });
+      commonJs.postRequest(
+        "https://interaction-api.gzstv.com/commen-web/comments/cream-list",
+        params,
+        renderHotCommentList
+      );
+    };
+
+    // 评论列表的获取 —— app + web
+    function getallComments(type) {
+      // 客户端内的处理
+      if (platformOs == "Android" || platformOs == "iOS") {
+        if (allowCommentVar == "True" && showCommentsVar == "True") {
+          type != undefined
+            ? type == "whole"
+              ? getAppWholeComments("renderWholeCommentList")
+              : getAppHotComments("renderHotCommentList")
+            : getAppWholeComments("renderWholeCommentList") +
+              getAppHotComments("renderHotCommentList");
+        } else {
+          $(".comments-wrap").remove();
+          $(".recommend").css("border", "none");
+        }
+      }
+      // 分享页的处理 —— web||wx
+      else {
+        if (allowCommentVar == "True") {
+          type != undefined
+            ? type == "whole"
+              ? getWebWholeComments()
+              : getWebHotComments()
+            : getWebWholeComments() + getWebHotComments();
+        } else {
+          $(".comments-wrap").remove();
+          $(".recommend").css("border", "none");
+        }
+      }
+    }
+    getallComments();
+
+    // 刷新评论
+    let refreshComment = function (type) {
+      last_from_pk.hot = 0;
+      last_from_pk.whole = 0;
+      isAbleComment = true;
+
+      // 刷新评论
+      let timer = setTimeout(() => {
+        getallComments();
+        clearTimeout(timer);
+        if (type == "h5") {
+          getCommentData(); //分享页-更新底部评论数
+        }
+      }, 1000);
+    };
+
+    // 评论列表的操作
+    $commentsWrap
+      // 查看更多评论 - 下一页
+      .on(clickOrTouch, ".comment-more", function (event) {
+        event.preventDefault();
+        if(isLoadingComment) return;
+        isLoadingComment = true;
+        getallComments($(this).closest(".comments-wrap").data("type"));
+      })
+      // 查看评论详情 - 查看回复
+      .on(clickOrTouch, ".reply-more", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        let $thisComment = $(this).closest(".comment-list-item");
+
+        $curReplyCon = $thisComment.find(".comment-list-children");
+        $curReply = $thisComment.find(".reply-more");
+
+        let data = {
+          comment_pk: $thisComment.data("id"),
+          from_pk:
+            $curReplyCon.find(".comment-list-item").length <= 0
+              ? 0
+              : $curReplyCon.children(".comment-list-item").last().data("id"),
+          num: limitChildPage,
+        };
+
+        if (platformOs == "Android" || platformOs == "iOS") {
+          commonJs.callApi(
+            "/v2/comments/children/",
+            data,
+            "renderCommentReply"
+          );
+        } else {
+          data.appid = commonJs.webShareAppid;
+          commonJs.postRequest(
+            "https://interaction-api.gzstv.com/commen-web/comments/children",
+            data,
+            renderCommentReply
+          );
+        }
+      })
+      // 评论点赞
+      .on(clickOrTouch, ".like-btn", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        let $this = $(this),
+          data = {
+            ctype: $this.data("type"),
+            object_pk: $this.data("id"),
+          };
+        commonJs.commentArticleLike(data, $this);
+      })
+      // 评论回复
+      .on(clickOrTouch, ".reply-btn", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        let $this = $(this),
+          obj_pk = $this.data("id"),
+          curObj = JSON.parse(
+            $this.closest(".comment-list-item").attr("data-obj")
+          );
+
+        let replyCall = function (id) {
+          let user = commonJs.djUserInfor;
+
+          let replay_params = {
+            parent_pk: obj_pk,
+            parent_name: curObj.name,
+          };
+
+          // 分享页
+          if ($(".h5-wrap").length >= 1) {
+            $(".comment-modal").fadeIn("fast").attr({
+              "data-m": 1, // 1-评论的回复
+              "data-id": obj_pk,
+            });
+            $("#comment-textarea").focus();
+          }
+
+          // 客户端
+          if ($(".app-wrap").length >= 1) {
+            commonJs.showCommentEditorDialog(
+              Object.assign(comParams, replay_params)
+            );
+          }
+        };
+        commonJs.needUserAction(replyCall);
+      })
+      // 去评论
+      .on(clickOrTouch, ".no-comments .btn", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        if (allowComment == "False" || allowComment == "Null") {
+          commonJs.toastMsg("该内容暂不支持评论");
+          return false;
+        }
+        let commentFunc = function () {
+          // 分享页
+          if ($(".h5-wrap").length >= 1) {
+            $(".comment-modal").fadeIn("fast").attr({
+              "data-m": 1, // 1-评论的回复
+              "data-id": obj_pk,
+            });
+            $("#comment-textarea").focus();
+          }
+
+          // 客户端
+          if ($(".app-wrap").length >= 1) {
+            commonJs.showCommentEditorDialog(comParams);
+          }
+        };
+        commonJs.needUserAction(commentFunc);
+      });
+
+    // 上拉加载更多评论
+    var lastScrollTop = 0; // 初始化上一次的滚动位置
+    $(window).scroll(function (e) {
+      if(isLoadingComment) return;
+
+      let scrollTop = $(this).scrollTop(),
+        scrollHeight = $(document).height(),
+        windowHeight = $(this).height(),
+        position = scrollTop + windowHeight,
+        st = $(this).scrollTop(); // 获取当前滚动位置
+
+      if (st > lastScrollTop) {
+        if (position >= scrollHeight - 10) {
+          if ($(".comment-more").is(":visible")) {
+            isLoadingComment = true;
+            getallComments(
+              $(".comment-more").closest(".comments-wrap").data("type")
+            );
+          }
+        }
+      }
+      lastScrollTop = st; // 更新上一次的滚动位置
+    });
+
+    // 评论框弹窗相关事件
+    let isAbleComment = true; // 限制重复评论
+    commonJs.autoHeight("#comment-textarea"); //输入框高度自适应
+    $(".comment-modal")
+      // 隐藏弹窗 影响安卓端按钮点击
+      // .on("touchstart", function (event) {
+      .on(clickOrTouch, function (event) {
+        // event.preventDefault();
+        event.stopPropagation();
+        if ($(event.target).hasClass("comment-modal")) {
+          $(this).fadeOut("fast");
+        }
+      })
+      // 提交评论-web端
+      .on(clickOrTouch, "button", function (event) {
+        event.preventDefault();
+        let self = this,
+          txt = $("#comment-textarea").val().trim();
+        if (txt.length <= 0) {
+          commonJs.toastMsg("最少输入一个字！");
+          return false;
+        }
+        if (!isAbleComment) {
+          return false;
+        }
+        isAbleComment = false;
+        let $curC = $(this).closest(".comment-modal"),
+          params = $.extend({}, comParams, {
+            appid: commonJs.webShareAppid,
+            comment: txt,
+          });
+        // 0-文章的评论  1-评论的回复
+        if ($curC.attr("data-m") == 1) {
+          params.parent_pk = $curC.attr("data-id");
+        }
+
+        commonJs.postRequest(
+          "https://interaction-api.gzstv.com/commen-web/comments/submit",
+          params,
+          function (res) {
+            $curC.fadeOut("fast");
+            $("#comment-textarea").val("");
+            commonJs.toastMsg("评论发送成功");
+            refreshComment("h5");
+          }
+        );
+      });
+
+    //实时检测输入框的输入字符个数
+    let $commentNum = $(".comment-modal").find(".t"),
+      $commentBtn = $(".comment-inp").find("button");
+    $("#comment-textarea").keyup(function () {
+      let len = $(this).val().length;
+      $commentNum.text(len);
+      if (len >= 1) {
+        $commentBtn.addClass("active");
+      } else {
+        $commentBtn.removeClass("active");
+      }
+    });
+
+    // 客户端：评论成功之后 刷新评论
+    window.commentSubmitCallback = function (res) {
+      // getNewestComments("showNewestComments");
+      refreshComment("app");
+
+      // 十周年活动弹窗控制
+      if ($(".year10").length > 0) {
+        $(".year10").hide();
+        activity10Pop("comment");
+      }
+    };
+
+    $("#comment-textarea").on("focus", () => {
+      setTimeout(() => {
+        // document.body.scrollTop = document.body.scrollHeight;
+        document.documentElement.scrollTop =
+          document.documentElement.scrollHeight - 100;
+        // window.scrollTo(0, document.body.scrollHeight - $('.comment-inp').height() - 100)
+        // document.documentElement.scrollTop=0;
+        // document.documentElement.scrollTop = window.visualViewport.height
+      }, 300);
+    });
+
+    document.body.addEventListener("focusin", () => {
+      //软键盘弹起事件
+      // console.log("键盘弹起");
+    });
+    document.body.addEventListener("focusout", () => {
+      //软键盘关闭事件
+      // console.log("键盘收起");
+    });
+  });
+</script>
+
+
+    <!-- 热门评论 -->
+    
+    <div class="comment" style="display: none;">
+      <h1 class="title">— 热门评论 —</h1>
+      <ul class="comment-list">
+      </ul>
+    </div>
+    
+
+    <!-- 返回顶部 -->
+    <div class="backTop">
+  <picture>
+    <source srcset="https://movement.gzstv.com/static/app/8.0/images/2025/top_icon.png"
+      media="(prefers-color-scheme: light)" />
+    <source srcset="https://movement.gzstv.com/static/app/8.0/images/2025/top_icon_black.png"
+      media="(prefers-color-scheme: dark)" />
+    <img class="logo no-filter" src="https://movement.gzstv.com/static/app/8.0/images/2025/top_icon.png" />
+  </picture>
+</div>
+
+<style>
+  .backTop {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 120px;
+    right: 8px;
+    cursor: pointer;
+    display: none;
+  }
+
+  .backTop img {
+    width: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* 暗黑模式 */
+  @media (prefers-color-scheme: dark) {
+    .backTop {
+      background: #242424;
+    }
+  }
+</style>
+
+<script>
+  $(function () {
+    // 判断页面是向上滚动还是向下滚动  向上：隐藏    向下：显示
+    var p1 = 0, t1 = 0,
+      screenH = window.innerHeight * 2,
+      $backTop = $(".backTop");
+    $(window).scroll(function (e) {
+      p1 = document.documentElement.scrollTop || document.body.scrollTop;
+      if (t1 > p1 || (t1 <= 0 && p1 <= 0)) {
+        if (p1 <= screenH) {
+          $backTop.fadeOut("slow");
+        }
+      } else {
+        if (p1 >= screenH) {
+          $backTop.fadeIn("fast");
+        }
+      }
+      setTimeout(function () { t1 = p1; }, 0);
+    });
+
+    $backTop.on("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  });
+</script>
+
+    <!-- 活动轮播图 -->
+    
+
+  </div>
+
+  <script type="text/javascript" src="https://movement.gzstv.com/static/app/8.0/js/article-detail-80.js?ver=2026-09-08"></script>
+
+  
+
+  <script type="text/javascript">
+
+    // 详情内的链接
+    $(document).on("click", ".app-redirect-link", function (event) {
+      event.preventDefault();
+
+      var $this = $(this);
+
+      function validURL(str) {
+        var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
+          '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+          '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+          '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+          '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+          '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+        return !!pattern.test(str);
+      }
+
+      // if (validURL($this.data("redirect_target"))) {
+      //   window.location.href = $this.data("redirect_target")
+      // } else {
+      //   window.location.href = "https://movement.gzstv.com/"
+      // }
+
+      var redirectType = $(this).attr("data-redirect_type");
+      var redirectUrl = "";
+      var id = "";
+      switch (redirectType) {
+        case "news.article"://文章
+          redirectUrl = "/news/detail/";
+          break;
+
+        case "news.specialnews"://专题
+          redirectUrl = "/news/sp/";
+          break;
+
+        // 音频 /sounds/audio/
+
+        case "streams.video"://视频
+          redirectUrl = "/streams/video/";
+          break;
+
+        case "streams.videolivestream"://视频直播
+          redirectUrl = "/streams/videolive/";
+          break;
+
+        case "streams.liveevent"://直播在线
+          redirectUrl = "/streams/live/";
+          break;
+
+        case "http"://普通链接
+          id = $(this).attr("data-redirect_target");
+          break;
+
+        case "youzan"://动静电商
+          id = $(this).attr("data-redirect_target");
+          break;
+
+        default:
+          break;
+      }
+
+      if (redirectType == "http" || redirectType == "youzan") {
+        window.location.href = id;
+      } else {
+        if ($(this).attr("data-hash_id") && $(this).attr("data-hash_id") != "undefined") {
+          id = $(this).attr("data-hash_id");
+        } else {
+          id = $(this).attr("data-redirect_target")
+        }
+        window.location.href = window.location.origin + redirectUrl + id;
+      }
+    });
+
+    window.onload = function () {
+      if ($('video')) {
+        $('video').attr('webkit-playsinline', 'true')
+        $('video').attr('playsinline', 'true')
+      }
+
+      // $("img.lazy").lazyload({
+      //   threshold: 100,
+      //   effect: "fadeIn"
+      // });
+
+      /* app article link */
+      $('a.app-article-link').each(function () {
+        $(this).attr('href', 'https://movement.gzstv.com/news/detail/' + $(this).data('article_id') + '/');
+      });
+    }
+
+    $(document).ready(function () {
+      // audio player
+      var loadCSS = function (href) {
+        var cssLink = $("<link>");
+        $("head").append(cssLink);
+        cssLink.attr({
+          rel: "stylesheet",
+          type: "text/css",
+          href: href
+        });
+      };
+
+      // audio player
+      $(".audio-player").DJHTMLAudio({
+        // "backgroundImage": "url(https://mstatic.gzstv.com/static/js/dj-audio/images/playerbg.png)"
+      });
+
+      let shareImageUrl = 'https://mstatic.gzstv.com/media/images/2023/12/28/PVBVzZRGm2US.png';
+      let timestamp = new Date().getTime();
+      commonJs.wxShare('国庆、中秋长假前七天 贵州累计接待游客超4700万人次', '国庆、中秋长假前七天 贵州累计接待游客超4700万人次', shareImageUrl);
+
+      // 大图查看
+      $("[data-fancybox]").fancybox({
+        loop: false, // 循环
+        buttons: ["thumbs", "close"], // 显示的工具栏按钮
+        // buttons: ["slideShow", "fullScreen", "thumbs", "close"],
+        clickContent: function (current, event) {},
+
+        // FancyBox 导致页面内容样式出错问题的解决
+        autoFocus: false,// 禁用自动CSS
+        hideScrollbar: false,// 防止FancyBox修改滚动条
+        baseClass: "my-fancybox"// 自定义类名避免冲突
+      });
+    });
+  </script>
+
+  <!-- 公用js：如 临时广告 -->
+  <script type="text/javascript" src="https://movement.gzstv.com/static/app/js/common-ad.js?ver=2026-09-08"></script>
+</body>
+
+</html>
