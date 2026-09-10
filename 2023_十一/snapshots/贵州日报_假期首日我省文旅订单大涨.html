@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>贵州日报</title>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/css.css">
+	<link rel="stylesheet" href="../../assets/css/search.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/li.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../../assets/css/calendar.css" />
+	<script src="../../assets/js/calendar.js"></script>
+	<script type="text/javascript">
+
+</script>
+</head>
+<body>
+    <div class="top">
+        <div class="container">
+            <img src="../../img/logo.png" />
+            <div class="wq-btn">
+				<a href="http://www.ddcpc.cn/" class="btn" target="_blank">当代先锋网</a>
+			    <a href="http://szbold.eyesnews.cn/" class="btn" target="_blank">旧版数字报刊</a>
+            </div>
+            <p class="text-right">
+			<span>贵州日报报刊社   贵州日报当代融媒体集团 出版</span>
+			<span>国内统一刊号：CN52-0013 代号65-1</span>
+			</p>
+        </div>
+    </div>
+		<!--<div style="text-align:center;">
+	<img src="../../img/gg_1.jpg" />
+	</div>-->
+    <div class="container">
+        <div class="center clearfix" style="">
+            <div class="left-btn">
+                <ul>
+                    <li>
+					<a class="r-btn btn-bg" id="candler"><i></i>日<br />历</a>
+					<div class="time-control" style="display:none;">
+									<div class="time-control-title text-center" >按日期查询</div>
+									<!--日历 begin-->
+									<div class="data_box" id="data_box" style="z-index:10000;">
+										<table cellspacing="0" cellpadding="0" style="background-color:#fff;width:213px;">
+											<tbody>
+												<tr>
+													<td>
+														<!--<img src="pre_year.gif" id="pre_y" onclick="changeY(-1);">-->
+														<span class="mr15 ft18 pointer" class="ft18" onclick="changeY(-1);">‹</span>
+														<!--<img id="pre_m" src="pre_month.gif">-->
+													</td>
+													<td>
+														<table cellspacing="0" cellpadding="0">
+															<tbody>
+																<tr>
+																	<td>
+																		<select id="year_box" onchange="changeDate();">
+																			<script type="text/javascript">
+																				yearList();
+																			</script>
+																	</td>
+																	<td align="center"><span class="ft18 ml15 pointer" onclick="changeY(1);">›</span></td>
+																	<td align="center"><span style="margin-right: 10px;" class="ft18 pointer" onclick="changeMn(-1);">‹</span></td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+													<td>
+														<table cellspacing="0" cellpadding="0">
+															<tbody>
+																<tr>
+																	<td>
+																		<select id="month_box" onchange="changeDate();">
+																			<script type="text/javascript">
+																				monthList();
+																			</script>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+													<td>
+														<span class="ft18 pointer" onClick="changeMn(1);">›</span>
+
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<table cellspacing="0" cellpadding="0" class="data_table" id="data_table">
+											<thead>
+												<tr>
+													<th>日</th>
+													<th>一</th>
+													<th>二</th>
+													<th>三</th>
+													<th>四</th>
+													<th>五</th>
+													<th>六</th>
+												</tr>
+											</thead>
+											<tbody>
+												<script type="text/javascript">
+													tdlist();
+													loadCalendar();
+												</script>
+											</tbody>
+										</table>
+									</div>
+									<!--日历 end-->
+								</div>
+					</li>
+                    <li><a href="#" class="t-btn btn-bg" id="goPrePeriod"><i></i>上<br />一<br />期</a></li>
+                    <li><a href="#" class="b-btn btn-bg" id="goNextPeriod">下<br />一<br />期<i></i></a></li>
+                </ul>
+            </div>
+            <div class="right-btn">
+			
+			<li><a class="f-btn" href="../../../layout/202309/30/node_02.html"><i></i>返<br />回</a></li>
+                <ul>
+                    <li><a href="../../../layout/202309/30/node_01.html" class="t-btn"><i></i>上<br />一<br />版</a></li>
+                    <li><a href="../../../layout/202309/30/node_03.html" class="b-btn">下<br />一<br />版<i></i></a></li>
+                </ul>
+
+            </div>
+            <div class="col-md-6" style="width:47%;">
+				<div class="search bar3">
+						 <div class="date">
+							
+								<div class="cb-text">
+								<span id="paperdate">2023年09月30日</span>
+								</div>
+
+						 </div>	
+						<!--<form action="http://10.1.1.42:8088/founder/SearchServlet.do" onsubmit="per_submit();" name="form1" method="post" target="_blank">
+							<input type="text" placeholder="请输入您要搜索的内容...">
+							<button type="submit"></button></form>-->
+							<form name="form1" id="f1" action="http://szbjs.eyesnews.cn/founder/SearchServlet.do" method="POST" style="margin:0px; padding:0px" target="_blank">
+	                         <input name="content" type="text" size="50" maxlength="50" placeholder="请输入您要搜索的内容..." class="searchText" style="height:42px;">
+	                         <button type="submit"></button>
+                             <input type="hidden" name="siteID" value="1">
+	                         <input type="hidden" name="paperID" value="1">
+                        </form>
+				</div>
+ 					<!--<form action="http://218.76.92.155:83/servlet/SearchServlet.do" onSubmit="per_submit();" name="form1" method="post" target="_blank">
+                        <div class="clearfix">
+							
+								<div class="cb-text">
+									<span id="paperdate">2023年09月30日</span>
+									<span style="margin:0;"><input type="text" name="contentKey" class="form-control" id="contentKey" placeholder=""></span>
+								</div>
+
+								<div class="cx-btn">
+									<a onClick="javascript:per_submit()"><img src="../../img/cx-btn.png" /></a>
+								</div>
+							</div>
+                    </form>-->
+				
+                <div class="newspaper-pic" style="position: relative;">
+                       <img class="preview" src="../../../pic/202309/30/2e63bc34-f2ac-4409-84d8-920a13f97dbc.jpg.1" usemap="#PagePicMap" > 
+						<MAP NAME="PagePicMap"><Area coords="377.3387488,109.0909125,377.3387488,59.790209999999995,24.743524,59.790209999999995,24.743524,109.0909125,24.743524,224.475525,377.3387488,224.475525" shape="polygon" href="content_105840.html"><Area coords="394.8654164,92.30769000000001,500.02539600000006,92.30769000000001,500.02539600000006,152.0979,394.8654164,152.0979" shape="polygon" href="content_105841.html"><Area coords="394.8654164,164.685315,500.02539600000006,164.685315,500.02539600000006,397.55244749999997,394.8654164,397.55244749999997" shape="polygon" href="content_105842.html"><Area coords="382.4936492,266.43357,20.6196016,266.43357,20.6196016,322.02797250000003,20.6196016,403.846155,382.4936492,403.846155" shape="polygon" href="content_105843.html"><Area coords="20.6196016,413.2867125,116.50076359999998,413.2867125,116.50076359999998,669.2307675,20.6196016,669.2307675" shape="polygon" href="content_105844.html"><Area coords="128.8725256,414.33566249999996,382.4936492,414.33566249999996,382.4936492,552.7972050000001,128.8725256,552.7972050000001" shape="polygon" href="content_105845.html"><Area coords="128.8725256,564.3356625,377.3387488,564.3356625,377.3387488,669.2307675,128.8725256,669.2307675" shape="polygon" href="content_105846.html"><Area coords="394.8654164,410.1398625,500.02539600000006,410.1398625,500.02539600000006,564.3356625,394.8654164,564.3356625" shape="polygon" href="content_105847.html"><Area coords="394.8654164,568.53147,498.99441279999996,568.53147,498.99441279999996,655.5944025,394.8654164,655.5944025" shape="polygon" href="content_105848.html"><Area coords="394.8654164,663.9860175,500.02539600000006,663.9860175,500.02539600000006,729.0209775,394.8654164,729.0209775" shape="polygon" href="content_105849.html"><Area coords="20.6196016,680.7692325,382.4936492,680.7692325,382.4936492,729.0209775,20.6196016,729.0209775" shape="polygon" href="content_105850.html"></MAP>
+						<div id="popupid" style="position:absolute;top:2.496px;left:221.55px;z-index:10;display:none;" class="popbox"></div>
+                </div>
+
+            </div>
+            <div class="col-md-6" style="width:53%; padding-right:0;">
+                <div class="ewm text-right">
+                    <span><img src="../../img/1.png" /></span>
+					<span><img src="../../img/2.png" /></span>
+					<span><img src="../../img/3.png" /></span>
+					<span><img src="../../img/4.png" /></span>
+                </div>
+                <div class="row mt40">
+				
+					<div class="detail" style="height: 700px;overflow-y: scroll;margin-right:20px;">
+                        <div class="detail-art">
+                            <div class="totalTitle">
+                                <h5 class="introtitle text-center" id="PreTitle"></h5>
+                                <h2 id="Title" class="art-title text-center">假期首日我省文旅订单大涨</h2>
+                                <h5 class="subtitle text-center" id="SubTitle"></h5>
+                            </div>
+
+                            <div class="attachment" align="center">
+                                <!--高级资源列表-->
+                            </div>
+                            <div id="ozoom" style="zoom:100%;" class="content">
+						<founder-content>
+							<!--enpcontent--><p>     本报讯（记者 曹雯）中国旅游研究院院长戴斌此前在接受采访时预计：“中秋国庆假期，全国会有9亿左右的人出游。”携程数据显示，9月29日目的地为贵阳的旅游订单量同比增长1611%，其中跨省订单占比近8成。</p><p>    据了解，双节期间，贵阳市举办各类活动共64场，从青云市集的“市集音乐节”到青岩古镇的“大明志·万国来朝”沉浸式体验，再到天河潭景区的吃月饼大赛，处处都洋溢着喜庆祥和的气氛。</p><p>    在黔东南施秉，不少游客在漂流、登高之余，前往花漾河畔享受一个午后的山野疗愈。游客们或化身山中精灵，参加彩虹面具舞会；或游走在玫瑰迷宫里，通过研学游戏了解植物养护知识。游客沈代菲告诉记者，“平时工作忙，今天来这里亲子同乐，以鲜花、落叶及松果为素材制作面具，感受到了很多与大自然的连接，小朋友都玩得不想回家了。”</p><p>    而此前一日，“月亮山户外运动大会之加榜梯田三项赛”鸣枪开跑，300余名户外运动爱好者沿着赛道奔跑，领略山地风光。“层层叠叠的金色梯田，点缀其间的古朴村寨，感觉行在画中，人与稻田，相映成趣。”来自广州的资深跑者小刘说，未来几天自己还将到贵州各地深度体验。</p><p>    线下节庆活动如火如荼，线上与贵州相关的旅游直播、旅游演艺也吸睛无数。多次造访贵州的旅行博主房琪带着网友沉浸式感受黔东南州多个宝藏目的地，感受远离都市的乡间静谧生活。飞猪联合房琪定制的线路产品“奇趣贵州罗甸白岩村侗寨6天5晚4人精品团”“奇趣贵州罗甸白岩村侗寨6天5晚12人轻奢小包团”销售火爆。</p><p>    据携程数据分析，今年中秋、国庆假期，省外游客预定的贵州旅游产品依旧集中在黄果树一日游、荔波小七孔一日游、“黄果树、梵净山、荔波小七孔、西江千户苗寨、镇远”6日5晚跟团游这些主要精华路线。入黔游客的年龄特点，愈发倾向年轻化。其中，“90后”占比39%，“00后”占比26%，“80后”占比24%，“70后”占比9%。 </p><!--/enpcontent--><!--enpproperty <date>2023-09-30 00:00:00:0</date><author></author><subtitle></subtitle><introtitle></introtitle><keyword></keyword><paperarticleid>105842</paperarticleid><channel>1</channel><nodeid>0</nodeid><nodename></nodename><url>http://szb.eyesnews.cn/pc/cont/202309/30/content_105842.html</url><urlpad>http://szb.eyesnews.cn/pad/cont/202309/30/content_105842.html</urlpad><siteid>1</siteid><paperid>1</paperid><title>假期首日我省文旅订单大涨</title>/enpproperty-->
+						</founder-content>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+		
+		
+        <div class="footer">
+            <p>Copyright 贵州日报数字报刊<span>|</span>所有内容为 贵州日报报刊社 版权所有.未经授权不得复制转载或建立镜像</p>
+			<p>为了更好的体验,请使用极速模式或谷歌浏览器浏览</p>
+        </div>
+    </div>
+	
+	
+	
+	<script>
+	
+		$("#candler").click(function(){
+		     //alert(1111)
+			 $(".time-control").toggle();
+		});
+	</script>	
+	<script src="../../assets/js/index.js" type="text/javascript" charset="utf-8"></script>
+
+	<table style="display:none;">
+<tr><td>-->
+
+<!--enpproperty
+<error><!--#include bot=INFOYEAR para="" --><!--enpend --></error>
+<date>2023-09-30</date>
+<author></author>
+<subtitle></subtitle>
+<introtitle></introtitle>
+<keyword></keyword>
+<id>1</id>
+<nodeid>1</nodeid>
+<nodename>贵州日报</nodename>
+<url>content_105842.html</url>
+<siteid>1</siteid>
+<title>假期首日我省文旅订单大涨</title> 
+/enpproperty-->
+</td></tr>
+</table>
+
+<div id="titleList" style="display:none;">	
+
+content_105840.html-新征程上，我们的前途一片光明,
+content_105841.html-政务简报,
+content_105842.html-假期首日我省文旅订单大涨,
+content_105843.html-[新时代 新征程 新伟业]推动转型发展、可持续发展、高质量发展 奋力开创“千年丹都·转型之城”现代化建设新未来,
+content_105844.html-[一线调研·驻村故事]干好直播“新农活” 一起迈上致富路,
+content_105845.html-纪录片《万桥飞架——山水间的人类奇迹》好评不断,
+content_105846.html-古村落 写生热,
+content_105847.html-高标准农田 稳粮增收有保障,
+content_105848.html-刺梨产业链 多点开花好态势,
+content_105849.html-[节日我在岗]保障双节供电安全 全力守护万家灯火,
+content_105850.html-贵阳市场货丰量足供需两旺,
+
+</div>
+</body>
+<script>
+    var words = $("#titleList").text().split(",").slice(0,-1);
+    String.prototype.replaceAll = function(s1,s2){ 
+         return this.replace(new RegExp(s1,"gm"),s2); 
+    }
+    String.prototype.trim=function() {
+        return this.replace(/(^\s*)|(\s*$)/g,'');
+    }
+	$('.newspaper-pic area').hover(function(e){
+		var url = $(this).attr("href");
+		var coords = $(this).attr("coords");
+		var coordsArr = coords.split(",");
+		for(var i = 0; i < words.length; i++){
+            var listItem = words[i].split("-")[0];
+            listItem =listItem.replaceAll('\n','');
+            listItem =listItem.replaceAll('\r','');
+            listItem = listItem.trim();
+            if(url==listItem){
+                var title = words[i].split("-")[1];
+                console.log(title)
+                $('#popupid').text(title);
+                console.log("left:"+coordsArr[6]+"px","top:"+coordsArr[7]+"px")
+                $('#popupid').css({"left":coordsArr[6]+"px","top":coordsArr[7]+"px"});
+            }
+		}
+		
+		$('#popupid').show();
+	}, function(){
+	    $('#popupid').hide();
+	});
+	
+	</script>
+</html>
