@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <title>半岛新闻</title>
+    <meta name="description" content="鼓舞大众 团结大众 服务大众">
+    <link rel="stylesheet" href="css/style.css?v=1.3" />
+    <style>
+        video{
+            margin: 0 0 0 0;
+            width: 100%;
+        }
+        .broadcast_p{
+            position: relative;
+        }
+        .broadcast_button{
+            display: none;
+            position: absolute;
+            height: 6.266666666vw;
+            width: 21.333333333vw;
+            border-radius: 3.2vw;
+            max-width: 160px;
+            max-height: 47px;
+            border: 1px solid rgba(234,68,55,1);
+            color: rgba(234,68,55,1);
+            font-size: 3.2vw;
+            text-align: center;
+            background: none;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            outline: none;
+        }
+        .broadcast_button > img{
+            height: 2.4vw;
+            width: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: -3px;
+            margin-right: 1vw;
+        }
+        .name_area{
+            color: #848E98;
+            font-size: 15px;
+        }
+       .share_content video {
+			max-height: 100%;
+            object-fit:fill;
+        }
+        @media only screen and (min-width: 751px) {
+            .broadcast_button{
+                font-size: 12px;
+                width: 80px;
+                height: 30px;
+            }
+            .broadcast_button > img{
+                height: 12px;
+                margin-right: 6px;
+            }
+        }
+		.outerdiv {
+			position:fixed;
+			top:0;
+			left:0;
+			background:rgba(0,0,0,0.7);
+			z-index: 2;
+			width: 100%;
+			height: 100%;
+			overflow-y: auto;
+		}
+		.outerdiv-hight {
+			display: flex !important;
+			align-items: center;
+		}
+		.pinch-zoom-container {
+			overflow: visible !important;
+			text-align: center;
+			width: 100%;
+		}
+		.pinch-zoom{
+			background-color: #fff;
+		}
+        .bg-music{
+            display: none;
+            background-color: #000;
+            width: 6vw;
+            height: 6vw;
+            border-radius: 3vw;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            outline: none;
+            border: none;
+            max-width: 36px;
+            max-height: 36px;
+        }
+        .music-play{
+            animation: reverseRotata 3.5s linear infinite;
+        }  
+        @keyframes reverseRotata{
+            0%{transform: translateY(-50%) rotateZ(0deg);}
+            100%{transform: translateY(-50%) rotateZ(-360deg);}
+        }      
+    </style>
+    <script src="../common/js/jquery.js"></script>
+    <script type="text/javascript" src="../common/js/jweixin-1.6.0.js"></script>
+    <script type="text/javascript" src="../common/js/dingtalk.js"></script>
+    <script type="text/javascript" src="../common/js/util.js?v=1.1"></script>
+    <script type="text/javascript" src="../common/js/request.js"></script>
+    <script type="text/javascript" src="../common/js/share.js"></script>
+    <script type="text/javascript" src="./js/util.js"></script>
+	<script src="../common/js/pinchzoom.js"></script>
+    <script>
+        webLinkHostNameReplace('publisher', 'news')
+    </script>
+</head>
+
+<body class="bg">
+    <!-- 背景音乐 -->
+    <audio id="bgSound" src="" loop> </audio>
+
+    <div class="wxshare_mask">
+        <img src="img/fenxiang.png" />
+    </div>
+    <div class="botton_open_app">
+        <button class="openapp_btn open_app_click">&nbsp;&nbsp;&nbsp;&nbsp;</button>
+    </div>
+    <div id="advTop" class="advert_area" style="display: none;">
+        <img src="" />
+        <div class="advert_area_bottom">
+            <b>广告</b>
+            <span></span>
+            <i class="close_adv"></i>
+        </div>
+    </div>
+    <div class="container" id="article">
+        <div class="t">
+            <h5></h5>
+            <p class="broadcast_p news-source">
+                <span class="re">半岛新闻</span>
+                <span id='time_day'></span>
+                <button class="broadcast_button" id="broadcastButton"><img src="img/play.png" />语音播报</button>
+                <audio id="broadcastAudio"></audio>
+                <span class="bg-music" id="bgMusicBtn">
+                    <img src="img/mcbg.png"/>
+                </span>
+            </p>
+        </div>
+        <div class="c share_content" id="news_content">
+            <p></p>
+            <p>
+                <img src="">
+            </p>
+            <p></p>
+        </div>
+        <!-- <div class="openapp_area">
+            <div class="openapp_area_mask"></div>
+            <a class="open_app_click">打开半岛新闻，查看更多精彩内容</a>
+        </div> -->
+    </div>
+    <div id="advBottom" class="advert_area" style="display: none;">
+        <img src="" />
+        <div class="advert_area_bottom">
+            <b>广告</b>
+            <span></span>
+            <i class="close_adv"></i>
+        </div>
+    </div>
+    <div class="container comment_cell">
+        <div class="l-t text-center">
+            <img class="like_image" src="img/remenpinglun.png" />
+        </div>
+        <!-- <div class="null-comment">暂无评论</div> -->
+        <div class="comment_list" id="commentInner">
+            
+        </div>
+        <div class="comment_more">
+            <button class="open_app_click">更多评论请打开半岛新闻APP观看</button>
+        </div>
+    </div>
+    <div class="container" id="like">
+
+        <div class="l-t text-center">
+            <img class="like_image" src="img/cainixihuan.png" />
+        </div>
+
+        <div class="l-l p-t">
+            <ul id='love' style="margin-bottom:24px;">
+            </ul>
+        </div>
+    </div>
+	<div id="outerdiv" class="outerdiv" style="display: none;">
+		<div class="pinch-zoom" id="test" data-scale="1">
+			<img id="bigimg" />
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+    var isMobile = isMobile()
+    if (!isMobile) {
+        $("body.bg").css("background","none")
+        $(".botton_open_app,.open_app_click").hide()
+    }else{
+        $("body.bg").css("padding-bottom", "15px")
+    }
+
+    // 隐藏分享按钮，获取信息后放出
+    hideShareMenu()
+
+    // 遮罩相关
+    maskRelation()
+
+    // 打开app
+    function initAppData(id) {
+        let info = {
+            newsId: id,
+            type: 1
+        }
+        var this_str = JSON.stringify(info);
+        var android_href = `com.bandaorongmeiti.news://splash?newsDetail=${this_str}`
+        var ios_href = `BandaoAPP://bandaoapp.bd.com/${this_str}`
+        openApp(android_href, ios_href)
+    }
+    
+    // 背景音乐按钮点击事件
+    $('.bg-music').click(function(){
+        let music = $("#bgSound")[0];
+        if(music.paused){
+            music.play();
+            $('.bg-music').attr('class','bg-music music-play');
+        }else{
+            music.pause();
+            $('.bg-music').attr('class','bg-music');
+        }
+    })
+    // 息屏或退出停止音乐
+    document.addEventListener("visibilitychange", () => {
+        let music = document.getElementById('bgSound');
+        // 和锚点的关键字冲突了，必须用jQuery，不能用$
+        if(jQuery('.bg-music').length){
+            if (document.hidden) {
+                music.pause()
+            } else {
+                setTimeout(() => {
+                    music.play()
+                }, 500)
+            }
+        }
+    });
+    // 自动播放
+    function bgMusicPlay() {
+        let music = document.getElementById('bgSound')
+        music.play()
+        $('.bg-music').attr('class','bg-music music-play');
+    }
+
+    var href = window.location.href;
+    if (href.indexOf('from') != -1 || href.indexOf('isappinstalled') != -1) {
+        window.history.replaceState(null, null, window.location.href.split('&')[0]);
+    }
+
+    // 获取详情
+    var newsId = recieveParamFromLink();
+    var params = {
+        "newsId": newsId,
+        "shareSource": fromEnv()
+    };
+    requestPost({
+        url: '/h5/news/newsDetail',
+        params: params,
+        success: function(data) {
+            if (data.code == 404 || data.message == "不存在的内容" || !data.result) {
+                create404()
+                return;
+            }
+            var res = data.result;
+            initAppData(res.newsId)
+            
+            $('.re').html(res.source);
+            $('#time_day').html(formatDate(new Date(res.time)));
+            $('h5').html(res.title);
+            document.title = res.title;
+            // 背景音乐>语音播报
+            if(res.bgMusic){
+                $('.bg-music').show()
+                document.getElementById("bgSound").src = res.bgMusic;
+                if(isWeiXin()){
+                    wx.ready(function(){
+                        bgMusicPlay()
+                    })
+                }else{
+                    bgMusicPlay()
+                }
+                //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+                // 安卓微信浏览器，safari浏览器
+                document.addEventListener('touchstart', function () {
+                    bgMusicPlay()
+                });
+                $("#broadcastButton").remove();
+                $("#broadcastAudio").remove();
+            }else if (!res.audioList) {
+                $("#bgMusicBtn").remove();
+                $("#broadcastButton").remove();
+                $("#broadcastAudio").remove();
+            }else {
+                $("#bgMusicBtn").remove();
+                $("#broadcastAudio").attr("src",res.audioList[0])
+                var audio_f = $("#broadcastAudio")[0],
+                    audio_length = res.audioList.length,
+                    audio_num = 0;
+                $("#broadcastButton").show();
+                if (!audio_f.paused) {
+                    audio_f.pause();
+                }
+                audio_f.addEventListener('ended', function () {
+                    audio_num++;
+                    if(audio_num < audio_length){
+                        $("#broadcastAudio").attr("src",res.audioList[audio_num]);
+                        audio_f.play();
+                    } else {
+                        audio_num = 0
+                        $("#broadcastAudio").attr("src",res.audioList[audio_num]);
+                        audio_f.pause();
+                        $("#broadcastButton").html('<img src="img/play.png" />语音播报')
+                    }
+                }, false);
+                $("#broadcastButton").click(function(){
+                    if (!audio_f.paused) {
+                        $("#broadcastButton").html('<img src="img/play.png" />语音播报')
+                        audio_f.pause();
+                    } else {
+                        $("#broadcastButton").html('<img src="img/zanting.png" />播放中...')
+                        audio_f.play();
+                    }
+                })
+            }
+            
+            var auditorName = "";
+            if (!!res.personnelDescriptionList && res.personnelDescriptionList.length > 0) {
+                for (var i = 0; i < res.personnelDescriptionList.length; i++) {
+                    var element = res.personnelDescriptionList[i];
+                    auditorName += '<p style="margin-bottom: 3px;">' +  element + '</p>';
+                }
+            }
+
+            var name_area = document.createElement('div');
+            name_area.className = "name_area";
+            $(name_area).html(auditorName);
+			res.boby = res.boby.replace(/preload="none"/g,'preload="auto"')
+				.replace(/width="420"/g,'width="100%"')
+				.replace(/height="280"/g,'height="auto"');
+            $('#news_content').html(res.boby).append(name_area);
+            var videoArr = $('#news_content').find("video");
+            for (var i = 0; i < videoArr.length; i++) {
+                var videoItem = videoArr[i];
+                var oldSrc = $(videoItem).attr("src")
+                let poster = $(videoItem).attr("poster");
+                !poster && $(videoItem).attr("poster", oldSrc + "?x-oss-process=video/snapshot,t_1000,f_jpg,ar_auto");
+                $(videoItem).attr("controlsList","nodownload");
+                $(videoItem).css('object-fit','contain')
+            }
+			var imageArr = $('#news_content').find("img");
+			for(var i=0;i<imageArr.length;i++){
+				var imgItem = imageArr[i]
+			    imgItem.onclick=function(){
+			        openImage(this.src,"#outerdiv", "#innerdiv", "#bigimg");
+			    }
+			}
+            
+            wx_getshareinfo({
+                title: res.title,
+                desc: res.share_content,
+                link: window.location.href,
+                imgUrl: res.share_icon,
+                success: function(res) {}
+            });
+            setDingDingShareInfo({
+                type: 0,
+                url: window.location.href,
+                content: res.share_content,
+                title: res.title,
+                image: res.share_icon,
+                onSuccess: function () {},
+                onFail: function (err) { }
+            });
+
+            getComment(isMobile, {
+                newsId: res.newsId,
+                page: 1,
+                limit: 10
+            })
+            
+            // 广告展示
+            if (!!res.advertList && res.advertList.length > 0) {
+                $(".advert_area").on("click","img",function(){
+                    var thisLink = $(this).attr("data-link"),
+                        newsId = $(this).attr("data-newsid"),
+                        type = Number($(this).attr("data-type"));
+                    switch (type) {
+                        case 0:
+                            window.location.href = "./tuwen.html?newsId="+newsId;
+                            break;
+                        case 1:
+                            window.location.href = "./tuwen.html?newsId="+newsId;
+                            break;
+                        case 2:
+                            window.location.href = "./picture.html?newsId="+newsId;
+                            break;
+                        case 3:
+                            window.location.href = "./video.html?newsId="+newsId;
+                            break;
+                        case 4:
+                            window.location.href = "./video.html?newsId="+newsId;
+                            break;
+                        case 5:
+                            window.location.href = "./video.html?newsId="+newsId;
+                            break;
+                        case 6:
+                            window.location.href = "./video.html?newsId="+newsId;
+                            break;
+                        case 7:
+                            window.location.href = "./video.html?newsId="+newsId;
+                            break;
+                        case 8:
+                            window.location.href = "./live.html?newsId="+newsId;
+                            break;
+                        case 9:
+                            window.location.href = "./live.html?newsId="+newsId;
+                            break;
+                        case 10:
+                            window.location.href = "./zhuanti.html?newsId="+newsId;
+                            break;
+                        case 16:
+                            window.location.href = "./smallvideo.html?newsId="+newsId;
+                            break;
+                        default:
+                            if(thisLink) {
+                                window.location.href = thisLink;
+                            }
+                            break;
+                    }
+                });
+                var topAdvList = [],
+                    bottomAdvList = [];
+                $(".close_adv").click(function(){
+                    var thisClose = $(this).attr("data-close");
+                    if (thisClose == 0) {
+                        var topSort = Number($(this).attr("data-sort")) + 1;
+                        if (topSort < topAdvList.length) {
+                            $("#advTop").children("img").attr({"src": topAdvList[topSort].thumb, "data-link": topAdvList[topSort].gotoUrl, "data-newsid": topAdvList[topSort].newsId, "data-type": topAdvList[topSort].newsType});
+                            $("#advTop").children(".advert_area_bottom").children("span").html(topAdvList[topSort].newsSource).siblings(".close_adv").attr({"data-close": 0, "data-sort": topSort});
+                            $("#advTop").show();
+                        } else {
+                            $(this).parent().parent().remove();
+                        }
+                    } else if (thisClose == 1) {
+                        var bottomSort = Number($(this).attr("data-sort")) + 1;
+                        if (bottomSort < bottomAdvList.length) {
+                            $("#advBottom").children("img").attr({"src": bottomAdvList[bottomSort].thumb, "data-link": bottomAdvList[bottomSort].gotoUrl, "data-newsid": bottomAdvList[bottomSort].newsId, "data-type": bottomAdvList[bottomSort].newsType});
+                            $("#advBottom").children(".advert_area_bottom").children("span").html(bottomAdvList[bottomSort].newsSource).siblings(".close_adv").attr({"data-close": 1, "data-sort": bottomSort});
+                            $("#advBottom").show();
+                        } else {
+                            $(this).parent().parent().remove();
+                            $("#article").css("margin-bottom","1rem");
+                        }
+                    }
+                });
+                for (var i = 0; i < res.advertList.length; i++) {
+                    var item = res.advertList[i];
+                    if (item.showPosition == 1) {
+                        topAdvList.push(item);
+                    } else if(item.showPosition == 2){
+                        bottomAdvList.push(item);
+                    }
+                }
+                if (topAdvList.length > 0) {
+                    $("#advTop").children("img").attr({"src": topAdvList[0].thumb, "data-link": topAdvList[0].gotoUrl, "data-newsid": topAdvList[0].newsId, "data-type": topAdvList[0].newsType});
+                    $("#advTop").children(".advert_area_bottom").children("span").html(topAdvList[0].newsSource).siblings(".close_adv").attr({"data-close": 0, "data-sort": 0});
+                    $("#advTop").show();
+                }
+                if (bottomAdvList.length > 0) {
+                    $("#advBottom").children("img").attr({"src": bottomAdvList[0].thumb, "data-link": bottomAdvList[0].gotoUrl, "data-newsid": bottomAdvList[0].newsId, "data-type": bottomAdvList[0].newsType});
+                    $("#advBottom").children(".advert_area_bottom").children("span").html(bottomAdvList[0].newsSource).siblings(".close_adv").attr({"data-close": 1, "data-sort": 0});
+                    $("#advBottom").show();
+                    $("#article").css("margin-bottom",0);
+                }
+            }
+            
+            guessNewsLike(isMobile, {
+                newsTitle: res.title,
+                newsId: res.newsId,
+                page: 1
+            }, 'common', res)
+
+        },
+        fail: function(){
+            setTimeout(function(){
+                create404()
+            },2000)
+        }
+    })
+	
+    // 图片缩放相关
+    var pinchzoom;
+	function openImage(src,outerdiv,innerdiv,bigimg){
+		console.log(src)
+		pinchzoom.offset.x = 0;
+		pinchzoom.offset.y = 0;
+		pinchzoom.zoomFactor = 1;
+		$(".bg").css("overflow","hidden")
+		$(bigimg).attr("src", src);
+		/*获取当前点击图片的真实大小，并显示弹出层及大图*/
+        $("<img/>").attr("src", src).on('load', function(){
+            $(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimgvar windowW = $(window).width();//获取当前窗口宽度
+            var windowH = $(window).height();//获取当前窗口高度 
+            var realWidth = this.width;//获取图片真实宽度 
+            var realHeight = this.height;//获取图片真实高度 
+            console.log(windowH,realHeight,this)
+            if(realHeight/2 > windowH){
+                console.log('大')
+                $("#outerdiv").removeClass("outerdiv-hight")
+                setTimeout(()=>{
+                    $("#outerdiv").scrollTop(0);
+                },200)
+            }else {
+                console.log('小')
+                $("#outerdiv").addClass("outerdiv-hight") 
+            }
+        })
+	};
+	//点击遮罩层
+	$(outerdiv).click(function(){//再次点击淡出消失弹出层 
+	  $(this).fadeOut("fast");
+	  $(".bg").css("overflow","visible")
+	  pinchzoom.offset.x = 0;
+	  pinchzoom.offset.y = 0;
+	  pinchzoom.zoomFactor = 1;
+	  setTimeout(()=>{
+		$("#outerdiv").removeClass("outerdiv-hight")  
+	  },200)
+	}); 
+    $('div.pinch-zoom').each(function () {
+		pinchzoom = new RTP.PinchZoom($(this), {});
+	});  
+</script>
+
+</html>
