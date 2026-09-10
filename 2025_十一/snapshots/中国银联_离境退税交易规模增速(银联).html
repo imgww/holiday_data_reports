@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+                            银联新闻 |
+             中国银联
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="renderer" content="webkit" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+        <meta http-equiv="Access-Control-Allow-Origin" conent="*" />
+        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0">
+        <meta name="Keywords" Content="银联新闻,银联报道,银联媒体报道,银联热门新闻" />
+        <meta name="Description" Content="关注最新资讯，洞察行业态势，了解银联动态。" />
+        <!--css-->
+        <link rel="stylesheet" href="../../../cn/resources/css/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../cn/resources/css/style.css?v=$!staticVersion">
+
+        <!--js-->
+        <script type="text/javascript" src="../../../cn/resources/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../../../cn/resources/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../../cn/resources/js/plugins/slider/slider.js?v=$!staticVersion"></script>
+        <script type="text/javascript" src="../../../cn/resources/js/plugins/jquery/jquery.tmpl.min.js?v=$!staticVersion"></script>
+		<script type="text/javascript"> var baiduHmt = true;</script>
+        <script type="text/javascript" src="../../../cn/resources/js/upow-tools.js"></script>
+        <script type="text/javascript">
+            var webRoot = '../../../cn';
+            var noWebsiteRoot = '../../../';
+        </script>
+
+    </head>
+    <body class="IESupport">
+		<script> var hrefShow = 1;</script>
+
+
+    <div id="Components-header"></div>
+
+<link rel="stylesheet" href="../../../cn/templates/newsList-01017/newsList-01017.css">
+
+<div class="page-content newsList-page">
+    <div class="page-container">
+        <div class="background" free="PIC11" style="background:#f2f2f2 url(../../../cn/templates/material/9ed2b7ea4873410186ae96112fccfc7d/1576079286231.jpg) no-repeat center center;background-size:cover;">
+            <div class="title">
+                <h1 free="WRD11">银联新闻</h1>
+            </div>
+            <div class="word">
+                <p free="WRD12">关注最新资讯，洞察行业态势，了解银联动态</p>
+            </div>
+        </div>
+        <div class="head-title">
+            <div class="title-content" id="nav-list">
+            </div>
+        </div>
+        <div class="wrapper">
+            <!-- 左侧内容 -->
+            <div class="content_left">
+                <div class="news-con-list">
+                    <ul id="newsList-con">
+                    </ul>
+                </div>
+            </div>
+            <!-- 左侧内容 -->
+            <!-- 右侧内容 -->
+            <div class="content_right" id="hotNews">
+            </div>
+            <!-- 右侧内容 -->
+            <div class="clearBoth"></div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .hot-news{padding-top: 20px;}
+    .hot-news li{position: relative;overflow: hidden;margin-bottom: 20px;}
+    .hot-news li a{display: block;}
+    .hot-news .hot-news-number{float: left;color: #DD2C34;width: 10%;}
+    .hot-news .hot-news-title{float: right;color: #222222;width:85%;}
+</style>
+<script id="tmpl-hot-news" type="text/x-jquery-tmpl">
+    <div class="box-style-1">
+        <div class="box-wrapper">
+            <div class="box-title">本月热门新闻</div>
+            <div class="line-style-1"></div>
+            <div class="box-body" id="hotNews">
+                <ul class="hot-news">
+                 {{if hotNewsList && hotNewsList.length>0}}
+                 {{each(i,item) hotNewsList}}
+                    <li>
+						                        <a href="../../../{{= item.url}}" {{if item.isOut==1}}target="_blank"{{/if}}>
+                            <div class="hot-news-number">0{{= i + 1}}</div>
+                            <div class="hot-news-title">{{= item.title }}</div>
+                        </a>
+                    </li>
+                 {{/each}}
+                 {{/if}}
+                </ul>
+            </div>
+        </div>
+    </div>
+	
+</script>
+
+<div class="floater">
+    <ul class="floater-ul-2">
+
+        <li class="cust-2" id="toTop">
+            <a href="#">
+            </a>
+        </li>
+    </ul>
+</div>
+<style>
+    /*分页样式*/
+    .page {
+        padding: 0;
+    }
+
+    .page-bg {
+        text-align: center;
+        margin:40px 0 0 0;
+    }
+
+    .page-bg .page-tit {
+        display: inline-block;
+        *zoom: 1;
+        *display: inline;
+        width: auto;
+        line-height: 32px;
+        padding-right: 5px;
+    }
+
+    .page-bg .page-img {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        *zoom: 1;
+        *display: inline;
+        background: url(../../../cn/resources/images/page/page_new_bg.png) no-repeat;
+        background-position: 0 0;
+        vertical-align: sub;
+        *vertical-align: middle;
+    }
+
+    .page-bg .page-img.prev {
+        margin: 3px 0 0;
+        background-position: -48px 0;
+    }
+
+    .page-bg .page-img.next {
+        margin: 0 0 0 3px;
+    }
+
+    .page-bg a {
+        display: inline-block;
+        line-height: 30px;
+        margin-left: 10px;
+        min-width: 30px;
+        border-radius: 4px;
+        text-align: center;
+        background: #F6F6F6;
+        font-size: 16px;
+        color: #222222;
+        letter-spacing: 0.5px;
+    }
+
+    .page-bg a.step-f {
+        width: 64px;
+        height: 30px;
+    }
+
+    .page-bg a.step-hover,
+    .page-bg .step-a:hover,
+    .page-bg a.step-f.on:hover {
+        background: #DD2C34;
+        color: #fff;
+    }
+
+    .page-bg .step-a:active,
+    .page-bg a.step-f.on:active {
+        background: #DD2C34;
+        border: 1px solid #DD2C34;
+        color: #fff;
+    }
+
+    .page-bg a.step-f.on:hover .page-img.prev {
+        background-position: -80px 0;
+    }
+
+    .page-bg a.step-f.on:hover .page-img.next {
+        background-position: -32px 0;
+    }
+
+    .page-bg .invaild {
+        color: #d5d5d5;
+    }
+
+    .page-bg .invaild .page-img.prev {
+        background-position: -64px 0;
+    }
+
+    .page-bg .invaild .page-img.next {
+        background-position: -16px 0;
+    }
+
+    .page-bg .page-go {
+        display: inline-block;
+        *zoom: 1;
+        *display: inline;
+        width: auto;
+        line-height: 32px;
+        margin-left: 15px;
+    }
+
+    .page-bg .page-go input {
+        width: 48px;
+        height: 32px;
+        line-height: 32px;
+        margin: 0 8px;
+        background: #FFFFFF;
+        border: 1px solid #D9D9D9;
+        border-radius: 4px;
+        text-align: center;
+        padding:0;
+        *vertical-align:middle;
+    }
+    .page-bg .device-pc{display: inline-block;}
+    .page-bg .position-control-a{display: inline-block;}
+    .page-bg .position-control-b{display: inline-block;}
+    .page-bg .page-go input:hover, .page-bg .page-go input:focus {border: 1px solid #4C80FF;}
+    .page-bg .page-go input:active {border: 1px solid #4C80FF;}
+    .page-bg .device-mobile{display: none;}
+    @media (max-width: 760px){
+        .page-bg {margin:30px 0 0 0;}
+        .page-bg .device-pc{display:none;}
+        .page-bg a.step-f {width: 100px;height: 30px;}
+        .page-bg a {margin:0;line-height: 30px;text-align: center;background: #FFFFFF;font-size: 13px;color: #DD2C34;letter-spacing: 1px;border: 1px solid #DD2C34;border-radius: 16px}
+        .page-bg .invaild { background-color: #ffffff;color: #222222;border: 1px solid #e5e5e5;}
+        .page-bg .position-control-a{float:left;}
+        .page-bg .position-control-b{float:right;}
+        .page-bg .position-control-c{display: inline-block;width: 100px;margin: 0 auto;}
+    }
+</style>
+<script id="tmpl-page-style-1" type="x-jquery-tmpl">
+{{if pageModel.pageNo > 0}}
+    <div class="page" style="text-decoration: none;" id="pageBlock">
+        <div class="page-bg">
+            <div class="device-pc">
+            <a href="{{= pageModel.url + 'page=1'}}" class="step-f on o-65 ">首页</a>
+            </div>
+            <div class="position-control-a device-pc">
+                {{if pageModel.page>1}}
+                    <a href="{{= pageModel.url + 'page='+ pageModel.lastNo}}" class="step-f on o-65">
+                        上一页</a>
+                {{else}}
+                    <a href="javascript:void(0);" class="step-f invaild o-25">
+                        上一页</a>
+                {{/if}}
+             </div>
+             <div class="device-pc">
+                {{each(i,noPage) pageNumList}}
+                    <a href="{{= pageModel.url + 'page='+noPage.num}}"
+                        {{if pageModel.page == noPage.num}}
+                            class="step-a step-hover o-65"
+                        {{else}}
+                            class="step-a step o-65"
+                        {{/if}}
+                      >{{= noPage.num}}</a>
+                 {{/each}}
+             </div>
+             <div class="position-control-c device-mobile">
+                  <a href="javascript:loadMoreInfo();" class="step-f on o-65">查看更多
+                    </a>
+             </div>
+             <div class="position-control-b device-pc">
+                {{if pageModel.page < pageModel.pageNo}}
+                    <a href="{{= pageModel.url + 'page='+ pageModel.nextNo}}" class="step-f on o-65">下一页
+                    </a>
+                {{else}}
+                    <a href="javascript:void(0);" class="step-f invaild o-25">下一页
+                    </a>
+                {{/if}}
+             </div>
+             <div class="device-pc">
+             <a href="{{= pageModel.url + 'page='+ pageModel.endPgNo}}" class="step-f on o-65 device-pc">末页</a>
+             </div>
+        </div>
+    </div>
+{{/if}}
+</script>
+<script type="text/javascript">
+    $(function () {
+
+    })
+    function pageInit(data,targetId) {
+        // 页码信息
+        var pageNumList = [];
+		var page = data.pageModel.page;
+		var totalPg = data.pageModel.endPgNo;
+        var beginPg = page>totalPg-2?totalPg-4:page-2;
+        var endPg = page<3?5:page+2;
+		beginPg = beginPg>1?beginPg:1;
+		endPg = endPg>data.pageModel.endPgNo?data.pageModel.endPgNo:endPg;
+        for(var i=beginPg;i<=endPg;i++){
+            pageNumList.push({"num": i});
+        }
+        data.pageNumList = pageNumList;
+        data.pageModel.url += "&";
+        var htmlStr = $("#tmpl-page-style-1").tmpl(data);
+        $(targetId).after(htmlStr);
+    }
+</script>
+
+<script  id="tmpl-news-nav-list" type="text/x-jquery-tmpl">
+    <ul>
+    {{if data && data.length>0}}
+        {{each(i,item) data}}
+        <li>
+            <a href="{{= item.url}}" {{if item.id == currentID}}class="current"{{/if}}>{{= item.name}}</a>
+        </li>
+        {{/each}}
+    {{/if}}
+    </ul>
+</script>
+
+<script  id="tmpl-newsList-list" type="text/x-jquery-tmpl">
+    {{if state}}
+       {{if pageModel.results && pageModel.results.length>0}}
+            {{each(i,item) pageModel.results}}
+                <li class="news-list-item">
+                    <a href="../../../{{= item.contentHtmlPath}}">
+                        <div class="date">
+                            {{if item.showTm}}
+                                <div class="date-strong">{{= item.showTm.substring(8,10)}}</div>
+                                <div class="date-small">{{= item.showTm.substring(0,7)}}</div>
+                            {{/if}}
+                        </div>
+                        <div class="date-mobile">{{= item.showTm}}</div>
+                        <div class="news-list-title">
+                            <h3 class="ell-one">{{= item.contentTitle}}</h3>
+                            <div class="label-control">
+                                {{if item.contentIsTop == "1"}}
+                                    <div class="label label-hot">置顶</div>
+                                {{/if}}
+                                {{if item.contentIsHot == "1"}}
+                                    <div class="label label-hot">热门</div>
+                                {{/if}}
+                            </div>
+                        </div>
+                        <div class="news-list-text ell-two">{{= item.synopsis}}</div>
+                        <div class="news-images">
+                            <ul>
+                                {{if item.picList && item.picList.length>0}}
+                                    {{each(k,pic) item.picList}}
+                                        <li><img src="../../../{{= pic}}" alt=""></li>
+                                    {{/each}}
+                                {{/if}}
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+            {{/each}}
+        {{/if}}
+    {{else}}
+        <div>{{= errorMsg}}</div>
+    {{/if}}
+</script>
+<script type="text/javascript">
+
+    $(function () {
+        //本月热门新闻列表初始化
+        hotNewsList_Init();
+		
+        //数据分页
+		getNewsPageList();
+    })
+	
+
+	
+	    //加载分页数据
+	    function getNewsPageList(){
+	        var menuId = getQueryVariable("menuId",window.document.location.search.substring(1));
+	        var page = getQueryVariable("page",window.document.location.search.substring(1));
+	        $.ajax({
+		    url:'/upowweb/news/getNewsList',
+	            type:"GET",
+	            dataType:"json",
+	            data:{
+	                menuId:menuId,
+	                page:page
+	            },
+	            success:function (data) {
+	                if (data.state == true) {
+	                    //初始化二级菜单
+	                    newsNavListInit(data.menuId);
+	                    data.pageModel.url = window.document.location.pathname+"?menuId="+data.menuId;
+	                    //渲染数据
+	                    var htmlStr = $("#tmpl-newsList-list").tmpl(data);
+	                    $("#newsList-con").html(htmlStr);
+	                    //渲染分页器
+	                    pageInit(data,"#newsList-con");
+	                    $.initEll();
+	                }else{
+	                    console.log(data.msg);
+	                    console.log("查询失败");
+	                }
+	            },
+	            error:function () {
+	                console.log("系统繁忙！");
+	            }
+	        })
+	    }	
+	var pageIndex = 2;
+	function loadMoreInfo(){
+		var menuId = getQueryVariable("menuId",window.document.location.search.substring(1));
+		$.ajax({
+			url:'/upowweb/news/getNewsList',
+			type:"GET",
+			dataType:"json",
+			data:{
+				menuId:menuId,
+				page:pageIndex
+			},
+			success:function (data) {
+				if (data.state == true) {
+					data.pageModel.url = window.document.location.pathname+"?menuId="+data.menuId;
+					//渲染数据
+					var htmlStr = $("#tmpl-newsList-list").tmpl(data);
+					$("#newsList-con").append(htmlStr);
+					//渲染分页器
+					$("#pageBlock").remove();
+					pageInit(data,"#newsList-con");
+					$.initEll();
+					if (data.pageModel.page == data.pageModel.endPgNo) {
+						$(".news-con-list .page .position-control-c").css({display: "none"})
+					} else {
+						pageIndex = data.pageModel.nextNo;
+					}
+				}else{
+					console.log(data.msg);
+					console.log("查询失败");
+					console.log(page);
+				}
+			},
+			error:function () {
+				console.log("系统繁忙！");
+			}
+		})
+		
+	}
+
+
+	function getMenu(menu,menuid){
+		if(menu!=undefined){
+			var lop = menu.children;
+			for(var i=0;i<lop.length;i++){
+				if(lop[i].id==menuid){
+					return menu;
+				}else{
+					var m = getMenu(lop[i],menuid);
+					if(m!=undefined){
+						return m;
+					}
+				}
+			}
+		}
+		return undefined;
+	}
+
+	//获取本月热门新闻列表
+	function hotNewsList_Init() {
+		var timestamp = (new Date().valueOf());
+		$.getScript(webRoot+"/resources/js/common/hotNewsList.js?v="+timestamp).done(function () {
+			if (hotNewsList&&hotNewsList != null){
+				var htmlStr = "";
+				var data = {
+					"hotNewsList":hotNewsList.data,
+					"webRoot":webRoot
+				}
+				htmlStr = $("#tmpl-hot-news").tmpl(data);
+				$("#hotNews").html(htmlStr);
+			}
+		})
+	}
+
+	//初始化二级菜单
+	function newsNavListInit(menuid){
+		$.getScript(webRoot+"/resources/js/common/navigationList.js").done(function () {
+			if (navigationList&&navigationList != null){
+				if (navigationList.top){
+					var param = {children:navigationList.top};
+					var menu = getMenu(param,menuid);
+					var list = {
+						"data":menu.children,
+						"currentID":menuid
+					}
+					//创建新闻二级导航样式
+					var htmlStr = $("#tmpl-news-nav-list").tmpl(list);
+					$("#nav-list").html(htmlStr);
+				}
+			}
+		})
+
+	}
+
+	//获取url参数
+	function getQueryVariable(variable , urlStr) {
+		var vars = urlStr.split("&");
+		for (var i = 0; i < vars.length; i++) {
+			var pair = vars[i].split("=");
+			if (pair[0] == variable){
+				return pair[1];
+			}
+		}
+		return "";
+	}
+</script>
+
+
+
+    <div id="Components-footer"></div>
+
+
+        <div id="ieCompatibility"></div>
+        <script>
+            var version = $.ieVersion();
+            if (version<10&&version>-1){
+                $("#ieCompatibility").append("<link>");
+                var css = $("#ieCompatibility").children(":last");
+                css.attr({
+                    rel:  "stylesheet",
+                    type: "text/css",
+                    href: "../../../cn/resources/css/ie89.css"
+                });
+            }
+        </script>
+		<!--js-->
+		<script type="text/javascript" src="../../../cn/resources/js/upow.js"></script>
+	
+
+
+        <!-- 兼容性 -->
+        <!--[if IE]>
+        <script type="text/javascript" src="../../../cn/resources/js/plugins/jquery/jquery.placeholder.js"></script>
+        <script type="text/javascript">
+            // placeholder 问题。
+            if($(':input[placeholder]').length>0){
+                $(':input[placeholder]').placeholder();
+            }
+        </script>
+        <![endif]-->
+
+        <!--[if lt IE 9]>
+        <script src="../../../cn/resources/js/plugins/html5.min.js"></script>
+        <script src="../../../cn/resources/js/plugins/respond.min.js"></script>
+        <script src="../../../cn/resources/js/plugins/json2.js"></script>
+        <![endif]-->
+		
+    </body>
+</html>
