@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0"/>
+<title>浙江：今年春节假日接待游客2531.1万人次，比2019年同期增长13.2% | 极目新闻</title>
+<meta name="title" content="浙江：今年春节假日接待游客2531.1万人次，比2019年同期增长13.2%">
+<meta name="author" content="极目新闻">
+<meta name="keywords" content="文化,接待,游客,景区,全省,浙江省">
+<meta name="description" content="极目新闻，湖北日报传媒集团倾力打造的新型主流媒体品牌。脱胎于楚天都市报，是一个以原创新闻为主的全媒体新闻资讯平台，全天候为用户生产、聚合优质原创全球时事、观点、财经等内容。热线电话：027-86777777。">
+<meta name="renderer" content="webkit">
+<meta name="referrer" content="no-referrer" />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0"> <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="../libs/swiper3.4.2/css/swiper.min.css">
+<style type="text/css">[v-cloak]{display:none !important;}</style>
+</head>
+<body>
+<div class="main-body" id="jmnews" v-cloak>
+<div class="header-top">
+<a href="http://www.gov.cn/zhuanti/zggcddescqgdbdh/index.htm" target="_blank"><img src="http://www.ctdsb.net/images/header.jpg?t=1015" /></a>
+</div><div class="header">
+<div id="header" :class="{autoH:showAllChannel}">
+<div class="header-w">
+<div class="head-logo">
+<a href="/index.html" title="极目新闻"><img :src="hostPath+'/images/logo.png'"></a>
+</div>
+<div class="head-nav">
+<div class="clearfix">
+<a href="/index.html" class="nav-item" title="推荐">
+<span>推荐</span>
+</a><a href="/c1715.html" class="nav-item" title="观点">
+<span>观点</span>
+</a><a href="/c1734.html" class="nav-item" title="武汉">
+<span>武汉</span>
+</a><a href="/c1733.html" class="nav-item" title="战疫">
+<span>战疫</span>
+</a><a href="/c1676.html" class="nav-item" title="湖北">
+<span>湖北</span>
+</a><a href="/c1716.html" class="nav-item" title="世相">
+<span>世相</span>
+</a><a href="/c1679.html" class="nav-item" title="环球">
+<span>环球</span>
+</a><a href="/c1495.html" class="nav-item" title="专题">
+<span>专题</span>
+</a><a href="/c1666.html" class="nav-item on" title="经济">
+<span>经济</span>
+</a><a href="/c1740.html" class="nav-item" title="城建">
+<span>城建</span>
+</a><a href="/c1673.html" class="nav-item" title="科教">
+<span>科教</span>
+</a><a href="/c1659.html" class="nav-item" title="健康">
+<span>健康</span>
+</a><a href="/c1722.html" class="nav-item" title="悠游">
+<span>悠游</span>
+</a><a href="/c1739.html" class="nav-item" title="相亲">
+<span>相亲</span>
+</a><a href="/c1669.html" class="nav-item" title="汽车">
+<span>汽车</span>
+</a><a href="/c1737.html" class="nav-item" title="房产">
+<span>房产</span>
+</a><a href="/c1738.html" class="nav-item" title="消费">
+<span>消费</span>
+</a><a href="/c1658.html" class="nav-item" title="创意">
+<span>创意</span>
+</a><a href="/c1664.html" class="nav-item" title="文化">
+<span>文化</span>
+</a><a href="/c1742.html" class="nav-item" title="娱乐">
+<span>娱乐</span>
+</a><a href="/c1720.html" class="nav-item" title="体育">
+<span>体育</span>
+</a><a href="/c1741.html" class="nav-item" title="影像">
+<span>影像</span>
+</a><a href="/c1723.html" class="nav-item" title="帅作文">
+<span>帅作文</span>
+</a><a href="/c1743.html" class="nav-item" title="International">
+<span>International</span>
+</a><a href="/c1736.html" class="nav-item" title="播客">
+<span>播客</span>
+</a> </div>
+<div class="head-more">
+<span @click="showAllChannel=!showAllChannel;"><img :src="hostPath+'/images/nav_more.png'"></span>
+</div>
+</div>
+<div class="head-info">
+<div class="search-box">
+<span class="login-btn" @click="showLoginDialog(true)" v-if="!logged">登录</span>
+<span class="separator" v-if="!logged">|</span>
+<div class="search-form">
+<span class="search-btn" @click="onSearchHandler"><img :src="hostPath+'/images/search.png'"></span>
+<input type="text" class="search-key" v-model="searcKey" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="app-header">
+<div class="logo"></div>
+<div class="logo_title">极目新闻客户端</div>
+<span class="menu" @click="onAppChannelShow"></span>
+</div>
+<div :class="{'app-channel-box':true,'app-channel-show':showAppChannel}">
+<ul class="app-channel-list">
+<li class="app-channel-item">
+<a class="item" href="/index.html" title="推荐">
+<span>推荐</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1715.html" title="观点">
+<span>观点</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1734.html" title="武汉">
+<span>武汉</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1733.html" title="战疫">
+<span>战疫</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1676.html" title="湖北">
+<span>湖北</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1716.html" title="世相">
+<span>世相</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1679.html" title="环球">
+<span>环球</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1495.html" title="专题">
+<span>专题</span>
+</a>
+</li><li class="app-channel-item on">
+<a class="item" href="/c1666.html" title="经济">
+<span>经济</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1740.html" title="城建">
+<span>城建</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1673.html" title="科教">
+<span>科教</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1659.html" title="健康">
+<span>健康</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1722.html" title="悠游">
+<span>悠游</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1739.html" title="相亲">
+<span>相亲</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1669.html" title="汽车">
+<span>汽车</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1737.html" title="房产">
+<span>房产</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1738.html" title="消费">
+<span>消费</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1658.html" title="创意">
+<span>创意</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1664.html" title="文化">
+<span>文化</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1742.html" title="娱乐">
+<span>娱乐</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1720.html" title="体育">
+<span>体育</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1741.html" title="影像">
+<span>影像</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1723.html" title="帅作文">
+<span>帅作文</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1743.html" title="International">
+<span>International</span>
+</a>
+</li><li class="app-channel-item">
+<a class="item" href="/c1736.html" title="播客">
+<span>播客</span>
+</a>
+</li> </ul>
+</div>
+</div> <div class="main">
+<div class="clearfix">
+<div class="main-left">
+<div class="news-detail-container">
+<h1 class="news-title">浙江：今年春节假日接待游客2531.1万人次，比2019年同期增长13.2%</h1>
+<div class="junior clearfix">
+<span class="source">浙江省文化和旅游厅</span>
+<span class="time">2023-01-28 08:57:05</span>
+<span class="readnum" v-if="!!detailInfo && detailInfo.isShowPlayCount">阅读量：<span v-text="detailInfo.playCount"></span></span>
+</div>
+<div class="content"><div id="jmxw-news" style="text-align: left;">
+<p style="text-align: left;">钱江晚报-小时新闻记者周丰</p>
+<p style="text-align: left;">刚刚，记者从浙江省文化和旅游厅获悉，2023年春节假日全省游客接待量超过疫情前2019年同期水平，创历史新高。</p>
+<p style="text-align: left;">经省文化和旅游厅统计数据中心监测，综合运营商手机信令大数据和旅游消费短信调查，2023年春节假期浙江省接待游客2531.1万人次，同比增长43%，比2021年同期增长17.6%，比疫情前的2019年同期增长13.2%，游客接待量创历史新高；实现旅游收入329.5亿元，同比增长36.1%，游客人均花费1302元/人。</p>
+<p style="text-align: left;">2023年春节假期纳入监测的258家全省4A级以上景区累计接待844.08万人次，比2022年同期上升241.25%，比2019年同期上升76.72%。全省热门景区前5分别为：横店影视城、永嘉县楠溪江风景区、台州市台州府城文化旅游区、普陀山风景旅游区、桐乡市乌镇景区。</p>
+<p align="center" style="text-align: center; text-indent: 0px;"><img src="http://ctdsb.clouddiffuse.xyz/trans-files/20230128/085503875afd64-7960-4d8b-a573-57c022c522c9.jpeg" style="width:auto; max-width:100%;" data-path="" data-resourceid=""></p>
+<p align="center" style="text-align: center; text-indent: 0px;"><img src="http://ctdsb.clouddiffuse.xyz/trans-files/20230128/0855032cdf8881-38ea-4af5-9754-c41b78e2f928.jpeg" style="width:auto; max-width:100%;" data-path="" data-resourceid=""></p>
+<p align="center" style="text-align: center; text-indent: 0px;"><img src="http://ctdsb.clouddiffuse.xyz/trans-files/20230128/0855038582aa87-ba13-4ffd-84de-b585607f8e00.jpeg" style="width:auto; max-width:100%;" data-path="" data-resourceid=""></p>
+<p align="center" style="text-align: center; text-indent: 0px;"><img src="http://ctdsb.clouddiffuse.xyz/trans-files/20230128/085503196e0cdd-4bbe-4193-9796-821c9d6941c7.jpeg" style="width:auto; max-width:100%;" data-path="" data-resourceid=""></p>
+<p align="center" style="text-align: center; text-indent: 0px;"><img src="http://ctdsb.clouddiffuse.xyz/trans-files/20230128/085503dfaa7da7-e2ff-4326-8900-03e2e12d0ca0.jpeg" style="width:auto; max-width:100%;" data-path="" data-resourceid=""></p>
+<p align="center" style="text-align: center; text-indent: 0px;"><img src="http://ctdsb.clouddiffuse.xyz/trans-files/20230128/085503b83c39e0-12bb-427d-b406-af3f86c28004.jpeg" style="width:auto; max-width:100%;" data-path="" data-resourceid=""></p>
+<p align="center" style="text-align: center; text-indent: 0px;"><img src="http://ctdsb.clouddiffuse.xyz/trans-files/20230128/085503456ef127-4eff-4ddf-934e-81bb68bd4672.jpeg" style="width:auto; max-width:100%;" data-path="" data-resourceid=""></p>
+<p align="center" style="text-align: center; text-indent: 0px;"><img src="http://ctdsb.clouddiffuse.xyz/trans-files/20230128/085503fc566d12-f45f-4ec8-bee8-857a666a07ab.jpeg" style="width:auto; max-width:100%;" data-path="" data-resourceid=""></p>
+<p align="center" style="text-align: center; text-indent: 0px;"><img src="http://ctdsb.clouddiffuse.xyz/trans-files/20230128/0855038dddaadd-df7d-4a7a-92ff-f4a6326cac2b.jpeg" style="width:auto; max-width:100%;" data-path="" data-resourceid=""></p>
+<p align="center" style="text-align: center; text-indent: 0px;"><img src="http://ctdsb.clouddiffuse.xyz/trans-files/20230128/085503237eecf1-81f0-4518-9271-cd72089bb906.jpeg" style="width:auto; max-width:100%;" data-path="" data-resourceid=""></p>
+<p align="center" style="text-align: center; text-indent: 0px;"><img src="http://ctdsb.clouddiffuse.xyz/trans-files/20230128/085503597c8828-a46f-4799-ba2b-1d94a6d0b912.jpeg" style="width:auto; max-width:100%;" data-path="" data-resourceid=""></p>
+<p align="center" style="text-align: center; text-indent: 0px;"><img src="http://ctdsb.clouddiffuse.xyz/trans-files/20230128/085503e5e5f866-eea0-4eed-a0d7-60e108b88ad9.jpeg" style="width:auto; max-width:100%;" data-path="" data-resourceid=""></p>
+<p align="center" style="text-align: center; text-indent: 0px;"><img src="http://ctdsb.clouddiffuse.xyz/trans-files/20230128/0855037ec5a3bb-f38f-49ae-94f2-73640adab5bc.jpeg" style="width:auto; max-width:100%;" data-path="" data-resourceid=""></p>
+<p align="center" style="text-align: center; text-indent: 0px;"><img src="http://ctdsb.clouddiffuse.xyz/trans-files/20230128/085503841cbede-8fb7-4f29-b881-e40954b5920b.jpeg" style="width:auto; max-width:100%;" data-path="" data-resourceid=""></p>
+<p align="center" style="text-align: center; text-indent: 0px;"><img src="http://ctdsb.clouddiffuse.xyz/trans-files/20230128/0855038cba5894-c874-4387-9279-f1f6419824ee.jpeg" style="width:auto; max-width:100%;" data-path="" data-resourceid=""></p>
+<p style="text-align: left;">稿件来源：浙江省文化和旅游厅</p>
+</div></div>
+<div class="editor">责任编辑:李伟</div>
+<praise-component :user="userInfo" :device="deviceId" :params="detailParams" :id="detailInfo.id" v-if="!!detailInfo && detailInfo.allowLikes != false && detailInfo.allowLikes != 0"></praise-component>
+<div class="line"></div>
+<more-news-component :source="!!detailInfo && detailInfo.source"></more-news-component>
+<div class="line"></div>
+<div class="tag-list" v-if="tagList.length > 0">
+<ul class="clearfix">
+<li v-for="item in tagList" :key="item.id" v-text="'# ' + item"></li>
+</ul>
+</div>
+<div class="related-news">
+<div class="related-news-title">
+<div class="title-box">
+<span>相关新闻</span>
+</div>
+</div>
+<div class="related-news-list" v-if="!!detailInfo">
+<ul class="clearfix">
+<li class="related-news-item" v-for="item in relatedList" :key="item.id">
+<div class="news-img">
+<a :href="onRalatedClick(item)" target="_blank" :title="item.title">
+<img :src="item.imgList[0].bigUrl" alt="" v-if="!!item.imgList && item.imgList.length > 0" />
+<img :src="item.imgUrl" alt="" v-else-if="!!item.imgUrl && item.imgUrl.length > 0" />
+<img :src="item.pictureUrls[0]" alt="" v-else-if="!!item.pictureUrls && item.pictureUrls.length > 0" />
+</a>
+</div>
+<div class="news-info">
+<h2 class="title">
+<a :href="onRalatedClick(item)" target="_blank" :title="item.title" v-text="item.title"></a>
+</h2>
+<div class="others">
+<span class="source" v-text="item.source" v-if="item.source && item.source.length > 0"></span>
+<span class="source">极目新闻</span>
+<span class="time" v-text="item.publishTime"></span>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div> <comment-component :user="userInfo" :params="commentParams" v-if="!!detailInfo"></comment-component>
+</div>
+</div>
+<righter-component></righter-component>
+</div>
+</div>
+<footer-component></footer-component>
+<login-component :show="showLogin" @showlogindialog="showLoginDialog" @loggedin="loggedIn"></login-component>
+<div class="bg-mask" id="mask"></div>
+<div class="app-bg-mask" id="appMask"></div>
+<loading-component></loading-component>
+</div>
+<input type="hidden" id="contentId" value="1645609">
+<input type="hidden" id="fromFlag" value="0">
+<input type="hidden" id="cId" value="0">
+<input type="hidden" id="contentType" value="5">
+<input type="hidden" id="columnId" value="1666">
+<script>var _hmt =_hmt ||[];(function() {var hm =document.createElement("script");hm.src ="https://hm.baidu.com/hm.js?d1ebe5509bf48809ff2604cf79a869dd";var s =document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script type="text/javascript">document.write(unescape("%3Cspan style='display: none !important' id='cnzz_stat_icon_1280689875'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1280689875%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript" src="../libs/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../libs/vue.min.js"></script>
+<script type="text/javascript" src="../libs/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../libs/swiper3.4.2/js/swiper.min.js"></script>
+<script type="text/javascript" src="../libs/qrcode/jquery.qrcode.min.js"></script>
+<script type="text/javascript" src="../libs/md5.min.js"></script>
+<script type="text/javascript">var script =document.createElement("script" );script.type ="text/javascript";script.onload =function() {$_BASE.appendCSS('../css/common.css');$_BASE.appendCSS('../css/text.css');$_BASE.appendScript('../js/template.js',function(){$_BASE.appendScript('../js/text.js',function(){});});}
+$("body").append(script );script.src ='../js/common.js?t=' + new Date().getTime();</script>
+</body>
+</html>
